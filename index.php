@@ -12,6 +12,8 @@ include "php/functions.php";
     <title>Document</title>
 </head>
 <body>
-    
+Hier is een mooie navbalk
+<a class="nav-link active" href="?list=home" rel="lol.php">Opdrachten</a> <br>
+   Hier komt content: <?php getContent(); ?>
 </body>
 </html>
