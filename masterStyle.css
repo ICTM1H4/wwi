@@ -6,28 +6,31 @@
 
 .algMargin{
     margin-left: 200px;
+    margin-right: 200px;
 }
 
 #menuBalk{
     background-color: #00AEEF;
+    height: 120px;
+    line-height: 120px;
 }
 
 #logo{
     float: left;
+    height: 90px;
+    line-height: 120px;
+    vertical-align: middle;
 }
 
 .categ{
     font-size: 20px;
-    margin-top: 50%;
     float: left;
 }
 
-#account{
+.menubalk-foto{
     height: 90px;
-}
-
-#winkelwagen{
-    height: 90px;
+    line-height: 120px;
+    vertical-align: middle;
 }
 
 #accountclick{
@@ -51,4 +54,8 @@
     height: 300px;
     width: 200px;
     left: 43%;
+}
+
+#searchBar{
+    float: left;
 }
