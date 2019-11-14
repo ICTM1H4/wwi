@@ -12,6 +12,7 @@ include "php/functions.php";
     <title>Document</title>
 </head>
 <body>
-<?php include "nav.php" ?>
+<?php
+include "nav.php" ?>
 </body>
 </html>
