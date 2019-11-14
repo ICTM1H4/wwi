@@ -21,7 +21,7 @@
 </div>
 <div id="accountclick">
     <div class="modal">
-        <form id="inlog" action="/index.php" method="post">
+        <form id="inlog" action="index.php" method="post">
             <span onclick="document.getElementById('accountclick').style.display='none'" class="close">&times;</span>
             <input type="text" placeholder="Username" id="username" required><br>
             <input type="password" placeholder="Password" id="userpw" required><br>
