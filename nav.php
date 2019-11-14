@@ -15,8 +15,10 @@
                 <input type="submit" id="searchBtn" value="Zoeken!">
             </form>
         </div>
-        <img src="account.png" class="menubalk-foto" " onclick="document.getElementById('accountclick').style.display='block'">
-        <img src="winkelwagen.png" class = "menubalk-foto">
+        <div class="rechts">
+            <img src="account.png" class="menubalk-foto" " onclick="document.getElementById('accountclick').style.display='block'">
+            <img src="winkelwagen.png" class = "menubalk-foto">
+        </div>
     </div>
 </div>
 <div id="accountclick">

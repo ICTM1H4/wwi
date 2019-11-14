@@ -60,4 +60,9 @@
 
 #searchBar{
     float: left;
+    margin-left: 10%;
+}
+
+.rechts{
+    float: right;
 }
