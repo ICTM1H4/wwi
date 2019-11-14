@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="masterStyle.css">
+    <link rel="stylesheet" href="navStyle.css">
     <title>inlog</title>
 </head>
 <body>
