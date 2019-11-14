@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,10 +17,13 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1TTvIIHlHErJd21nLn5vtcCX19H" />
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -46,7 +48,13 @@
       <option name="presentableId" value="Default" />
       <updated>1573496819660</updated>
       <workItem from="1573496824450" duration="966000" />
-      <workItem from="1573551764272" duration="1740000" />
+      <workItem from="1573551764272" duration="4734000" />
+      <workItem from="1573560027404" duration="883000" />
+      <workItem from="1573637685080" duration="62000" />
+      <workItem from="1573638751438" duration="675000" />
+      <workItem from="1573641170125" duration="1767000" />
+      <workItem from="1573649162715" duration="1190000" />
+      <workItem from="1573727784293" duration="536000" />
     </task>
     <task id="LOCAL-00001" summary="test">
       <created>1573496863133</created>
@@ -76,7 +84,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573497185003</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test.php verwijdert">
+      <created>1573557023849</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573557023849</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,6 +113,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test" />
     <MESSAGE value="Project files toegevoegd, Phpstorm zeg dat het moet, weet niet waarom maar het zal wel." />
-    <option name="LAST_COMMIT_MESSAGE" value="Project files toegevoegd, Phpstorm zeg dat het moet, weet niet waarom maar het zal wel." />
+    <MESSAGE value="test.php verwijdert" />
+    <option name="LAST_COMMIT_MESSAGE" value="test.php verwijdert" />
   </component>
 </project>

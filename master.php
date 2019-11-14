@@ -7,10 +7,10 @@
 <body>
 <div id="menuBalk">
     <div class="algMargin">
-        <img src="../kbs/wwi_logo.png" id="logo">
+        <img src="wwi_logo_wit.png" id="logo">
         <div class="categ">Categorieën</div>
-        <img src="../kbs/account.png" id="account" onclick="document.getElementById('accountclick').style.display='block'">
-        <img src="../kbs/winkelwagen.png" id="winkelwagen">
+        <img src="account.png" id="account" onclick="document.getElementById('accountclick').style.display='block'">
+        <img src="winkelwagen.png" id="winkelwagen">
         <div id="accountclick">
             <div class="modal">
                 <form id="inlog" action="/index.php" method="post">
