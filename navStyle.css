@@ -7,6 +7,7 @@
 .algMargin{
     margin-left: 200px;
     margin-right: 200px;
+    position: static;
 }
 
 #menuBalk{
@@ -17,6 +18,7 @@
 
 #logo{
     float: left;
+    margin-top: 15px;
     height: 90px;
     line-height: 120px;
     vertical-align: middle;
@@ -48,8 +50,7 @@
     padding-top: 60px;
 }
 
-.modal {
-    background-color: red;
+.modal{
     position: absolute;
     height: 300px;
     width: 200px;
