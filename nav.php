@@ -11,9 +11,9 @@
         <div class="dropdown">
             <p class="categ">Categorieën</p>
             <div class="dropdownCateg">
-                <a href="#">Link 1</a>
-                <a href="#">Link 2</a>
-                <a href="#">Link 3</a>
+                <a href="#">Link 1</a><br>
+                <a href="#">Link 2</a><br>
+                <a href="#">Link 3</a><br>
             </div>
         </div>
         <form action="masterZoek.php" method="GET" id="searchBar">
