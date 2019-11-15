@@ -39,6 +39,7 @@
 }
 
 .dropdownCateg{
+    color: black;
     position: static;
     display: none;
     background-color: #f9f9f9;

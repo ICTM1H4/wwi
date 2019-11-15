@@ -13,6 +13,7 @@
             <p class="categ">Categorieën</p>
             <div class="dropdownCateg">
                 <?php
+                    include_once "php\connectDB.php";
                     $query = mysqli_query($conn, "SELECT * FROM stockgroups");
                     $aantalCat = mysqli_num_rows($query);
                     while ($row = mysqli_fetch_array($query)) {
@@ -23,7 +24,7 @@
             </div>
         </div>
         <form action="masterZoek.php" method="GET" id="searchBar">
-            <input type="text" onfocus="this.value= '' " name="searchBar" value="Zoeken.." maxlength="25" autocomplete="on" onmousedown="" onblur="">
+            <input type="text" onfocus="this.value= '' " name="searchBar" maxlength="40" autocomplete="on" onmousedown="" onblur="">
 <!--            <input type="submit" id="searchBtn" value="Zoeken">-->
             <input type="image" id="searchBtn" src="search.png" border="0" alt="Submit" />
         </form>

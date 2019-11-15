@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/search.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/nav.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/navStyle.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -58,7 +56,7 @@
       <updated>1573556772537</updated>
       <workItem from="1573556773701" duration="16761000" />
       <workItem from="1573739738990" duration="78000" />
-      <workItem from="1573811471115" duration="9945000" />
+      <workItem from="1573811471115" duration="10982000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -186,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573818518975</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="search knop foto van gemaakt">
+      <created>1573824216000</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1573824216000</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -220,6 +225,7 @@
     <MESSAGE value="opmaak nav en zoekbar verbeterd" />
     <MESSAGE value="categorieen werkend gemaakt" />
     <MESSAGE value="wwi logo interactief gemaakt" />
-    <option name="LAST_COMMIT_MESSAGE" value="wwi logo interactief gemaakt" />
+    <MESSAGE value="search knop foto van gemaakt" />
+    <option name="LAST_COMMIT_MESSAGE" value="search knop foto van gemaakt" />
   </component>
 </project>
