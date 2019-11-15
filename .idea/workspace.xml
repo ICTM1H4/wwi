@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/navStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/account.png" beforeDir="false" afterPath="$PROJECT_DIR$/account.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +56,7 @@
       <updated>1573556772537</updated>
       <workItem from="1573556773701" duration="16761000" />
       <workItem from="1573739738990" duration="78000" />
-      <workItem from="1573811471115" duration="251000" />
+      <workItem from="1573811471115" duration="751000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -142,7 +142,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573737021410</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="css nav balk witte letter&#10;nieuwe winkelwagen en account foto">
+      <created>1573811836005</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1573811836006</updated>
+    </task>
+    <task id="LOCAL-00014" summary="nav toegoevoegd aan zoek pagina&#10;for loop met a en breaks weggehaald">
+      <created>1573811977087</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1573811977087</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +185,7 @@
     <MESSAGE value="Nav style css aangepast" />
     <MESSAGE value="index geupdate" />
     <MESSAGE value="css nav balk witte letter&#10;nieuwe winkelwagen en account foto" />
-    <option name="LAST_COMMIT_MESSAGE" value="css nav balk witte letter&#10;nieuwe winkelwagen en account foto" />
+    <MESSAGE value="nav toegoevoegd aan zoek pagina&#10;for loop met a en breaks weggehaald" />
+    <option name="LAST_COMMIT_MESSAGE" value="nav toegoevoegd aan zoek pagina&#10;for loop met a en breaks weggehaald" />
   </component>
 </project>
