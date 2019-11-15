@@ -56,7 +56,7 @@
       <updated>1573556772537</updated>
       <workItem from="1573556773701" duration="16761000" />
       <workItem from="1573739738990" duration="78000" />
-      <workItem from="1573811471115" duration="12750000" />
+      <workItem from="1573811471115" duration="14144000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -205,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573826421729</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="balk kleur en grotes aangepast">
+      <created>1573828707123</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1573828707123</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
