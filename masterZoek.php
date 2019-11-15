@@ -1,5 +1,5 @@
 <?php
-
+include "nav.php";
 $q = ($_GET["searchBar"]);
 
 $conn = mysqli_connect('localhost', 'root', '', 'wideworldimporters');

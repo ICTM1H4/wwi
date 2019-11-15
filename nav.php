@@ -31,12 +31,6 @@
         </form>
     </div>
 </div>
-
-<?php
-for($i = 0;$i<100;$i++){
-    print(" a<br>");
-}
-?>
 </body>
 </html>
 
