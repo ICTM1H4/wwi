@@ -4,6 +4,10 @@
     font-family: Arial, serif;
 }
 
+a{
+    color: white;
+}
+
 .algMargin{
     margin: auto;
     width: 80%;
@@ -12,18 +16,18 @@
 
 #menuBalk{
     position: sticky;
-    background-color: #00AEEF;
-    height: 120px;
-    line-height: 120px;
+    background-color: #00bdf3;
+    height: 100px;
+    line-height: 100px;
     top: 0;
     color: white;
 }
 
 #logo{
     float: left;
-    margin-top: 25px;
-    height: 70px;
-    line-height: 120px;
+    margin-top: 20px;
+    height: 60px;
+    line-height: 100px;
     vertical-align: middle;
 }
 
@@ -40,9 +44,9 @@
 
 .dropdownCateg{
     color: black;
-    position: static;
+    position: absolute;
     display: none;
-    background-color: #f9f9f9;
+    background-color: #00bdf3;
     border-radius: 10px;
     line-height: 25px;
 }
@@ -52,8 +56,8 @@
 }
 
 .menubalk-foto{
-    height: 50px;
-    line-height: 120px;
+    height: 35px;
+    line-height: 100px;
     vertical-align: middle;
 }
 
