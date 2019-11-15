@@ -6,6 +6,7 @@
 
 a{
     color: white;
+    text-decoration: none;
 }
 
 .algMargin{
@@ -32,12 +33,13 @@ a{
 }
 
 .categ{
+    text-align: center;
 }
 
 .dropdown{
     float: left;
     width: 10%;
-    text-align: center;
+    text-align: left;
     font-size: 15px;
     margin-left: 5%;
 }
@@ -53,6 +55,16 @@ a{
 
 .dropdown:hover .dropdownCateg{
     display: block;
+    background-color: white;
+}
+
+.dropdown:hover .dropdownCateg a{
+    color: black;
+}
+
+.dropdown:hover .categ{
+    color: black;
+    background-color: white;
 }
 
 .menubalk-foto{
