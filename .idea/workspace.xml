@@ -56,7 +56,7 @@
       <updated>1573556772537</updated>
       <workItem from="1573556773701" duration="16761000" />
       <workItem from="1573739738990" duration="78000" />
-      <workItem from="1573811471115" duration="14144000" />
+      <workItem from="1573811471115" duration="14627000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -212,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573828707123</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="dropdown menu opgemaakt">
+      <created>1573835330362</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1573835330362</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +256,7 @@
     <MESSAGE value="search knop foto van gemaakt" />
     <MESSAGE value="search knop aanpassingen" />
     <MESSAGE value="balk kleur en grotes aangepast" />
-    <option name="LAST_COMMIT_MESSAGE" value="balk kleur en grotes aangepast" />
+    <MESSAGE value="dropdown menu opgemaakt" />
+    <option name="LAST_COMMIT_MESSAGE" value="dropdown menu opgemaakt" />
   </component>
 </project>
