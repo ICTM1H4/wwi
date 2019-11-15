@@ -24,7 +24,8 @@
         </div>
         <form action="masterZoek.php" method="GET" id="searchBar">
             <input type="text" onfocus="this.value= '' " name="searchBar" value="Zoeken.." maxlength="25" autocomplete="on" onmousedown="" onblur="">
-            <input type="submit" id="searchBtn" value="Zoeken">
+<!--            <input type="submit" id="searchBtn" value="Zoeken">-->
+            <input type="image" id="searchBtn" src="search.png" border="0" alt="Submit" />
         </form>
         <div class="rechts">
             <img src="account.png" class="menubalk-foto" onclick="document.getElementById('accountclick').style.display='block'">

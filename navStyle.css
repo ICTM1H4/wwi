@@ -82,13 +82,13 @@
 #searchBar {
     float: left;
     margin-left: 6%;
-    width: 30%;
+    width: 35%;
 }
 
 #searchBar input{
     border: transparent;
-    border-radius: 5px;
-    padding: 5px;
+    border-radius: 20px;
+    padding: 10px;
 
 }
 
@@ -99,6 +99,11 @@
 #searchBar input[type='submit']{
     background-color: white;
     cursor: pointer;
+}
+
+#searchBtn{
+    height: 25px;
+    vertical-align: middle;
 }
 
 
