@@ -22,6 +22,7 @@ a{
     line-height: 100px;
     top: 0;
     color: white;
+    box-shadow: 0px 4px 16px -10px rgba(0,0,0,0.5);
 }
 
 #logo{
@@ -116,7 +117,7 @@ a{
 
 #searchBar input[type='text']{
     width: 80%;
-    box-shadow: inset 0px 0px 5px rgba(0,0,0,0.8);
+    box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.2);
 }
 
 #searchBar input[type='submit']{
