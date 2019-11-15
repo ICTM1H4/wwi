@@ -12,9 +12,14 @@
         <div class="dropdown">
             <p class="categ">Categorieën</p>
             <div class="dropdownCateg">
-                <a href="#">Link 1</a><br>
-                <a href="#">Link 2</a><br>
-                <a href="#">Link 3</a><br>
+                <?php
+                    $query = mysqli_query($conn, "SELECT * FROM stockgroups");
+                    $aantalCat = mysqli_num_rows($query);
+                    while ($row = mysqli_fetch_array($query)) {
+                        $catName = $row['StockGroupName'];
+                        echo "<a href='#'>$catName</a><br>";
+                    }
+                ?>
             </div>
         </div>
         <form action="masterZoek.php" method="GET" id="searchBar">
