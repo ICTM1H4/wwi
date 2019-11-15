@@ -7,7 +7,8 @@
 <body>
 <div id="menuBalk">
     <div class="algMargin">
-        <img src="wwi_logo_wit.png" id="logo">
+        <a href="index.php">
+            <img src="wwi_logo_wit.png" onclick="index.php" id="logo"></a>
         <div class="dropdown">
             <p class="categ">Categorieën</p>
             <div class="dropdownCateg">

@@ -57,7 +57,7 @@
       <updated>1573556772537</updated>
       <workItem from="1573556773701" duration="16761000" />
       <workItem from="1573739738990" duration="78000" />
-      <workItem from="1573811471115" duration="5271000" />
+      <workItem from="1573811471115" duration="6161000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -171,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573815355117</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="categorieen werkend gemaakt">
+      <created>1573817520911</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1573817520911</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,6 +210,7 @@
     <MESSAGE value="nav toegoevoegd aan zoek pagina&#10;for loop met a en breaks weggehaald" />
     <MESSAGE value="witte account png" />
     <MESSAGE value="opmaak nav en zoekbar verbeterd" />
-    <option name="LAST_COMMIT_MESSAGE" value="opmaak nav en zoekbar verbeterd" />
+    <MESSAGE value="categorieen werkend gemaakt" />
+    <option name="LAST_COMMIT_MESSAGE" value="categorieen werkend gemaakt" />
   </component>
 </project>
