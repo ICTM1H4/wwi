@@ -8,7 +8,14 @@
 <div id="menuBalk">
     <div class="algMargin">
         <img src="wwi_logo_wit.png" id="logo">
-        <div class="categ">Categorieën</div>
+        <div class="dropdown">
+            <p class="categ">Categorieën</p>
+            <div class="dropdownCateg">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
         <form action="masterZoek.php" method="GET" id="searchBar">
             <input type="text" onfocus="this.value= '' " name="searchBar" value="Zoeken.." maxlength="25" autocomplete="on" onmousedown="" onblur="">
             <input type="submit" id="searchBtn" value="Zoeken">
@@ -19,6 +26,7 @@
         </div>
     </div>
 </div>
+
 <div id="accountclick">
     <div class="modal">
         <form id="inlog" action="index.php" method="post">
