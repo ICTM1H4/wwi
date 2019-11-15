@@ -12,13 +12,14 @@
 }
 
 #menuBalk{
+    position: sticky;
     background-color: #00AEEF;
     height: 120px;
     line-height: 120px;
+    top: 0;
 }
 
 #logo{
-    position: sticky;
     float: left;
     margin-top: 15px;
     height: 90px;
