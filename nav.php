@@ -9,12 +9,10 @@
     <div class="algMargin">
         <img src="wwi_logo_wit.png" id="logo">
         <div class="categ">Categorieën</div>
-        <div class = "zoekinput">
-            <form action="masterZoek.php" method="GET" id="searchBar">
-                <input type="text" onfocus="this.value= '' " name="searchBar" value="Zoeken.." maxlength="25" autocomplete="on" onmousedown="" onblur="">
-                <input type="submit" id="searchBtn" value="Zoeken!">
-            </form>
-        </div>
+        <form action="masterZoek.php" method="GET" id="searchBar">
+            <input type="text" onfocus="this.value= '' " name="searchBar" value="Zoeken.." maxlength="25" autocomplete="on" onmousedown="" onblur="">
+            <input type="submit" id="searchBtn" value="Zoeken!">
+        </form>
         <div class="rechts">
             <img src="account.png" class="menubalk-foto" " onclick="document.getElementById('accountclick').style.display='block'">
             <img src="winkelwagen.png" class = "menubalk-foto">
