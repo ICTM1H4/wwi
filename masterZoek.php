@@ -1,8 +1,8 @@
 <?php
 include "nav.php";
-$q = ($_GET["searchBar"]);
+include_once "php\connectDB.php";
 
-$conn = mysqli_connect('localhost', 'root', '', 'wideworldimporters');
+$q = ($_GET["searchBar"]);
 
 if ($q == ($_GET['searchBar'] == ' ')){
     header('Location: zoeklijst.php');
