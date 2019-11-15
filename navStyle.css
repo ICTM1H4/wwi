@@ -30,7 +30,7 @@
 .categ{
     font-size: 15px;
     float: left;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 
 .menubalk-foto{
@@ -64,8 +64,26 @@
 
 #searchBar {
     float: left;
-    margin-left: 10%;
+    margin-left: 9%;
+    width: 30%;
 }
+
+#searchBar input{
+    border: transparent;
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+#searchBar input[type='text']{
+    width: 80%;
+}
+
+#searchBar input[type='submit']{
+    background-color: white;
+    cursor: pointer;
+}
+
 
 .rechts{
     float: right;
