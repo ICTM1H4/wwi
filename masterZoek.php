@@ -5,11 +5,7 @@ include_once "php\connectDB.php";
 $q = ($_GET["searchBar"]);
 
 if ($q == ($_GET['searchBar'] == ' ')){
-    header('Location: zoeklijst.php');
-}
-
-if ($q == ($_GET['searchBar'] == 'Zoeken..')){
-    header('Location: zoeklijst.php');
+    header('Location: index.php');
 }
 
 ?>
@@ -24,16 +20,14 @@ if (!isset($q)){
     ?>
     <p><strong><?php echo $num_rows; ?> </strong> Results for "<?php echo $q; ?>"</p>
     <?php
-    while ($row = mysqli_fetch_array($query)) {
+        while ($row = mysqli_fetch_array($query)) {
 
-        $title = $row['StockItemName'];
-        $details = $row['SearchDetails'];
-        $tags = $row['Tags'];
-        $image = $row['Photo'];
+            $title = $row['StockItemName'];
+            $details = $row['SearchDetails'];
+            $tags = $row['Tags'];
+            $image = $row['Photo'];
 
-        echo "<h3>" . $title . "</h3><p>" . $details . $image . $tags. "</p><br> " . ". <br>";
-
-
+            echo "<h3>" . $title . "</h3><p>" . $details . $image . $tags. "</p><br> " . ". <br>";
+        }
     }
-}
-?>
+    ?>
