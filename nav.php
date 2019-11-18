@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="navStyle.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>inlog</title>
 </head>
 <body>
@@ -36,8 +37,8 @@
 
 <div id="accountclick">
     <div class="modal">
-        <form id="inlog" action="index.php" method="post">
-            <span onclick="document.getElementById('accountclick').style.display='none'" class="close">&times;</span>
+        <form id="inlog" method="post">
+            <span onclick="document.getElementById('accountclick').style.display='none'" class="close">X</span>
             <input type="text" placeholder="Username" id="username" required><br>
             <input type="password" placeholder="Password" id="userpw" required><br>
             <input type="submit" placeholder="Verstuur" id="send"><br>
