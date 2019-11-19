@@ -10,6 +10,7 @@ function categ($conn){
 include "nav.php";
 include_once "php\connectDB.php";
 
+
 if(isset($_GET['id'])){
 }
 else{
@@ -28,7 +29,7 @@ if (categ($conn)=== TRUE){
     $num_rows = mysqli_num_rows($query);
 }
 else {
-    $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%'");
+    $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%'  ");
     $num_rows = mysqli_num_rows($query);
 }
 ?>
@@ -55,13 +56,20 @@ else {
     ?>
         <div class="card">
             <img src="Geen_foto_helaas_beschikbaar.png" alt="Denim Jeans" style="width:100%">
-            <h1> <?php echo $title?></h1>
+            <h5> <?php echo $title?></h5>
             <p class="price"><?php echo "€ ". $price ?></p>
-            <p><?php echo $details?></p>
-            <p><button>Add to Cart</button></p>
+            <p><?php //echo $details?></p>
+            <p><button>Toevoegen aan winkelwagentje</button></p>
         </div>
+
+
 
 <?php
 }
 ?>
+
+<input type="submit" name="tp25" value="25">
+<input type="submit" name="tp50" value="50">
+<input type="submit" name="tp100" value="100">
+
 
