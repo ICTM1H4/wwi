@@ -40,7 +40,6 @@
 <div id="accountclick">
     <div class="modal">
         <form id="inlog" method="post">
-            <? include "Display_products.php"; ?>
             <span onclick="document.getElementById('accountclick').style.display='none'" class="close">X</span>
             <input type="text" placeholder="Username" id="username" required><br>
             <input type="password" placeholder="Password" id="userpw" required><br>
