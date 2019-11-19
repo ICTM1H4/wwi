@@ -14,5 +14,11 @@ include "php/functions.php";
 <body>
 <?php
 include "nav.php" ?>
+<?php
+//$search = $_GET["searchBar"];
+//$limit = $_GET["limit"];
+//echo Aantalproducten($productperpage);
+?>
+
 </body>
 </html>

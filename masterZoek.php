@@ -49,8 +49,19 @@ else {
         $details = $row['SearchDetails'];
         $tags = $row['Tags'];
         $image = $row['Photo'];
+        $price = $row['RecommendedRetailPrice'];
 
-        echo "<h3>" . $title . "</h3><p>" . $details . $image . $tags . "</p><br> " . ". <br>";
-    }
+        //echo "<h3>" . $title . "</h3><p>" . $details . $image . $tags . "</p><br> " . ". <br>";
+    ?>
+        <div class="card">
+            <img src="Geen_foto_helaas_beschikbaar.png" alt="Denim Jeans" style="width:100%">
+            <h1> <?php echo $title?></h1>
+            <p class="price"><?php echo "€ ". $price ?></p>
+            <p><?php echo $details?></p>
+            <p><button>Add to Cart</button></p>
+        </div>
+
+<?php
+}
 ?>
 
