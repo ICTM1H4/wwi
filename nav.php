@@ -30,7 +30,9 @@
         </form>
         <div class="rechts">
             <img src="account.png" class="menubalk-foto" onclick="document.getElementById('accountclick').style.display='block'">
-            <img src="winkelwagen.png" class = "menubalk-foto">
+            <a href="winkelwagen.php">
+                <img src="winkelwagen.png" class = "menubalk-foto">
+            </a>
         </div>
     </div>
 </div>
