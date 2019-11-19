@@ -35,4 +35,27 @@ function Aantalproducten() {
 
 }
 
+function getItem($conn, $id) {
+    $query = "SELECT (SELECT LastStockTakeQuantity FROM stockitemholdings WHERE StockItemID = ".$id.") AS voorraad, StockItemID, StockItemName, 
+                SearchDetails, Photo, RecommendedRetailPrice FROM stockitems WHERE StockItemID = ".$id."";
+    $result = $conn->query($query);
+    if ($result){
+        return $result->fetch_assoc();
+    } else {
+        return "Er is geen resultaat";
+    }
+}
+
+function printPlaatjes() {
+    $getName = glob("*.{gif,jfif,png,jpeg,jpg}",  GLOB_BRACE);
+    $countNames = count($getName);
+    for($i = 0; $i < $countNames; $i++) {
+        print('<div class="mySlides fade">');
+        print('<div class="numbertext">1 / 3</div>');
+        print('<img src="'.$getName[$i].'">');
+        print('<!-- <div class="text">Caption Text</div> -->');
+        print('</div>');
+    }
+}
+
 ?>
