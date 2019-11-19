@@ -59,7 +59,7 @@
       <workItem from="1573811471115" duration="15791000" />
       <workItem from="1573847565841" duration="178000" />
       <workItem from="1574077805508" duration="3468000" />
-      <workItem from="1574153793742" duration="1447000" />
+      <workItem from="1574153793742" duration="2647000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -250,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574078446426</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="kleurencodes bepaald en onderaan navstyle document toegevoegd">
+      <created>1574156299249</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1574156299249</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -291,6 +298,7 @@
     <MESSAGE value="schaduw toegevoegd aan zoekinput" />
     <MESSAGE value="schaduwen geupdate" />
     <MESSAGE value="zoekknop test verwijdert" />
-    <option name="LAST_COMMIT_MESSAGE" value="zoekknop test verwijdert" />
+    <MESSAGE value="kleurencodes bepaald en onderaan navstyle document toegevoegd" />
+    <option name="LAST_COMMIT_MESSAGE" value="kleurencodes bepaald en onderaan navstyle document toegevoegd" />
   </component>
 </project>

@@ -10,12 +10,14 @@ a{
 }
 
 .algMargin{
+    /*Margin van de zijkanten van de pagina*/
     margin: auto;
     width: 80%;
     position: static;
 }
 
 #menuBalk{
+    /*Opmaak van de menubalk*/
     position: sticky;
     background-color: #00bdf3;
     height: 100px;
@@ -26,6 +28,7 @@ a{
 }
 
 #logo{
+    /*Opmaak van het logo*/
     float: left;
     margin-top: 20px;
     height: 60px;
@@ -34,12 +37,14 @@ a{
 }
 
 .categ{
+    /*Opmaak van de categorieen text*/
     text-align: center;
     line-height: 100px;
     width: 100%;
 }
 
 .dropdown{
+    /*Opmaak van de tekst van het categorieen dropdown menu*/
     float: left;
     width: 10%;
     text-align: left;
@@ -49,10 +54,10 @@ a{
 }
 
 .dropdownCateg{
+    /*Opmaak van de dropdown box*/
     color: black;
     position: absolute;
     display: none;
-    background-color: #00bdf3;
     line-height: 25px;
     padding: 2%;
     width: 61%;
@@ -60,20 +65,24 @@ a{
 }
 
 .dropdown:hover .dropdownCateg{
+    /*Functie dat de dropdown menu wordt aangeroepen zodra er over categorieen wordt gehoverd.*/
     display: block;
     background-color: white;
 }
 
 .dropdown:hover .dropdownCateg a{
+    /*Functie dat de tekst in het dropdown menu zwart zodra hij wordt aangeroepen*/
     color: black;
 }
 
 .dropdown:hover .categ{
+    /*Functie dat de tekst van categorieen zwart wordt zodra hij wordt aangeroepen*/
     color: black;
     background-color: white;
 }
 
 .menubalk-foto{
+    /*Opmaak van de winkelwagen en de account foto's*/
     cursor: pointer;
     height: 35px;
     line-height: 100px;
@@ -81,6 +90,7 @@ a{
 }
 
 #accountclick{
+
     display: none;
     position: fixed;
     text-align: center;
