@@ -15,7 +15,7 @@
             <div class="dropdownCateg">
                 <?php
                     include_once "php\connectDB.php";
-                    $query = mysqli_query($conn, "SELECT * FROM stockgroups");
+                    $query = mysqli_query($conn, "SELECT * FROM stockgroups ORDER BY StockGroupName");
                     $aantalCat = mysqli_num_rows($query);
                     while ($row = mysqli_fetch_array($query)) {
                         $catName = $row['StockGroupName'];
