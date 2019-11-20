@@ -5,7 +5,7 @@ $data = getItem($conn, $id);
 <div class="div-image">
     <div class="slideshow-container">
         <div class="mySlides fade">
-            <div class="numbertext">1 / 1</div>
+            <div class="numbertext">1 / 3</div>
             <img src="Geen_foto_helaas_beschikbaar.png" alt="werkt niet">
             <!-- <div class="text">Caption Text</div> -->
         </div>
