@@ -8,8 +8,6 @@
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     max-width: 300px;
-    max-height: 400px;
-    height: 400px;
     background-color: rgba(253, 246, 255, 0);
     text-align: center;
     font-family: Arial, serif;
@@ -21,7 +19,7 @@
     margin-right: 20px;
     line-height: 30px;
     height: 550px;
-    /*vertical-align: middle;*/
+    vertical-align: middle;
 
 }
 
