@@ -1,4 +1,3 @@
-bhsdajdsa
 <?php
 function categ($conn){
     if (isset($_GET['id'])){
@@ -8,7 +7,6 @@ function categ($conn){
 ?>
 
 <?php
-// include "nav.php";
 include_once "php\connectDB.php";
 
 

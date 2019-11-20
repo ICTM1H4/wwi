@@ -122,13 +122,13 @@ a{
 
 #searchBar input{
     border: transparent;
-    border-radius: 20px;
     padding: 10px;
 
 }
 
 #searchBar input[type='text']{
     width: 80%;
+    border-radius: 20px;
     box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.2);
 }
 

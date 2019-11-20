@@ -17,7 +17,7 @@ include "php/functions.php";
 </div>
 <div class="content"><?php
 // print_r($_GET);
-if(isset($_GET['searchBar'])){
+if(isset($_GET['searchBar']) || isset($_GET['id'])){
     include "masterZoek.php";
 }
 elseif(isset($_GET['productID'])){
