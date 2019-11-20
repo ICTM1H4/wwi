@@ -9,7 +9,7 @@ include "php/functions.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php addLink(); ?>
-    <title>Document</title>
+    <title>Wide world importers</title>
 </head>
 <body>
 <div class="nav">
