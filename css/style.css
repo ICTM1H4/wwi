@@ -4,7 +4,6 @@
     box-sizing:border-box;
 }
 
-
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
     max-width: 300px;
@@ -65,8 +64,6 @@ h1 {
 .div-image{
     float: left;
     height: 400px;
-    /* max-height: 400px; */
-    /* max-width: 400px; */
     width: 400px;
    
 }
@@ -76,8 +73,6 @@ h1 {
     background-color: red;
     height: 100%;
     width: 100%;
-    /* max-height: 300px;
-    max-width: 300px; */
 }
 
 .product-omschrijving {
@@ -100,7 +95,6 @@ h1 {
 
 .slideshow-container {
   max-width: 1000px;
-  z-index: -1;
   position: relative;
   margin: auto;
 }
