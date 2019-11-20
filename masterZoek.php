@@ -20,17 +20,14 @@ else{
         header('Location: index.php');
     }
 }
-?>
 
-
-<?php
 if (categ($conn)=== TRUE){
     $groupID = $_GET['id'];
     $query = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID'");
     $num_rows = mysqli_num_rows($query);
 }
 else {
-    $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%'  ");
+    $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' ");
     $num_rows = mysqli_num_rows($query);
 }
 ?>
@@ -46,6 +43,7 @@ else {
         }
         ?>"</p>
     <?php
+
     while ($row = mysqli_fetch_array($query)) {
         // print_r($row);
         $title = $row['StockItemName'];
@@ -59,8 +57,10 @@ else {
             <a href="?productID=<?php echo $row['StockItemID']?>"><img src="Geen_foto_helaas_beschikbaar.png" alt="Denim Jeans" style="width:100%"></a>
             <h5> <?php echo $title?></h5>
             <p class="price"><?php echo "€ ". $price ?></p>
-            <p><button>Toevoegen aan winkelwagentje</button></p>
+            <p><button> Toevoegen aan winkelwagentje</button> </p>
         </div>
+
+        
 <?php
 }
 ?>
