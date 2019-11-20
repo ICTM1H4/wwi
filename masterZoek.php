@@ -1,3 +1,4 @@
+bhsdajdsa
 <?php
 function categ($conn){
     if (isset($_GET['id'])){
@@ -7,7 +8,7 @@ function categ($conn){
 ?>
 
 <?php
-include "nav.php";
+// include "nav.php";
 include_once "php\connectDB.php";
 
 
@@ -34,7 +35,8 @@ else {
 }
 ?>
     <p><strong><?php echo $num_rows; ?> </strong> Results for "
-        <?php if(isset($q)){
+        <?php 
+        if(isset($q)){
             echo ($q);
         }
         elseif (isset($groupID)){
@@ -45,7 +47,7 @@ else {
         ?>"</p>
     <?php
     while ($row = mysqli_fetch_array($query)) {
-
+        // print_r($row);
         $title = $row['StockItemName'];
         $details = $row['SearchDetails'];
         $tags = $row['Tags'];
@@ -55,7 +57,7 @@ else {
         //echo "<h3>" . $title . "</h3><p>" . $details . $image . $tags . "</p><br> " . ". <br>";
     ?>
         <div class="card">
-            <img src="Geen_foto_helaas_beschikbaar.png" alt="Denim Jeans" style="width:100%">
+            <a href="?productID=<?php echo $row['StockItemID']?>"><img src="Geen_foto_helaas_beschikbaar.png" alt="Denim Jeans" style="width:100%"></a>
             <h5> <?php echo $title?></h5>
             <p class="price"><?php echo "€ ". $price ?></p>
             <p><?php //echo $details?></p>

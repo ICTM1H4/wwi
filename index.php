@@ -12,13 +12,22 @@ include "php/functions.php";
     <title>Document</title>
 </head>
 <body>
-<?php
-include "nav.php" ?>
-<?php
+<div class="nav">
+    <?php include "nav.php" ?>
+</div>
+<div class="content"><?php
+// print_r($_GET);
+if(isset($_GET['searchBar'])){
+    include "masterZoek.php";
+}
+elseif(isset($_GET['productID'])){
+    include "structure/productpage.php";
+}
 //$search = $_GET["searchBar"];
 //$limit = $_GET["limit"];
 //echo Aantalproducten($productperpage);
-?>
+?></div>
+
 
 </body>
 </html>

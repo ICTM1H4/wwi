@@ -1,20 +1,23 @@
 <?php
-$id = $_GET['id'];
+$id = $_GET['productID'];
 $data = getItem($conn, $id);
 ?>
 <div class="image">
     <div class="slideshow-container">
-        <?php echo printPlaatjes();?>
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 1</div>
+            <img src="Geen_foto_helaas_beschikbaar.png" alt="werkt niet">
+        <!-- <div class="text">Caption Text</div> -->
+        </div>
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
+        <!-- <span class="dot" onclick="currentSlide(2)"></span> -->
+        <!-- <span class="dot" onclick="currentSlide(3)"></span> -->
     </div>
 </div>
-<?php //var_dump($data)?>
 <div class="content">
     <div class="naam">Naam: <?php echo $data["StockItemName"] ?></div>
     <div class="prijs md5">Prijs: <?php echo $data["RecommendedRetailPrice"] ?></div>
