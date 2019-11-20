@@ -4,22 +4,29 @@
     box-sizing:border-box;
 }
 
-.card {
+.afmetingCard{
+    position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
-    max-width: 300px;
     background-color: rgba(253, 246, 255, 0);
-    text-align: center;
-    font-family: Arial, serif;
     float: left;
-    width: 25%;
-    padding: 0 10px;
+    width: 20%;
+    height: 600px;
     margin-top: 40px;
     margin-left: 50px;
     margin-right: 20px;
-    line-height: 30px;
-    height: 550px;
-    vertical-align: middle;
+    font-family: Arial, serif;
+}
 
+.card {
+    text-align: center;
+    padding: 0 10px;
+    margin-top: 40px;
+}
+
+.onder{
+    position: absolute;
+    padding: 0 10px;
+    bottom: 20px;
 }
 
 .price {
