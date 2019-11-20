@@ -51,11 +51,15 @@ else {
         $price = $row['RecommendedRetailPrice'];
 
     ?>
-        <div class="card">
-            <a href="?productID=<?php echo $row['StockItemID']?>"><img src="Geen_foto_helaas_beschikbaar.png" alt="Denim Jeans" style="width:100%"></a>
-            <h5> <?php echo $title?></h5><br>
-            <p class="price"><?php echo "€ ". $price ?></p><br>
-            <p><button> Toevoegen aan winkelwagentje</button> </p>
+        <div class="afmetingCard">
+            <div class="card">
+                <a href="?productID=<?php echo $row['StockItemID']?>"><img src="Geen_foto_helaas_beschikbaar.png" alt="Denim Jeans" style="width:100%"></a>
+                <h5> <?php echo $title?></h5><br>
+                <div class="onder">
+                    <p class="price"><?php echo "€ ". $price ?></p><br>
+                    <p><button> Toevoegen aan winkelwagentje</button> </p>
+                </div>
+            </div>
         </div>
 
         
