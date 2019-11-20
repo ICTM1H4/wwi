@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/masterZoek.php" beforeDir="false" afterPath="$PROJECT_DIR$/masterZoek.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +59,7 @@
       <workItem from="1573847565841" duration="178000" />
       <workItem from="1574077805508" duration="605000" />
       <workItem from="1574200476624" duration="523000" />
-      <workItem from="1574201154674" duration="7223000" />
+      <workItem from="1574201154674" duration="7480000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -266,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574240485357</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="productcards aangepast (dezelfde grootte)">
+      <created>1574244780739</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1574244780739</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,6 +312,7 @@
     <MESSAGE value="schaduw toegevoegd aan zoekinput" />
     <MESSAGE value="schaduwen geupdate" />
     <MESSAGE value="CSS aangepast" />
-    <option name="LAST_COMMIT_MESSAGE" value="CSS aangepast" />
+    <MESSAGE value="productcards aangepast (dezelfde grootte)" />
+    <option name="LAST_COMMIT_MESSAGE" value="productcards aangepast (dezelfde grootte)" />
   </component>
 </project>
