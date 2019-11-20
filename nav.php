@@ -19,7 +19,7 @@
                     $aantalCat = mysqli_num_rows($query);
                     while ($row = mysqli_fetch_array($query)) {
                         $catName = $row['StockGroupName'];
-                        echo "<a href='masterZoek.php?id=".$row["StockGroupID"]."'>$catName</a><br>";
+                        echo "<a href='?id=".$row["StockGroupID"]."'>$catName</a><br>";
                     }
                 ?>
             </div>
