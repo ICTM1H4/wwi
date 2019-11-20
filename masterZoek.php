@@ -53,8 +53,8 @@ else {
     ?>
         <div class="card">
             <a href="?productID=<?php echo $row['StockItemID']?>"><img src="Geen_foto_helaas_beschikbaar.png" alt="Denim Jeans" style="width:100%"></a>
-            <h5> <?php echo $title?></h5>
-            <p class="price"><?php echo "€ ". $price ?></p>
+            <h5> <?php echo $title?></h5><br>
+            <p class="price"><?php echo "€ ". $price ?></p><br>
             <p><button> Toevoegen aan winkelwagentje</button> </p>
         </div>
 
@@ -63,7 +63,4 @@ else {
 }
 ?>
 
-<input type="submit" name="tp25" value="25">
-<input type="submit" name="tp50" value="50">
-<input type="submit" name="tp100" value="100">
 
