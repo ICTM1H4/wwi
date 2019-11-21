@@ -189,6 +189,24 @@ h1 {
   to {opacity: 1}
 }
 
+.content-product {
+  margin-left: 10%;
+  margin-top: 2%;
+  width: 80%;
+  height: 500px;
+}
+
+.content {
+  margin-top: 100px;
+  /* float: left; */
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+}
 #aantal25{
     float: right;
     border: none;
