@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/masterZoek.php" beforeDir="false" afterPath="$PROJECT_DIR$/masterZoek.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -287,7 +285,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574326986254</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Weergeven aantal resultaten aangepast">
+      <created>1574327672666</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1574327672666</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +334,7 @@
     <MESSAGE value="schaduwen geupdate" />
     <MESSAGE value="zinloze code verwijderd." />
     <MESSAGE value="opmaak aangepast" />
-    <option name="LAST_COMMIT_MESSAGE" value="opmaak aangepast" />
+    <MESSAGE value="Weergeven aantal resultaten aangepast" />
+    <option name="LAST_COMMIT_MESSAGE" value="Weergeven aantal resultaten aangepast" />
   </component>
 </project>
