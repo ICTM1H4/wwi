@@ -7,12 +7,11 @@ function categ($conn){
 }
 
 ?>
-    <input type="button" name="tp25" value="25" id="aantal25">
+    <!-- <input type="button" name="tp25" value="25" id="aantal25">
     <input type="button" name="tp50" value="50" id="aantal50">
-    <input type="button" name="tp100" value="100" id="aantal100">
+    <input type="button" name="tp100" value="100" id="aantal100"> -->
 <?php
 include_once "php\connectDB.php";
-
 
 
 if(isset($_GET['id'])){
@@ -35,9 +34,15 @@ else {
 }
 ?>
 
-<div id="resultaten" ><p> We hebben <strong> <?php echo $num_rows; ?>  resultaten </strong> gevonden voor:
+<div id="resultaten" ><p> <strong> <?php echo $num_rows; ?> </strong> <?php
 
-        <?php
+        if($num_rows<= 1){
+            echo"resultaat voor: ";
+        }
+        else{
+            echo"resultaten voor: ";
+        }
+
         if(isset($q)){
             echo ($q);
         }
@@ -58,7 +63,7 @@ else {
         $price = $row['RecommendedRetailPrice'];
 
     ?>
-        <div class="algMargin">
+        <div class="zoekMargin">
             <div class="alleProducten">
                 <div class="afmetingCard">
                 <div class="card">
