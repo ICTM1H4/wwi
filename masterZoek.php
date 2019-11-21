@@ -13,9 +13,7 @@ function categ($conn){
 <?php
 include_once "php\connectDB.php";
 
-if(isset($_GET["tp25"])){
-    echo SHSRHWRSWHRHSHSE;
-}
+
 
 if(isset($_GET['id'])){
 }
