@@ -30,7 +30,7 @@ if (categ($conn)=== TRUE){
     $num_rows = mysqli_num_rows($query);
 }
 else {
-    $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' ");
+    $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR StockItemID LIKE '$q'");
     $num_rows = mysqli_num_rows($query);
 }
 ?>
