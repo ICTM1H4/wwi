@@ -57,5 +57,3 @@ function printPlaatjes() {
         print('</div>');
     }
 }
-
-?>
