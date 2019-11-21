@@ -57,7 +57,7 @@ else {
         $price = $row['RecommendedRetailPrice'];
 
     ?>
-        <div class="algMargin">
+        <div class="zoekMargin">
             <div class="alleProducten">
                 <div class="afmetingCard">
                 <div class="card">
