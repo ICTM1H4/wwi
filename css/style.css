@@ -218,7 +218,6 @@ h1 {
     background-color: #0006f3;
     height: 25px;
     width: 30px;
-    margin-top: 40px;
     margin-left: 10px;
     margin-right: 50px;
 }
@@ -229,7 +228,6 @@ h1 {
     background-color: #0006f3;
     height: 25px;
     width: 30px;
-    margin-top: 40px;
     margin-left: 10px;
 }
 
@@ -239,7 +237,6 @@ h1 {
     background-color: #0006f3;
     height: 25px;
     width: 30px;
-    margin-top: 40px;
     margin-left: 10px;
 }
 
@@ -256,5 +253,5 @@ h1 {
 }
 #resultaten {
     margin-top: 150px;
-    margin-left: 10%;
+    margin-left: 13%;
 }
