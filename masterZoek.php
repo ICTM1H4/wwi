@@ -34,9 +34,15 @@ else {
 }
 ?>
 
-<div id="resultaten" ><p> <strong> <?php echo $num_rows; ?> </strong> gevonden producten voor:
+<div id="resultaten" ><p> <strong> <?php echo $num_rows; ?> </strong> <?php
 
-        <?php
+        if($num_rows<= 1){
+            echo"resultaat voor: ";
+        }
+        else{
+            echo"resultaten voor: ";
+        }
+
         if(isset($q)){
             echo ($q);
         }
@@ -57,7 +63,7 @@ else {
         $price = $row['RecommendedRetailPrice'];
 
     ?>
-        <div class="algMargin">
+        <div class="zoekMargin">
             <div class="alleProducten">
                 <div class="afmetingCard">
                 <div class="card">
