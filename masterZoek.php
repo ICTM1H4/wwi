@@ -14,7 +14,6 @@ function categ($conn){
 include_once "php\connectDB.php";
 
 
-
 if(isset($_GET['id'])){
 }
 else{
@@ -35,7 +34,7 @@ else {
 }
 ?>
 
-<div id="resultaten" ><p> We hebben <strong> <?php echo $num_rows; ?>  resultaten </strong> gevonden voor:
+<div id="resultaten" ><p> <strong> <?php echo $num_rows; ?> </strong> gevonden producten voor:
 
         <?php
         if(isset($q)){
@@ -58,7 +57,7 @@ else {
         $price = $row['RecommendedRetailPrice'];
 
     ?>
-        <div class="algMargin">
+        <div class="zoekMargin">
             <div class="alleProducten">
                 <div class="afmetingCard">
                 <div class="card">
