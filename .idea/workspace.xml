@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,6 +26,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../tentamen php/s1147603-Joost Budding-ICTM1H/97828-Antwoordbestanden-4-11-2019" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -264,35 +266,7 @@
       <option name="project" value="LOCAL" />
       <updated>1574322057103</updated>
     </task>
-    <task id="LOCAL-00030" summary="zinloze code verwijderd.">
-      <created>1574322909380</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1574322909380</updated>
-    </task>
-    <task id="LOCAL-00031" summary="opmaak aangepast">
-      <created>1574325995443</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1574325995443</updated>
-    </task>
-    <task id="LOCAL-00032" summary="opmaak aangepast">
-      <created>1574326986254</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1574326986254</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Weergeven aantal resultaten aangepast">
-      <created>1574327672666</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1574327672666</updated>
-    </task>
-    <option name="localTasksCounter" value="34" />
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,9 +306,6 @@
     <MESSAGE value="dropdown menu opgemaakt" />
     <MESSAGE value="schaduw toegevoegd aan zoekinput" />
     <MESSAGE value="schaduwen geupdate" />
-    <MESSAGE value="zinloze code verwijderd." />
-    <MESSAGE value="opmaak aangepast" />
-    <MESSAGE value="Weergeven aantal resultaten aangepast" />
-    <option name="LAST_COMMIT_MESSAGE" value="Weergeven aantal resultaten aangepast" />
+    <option name="LAST_COMMIT_MESSAGE" value="schaduwen geupdate" />
   </component>
 </project>
