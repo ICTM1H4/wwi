@@ -31,7 +31,7 @@ $data = getItem($conn, $id);
     </div>
     <div class="product-omschrijving">
         <div class="naam">Naam: <?php echo $data["StockItemName"] ?></div>
-        <div class="prijs md5">Prijs: <?php echo $data["RecommendedRetailPrice"] ?></div>
+        <div class="prijs md5">Prijs: &euro;<?php echo $data["RecommendedRetailPrice"] ?></div>
         <div class="link"><a class="md5" href="<?php echo $data['StockItemID'] ?>"> Voeg toe aan winkelmandje </a></div>
         <div class="voorraad md5">Aantal producten op voorraad: <?php echo $data["voorraad"] ?></div>
         <div class="omschrijving md5">Omschrijving: <?php echo $data["SearchDetails"] ?></div>
