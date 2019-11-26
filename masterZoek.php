@@ -17,7 +17,7 @@ include_once "php\connectDB.php";
 if(isset($_GET['id'])){
 }
 else{
-    $q = ($_GET["searchBar"]);
+    $q = trim(($_GET["searchBar"]));
     if ($q == ($_GET['searchBar'] == ' ')){
         header('Location: index.php');
     }
@@ -34,13 +34,13 @@ else {
 }
 ?>
 
-<div id="resultaten" ><p> <strong> <?php echo $num_rows; ?> </strong> <?php
+<div id="resultaten" ><p> <strong> <?php if($num_rows > 0) {echo $num_rows;} else{echo "Er zijn geen resultaten voor: ";}; ?> </strong> <?php
 
-        if($num_rows<= 1){
-            echo"resultaat voor: ";
+        if($num_rows > 1) {
+            echo" resultaten voor: ";
         }
-        else{
-            echo"resultaten voor: ";
+        elseif($num_rows < 2 AND $num_rows != 0){
+            echo " resultaat voor: ";
         }
 
         if(isset($q)){
