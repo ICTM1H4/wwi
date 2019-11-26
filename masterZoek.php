@@ -17,7 +17,7 @@ include_once "php\connectDB.php";
 if(isset($_GET['id'])){
 }
 else{
-    $q = ($_GET["searchBar"]);
+    $q = trim(($_GET["searchBar"]));
     if ($q == ($_GET['searchBar'] == ' ')){
         header('Location: index.php');
     }
