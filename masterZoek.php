@@ -39,7 +39,7 @@ else {
         if($num_rows > 1) {
             echo" resultaten voor: ";
         }
-        if($num_rows < 2 AND $num_rows != 0){
+        elseif($num_rows < 2 AND $num_rows != 0){
             echo " resultaat voor: ";
         }
 
