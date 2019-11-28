@@ -4,7 +4,6 @@
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/navStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/structure/productpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/structure/productpage.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,7 +80,7 @@
       <workItem from="1574077805508" duration="605000" />
       <workItem from="1574200476624" duration="523000" />
       <workItem from="1574201154674" duration="3103000" />
-      <workItem from="1574766414857" duration="15235000" />
+      <workItem from="1574766414857" duration="16399000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -293,7 +292,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574938138072</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="schaduwen geupdate">
+      <created>1574952726394</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1574952726394</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
