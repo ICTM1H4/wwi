@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/overzicht.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bestelproces.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/nav.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/overzicht.php" beforeDir="false" afterPath="$PROJECT_DIR$/overzicht.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -274,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574322057103</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="aanpassingen in bestelproces&#10;functie voor progressbar aangemaakt">
+      <created>1574956439324</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1574956439324</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,6 +317,7 @@
     <MESSAGE value="dropdown menu opgemaakt" />
     <MESSAGE value="schaduw toegevoegd aan zoekinput" />
     <MESSAGE value="schaduwen geupdate" />
-    <option name="LAST_COMMIT_MESSAGE" value="schaduwen geupdate" />
+    <MESSAGE value="aanpassingen in bestelproces&#10;functie voor progressbar aangemaakt" />
+    <option name="LAST_COMMIT_MESSAGE" value="aanpassingen in bestelproces&#10;functie voor progressbar aangemaakt" />
   </component>
 </project>

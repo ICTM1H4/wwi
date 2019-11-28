@@ -12,18 +12,20 @@ include "php/functions.php";
 <div class = 'progressBar'><?php echo progressBar()?></div>
     <div class="algMargin">
         <form class="factuurData">
-            <div class="klantnaam">
-                Naam: <input type="text" name="klantVoorN" placeholder="Voornaam">
-                <input type="text" name="klantTussenN" placeholder="tussenvoegsels">
-                <input type="text" name="klantAchterN" placeholder="Achternaam" >
+            <div class="klantInfo">
+                Naam:
+                <input type="text" name="voornaam" placeholder="Voornaam">
+                <input type="text" name="tussenvoegsel" placeholder="tussenvoegsels">
+                <input type="text" name="achternaam" placeholder="Achternaam" >
             </div>
-            Postcode: <input type="text" name="BestelPostcode" placeholder="1234 AB">
-            <div class="BestelAdres">
-                Adres: <input type="text" name="BestelAdres" placeholder="Straat + Nr.">
+            <div class="adres">
+                Postcode: <input type="text" name="postcode" placeholder="1234 AB">
+                Adres: <input type="text" name="straat" placeholder="Straat + straatnummer">
                 <input type="text" name="BestelToev" placeholder="Evt. toev.">
             </div>
-            E-mail: <input type="text" name="BestelEmail" placeholder="E-mailadres">
+            <div class = "email">E-mail: <input type="text" name="BestelEmail" placeholder="E-mailadres">
             Telefoonnummer: <input type="text" name="BestelTel" placeholder="Telefoonnummer">
+            </div>
         </form>
         <div class="VerzendType">
             <p class="normLever"> Prijs: €<?php //$normLever ?></p>
