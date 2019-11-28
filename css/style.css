@@ -258,3 +258,17 @@ h1 {
     margin-top: 150px;
     margin-left: 13%;
 }
+
+.knopVerzenden {
+    margin-left: 200px;
+}
+
+.locatie {
+    float: right;
+    margin-top: -170px;
+}
+
+.uwVraag {
+    height: 185px;
+    width: 268px;
+}

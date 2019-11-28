@@ -28,6 +28,7 @@
             <input type="text" onfocus="this.value= '' " name="searchBar" maxlength="40" autocomplete="on" onmousedown="" onblur="">
             <input type="image" id="searchBtn" src="search.png" border="0" alt="Submit" />
         </form>
+        <a href="?klantenservice">Klantenservice</a>
         <div class="rechts">
             <img src="account.png" class="menubalk-foto" onclick="document.getElementById('accountclick').style.display='block'">
             <a href="winkelwagen.php">
