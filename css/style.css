@@ -272,3 +272,17 @@ h1 {
     height: 185px;
     width: 268px;
 }
+
+/*Bestelproces begin*/
+
+.progressBar{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.factuurData{
+
+}
+
+/*Bestelproces eind*/
