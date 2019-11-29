@@ -1,5 +1,6 @@
 <?php
 include "nav.php";
+include "index.php";
 ?>
 <?php
 $prijs = array(200, 0); // Prijzen worden een POST om de array aan te vullen //
@@ -8,7 +9,7 @@ $verzendkosten = 0;
 $totaal = ($totaalartikelen*1.21) + $verzendkosten;
 $prijsProduct = 200;
 
-
+$Arrayproducts = $_SESSION['cart'];
 
 
 ?>
@@ -24,7 +25,13 @@ $prijsProduct = 200;
 
 <h1>Winkelwagen</h1>
 
+
+
 <div class="plaatje">
+
+    <?php
+        print_r($_SESSION['cart']) . '<br/>';
+    ?>
 
 
 </div>
@@ -32,7 +39,7 @@ $prijsProduct = 200;
 <div class="totaal">
 
     <form action="winkelwagen.php">
-    <h3>Totaal artikelen: <?php echo "€" . $totaalartikelen ?> (excl. btw)<br> Verzendkosten: <?php echo "€" . $verzendkosten ?> <br> ____________ <br> Totaal: <?php echo "€" . $totaal ?> (inc. btw)</h3><br>
+    <h3>Totaal artikelen: <?php echo "€" . $totaalartikelen ?> (excl. btw)<br> Verzendkosten: <?php echo "€" . $verzendkosten ?> <br> <hr> <br> Totaal: <?php echo "€" . $totaal ?> (inc. btw)</h3><br>
 
         <input type="submit" value="Verder naar bestellen" id="verder">
     </form>
