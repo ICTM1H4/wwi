@@ -354,7 +354,6 @@ h2{
     border-style: solid;
     border-radius: 10px;
     border-width: 1px;
-    box-shadow: #bbbbbb;
     padding: 5%;
     box-shadow: 0 10px 6px -9px #777;
 }
@@ -369,6 +368,7 @@ h2{
 }
 
 .button-afrekenen{
+    margin-left: 56%;
     border: none;
     outline: 0;
     padding: 12px;
@@ -381,6 +381,24 @@ h2{
     margin-top: 20px;
     border-radius: 8px;
 
+}
+
+.overzicht-foto{
+    margin-top: -15px;
+    margin-left: 70%;
+    width: 100px;
+}
+
+.overzichtPrijs{
+
+}
+
+.overzicht-product{
+
+}
+
+.overzicht-totaalprijs{
+    margin-top: 20px;
 }
 
 
