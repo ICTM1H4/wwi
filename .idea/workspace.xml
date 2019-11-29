@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/besteloverzicht.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/besteloverzicht.php" beforeDir="false" afterPath="$PROJECT_DIR$/besteloverzicht.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/verzending.php" beforeDir="false" afterPath="$PROJECT_DIR$/verzending.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +82,7 @@
       <workItem from="1574201154674" duration="3103000" />
       <workItem from="1574766414857" duration="12173000" />
       <workItem from="1575012618811" duration="347000" />
-      <workItem from="1575019788696" duration="522000" />
+      <workItem from="1575019788696" duration="2412000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -301,7 +301,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575020071134</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="besteloverzicht toegevoegd">
+      <created>1575020331774</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1575020331774</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,6 +350,7 @@
     <MESSAGE value="schaduwen geupdate" />
     <MESSAGE value="basis styling overzicht pagina" />
     <MESSAGE value="verzending pagina hernoemd" />
-    <option name="LAST_COMMIT_MESSAGE" value="verzending pagina hernoemd" />
+    <MESSAGE value="besteloverzicht toegevoegd" />
+    <option name="LAST_COMMIT_MESSAGE" value="besteloverzicht toegevoegd" />
   </component>
 </project>

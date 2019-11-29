@@ -290,4 +290,12 @@ h2{
 .factuurData{
 }
 
+/*Besteloverzicht*/
+.overzichtAdres{
+    border-radius: 5px;
+    border-color: black;
+}
+
+
+
 /*------------------------Bestelprocedure einde--------------------------*/
