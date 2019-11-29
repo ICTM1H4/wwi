@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="navStyle.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>inlog</title>
+    <title>Wide World Importers</title>
 </head>
 <body>
 <div id="menuBalk">

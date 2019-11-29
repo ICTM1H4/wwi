@@ -68,6 +68,13 @@
 
 h1 {
     color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 600px) {
@@ -313,3 +320,43 @@ h1 {
   text-align: center;
   color: black;
 }
+
+/*Besteloverzicht begin*/
+
+.progressBar{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.factuurData{
+    float: left;
+    width: 60%;
+}
+
+.verzendType{
+    display: none;
+}
+
+/*---------------------------Bestelprocedure-----------------------------*/
+.overzichtAdres{
+    border-radius: 5px;
+    border-color: black;
+    border-width: medium;
+}
+
+.overzichtKlant{
+    background-color: #717171;
+    text-align: left;
+    width: 40%;
+}
+
+.overzichtBestelling{
+    text-align: right;
+    background-color: #6a8be1;
+    position: static;
+    width: 40%;
+}
+
+
+
+/*------------------------Bestelprocedure einde--------------------------*/

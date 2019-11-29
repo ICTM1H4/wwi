@@ -7,9 +7,9 @@ function categ($conn){
 }
 
 ?>
-    <!-- <input type="button" name="tp25" value="25" id="aantal25">
+    <input type="button" name="tp25" value="25" id="aantal25">
     <input type="button" name="tp50" value="50" id="aantal50">
-    <input type="button" name="tp100" value="100" id="aantal100"> -->
+    <input type="button" name="tp100" value="100" id="aantal100"> 
 <?php
 include_once "php\connectDB.php";
 

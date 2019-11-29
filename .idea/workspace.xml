@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/structure/klantenservice.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/besteloverzicht.php" beforeDir="false" afterPath="$PROJECT_DIR$/besteloverzicht.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/javascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/javascript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/nav.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,6 +81,8 @@
       <workItem from="1574200476624" duration="523000" />
       <workItem from="1574201154674" duration="3103000" />
       <workItem from="1574766414857" duration="12173000" />
+      <workItem from="1575012618811" duration="347000" />
+      <workItem from="1575019788696" duration="3665000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -288,7 +287,35 @@
       <option name="project" value="LOCAL" />
       <updated>1574322057103</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="basis styling overzicht pagina">
+      <created>1574963722170</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1574963722170</updated>
+    </task>
+    <task id="LOCAL-00031" summary="verzending pagina hernoemd">
+      <created>1575020071134</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1575020071134</updated>
+    </task>
+    <task id="LOCAL-00032" summary="besteloverzicht toegevoegd">
+      <created>1575020331774</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1575020331774</updated>
+    </task>
+    <task id="LOCAL-00033" summary="begin aan besteloverzicht en aanpassingen met de style daarvan">
+      <created>1575022392365</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1575022392365</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,6 +355,10 @@
     <MESSAGE value="dropdown menu opgemaakt" />
     <MESSAGE value="schaduw toegevoegd aan zoekinput" />
     <MESSAGE value="schaduwen geupdate" />
-    <option name="LAST_COMMIT_MESSAGE" value="schaduwen geupdate" />
+    <MESSAGE value="basis styling overzicht pagina" />
+    <MESSAGE value="verzending pagina hernoemd" />
+    <MESSAGE value="besteloverzicht toegevoegd" />
+    <MESSAGE value="begin aan besteloverzicht en aanpassingen met de style daarvan" />
+    <option name="LAST_COMMIT_MESSAGE" value="begin aan besteloverzicht en aanpassingen met de style daarvan" />
   </component>
 </project>

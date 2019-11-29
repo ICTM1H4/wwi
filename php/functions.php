@@ -88,3 +88,27 @@ function getCategorie($conn) {
         echo '</div>';
     }
 }
+//Functie van de progressiebar tijdens de bestelprocedure
+
+function progressBar(){
+    $status = "Besteloverzicht";
+    if (isset($_GET['betaaloverzicht']))
+    {
+        $status = "Besteloverzicht";
+    }
+    elseif (isset($_GET['verzending']))
+    {
+        $status = "Verzending";
+    }
+    elseif (isset($_GET['betaling']))
+    {
+        $status = "Betaling";
+    }
+    elseif (isset($_GET['bevestiging']))
+    {
+        $status = "Bevestiging";
+    }
+    return $status;
+}
+
+
