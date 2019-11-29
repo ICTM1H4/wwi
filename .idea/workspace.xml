@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/overzicht.php" beforeDir="false" afterPath="$PROJECT_DIR$/overzicht.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/overzicht.php" beforeDir="false" afterPath="$PROJECT_DIR$/verzending.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,6 +80,8 @@
       <workItem from="1574200476624" duration="523000" />
       <workItem from="1574201154674" duration="3103000" />
       <workItem from="1574766414857" duration="12173000" />
+      <workItem from="1575012618811" duration="347000" />
+      <workItem from="1575019788696" duration="266000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -285,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574322057103</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="basis styling overzicht pagina">
+      <created>1574963722170</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1574963722170</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,6 +333,7 @@
     <MESSAGE value="dropdown menu opgemaakt" />
     <MESSAGE value="schaduw toegevoegd aan zoekinput" />
     <MESSAGE value="schaduwen geupdate" />
-    <option name="LAST_COMMIT_MESSAGE" value="schaduwen geupdate" />
+    <MESSAGE value="basis styling overzicht pagina" />
+    <option name="LAST_COMMIT_MESSAGE" value="basis styling overzicht pagina" />
   </component>
 </project>

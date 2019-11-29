@@ -10,7 +10,7 @@ include "php/functions.php";
 </head>
 <body>
 <div class="algMargin">
-<div class = 'progressBar'><?php echo "<h1>" . progressBar() . "</h1>"?></div>
+    <div class = 'progressBar'><?php echo "<h1>" . progressBar() . "</h1>"?></div>
         <form class="factuurData">
             <div class="klantInfo">
                 <h2>Uw gegevens</h2>
@@ -23,8 +23,9 @@ include "php/functions.php";
                 Adres <input type="text" name="straat" placeholder="Straat + straatnummer">
                 <input type="text" name="BestelToev" placeholder="Evt. toev.">
             </div>
-            <div class = "email">E-mail <input type="text" name="BestelEmail" placeholder="E-mailadres">
-            Telefoonnummer <input type="text" name="BestelTel" placeholder="Telefoonnummer">
+            <div class = "email">
+                E-mail <input type="text" name="BestelEmail" placeholder="E-mailadres">
+                Telefoonnummer <input type="text" name="BestelTel" placeholder="Telefoonnummer">
             </div>
         </form>
         <div class="verzendType">
