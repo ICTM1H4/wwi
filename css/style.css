@@ -280,7 +280,7 @@ h2{
     width: 268px;
 }
 
-/*---------------------------Bestelprocedure-----------------------------*/
+/*Besteloverzicht begin*/
 
 .progressBar{
     margin-bottom: 20px;
@@ -288,9 +288,15 @@ h2{
 }
 
 .factuurData{
+    float: left;
+    width: 60%;
 }
 
-/*Besteloverzicht*/
+.verzendType{
+    display: none;
+}
+
+/*---------------------------Bestelprocedure-----------------------------*/
 .overzichtAdres{
     border-radius: 5px;
     border-color: black;
