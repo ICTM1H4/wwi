@@ -294,6 +294,20 @@ h2{
 .overzichtAdres{
     border-radius: 5px;
     border-color: black;
+    border-width: medium;
+}
+
+.overzichtKlant{
+    background-color: #717171;
+    text-align: left;
+    width: 40%;
+}
+
+.overzichtBestelling{
+    text-align: right;
+    background-color: #6a8be1;
+    position: static;
+    width: 40%;
 }
 
 

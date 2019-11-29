@@ -44,11 +44,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\wwi" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\wwi\structure" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\wwi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -82,7 +82,7 @@
       <workItem from="1574201154674" duration="3103000" />
       <workItem from="1574766414857" duration="12173000" />
       <workItem from="1575012618811" duration="347000" />
-      <workItem from="1575019788696" duration="2412000" />
+      <workItem from="1575019788696" duration="3665000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -308,7 +308,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575020331774</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="begin aan besteloverzicht en aanpassingen met de style daarvan">
+      <created>1575022392365</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1575022392365</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,6 +358,7 @@
     <MESSAGE value="basis styling overzicht pagina" />
     <MESSAGE value="verzending pagina hernoemd" />
     <MESSAGE value="besteloverzicht toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="besteloverzicht toegevoegd" />
+    <MESSAGE value="begin aan besteloverzicht en aanpassingen met de style daarvan" />
+    <option name="LAST_COMMIT_MESSAGE" value="begin aan besteloverzicht en aanpassingen met de style daarvan" />
   </component>
 </project>
