@@ -279,6 +279,47 @@ h2{
     height: 185px;
     width: 268px;
 }
+.afmetingCardBeter{
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    background-color: rgba(253, 246, 255, 0);
+    float: left;
+    width: 20%;
+    height: 500px;
+    margin-top: 10px;
+    margin-right: 75px;
+    font-family: Arial, serif;
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.categorieLayout {
+  float: left;
+  display: block;
+  /* background-color: #0006f3; */
+  border-color: #717171;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+  /* border: 1px solid black; */
+  height: 140px;
+  width: 100px;
+  margin-right: 50px;
+}
+
+.containerOntdek {
+  /* background-color: red; */
+  height: 200px;
+  width: 100%;
+}
+
+.categorieLayout img {
+  width: 100px;
+  height: 100px;
+  border-bottom: 1px solid black;
+}
+.tekst {
+  text-align: center;
+  color: black;
+}
 
 /*---------------------------Bestelprocedure-----------------------------*/
 
