@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="navStyle.css">
-    <link rel="stylesheet" href="css/style.css">
     <title>Wide World Importers</title>
 </head>
 <body>
