@@ -321,7 +321,7 @@ h2{
   color: black;
 }
 
-/*Besteloverzicht begin*/
+/*---------------------------Bestelprocedure-----------------------------*/
 
 .progressBar{
     margin-bottom: 20px;
@@ -344,17 +344,61 @@ h2{
     border-width: medium;
 }
 
+.overzicht h2{
+    margin-top: 0;
+}
+
+.overzicht-border{
+    margin-top: 40px;
+    border-color: #99aebb;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 5%;
+    box-shadow: 0 10px 6px -9px #777;
+}
+
 .overzichtKlant{
-    background-color: #717171;
-    text-align: left;
-    width: 40%;
+    float: left;
 }
 
 .overzichtBestelling{
-    text-align: right;
+    float: right;
+    width: 30%;
+}
+
+.button-afrekenen{
+    margin-left: 56%;
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
     background-color: #6a8be1;
-    position: static;
+    text-align: center;
+    cursor: pointer;
     width: 40%;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 8px;
+
+}
+
+.overzicht-foto{
+    margin-top: -15px;
+    margin-left: 70%;
+    width: 100px;
+}
+
+.overzichtPrijs{
+
+}
+
+.overzicht-product{
+
+}
+
+.overzicht-totaalprijs{
+    margin-top: 20px;
 }
 
 
