@@ -30,3 +30,8 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
 }
+
+function showAlert() {
+    alert("Uw vraag is doorgestuurd naar een van onze medewerkers.");
+    location.reload();
+}

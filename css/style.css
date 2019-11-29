@@ -68,6 +68,13 @@
 
 h1 {
     color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 @media screen and (max-width: 600px) {
@@ -258,3 +265,29 @@ h1 {
     margin-top: 150px;
     margin-left: 13%;
 }
+
+.knopVerzenden {
+    margin-left: 200px;
+}
+
+.locatie {
+    float: right;
+    margin-top: -170px;
+}
+
+.uwVraag {
+    height: 185px;
+    width: 268px;
+}
+
+/*---------------------------Bestelprocedure-----------------------------*/
+
+.progressBar{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.factuurData{
+}
+
+/*------------------------Bestelprocedure einde--------------------------*/

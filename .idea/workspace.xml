@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="" />
+    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/besteloverzicht.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/verzending.php" beforeDir="false" afterPath="$PROJECT_DIR$/verzending.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,6 +16,20 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -28,6 +46,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\wwi" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\wwi\structure" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -59,6 +80,9 @@
       <workItem from="1574077805508" duration="605000" />
       <workItem from="1574200476624" duration="523000" />
       <workItem from="1574201154674" duration="3103000" />
+      <workItem from="1574766414857" duration="12173000" />
+      <workItem from="1575012618811" duration="347000" />
+      <workItem from="1575019788696" duration="522000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -263,19 +287,19 @@
       <option name="project" value="LOCAL" />
       <updated>1574322057103</updated>
     </task>
-    <task id="LOCAL-00030" summary="aAantal resultaten (header) gewijzigd.">
-      <created>1574765234276</created>
+    <task id="LOCAL-00030" summary="basis styling overzicht pagina">
+      <created>1574963722170</created>
       <option name="number" value="00030" />
       <option name="presentableId" value="LOCAL-00030" />
       <option name="project" value="LOCAL" />
-      <updated>1574765234325</updated>
+      <updated>1574963722170</updated>
     </task>
-    <task id="LOCAL-00031" summary="aAantal resultaten (header) gewijzigd.">
-      <created>1574765303861</created>
+    <task id="LOCAL-00031" summary="verzending pagina hernoemd">
+      <created>1575020071134</created>
       <option name="number" value="00031" />
       <option name="presentableId" value="LOCAL-00031" />
       <option name="project" value="LOCAL" />
-      <updated>1574765303861</updated>
+      <updated>1575020071134</updated>
     </task>
     <option name="localTasksCounter" value="32" />
     <servers />
@@ -317,7 +341,8 @@
     <MESSAGE value="dropdown menu opgemaakt" />
     <MESSAGE value="schaduw toegevoegd aan zoekinput" />
     <MESSAGE value="schaduwen geupdate" />
-    <MESSAGE value="aAantal resultaten (header) gewijzigd." />
-    <option name="LAST_COMMIT_MESSAGE" value="aAantal resultaten (header) gewijzigd." />
+    <MESSAGE value="basis styling overzicht pagina" />
+    <MESSAGE value="verzending pagina hernoemd" />
+    <option name="LAST_COMMIT_MESSAGE" value="verzending pagina hernoemd" />
   </component>
 </project>
