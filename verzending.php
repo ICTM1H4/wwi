@@ -14,7 +14,8 @@ include "php/functions.php";
         <form class="factuurData">
             <div class="klantInfo">
                 <h2>Uw gegevens</h2>
-                Naam <input type="text" name="voornaam" placeholder="Voornaam">
+                Naam
+                <input type="text" name="voornaam" placeholder="Voornaam">
                 <input type="text" name="tussenvoegsel" placeholder="tussenvoegsels">
                 <input type="text" name="achternaam" placeholder="Achternaam" >
             </div>
