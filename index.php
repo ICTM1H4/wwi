@@ -27,6 +27,9 @@ include "php/functions.php";
     elseif(isset($_GET['klantenservice'])){
         include "structure/klantenservice.php";
     }
+    else {
+        include "structure/home.php";
+    }
     //$search = $_GET["searchBar"];
     //$limit = $_GET["limit"];
     //echo Aantalproducten($productperpage);
