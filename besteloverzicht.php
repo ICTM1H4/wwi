@@ -46,15 +46,20 @@ include "altnav.php";
                 <div><h2>Bestelling</h2></div>
                     <div>
                         <?php
+                        $prijs = 1;
                         $totaalprijs = 0;
-                        for($i = 0; $i < 1; $i++){
+                        for($i = 1; $i <= 3; $i++){
+                            $totaalprijs += $prijs;
+                            $prijs ++;
                             echo "<div class='overzicht-product'>";
                             echo "<div class = 'overzicht-productnaam'><h3>Product</h3><div>";
                             echo "<img class = 'overzicht-foto' src='Geen_foto_helaas_beschikbaar.png'>";
-                            echo "<div class = 'overzichtPrijs''><h4>Prijs: </h4></div>";
+                            echo "<div class = 'overzichtAantal'></div>";
+                            echo "<div class = 'overzicht-prijs''><h4>$prijs</h4></div>";
                             echo "</div>";
-                            echo "<div class = 'overzicht-totaalprijs' ><h3>Totaalprijs</h3></div>";
                         }
+                        echo "<hr>";
+                        echo "<div class = 'overzicht-totaalprijs' ><h3>$totaalprijs</h3></div>";
                         ?>
                     </div>
                 <div>
