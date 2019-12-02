@@ -79,7 +79,7 @@
       <workItem from="1574766414857" duration="12173000" />
       <workItem from="1575012618811" duration="347000" />
       <workItem from="1575019788696" duration="3665000" />
-      <workItem from="1575279831996" duration="770000" />
+      <workItem from="1575279831996" duration="530000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -334,11 +334,11 @@
       <updated>1575033411532</updated>
     </task>
     <task id="LOCAL-00037" summary="hr erbij getieft">
-      <created>1575280384667</created>
+      <created>1575280496300</created>
       <option name="number" value="00037" />
       <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
-      <updated>1575280384668</updated>
+      <updated>1575280496300</updated>
     </task>
     <option name="localTasksCounter" value="38" />
     <servers />
