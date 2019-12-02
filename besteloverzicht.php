@@ -18,7 +18,18 @@ include "altnav.php";
                 <div class = "overzicht-border">
 
                     <div> <h2>Aflever- en factuuradres</h2></div>
-                    <div class="overzichtKlantNaam">voornaam tussenvoegsel achternaam </div>
+                        <div class="overzichtKlantNaam">
+<!--                            Voornaam tussenvoegsel en achternaam-->
+                            <?php
+                            $voornaam = $_POST["voornaam"];
+                            $tussenvoegsel = $_POST["tussenvoegsel"];
+                            $achternaam = $_POST["achternaam"];
+
+                            if (isset($_POST["voornaam"]) and $_POST["achternaam"]){
+                                echo $voornaam;
+                            }
+                            ?>
+                        </div>
                     <div class="overzichtStraat"> Straat Straatnummer </div>
                     <div class="overzichtPostcode"> XXXX XX Plaats</div>
                 </div>
@@ -39,7 +50,9 @@ include "altnav.php";
                 </div>
             </div>
             <div class = "vorigestap">
-                <input class = "button-afrekenen" type="submit" value="Vorige stap">
+                <form action="verzending.php">
+                    <input class = "button-afrekenen" type="submit" value="Vorige stap">
+                </form>
             </div>
         </div>
         <div class = "overzichtBestelling">
@@ -49,7 +62,7 @@ include "altnav.php";
                         <?php
                         $prijs = 1;
                         $totaalprijs = 0;
-                        for($i = 1; $i <= 3; $i++){
+                        for($i = 1; $i <= 1; $i++){
                             $totaalprijs += $prijs;
                             $prijs ++;
                             echo "<div class='overzicht-product'>";

@@ -341,6 +341,10 @@ td{
 }
 
 /*---------------------------Bestelprocedure-----------------------------*/
+.overzicht{
+    padding-bottom: 5%;
+}
+
 .overzichtAdres{
     border-radius: 5px;
     border-color: black;
