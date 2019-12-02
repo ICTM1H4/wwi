@@ -1,6 +1,32 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <?php
 include "nav.php";
 include "php/functions.php";
+
+$normLever = 0;
+$ophalen = 0;
+$eenDagLever = 10;
+
+$totaal = /*normaal is het $_SESSION['$totaalbedrag']*/ 30;
+
+if ($totaal < 50){
+    $normLever += 6.5;
+}
+
+function knop($a){
+    $totaal += $a;
+}
+
+if (isset($_POST['normLever'])){
+    knop($normLever);
+}
+elseif (isset($_POST['ophalen'])){
+    knop($ophalen);
+}
+
+elseif (isset($_POST['eenDagLever'])) {
+    knop($eenDagLever);
+}
 ?>
 <html>
 <head>
@@ -10,28 +36,28 @@ include "php/functions.php";
 <body>
 <div class="algMargin">
     <div class = 'progressBar'><?php echo "<h1>" . progressBar() . "</h1>"?></div>
-    <form class="factuurData">
+    <form class="factuurData" method="post">
         <table>
             <div class="klantInfo">
                 <h2>Uw gegevens</h2>
                 <tr>
                     <td>Naam</td>
-                    <td><input type="text" name="voornaam" placeholder="Voornaam"></td>
+                    <td><input type="text" name="voornaam" placeholder="Voornaam" required></td>
                     <td><input type="text" name="tussen" placeholder="tussenvoegsels"></td>
-                    <td><input type="text" name="achternaam" placeholder="Achternaam"></td>
+                    <td><input type="text" name="achternaam" placeholder="Achternaam" required></td>
                 </tr>
             </div>
             <div class="adres">
                 <tr class="row">
-                    <td>Postcode</td> <td><input type="text" name="postcode" placeholder="1234 AB"><br></td>
+                    <td>Postcode</td> <td><input type="text" name="postcode" placeholder="1234 AB" required><br></td>
                 </tr>
                 <tr>
-                    <td>Adres</td> <td><input type="text" name="adres" placeholder="Straat + straatnummer"></td>
+                    <td>Adres</td> <td><input type="text" name="adres" placeholder="Straat + straatnummer" required></td>
                     <td><input type="text" name="toev" placeholder="Evt. toev."></td>
                 </tr>
             </div>
             <tr>
-                <td>E-mail</td> <td><input type="text" name="email" placeholder="E-mailadres"></td>
+                <td>E-mail</td> <td><input type="text" name="email" placeholder="E-mailadres" required></td>
             </tr>
             <tr>
                 <td>Telefoonnummer</td> <td><input type="text" name="telef" placeholder="Telefoonnummer"></td>
@@ -40,11 +66,17 @@ include "php/functions.php";
     </form>
     <div class="verzendType">
         <h1>Verzendprijzen</h1>
-        <p class="normLever"> Normale levering €<?php //$normLever ?></p>
-        <p class="ophalen"> Ophalen €<?php //$ophalen ?></p>
-        <p class="eenDagLever"> Express levering €<?php //$eenDagLever ?></p>
+        <p class="normLever"> <input type="radio" class="knop" name="maarEenKnop"> Normale levering €<?php echo $normLever ?></p>
+        <p class="ophalen"> <input type="radio" class="knop" name="maarEenKnop"> Ophalen €<?php echo $ophalen ?> </p>
+        <p class="eenDagLever"> <input type="radio" class="knop" name="maarEenKnop"> Express levering €<?php echo $eenDagLever ?></p>
+        <p class="totaalprijs"> Totaalprijs: €<?php echo $totaal?></p>
     </div>
 </div>
 </body>
 </html>
 
+<script>
+    $(".knop").click(function() {
+        alert("The paragraph was clicked.");
+    });
+</script>

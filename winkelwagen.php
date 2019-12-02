@@ -38,7 +38,7 @@ $prijsProduct = 200;
 
 <div class="totaal">
 
-    <form action="winkelwagen.php">
+    <form action="verzending.php">
     <h3>Totaal artikelen: <?php echo "€" . $totaalartikelen ?> (excl. btw)<br> Verzendkosten: <?php echo "€" . $verzendkosten ?> <br> ____________ <br> Totaal: <?php echo "€" . $totaal ?> (inc. btw)</h3><br>
 
         <input type="submit" value="Verder naar bestellen" id="verder">
