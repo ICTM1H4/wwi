@@ -333,13 +333,18 @@ h2{
 .factuurData{
     float: left;
     width: 60%;
+    display: table;
 }
 
-.verzendType{
-    display: none;
+td{
+    padding: 10px;
 }
 
 /*---------------------------Bestelprocedure-----------------------------*/
+.overzicht{
+    padding-bottom: 5%;
+}
+
 .overzichtAdres{
     border-radius: 5px;
     border-color: black;
@@ -366,11 +371,10 @@ h2{
 
 .overzichtBestelling{
     float: right;
-    width: 30%;
+    width: 360px;
 }
 
 .button-afrekenen{
-    margin-left: 56%;
     border: none;
     outline: 0;
     padding: 12px;
@@ -378,11 +382,10 @@ h2{
     background-color: #6a8be1;
     text-align: center;
     cursor: pointer;
-    width: 40%;
+    width: 135px;
     font-size: 18px;
     margin-top: 20px;
     border-radius: 8px;
-
 }
 
 .overzicht-foto{
@@ -405,6 +408,20 @@ h2{
     text-align: right;
     margin-top: 20px;
     margin-right: 8%;
+}
+
+.betalingkeuze{
+    margin: auto;
+    width: 40%;
+    height: 50%;
+}
+
+.form-afrekenen{
+    margin-left: 56%;
+}
+
+.vorigestap{
+
 }
 
 
