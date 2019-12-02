@@ -366,11 +366,10 @@ h2{
 
 .overzichtBestelling{
     float: right;
-    width: 30%;
+    width: 360px;
 }
 
 .button-afrekenen{
-    margin-left: 56%;
     border: none;
     outline: 0;
     padding: 12px;
@@ -378,11 +377,10 @@ h2{
     background-color: #6a8be1;
     text-align: center;
     cursor: pointer;
-    width: 40%;
+    width: 135px;
     font-size: 18px;
     margin-top: 20px;
     border-radius: 8px;
-
 }
 
 .overzicht-foto{
@@ -413,8 +411,12 @@ h2{
     height: 50%;
 }
 
+.form-afrekenen{
+    margin-left: 56%;
+}
+
 .vorigestap{
-    width: 20%;
+
 }
 
 

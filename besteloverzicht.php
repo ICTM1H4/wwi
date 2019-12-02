@@ -14,27 +14,32 @@ include "altnav.php";
 <div class="algMargin">
     <div class="overzicht">
         <div class = "overzichtKlant">
-            <div class = "overzicht-border">
-                <div class = "overzichtAdres">
+            <div class = "overzichtAdres">
+                <div class = "overzicht-border">
+
                     <div> <h2>Aflever- en factuuradres</h2></div>
                     <div class="overzichtKlantNaam">voornaam tussenvoegsel achternaam </div>
                     <div class="overzichtStraat"> Straat Straatnummer </div>
                     <div class="overzichtPostcode"> XXXX XX Plaats</div>
                 </div>
             </div>
+            <div class="overzichtBezorging">
+                <div class = "overzicht-border">
 
-            <div class = "overzicht-border">
-                <div class="overzichtBezorging">
                     <div><h2>Bezorging</h2></div>
                     <div>Bezorgingswijze<br><br></div>
                     <div>... euro</div>
                 </div>
             </div>
-            <div class = "overzicht-border">
-                <div class = "betalingswijze">
+            <div class = "betalingswijze">
+                <div class = "overzicht-border">
+
                     <div><h2>Betaling</h2></div>
                     <div>Ideal</div>
                 </div>
+            </div>
+            <div class = "vorigestap">
+                <input class = "button-afrekenen" type="submit" value="Vorige stap">
             </div>
         </div>
         <div class = "overzichtBestelling">
