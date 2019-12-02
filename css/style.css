@@ -392,8 +392,10 @@ td{
     width: 100px;
 }
 
-.overzichtPrijs{
-
+.overzicht-prijs{
+    text-align: right;
+    margin: 5%;
+    margin-right: 8%;
 }
 
 .overzicht-product{
@@ -401,7 +403,9 @@ td{
 }
 
 .overzicht-totaalprijs{
+    text-align: right;
     margin-top: 20px;
+    margin-right: 8%;
 }
 
 
