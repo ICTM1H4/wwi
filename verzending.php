@@ -37,10 +37,10 @@ function knop($a){
 <body>
 <div class="algMargin">
     <div class = 'progressBar'><?php echo "<h1>" . progressBar() . "</h1>"?></div>
+    <h2>Uw gegevens</h2>
     <form class="factuurData" action="besteloverzicht.php" method="post">
-        <table>
+        <table class="factuurText">
             <div class="klantInfo">
-                <h2>Uw gegevens</h2>
                 <tr>
                     <td>Naam</td>
                     <td><input type="text" name="voornaam" placeholder="Voornaam" required></td>
@@ -65,7 +65,7 @@ function knop($a){
             </tr>
             <tr>
                 <td>
-                    <input type="submit" class="submitVerzend">
+                    <input type="submit" class="rechtsVerzend">
                 </td>
             </tr>
         </table>
@@ -74,7 +74,7 @@ function knop($a){
         <h1>Verzendprijzen</h1>
         <p class="normLever"> <input type="radio" class="knop" name="maarEenKnop"> Normale levering €<?php echo $normLever ?></p>
         <p class="ophalen"> <input type="radio" class="knop" name="maarEenKnop"> Ophalen €<?php echo $ophalen ?> </p>
-        <p class="eenDagLever"> <input type="radio" class="knop" name="maarEenKnop"> Express levering €<?php echo $eenDagLever ?></p>
+        <p class="eenDagLever"> <input type="radio" class="knop" name="maarEenKnop"> Express levering €<?php echo $eenDagLever ?></p><br>
         <p class="totaalprijs"> Totaalprijs: €<?php echo $totaal?></p>
     </div>
 </div>

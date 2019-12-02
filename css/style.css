@@ -336,6 +336,14 @@ h2{
     display: table;
 }
 
+.factuurText{
+    font-size: 20px;
+}
+
+h2{
+    display: inline-block;
+}
+
 td{
     padding: 10px;
 }
@@ -345,6 +353,10 @@ td{
     padding-bottom: 5%;
 }
 
+.rechtsVerzend{
+    position: absolute;
+    right: 38%;
+}
 .overzichtAdres{
     border-radius: 5px;
     border-color: black;
