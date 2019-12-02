@@ -14,15 +14,19 @@
     <table>
         <tr>
             <td>Naam:</td>
-            <td><input type="text" id="Name" name="Naam:"></td>
+            <td><input type="text" class="name" name="Naam:"></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" class="email" name="Naam:"></td>
         </tr>
         <tr>
             <td>Ordernummer:</td>
-            <td><input type="text" id="Od" name="Ordernummer:"><br></td>
+            <td><input type="text" class="od" name="Ordernummer:"><br></td>
         </tr>
         <tr>
             <td>Onderwerp:</td>
-            <td><input type="text" id="Onw" name="Onderwerp:"><br></td>
+            <td><input type="text" class="onw" name="Onderwerp:"><br></td>
         </tr>
         <tr>
             <td><h4><br>Uw vraag:</h4></td>
