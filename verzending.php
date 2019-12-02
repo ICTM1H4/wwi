@@ -17,16 +17,17 @@ function knop($a){
     $totaal += $a;
 }
 
-if (isset($_POST['normLever'])){
-    knop($normLever);
-}
-elseif (isset($_POST['ophalen'])){
-    knop($ophalen);
-}
 
-elseif (isset($_POST['eenDagLever'])) {
-    knop($eenDagLever);
-}
+//if (isset($_POST['normLever'])){
+//    knop($normLever);
+//}
+//elseif (isset($_POST['ophalen'])){
+//    knop($ophalen);
+//}
+//
+//elseif (isset($_POST['eenDagLever'])) {
+//    knop($eenDagLever);
+//}
 ?>
 <html>
 <head>
@@ -36,7 +37,7 @@ elseif (isset($_POST['eenDagLever'])) {
 <body>
 <div class="algMargin">
     <div class = 'progressBar'><?php echo "<h1>" . progressBar() . "</h1>"?></div>
-    <form class="factuurData" method="post">
+    <form class="factuurData" action="besteloverzicht.php" method="post">
         <table>
             <div class="klantInfo">
                 <h2>Uw gegevens</h2>
@@ -62,6 +63,11 @@ elseif (isset($_POST['eenDagLever'])) {
             <tr>
                 <td>Telefoonnummer</td> <td><input type="text" name="telef" placeholder="Telefoonnummer"></td>
             </tr>
+            <tr>
+                <td>
+                    <input type="submit" class="submitVerzend">
+                </td>
+            </tr>
         </table>
     </form>
     <div class="verzendType">
@@ -70,9 +76,6 @@ elseif (isset($_POST['eenDagLever'])) {
         <p class="ophalen"> <input type="radio" class="knop" name="maarEenKnop"> Ophalen €<?php echo $ophalen ?> </p>
         <p class="eenDagLever"> <input type="radio" class="knop" name="maarEenKnop"> Express levering €<?php echo $eenDagLever ?></p>
         <p class="totaalprijs"> Totaalprijs: €<?php echo $totaal?></p>
-        <form action="besteloverzicht.php">
-            <input type="submit" class="submitVerzend">
-        </form>
     </div>
 </div>
 </body>

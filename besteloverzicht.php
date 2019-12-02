@@ -21,8 +21,13 @@ include "altnav.php";
                         <div class="overzichtKlantNaam">
 <!--                            Voornaam tussenvoegsel en achternaam-->
                             <?php
+                            $_SESSION['ja'] = true;
+                            $array = $_POST['achternaam'];
+                            $_SESSION['ja'] = $array;
+                            print_r($_SESSION['ja']);
+
                             $voornaam = $_POST["voornaam"];
-                            $tussenvoegsel = $_POST["tussenvoegsel"];
+                            $tussenvoegsel = $_POST["tussen"];
                             $achternaam = $_POST["achternaam"];
 
                             if (isset($_POST["voornaam"]) and $_POST["achternaam"]){
