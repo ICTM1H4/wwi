@@ -333,10 +333,11 @@ h2{
 .factuurData{
     float: left;
     width: 60%;
+    display: table;
 }
 
-.verzendType{
-    display: none;
+td{
+    padding: 10px;
 }
 
 /*---------------------------Bestelprocedure-----------------------------*/
