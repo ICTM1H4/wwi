@@ -1,6 +1,6 @@
 <div class="content-product">
     <div class="contentklantenservice">
-        <div class="bedrijfsgegevens"> <h1>Bedrijfsgegevens</h1></div>
+        <div class="bedrijfsgegevens"><h2>Bedrijfsgegevens</h2></div>
         <div class="bedrijfsnaam">WWI international </div>
         <div class="adres"> Importeurstraat 11 </div>
         <div class="Postcodeplaats"> 1337 AA Zwolle <br><br></div>
@@ -10,26 +10,26 @@
     </div>
     <h3>Direct een vraag stellen?<br></h3>
 <!--<form action="" method="post">-->
+
     <table>
         <tr>
             <td>Naam:</td>
-            <td><input type="text" name="Naam:"></td>
+            <td><input type="text" id="Name" name="Naam:"></td>
         </tr>
         <tr>
             <td>Ordernummer:</td>
-            <td><input type="text" name="Ordernummer:"><br></td>
+            <td><input type="text" id="Od" name="Ordernummer:"><br></td>
         </tr>
         <tr>
             <td>Onderwerp:</td>
-            <td><input type="text" name="Onderwerp:"><br></td>
+            <td><input type="text" id="Onw" name="Onderwerp:"><br></td>
         </tr>
         <tr>
             <td><h4><br>Uw vraag:</h4></td>
         </tr>
-
     </table>
-    <textarea class="uwVraag"> </textarea>
-    <br><button class="knopVerzenden" onclick="showAlert()">Verzenden</button>
+    <textarea class="uwVraag"></textarea>
+    <br><button type="submit" class="knopVerzenden" onclick="validate()">Verzenden</button>
     <script src="js/javascript.js"></script>
-<!--</form>-->
 </div>
+

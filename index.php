@@ -1,6 +1,7 @@
 <?php
 include "php/connectDB.php";
 include "php/functions.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,8 +14,7 @@ include "php/functions.php";
 </head>
 <body>
 <div class="nav">
-    <?php include "nav.php"?>
-
+    <?php include "nav.php" ?>
 </div>
 <div class="content">
 <?php
@@ -26,52 +26,48 @@ include "php/functions.php";
     elseif(isset($_GET['productID'])){
         include "structure/productpage.php";
     }
-
     elseif(isset($_GET['klantenservice'])){
         include "structure/klantenservice.php";
     }
+    elseif (isset($_GET['winkelwagen'])) {
+        include "winkelwagen.php";
+    }
 
-if(isset($_POST["add"])){
-    //print_r($_POST['product_id']);
-    if(isset($_SESSION['cart'])){
-        $item_array_id = array_column($_SESSION['cart'], "product_id");
-        //var_dump($item_array_id );
+    if(isset($_POST["add"])){
+
+        //print_r($_POST['product_id']);
+        if(isset($_SESSION['cart'])){
+            $item_array_id = array_column($_SESSION['cart'], "product_id");
+            //var_dump($item_array_id );
 
 
-        //print_r($_SESSION['cart']);
+            //print_r($_SESSION['cart']);
 
-        if(in_array($_POST['product_id'], $item_array_id)){
-            echo "<script>alert('Dit product is al toegevoegd aan uw winkelwagentje...!')</script>";
-            echo "<script>window.location = 'index.php</script>";
+            if(in_array($_POST['product_id'], $item_array_id)){
+                echo "<script>alert('Dit product is al toegevoegd aan uw winkelwagentje...!')</script>";
+                echo "<script>window.location = 'index.php</script>";
+            }
+            else{
+                $count = count($_SESSION['cart']);
+                $item_array = array(
+                        'product_id' => $_POST['product_id']
+                );
+
+                $_SESSION['cart'][$count]= $item_array;
+                //print_r($_SESSION['cart']);
+            }
         }
-        else{
-            $count = count($_SESSION['cart']);
+        else {
             $item_array = array(
                 'product_id' => $_POST['product_id']
             );
 
-            $_SESSION['cart'][$count]= $item_array;
+            $_SESSION['cart'][0] = $item_array;
             //print_r($_SESSION['cart']);
         }
+
     }
-    else {
-        $item_array = array(
-            'product_id' => $_POST['product_id']
-        );
-
-        $_SESSION['cart'][0] = $item_array;
-        //print_r($_SESSION['cart']);
-    }
-
-}
-
-
-    //$search = $_GET["searchBar"];
-    //$limit = $_GET["limit"];
-    //echo Aantalproducten($productperpage);
 ?>
 </div>
-
-
 </body>
 </html>
