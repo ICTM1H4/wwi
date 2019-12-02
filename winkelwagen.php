@@ -9,6 +9,7 @@ $verzendkosten = 0;
 $totaal = ($totaalartikelen*1.21) + $verzendkosten;
 $prijsProduct = 200;
 
+
 ?>
 
 
@@ -23,10 +24,10 @@ $prijsProduct = 200;
 <h1>Winkelwagen</h1>
 
 <div class="plaatje">
-
+//
     <?php
     foreach ($_SESSION['cart'] as $result){
-        echo "productID: ".$result['product_id']."<br>";
+        echo "productID: ".$result['product_id']. "<br>";
     }
 
 
