@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/besteloverzicht.php" beforeDir="false" afterPath="$PROJECT_DIR$/besteloverzicht.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/javascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/javascript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/structure/klantenservice.php" beforeDir="false" afterPath="$PROJECT_DIR$/structure/klantenservice.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,7 +83,7 @@
       <workItem from="1574201154674" duration="3103000" />
       <workItem from="1574766414857" duration="12173000" />
       <workItem from="1575012618811" duration="347000" />
-      <workItem from="1575019788696" duration="3665000" />
+      <workItem from="1575019788696" duration="522000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -301,42 +302,7 @@
       <option name="project" value="LOCAL" />
       <updated>1575020071134</updated>
     </task>
-    <task id="LOCAL-00032" summary="besteloverzicht toegevoegd">
-      <created>1575020331774</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1575020331774</updated>
-    </task>
-    <task id="LOCAL-00033" summary="begin aan besteloverzicht en aanpassingen met de style daarvan">
-      <created>1575022392365</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1575022392365</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Begin aan winkelwagen en styling daarvan">
-      <created>1575025839362</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1575025839362</updated>
-    </task>
-    <task id="LOCAL-00035" summary="betaling pagina aangemaakt">
-      <created>1575281005545</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1575281005545</updated>
-    </task>
-    <task id="LOCAL-00036" summary="bevestiging pagina aangemaakt, verder aanpassing voor betalingsoverzicht en betaling">
-      <created>1575283717323</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1575283717323</updated>
-    </task>
-    <option name="localTasksCounter" value="37" />
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,6 +322,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="logo erbij" />
+    <MESSAGE value="winkelwagen erbij" />
     <MESSAGE value="account logo erbij" />
     <MESSAGE value="index toevoeging: logo, categorieën, zoekbalk, winkelwagen, begin account" />
     <MESSAGE value="account =&gt; inlogscherm werkt, css aangevuld over index pagina" />
@@ -376,11 +344,6 @@
     <MESSAGE value="schaduwen geupdate" />
     <MESSAGE value="basis styling overzicht pagina" />
     <MESSAGE value="verzending pagina hernoemd" />
-    <MESSAGE value="besteloverzicht toegevoegd" />
-    <MESSAGE value="begin aan besteloverzicht en aanpassingen met de style daarvan" />
-    <MESSAGE value="Begin aan winkelwagen en styling daarvan" />
-    <MESSAGE value="betaling pagina aangemaakt" />
-    <MESSAGE value="bevestiging pagina aangemaakt, verder aanpassing voor betalingsoverzicht en betaling" />
-    <option name="LAST_COMMIT_MESSAGE" value="bevestiging pagina aangemaakt, verder aanpassing voor betalingsoverzicht en betaling" />
+    <option name="LAST_COMMIT_MESSAGE" value="verzending pagina hernoemd" />
   </component>
 </project>

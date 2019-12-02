@@ -31,7 +31,17 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
 }
 
-function showAlert() {
-    alert("Uw vraag is doorgestuurd naar een van onze medewerkers.");
-    location.reload();
+
+function validate() {
+    var Name = document.getElementById('Name').value;
+    var Ordernummer = document.getElementById('Od').value;
+    var Onderwerp = document.getElementById('Onw').value;
+    if (Name == "" || Ordernummer == "" || Onderwerp == "") //wanted to check for alphabets only.
+        alert("Vul alle velden in");
+    else {
+        alert("Uw vraag is doorgestuurd naar een van onze medewerkers");
+        location.reload();
+    }
 }
+
+
