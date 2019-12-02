@@ -10,10 +10,6 @@ include "altnav.php";
     <title>Wide World Importers</title>
 </head>
 
-<head>
-    <title>Wide World Importers</title>
-</head>
-
 <body>
 <div class="algMargin">
     <div class="overzicht">
