@@ -70,13 +70,16 @@ elseif (isset($_POST['eenDagLever'])) {
         <p class="ophalen"> <input type="radio" class="knop" name="maarEenKnop"> Ophalen €<?php echo $ophalen ?> </p>
         <p class="eenDagLever"> <input type="radio" class="knop" name="maarEenKnop"> Express levering €<?php echo $eenDagLever ?></p>
         <p class="totaalprijs"> Totaalprijs: €<?php echo $totaal?></p>
+        <form action="besteloverzicht.php">
+            <input type="submit" class="submitVerzend">
+        </form>
     </div>
 </div>
 </body>
 </html>
 
-<script>
-    $(".knop").click(function() {
-        alert("The paragraph was clicked.");
-    });
-</script>
+<!--<script>-->
+<!--    $(".knop").click(function() {-->
+<!--        $.ajax({ url: 'script.php?argument=value&foo=bar' });-->
+<!--    });-->
+<!--</script>-->
