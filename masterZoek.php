@@ -7,9 +7,7 @@ function categ($conn){
 }
 
 ?>
-    <input type="button" name="tp25" value="25" id="aantal25">
-    <input type="button" name="tp50" value="50" id="aantal50">
-    <input type="button" name="tp100" value="100" id="aantal100"> 
+
 <?php
 include_once "php\connectDB.php";
 
@@ -63,20 +61,23 @@ else {
         $price = $row['RecommendedRetailPrice'];
 
     ?>
-        <div class="zoekMargin">
-            <div class="alleProducten">
-                <div class="afmetingCard">
-                <div class="card">
-                    <a href="?productID=<?php echo $row['StockItemID']?>"><img src="Geen_foto_helaas_beschikbaar.png" alt="Denim Jeans" style="width:100%"></a>
-                    <h5> <?php echo $title?></h5><br>
-                    <div class="onder">
-                        <p class="price"><?php echo "€ ". $price ?></p><br>
-                        <a href="winkelwagen.php" </a><button>   Toevoegen aan winkelwagentje</button></p>
+        <form method="post"  >
+            <div class="zoekMargin">
+                <div class="alleProducten">
+                    <div class="afmetingCard">
+                        <div class="card">
+                            <a href="?productID=<?php echo $row['StockItemID']?>"><img src="Geen_foto_helaas_beschikbaar.png" alt="Denim Jeans" style="width:100%"></a>
+                            <h5> <?php echo $title?></h5><br>
+                            <div class="onder">
+                                <p class="price"><?php echo "€ ". $price ?></p><br>
+                                <button type="submit" name="add"> Toevoegen aan winkelwagentje</button>
+                                <input type="hidden" name="product_id" value='<?php echo $row['StockItemID']?>'>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                </div>
             </div>
-        </div>
+        </form>
         
 <?php
 

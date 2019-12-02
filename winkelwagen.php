@@ -1,5 +1,6 @@
 <?php
-include "nav.php";
+//include "nav.php";
+
 ?>
 <?php
 $prijs = array(200, 0); // Prijzen worden een POST om de array aan te vullen //
@@ -7,9 +8,6 @@ $totaalartikelen = array_sum($prijs); // veranderen naar een POST om de prijzen 
 $verzendkosten = 0;
 $totaal = ($totaalartikelen*1.21) + $verzendkosten;
 $prijsProduct = 200;
-
-
-
 
 ?>
 
@@ -26,6 +24,14 @@ $prijsProduct = 200;
 
 <div class="plaatje">
 
+    <?php
+    foreach ($_SESSION['cart'] as $result){
+        echo "productID: ".$result['product_id']."<br>";
+    }
+
+
+
+    ?>
 
 </div>
 
