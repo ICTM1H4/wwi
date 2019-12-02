@@ -30,7 +30,7 @@
         <a href="?klantenservice">Klantenservice</a>
         <div class="rechts">
             <img src="account.png" class="menubalk-foto" onclick="document.getElementById('accountclick').style.display='block'">
-            <a href="winkelwagen.php">
+            <a href="?winkelwagen">
                 <img src="winkelwagen.png" class = "menubalk-foto">
             </a>
         </div>
