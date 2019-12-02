@@ -377,8 +377,9 @@ td{
     box-shadow: 0 10px 6px -9px #777;
 }
 
-.overzichtKlant{
+.overzichtKlantgegevens{
     float: left;
+    width: 240px;
 }
 
 .overzichtBestelling{

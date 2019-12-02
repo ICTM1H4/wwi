@@ -13,30 +13,43 @@ include "altnav.php";
 <body>
 <div class="algMargin">
     <div class="overzicht">
-        <div class = "overzichtKlant">
+        <div class = "overzichtKlantgegevens">
             <div class = "overzichtAdres">
                 <div class = "overzicht-border">
 
-                    <div> <h2>Aflever- en factuuradres</h2></div>
+                    <div> <h2>Aflever- en factuuradres</h2>
+                    </div>
                         <div class="overzichtKlantNaam">
 <!--                            Voornaam tussenvoegsel en achternaam-->
                             <?php
-                            $_SESSION['ja'] = true;
-                            $array = $_POST['achternaam'];
-                            $_SESSION['ja'] = $array;
-                            print_r($_SESSION['ja']);
+                            $_SESSION['klantgegevens'] = true;
 
-                            $voornaam = $_POST["voornaam"];
-                            $tussenvoegsel = $_POST["tussen"];
-                            $achternaam = $_POST["achternaam"];
+                            if(isset($_POST['voornaam']) and isset($_POST['tussenvoegsel']) and isset($_POST['achternaam']))
+                            {
+                                $klantVoornaam = $_POST['voornaam'];
+                                $klantTussenvoegsel = $_POST['tussenvoegsel'];
+                                $klantAchternaam = $_POST['achternaam'];
+                                $klantgegevens = array($klantVoornaam, $klantTussenvoegsel, $klantAchternaam);
 
-                            if (isset($_POST["voornaam"]) and $_POST["achternaam"]){
-                                echo $voornaam;
+                            }
+                            else
+                                {
+                                    $klantVoornaam = $_POST['voornaam'];
+                                    $klantAchternaam = $_POST['achternaam'];
+                                    $klantgegevens = array($klantVoornaam, $klantAchternaam);
+                            }
+
+                            $_SESSION['klantgegevens'] = $klantgegevens;
+
+                            foreach($klantgegevens as $klantgegeven){
+                                echo $klantgegeven;
+                                echo " ";
                             }
                             ?>
                         </div>
-                    <div class="overzichtStraat"> Straat Straatnummer </div>
-                    <div class="overzichtPostcode"> XXXX XX Plaats</div>
+                    <div class = "overzichtKlantAdres">
+
+                    </div>
                 </div>
             </div>
             <div class="overzichtBezorging">

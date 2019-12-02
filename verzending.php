@@ -12,10 +12,10 @@ $totaal = /*normaal is het $_SESSION['$totaalbedrag']*/ 30;
 if ($totaal < 50){
     $normLever += 6.5;
 }
-
-function knop($a){
-    $totaal += $a;
-}
+//
+//function knop($a){
+//    $totaal += $a;
+//}
 
 
 //if (isset($_POST['normLever'])){
@@ -44,7 +44,7 @@ function knop($a){
                 <tr>
                     <td>Naam</td>
                     <td><input type="text" name="voornaam" placeholder="Voornaam" required></td>
-                    <td><input type="text" name="tussen" placeholder="tussenvoegsels"></td>
+                    <td><input type="text" name="tussenvoegsel" placeholder="tussenvoegsel"></td>
                     <td><input type="text" name="achternaam" placeholder="Achternaam" required></td>
                 </tr>
             </div>
