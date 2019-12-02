@@ -1,13 +1,21 @@
 .totaal {
-margin-top: 400px;
-margin-left: 1150px;
+margin-top: 10px;
+margin-left: 1050px;
+    margin-bottom: 0px;
 
 }
 
 h1 {
-    margin-left: 40px;
+
 }
 
+.prijs1 {
+
+    margin-top: 5px;
+    font-size: 17px;
+    margin-right: 10px;
+    margin-left: 130px;
+}
 
 
 
@@ -15,6 +23,54 @@ h3 {
     font-size: 17px;
 }
 
+.prijs2 {
+
+    margin-top: 5px;
+margin-right: 10px;
+    font-size: 17px;
+    margin-left: 130px;
+}
+
+hr {
+    display: block;
+
+    border-width: 1px;
+
+
+}
+
 #verder {
     font-size: 20px;
+}
+
+hr {
+    display: block;
+
+    border-width: 1px;
+
+}
+
+
+#plaatje {
+    height: 100px;
+    width: 100px;
+    margin-top: 5px;
+
+
+}
+
+.verwijder1{
+    margin-left: 130px;
+}
+
+.verwijder2 {
+    margin-left: 130px;
+}
+
+.aantal1 {
+    margin-left: 130px;
+}
+
+.aantal2 {
+    margin-left: 130px;
 }

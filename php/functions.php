@@ -58,6 +58,36 @@ function printPlaatjes() {
     }
 }
 
+function printRandomItem($conn){
+    $query = "SELECT StockItemID,SearchDetails, Photo, RecommendedRetailPrice, StockItemName FROM stockitems ORDER BY RAND() limit 4";
+    $result = $conn->query($query);
+     while ($row = mysqli_fetch_array($result)) {
+        echo '<div class="afmetingCardBeter">';
+            echo '<div class="card">';
+                echo '<a style="color: black" href="?productID='.$row['StockItemID'].'">
+                        <img style="width: 100%; height: 250px" src="data:image/jpeg;base64,'.base64_encode($row['Photo']).'"><br>';
+                echo '<h5>'.$row['StockItemName'].'</h5></a>';
+                echo '<div class="onder">';
+                echo '<p class="price">&euro; '.$row['RecommendedRetailPrice'].'</p><br>';
+                echo '<a href="winkelwagen.php"><button>Toevoegen aan winkelwagen</button></a>';
+                echo '</div>';
+            echo '</div>';
+        echo '</div>';
+     }
+}
+
+function getCategorie($conn) {
+    $query = "SELECT * FROM stockgroups ORDER BY StockGroupName";
+    $result = $conn->query($query);
+    while($row = mysqli_fetch_array($result)) {
+        echo '<div class="categorieLayout md5">';
+            echo '<a href="?id='.$row['StockGroupID'].'">';
+            echo '<img src="img/categories/'. $row['StockGroupID'].'.jpg">';
+            echo '<div class="tekst">'.$row['StockGroupName'].'</div>';
+            echo '</a>';
+        echo '</div>';
+    }
+}
 //Functie van de progressiebar tijdens de bestelprocedure
 
 function progressBar(){
@@ -80,5 +110,6 @@ function progressBar(){
     }
     return $status;
 }
+
 
 
