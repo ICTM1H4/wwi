@@ -41,7 +41,7 @@ if(isset($_POST["add"])){
         //print_r($_SESSION['cart']);
 
         if(in_array($_POST['product_id'], $item_array_id)){
-            echo "<script>alert('product is already added to cart...!')</script>";
+            echo "<script>alert('Dit product is al toegevoegd aan uw winkelwagentje...!')</script>";
             echo "<script>window.location = 'index.php</script>";
         }
         else{
