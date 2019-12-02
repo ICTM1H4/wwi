@@ -8,11 +8,9 @@ $verzendkosten = 0;
 $totaal = ($totaalartikelen*1.21) + $verzendkosten;
 $prijsProduct = 200;
 
-
-
+print_r($_SESSION['cart']);
 
 ?>
-
 
 <!doctype html>
 <div lang="en">
@@ -70,6 +68,7 @@ $prijsProduct = 200;
 
         <input type="submit" value="Verder naar bestellen" id="verder">
     </form>
+</div>
 </div>
 </div>
 </body>
