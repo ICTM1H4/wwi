@@ -3,11 +3,6 @@
 
 ?>
 <?php
-$prijs = array(200, 0); // Prijzen worden een POST om de array aan te vullen //
-$totaalartikelen = array_sum($prijs); // veranderen naar een POST om de prijzen te bepalen //
-$verzendkosten = 0;
-$totaal = ($totaalartikelen*1.21) + $verzendkosten;
-$prijsProduct = 200;
 
 
 ?>
@@ -24,12 +19,31 @@ $prijsProduct = 200;
 <h1>Winkelwagen</h1>
 
 <div class="plaatje">
-//
+
     <?php
-    foreach ($_SESSION['cart'] as $result){
-        echo "productID: ".$result['product_id']. "<br>";
+    $totaal = 0;
+    $totaalprijs = 0;
+    foreach ($_SESSION['cart'] as $result) {
+        $queryscproducts = mysqli_query($conn, "SELECT StockItemName FROM stockitems WHERE StockItemID = ".$result["product_id"]."");
+        $title = $queryscproducts->fetch_assoc();
+        echo  $title["StockItemName"];
+        echo "<br>";
+        $queryscproducts = mysqli_query($conn, "SELECT RecommendedRetailPrice FROM stockitems WHERE StockItemID = ".$result["product_id"]."");
+        $price = $queryscproducts->fetch_assoc();
+        echo "€" . $price["RecommendedRetailPrice"];
+
+        $totaal++;
+
+        $totaalprijs = $price['RecommendedRetailPrice'] += $price['RecommendedRetailPrice'] ;
+        echo "<br><hr>";
+        //echo "<br>" . "productID: " . $result['product_id']."<br>" . ;
+
     }
 
+
+    //$totaalartikelen = array_sum($result['product_id']); // veranderen naar een POST om de prijzen te bepalen //
+    //$verzendkosten = 0;
+    //$prijs = array_count_values($price);
 
 
     ?>
@@ -38,8 +52,8 @@ $prijsProduct = 200;
 
 <div class="totaal">
 
-    <form action="verzending.php">
-    <h3>Totaal artikelen: <?php echo "€" . $totaalartikelen ?> (excl. btw)<br> Verzendkosten: <?php echo "€" . $verzendkosten ?> <br> ____________ <br> Totaal: <?php echo "€" . $totaal ?> (inc. btw)</h3><br>
+    <form action="winkelwagen.php">
+    <h3>Aantal artikelen: <?php echo $totaal ?> </h3><br>
 
         <input type="submit" value="Verder naar bestellen" id="verder">
     </form>

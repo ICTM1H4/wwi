@@ -72,7 +72,9 @@ else {
                             <div class="onder">
                                 <p class="price"><?php echo "€ ". $price ?></p><br>
                                 <button type="submit" name="add"> Toevoegen aan winkelwagentje</button>
-                                <input type="hidden" name="product_id" value='<?php echo $row['StockItemID']?>'> //
+                                <input type="hidden" name="product_id" value='<?php echo $row['StockItemID']?>'>
+                                <input type="hidden" name="price" value='<?php echo $row['RecommendedRetailPrice']?>'>
+                                <input type="hidden" name="photo" value='<?php echo $row['Photo']?>'>
                             </div>
                         </div>
                     </div>
