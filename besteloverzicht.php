@@ -24,31 +24,69 @@ include "altnav.php";
                             <?php
                             $_SESSION['klantgegevens'] = true;
 
-                            if(isset($_POST['voornaam']) and isset($_POST['tussenvoegsel']) and isset($_POST['achternaam']))
+                            if($_POST['tussenvoegsel'])
                             {
                                 $klantVoornaam = $_POST['voornaam'];
                                 $klantTussenvoegsel = $_POST['tussenvoegsel'];
                                 $klantAchternaam = $_POST['achternaam'];
-                                $klantgegevens = array($klantVoornaam, $klantTussenvoegsel, $klantAchternaam);
+                                $klantAdres = $_POST['adres'];
+                                $klantPostcode = $_POST['postcode'];
+                                $klantPlaatsnaam = $_POST['plaatsnaam'];
+                                $klantgegevens = array
+                                (   'voornaam' => $klantVoornaam,
+                                    'tussenvoegsel' => $klantTussenvoegsel,
+                                    'achternaam' => $klantAchternaam,
+                                    'adres' => $klantAdres,
+                                    'postcode' => $klantPostcode,
+                                    'plaatsnaam' => $klantPlaatsnaam
+                                );
+
+                                echo "<div>";
+                                echo $klantgegevens['voornaam'] ." ".  $klantgegevens['tussenvoegsel'] . " " . $klantgegevens['achternaam'];
+                                echo "</div>";
+                                echo "<div>";
+                                echo $klantgegevens['adres'];
+                                echo "</div>";
+                                echo "<div>";
+                                echo $klantgegevens['postcode'] . " " . $klantgegevens['plaatsnaam'];
+                                echo "</div>";
+
 
                             }
                             else
                                 {
                                     $klantVoornaam = $_POST['voornaam'];
                                     $klantAchternaam = $_POST['achternaam'];
-                                    $klantgegevens = array($klantVoornaam, $klantAchternaam);
+                                    $klantAdres = $_POST['adres'];
+                                    $klantPostcode = $_POST['postcode'];
+                                    $klantPlaatsnaam = $_POST['plaatsnaam'];
+                                    $klantgegevens = array
+                                    (   'voornaam' => $klantVoornaam,
+                                        'achternaam' => $klantAchternaam,
+                                        'adres' => $klantAdres,
+                                        'postcode' => $klantPostcode,
+                                        'plaatsnaam' => $klantPlaatsnaam
+
+                                    );
+
+                                    echo "<div>";
+                                    echo $klantgegevens['voornaam'] ." " . $klantgegevens['achternaam'];
+                                    echo "</div>";
+                                    echo "<div>";
+                                    echo $klantgegevens['adres'];
+                                    echo "</div>";
+                                    echo "<div>";
+                                    echo $klantgegevens['postcode'] . " " . $klantgegevens['plaatsnaam'];
+                                    echo "</div>";
                             }
 
                             $_SESSION['klantgegevens'] = $klantgegevens;
-
-                            foreach($klantgegevens as $klantgegeven){
-                                echo $klantgegeven;
-                                echo " ";
-                            }
                             ?>
                         </div>
                     <div class = "overzichtKlantAdres">
+                        <?php
 
+                        ?>
                     </div>
                 </div>
             </div>

@@ -50,11 +50,14 @@ if ($totaal < 50){
             </div>
             <div class="adres">
                 <tr>
-                    <td class="tableColumn">Postcode</td> <td class="tableColumn"><input type="text" name="postcode" placeholder="1234 AB" required><br></td>
+                    <td class = "tableColumn">Adres</td> <td class = "tableColumn"><input type="text" name="adres" placeholder="Straat + straatnummer" required></td>
+                    <td class = "tableColumn"><input type="text" name="toev" placeholder="Evt. toev."></td>
                 </tr>
                 <tr>
-                    <td class="tableColumn">Adres</td> <td class="tableColumn"><input type="text" name="adres" placeholder="Straat + straatnummer" required></td>
-                    <td class="tableColumn"><input type="text" name="toev" placeholder="Evt. toev."></td>
+                    <td class = "tableColumn">Postcode</td> <td class = "tableColumn"><input type="text" name="postcode" placeholder="1234 AB" required><br></td>
+                </tr>
+                <tr>
+                    <td class = "tableColumn">Plaatsnaam</td> <td class = "tableColumn"><input type="text" name="plaatsnaam" placeholder="Zwolle" required><br></td>
                 </tr>
             </div>
             <tr>

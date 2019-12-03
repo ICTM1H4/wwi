@@ -112,3 +112,6 @@ function progressBar(){
 }
 
 
+function klanggev($a){
+    $_POST['$a'];
+}
