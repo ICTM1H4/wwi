@@ -79,16 +79,27 @@ hr {
     height: 20px;
     width: 20px;
     margin-left: 100px;
+    background-color: #6a8be1;
 }
 
 #increase {
     height: 20px;
     width: 20px;
     margin-left: 10px;
+    background-color: #6a8be1;
 }
 
 #delete {
     height: 20px;
     width: 70px;
     margin-left: 10px;
+    background-color: #6a8be1;
+}
+
+#deleteall{
+    height: 50px;
+    width: 100px;
+    margin-left: 10px;
+    background-color: #6a8be1;
+    margin-bottom: 10px;
 }
