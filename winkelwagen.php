@@ -84,7 +84,7 @@
 
 <div class="totaal">
 
-    <form action="winkelwagen.php">
+    <form action="verzending.php">
     <h3>Aantal artikelen: <?php echo $totaal ?> </h3><br>
         <h3>Totaalprijs: <?php echo "€" . $totaalprijs ?> (exl btw) </h3>
         <h3>Verzendkosten: <?php echo "€" . $verzendkosten ?>  </h3><hr>
