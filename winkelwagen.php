@@ -26,12 +26,7 @@
     $verzendkosten = 0;
     $totaalartikelen = $totaalprijs*1.21+$verzendkosten;
 
-   if ($totaalprijs >= 50){
-       $verzendkosten = 0;
 
-   } else {
-       $verzendkosten = 6.95;
-   }
 
    $totaalprijs=0;
 
@@ -59,7 +54,11 @@
 
            <?php
 
-
+if ($price["RecommendedRetailPrice"] >= 50){
+    $verzendkosten = 0;
+}else {
+    $verzendkosten = 6.95;
+}
            $totaalprijs = $totaalprijs + $price["RecommendedRetailPrice"];
            $totaalartikelen = round($totaalprijs * 1.21 + $verzendkosten, 2);
        }

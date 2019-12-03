@@ -2,6 +2,7 @@
 $id = $_GET['productID'];
 $data = getItem($conn, $id);
 ?>
+
 <div class="content-product">
     <div class="div-image">
         <div class="slideshow-container">
@@ -29,12 +30,16 @@ $data = getItem($conn, $id);
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     </div>
-    <div class="product-omschrijving">
+        <div class="product-omschrijving">
         <div class="naam"><?php echo "<h2>". $data["StockItemName"]."</h2>"?><br></div>
         <div class="prijs md5"><?php echo "&euro;". $data["RecommendedRetailPrice"]?></div>
         <div class="voorraad md5">Voorraad: <?php echo $data["voorraad"] ?></div>
-        <div class="link"><a class="md5" href="<?php echo $data['StockItemID'] ?>"> Voeg toe aan winkelmandje </a></div>
+          <form method="POST">
+              <button type="submit" name="add">Toevoegen aan winkelwagentje</button>
+              <input type="hidden" name="product_id" value='<?php echo $data['StockItemID']?>'>
+              <input type="hidden" name="price" value='<?php echo $data['RecommendedRetailPrice']?>'>
+          </form>
         <div class="omschrijving md5"> <h4>Productomschrijving<br></h4> <?php echo $data["SearchDetails"] ?></div>
-    </div>
-</div>
+        </div>
+
 <script src="js/javascript.js"></script>

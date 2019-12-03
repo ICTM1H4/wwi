@@ -69,7 +69,11 @@ function printRandomItem($conn){
                 echo '<h5>'.$row['StockItemName'].'</h5></a>';
                 echo '<div class="onder">';
                 echo '<p class="price">&euro; '.$row['RecommendedRetailPrice'].'</p><br>';
-                echo '<a href="winkelwagen.php"><button>Toevoegen aan winkelwagen</button></a>';
+                echo '<form method="POST" >';
+                echo '<input type="submit" name="add" value="Toevoegen aan winkelwagentje">';
+                echo '<input type="hidden" name="product_id" value="'. $row["StockItemID"] .'">';
+                echo '<input type="hidden" name="price" value="'. $row["RecommendedRetailPrice"].'">';
+                echo '</form>';
                 echo '</div>';
             echo '</div>';
         echo '</div>';
