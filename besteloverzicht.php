@@ -3,13 +3,6 @@ include "php/functions.php";
 include "php/connectDB.php";
 include "altnav.php";
 
-if (isset($_SESSION["normLever"])){
-    $keuze = $normLever;
-}
-
-function leveringsprijs($a){
-    echo $_SESSION["$a"];
-}
 ?>
 
 <html>
@@ -40,13 +33,15 @@ function leveringsprijs($a){
                                 $klantAdres = $_POST['adres'];
                                 $klantPostcode = $_POST['postcode'];
                                 $klantPlaatsnaam = $_POST['plaatsnaam'];
+                                $verzendType = $_POST['maarEenKnop'];
                                 $klantgegevens = array
                                 (   'voornaam' => $klantVoornaam,
                                     'tussenvoegsel' => $klantTussenvoegsel,
                                     'achternaam' => $klantAchternaam,
                                     'adres' => $klantAdres,
                                     'postcode' => $klantPostcode,
-                                    'plaatsnaam' => $klantPlaatsnaam
+                                    'plaatsnaam' => $klantPlaatsnaam,
+                                    'verzendType' => $verzendType
                                 );
 
                                 echo "<div>";
@@ -68,12 +63,14 @@ function leveringsprijs($a){
                                     $klantAdres = $_POST['adres'];
                                     $klantPostcode = $_POST['postcode'];
                                     $klantPlaatsnaam = $_POST['plaatsnaam'];
+                                    $verzendType = $_POST['maarEenKnop'];
                                     $klantgegevens = array
                                     (   'voornaam' => $klantVoornaam,
                                         'achternaam' => $klantAchternaam,
                                         'adres' => $klantAdres,
                                         'postcode' => $klantPostcode,
-                                        'plaatsnaam' => $klantPlaatsnaam
+                                        'plaatsnaam' => $klantPlaatsnaam,
+                                        'verzendType' => $verzendType
 
                                     );
 
@@ -103,7 +100,7 @@ function leveringsprijs($a){
 
                     <div><h2>Bezorging</h2></div>
                     <div>Bezorgingswijze<br><br></div>
-                    <div><?php leveringsprijs($keuze)?> euro</div>
+                    <div><?php echo $_SESSION['klantgegevens']['verzendType']?> euro</div>
                 </div>
             </div>
             <div class = "betalingswijze">
