@@ -85,7 +85,7 @@ if ($price["RecommendedRetailPrice"] >= 50){
 
     if(isset($_POST['deleteall'])){
         session_destroy();
-
+        //test
     }
 
     if(isset($_POST['increase'])){
