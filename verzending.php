@@ -42,31 +42,29 @@ if ($totaal < 50){
         <table class="factuurText">
             <div class="klantInfo">
                 <tr>
-                    <td>Naam</td>
-                    <td><input type="text" name="voornaam" placeholder="Voornaam" required></td>
-                    <td><input type="text" name="tussenvoegsel" placeholder="tussenvoegsel"></td>
-                    <td><input type="text" name="achternaam" placeholder="Achternaam" required></td>
+                    <td class="tableColumn">Naam</td>
+                    <td class="tableColumn"><input type="text" name="voornaam" placeholder="Voornaam" required></td>
+                    <td class="tableColumn"><input type="text" name="tussenvoegsel" placeholder="tussenvoegsel"></td>
+                    <td class="tableColumn"><input type="text" name="achternaam" placeholder="Achternaam" required></td>
                 </tr>
             </div>
             <div class="adres">
-                <tr class="row">
-                    <td>Postcode</td> <td><input type="text" name="postcode" placeholder="1234 AB" required><br></td>
+                <tr>
+                    <td class="tableColumn">Postcode</td> <td class="tableColumn"><input type="text" name="postcode" placeholder="1234 AB" required><br></td>
                 </tr>
                 <tr>
-                    <td>Adres</td> <td><input type="text" name="adres" placeholder="Straat + straatnummer" required></td>
-                    <td><input type="text" name="toev" placeholder="Evt. toev."></td>
+                    <td class="tableColumn">Adres</td> <td class="tableColumn"><input type="text" name="adres" placeholder="Straat + straatnummer" required></td>
+                    <td class="tableColumn"><input type="text" name="toev" placeholder="Evt. toev."></td>
                 </tr>
             </div>
             <tr>
-                <td>E-mail</td> <td><input type="text" name="email" placeholder="E-mailadres" required></td>
+                <td class="tableColumn">E-mail</td> <td class="tableColumn"><input type="text" name="email" placeholder="E-mailadres" required></td>
             </tr>
             <tr>
-                <td>Telefoonnummer</td> <td><input type="text" name="telef" placeholder="Telefoonnummer"></td>
+                <td class="tableColumn">Telefoonnummer</td> <td class="tableColumn"><input type="text" name="telef" placeholder="Telefoonnummer"></td>
             </tr>
             <tr>
-                <td>
-                    <input type="submit" class="rechtsVerzend">
-                </td>
+                <td class="tableColumn"><input type="submit" class="rechtsVerzend"></td>
             </tr>
         </table>
     </form>
