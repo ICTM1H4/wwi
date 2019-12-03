@@ -2,6 +2,14 @@
 include "php/functions.php";
 include "php/connectDB.php";
 include "altnav.php";
+
+if (isset($_SESSION["normLever"])){
+    $keuze = $normLever;
+}
+
+function leveringsprijs($a){
+    echo $_SESSION["$a"];
+}
 ?>
 
 <html>
@@ -95,7 +103,7 @@ include "altnav.php";
 
                     <div><h2>Bezorging</h2></div>
                     <div>Bezorgingswijze<br><br></div>
-                    <div>... euro</div>
+                    <div><?php leveringsprijs($keuze)?> euro</div>
                 </div>
             </div>
             <div class = "betalingswijze">

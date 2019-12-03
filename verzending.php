@@ -3,15 +3,6 @@
 include "nav.php";
 include "php/functions.php";
 
-$normLever = 0;
-$ophalen = 0;
-$eenDagLever = 10;
-
-$totaal = /*normaal is het $_SESSION['$totaalbedrag']*/ 30;
-
-if ($totaal < 50){
-    $normLever += 6.5;
-}
 //
 //function knop($a){
 //    $totaal += $a;
@@ -67,16 +58,16 @@ if ($totaal < 50){
                 <td class="tableColumn">Telefoonnummer</td> <td class="tableColumn"><input type="text" name="telef" placeholder="Telefoonnummer"></td>
             </tr>
             <tr>
-                <td class="tableColumn"><input type="submit" class="rechtsVerzend"></td>
+                <td class="tableColumn"><input type="submit" class="rechtsSubmit"></td>
             </tr>
         </table>
     </form>
     <div class="verzendType">
         <h1>Verzendprijzen</h1>
-        <p class="normLever"> <input type="radio" class="knop" name="maarEenKnop"> Normale levering €<?php echo $normLever ?></p>
-        <p class="ophalen"> <input type="radio" class="knop" name="maarEenKnop"> Ophalen €<?php echo $ophalen ?> </p>
-        <p class="eenDagLever"> <input type="radio" class="knop" name="maarEenKnop"> Express levering €<?php echo $eenDagLever ?></p><br>
-        <p class="totaalprijs"> Totaalprijs: €<?php echo $totaal?></p>
+        <p> <input type="radio" value="normLever" name="maarEenKnop"> Normale levering €<?php echo $normLever ?></p>
+        <p> <input type="radio" value="ophalen" name="maarEenKnop"> Ophalen €<?php echo $ophalen ?> </p>
+        <p> <input type="radio" value="eenDagLever" name="maarEenKnop"> Express levering €<?php echo $eenDagLever ?></p><br>
+        <p> Totaalprijs: €<?php echo $totaal?></p>
     </div>
 </div>
 </body>

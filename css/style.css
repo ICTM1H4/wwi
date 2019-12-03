@@ -354,14 +354,20 @@ h2{
     padding-bottom: 5%;
 }
 
-.rechtsVerzend{
+.rechtsSubmit{
     position: absolute;
     right: 38%;
 }
+
 .overzichtAdres{
     border-radius: 5px;
     border-color: black;
     border-width: medium;
+}
+
+.verzendType{
+    margin-top: -50px;
+    float: left;
 }
 
 .overzicht h2{

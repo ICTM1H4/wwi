@@ -115,3 +115,15 @@ function progressBar(){
 function klanggev($a){
     $_POST['$a'];
 }
+
+//dit is voor de verzending
+
+$normLever = 0;
+$ophalen = 0;
+$eenDagLever = 10;
+
+$totaal = /*normaal is het $_SESSION['$totaalbedrag']*/ 30;
+
+if ($totaal < 50){
+    $normLever += 6.5;
+}
