@@ -32,6 +32,9 @@ include "php/functions.php";
     elseif (isset($_GET['winkelwagen'])) {
         include "winkelwagen.php";
     }
+    else {
+        include "structure/home.php";
+    }
 
     if(isset($_POST["add"])){
 

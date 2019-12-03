@@ -7,7 +7,7 @@ $data = getItem($conn, $id);
         <div class="slideshow-container">
             <div class="mySlides fade">
                 <div class="numbertext">1 / 3</div>
-                <img src="Geen_foto_helaas_beschikbaar.png" alt="werkt niet">
+                <img src="data:image/jpeg;base64,<?php echo base64_encode($data['Photo']) ?>" alt="werkt niet">
                 <!-- <div class="text">Caption Text</div> -->
             </div>
             <div class="mySlides fade">
