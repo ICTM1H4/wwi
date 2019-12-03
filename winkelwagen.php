@@ -47,7 +47,7 @@
         $totaalprijs = $price['RecommendedRetailPrice'] += $price['RecommendedRetailPrice'] ;
         echo "<br><hr>";
         //echo "<br>" . "productID: " . $result['product_id']."<br>" . ;
-
+        //test
     }
 
 
