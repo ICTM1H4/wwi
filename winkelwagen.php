@@ -29,39 +29,55 @@
    if ($totaalprijs >= 50){
        $verzendkosten = 0;
 
-   } else $verzendkosten = 6.95;
+   } else {
+       $verzendkosten = 6.95;
+   }
+
+   $totaalprijs=0;
+
+   if(isset($_SESSION['cart'])) {
+
+       foreach ($_SESSION['cart'] as $result) {
+           echo "<br>";
+           $queryscproducts = mysqli_query($conn, "SELECT StockItemName FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
+           $title = $queryscproducts->fetch_assoc();
+           echo $title["StockItemName"];
+           echo "<br>";
+           $queryscproducts = mysqli_query($conn, "SELECT RecommendedRetailPrice FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
+           $price = $queryscproducts->fetch_assoc();
+           echo "€" . $price["RecommendedRetailPrice"];
+
+           $totaal++;
+           echo "<br>";
+           ?>
+
+           <button type="submit" name="decrease" value="+" id="decrease"> -</button>
+           <button type="submit" name="increase" value="+" id="increase"> +</button>
+           <button type="submit" name="delete" value="x" id="delete"> Verwijderen</button>
+           <hr>
 
 
-$totaalprijs=0;
-    foreach ($_SESSION['cart'] as $result) {
-        echo "<br>";
-        $queryscproducts = mysqli_query($conn, "SELECT StockItemName FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
-        $title = $queryscproducts->fetch_assoc();
-        echo $title["StockItemName"];
-        echo "<br>";
-        $queryscproducts = mysqli_query($conn, "SELECT RecommendedRetailPrice FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
-        $price = $queryscproducts->fetch_assoc();
-        echo "€" . $price["RecommendedRetailPrice"];
-
-        $totaal++;
-        echo "<br>";
-        ?>
-
-        <button type="submit" name="decrease" value="+" id="decrease"> -</button>
-        <button type="submit" name="increase" value="+" id="increase"> +</button>
-        <button type="submit" name="delete" value="x" id="delete"> Verwijderen</button>
-        <hr>
+           <?php
 
 
-        <?php
+           $totaalprijs = $totaalprijs + $price["RecommendedRetailPrice"];
+           $totaalartikelen = round($totaalprijs * 1.21 + $verzendkosten, 2);
+       }
+   }
 
+   else{
+       echo "Winkelwagentje is leeg";
+   }
+    ?>
+    <form method="post">
+    <button type="submit" name="deleteall" value="+" id="deleteall"> Verwijder alles</button>
+    </form>
+    <?php
 
-
-        $totaalprijs = $totaalprijs + $price["RecommendedRetailPrice"];
-        $totaalartikelen = round($totaalprijs*1.21+$verzendkosten,2);
+    if(isset($_POST['deleteall'])){
+        session_destroy();
+        //test
     }
-
-
     ?>
 
 </div>
