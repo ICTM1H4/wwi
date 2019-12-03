@@ -33,6 +33,7 @@
    if(isset($_SESSION['cart'])) {
 
        foreach ($_SESSION['cart'] as $result) {
+           print_r($result);
            echo "<br>";
            $queryscproducts = mysqli_query($conn, "SELECT StockItemName FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
            $title = $queryscproducts->fetch_assoc();
@@ -42,15 +43,22 @@
            $price = $queryscproducts->fetch_assoc();
            echo "€" . $price["RecommendedRetailPrice"];
 
-           $totaal++;
+           //echo $result['aantal'];
+
+
            echo "<br>";
+
+
+           $aantalp = 2;
            ?>
 
-           <button type="submit" name="decrease" value="+" id="decrease"> -</button>
+           <form method="post">
+           <button type="submit" name="decrease" value="-" id="decrease"> -</button>
+           <input type="text" disabled id="aantal" value="<?php echo $aantalp; ?>"</input>
            <button type="submit" name="increase" value="+" id="increase"> +</button>
            <button type="submit" name="delete" value="x" id="delete"> Verwijderen</button>
            <hr>
-
+           </form>
 
            <?php
 
@@ -64,6 +72,8 @@ if ($price["RecommendedRetailPrice"] >= 50){
        }
    }
 
+
+
    else{
        echo "Winkelwagentje is leeg";
    }
@@ -76,6 +86,10 @@ if ($price["RecommendedRetailPrice"] >= 50){
     if(isset($_POST['deleteall'])){
         session_destroy();
         //test
+    }
+
+    if(isset($_POST['increase'])){
+        $aantalp ++;
     }
     ?>
 

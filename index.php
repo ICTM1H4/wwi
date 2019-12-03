@@ -37,10 +37,11 @@ include "php/functions.php";
     }
 
     if(isset($_POST["add"])){
-
+        //session_destroy();
         //print_r($_POST['product_id']);
         if(isset($_SESSION['cart'])){
             $item_array_id = array_column($_SESSION['cart'], "product_id");
+
             //var_dump($item_array_id );
 
 
@@ -49,11 +50,13 @@ include "php/functions.php";
             if(in_array($_POST['product_id'], $item_array_id)){
                 echo "<script>alert('Dit product is al toegevoegd aan uw winkelwagentje...!')</script>";
                 echo "<script>window.location = 'index.php</script>";
-            }
+
+               }
             else{
                 $count = count($_SESSION['cart']);
                 $item_array = array(
-                        'product_id' => $_POST['product_id']
+                        'product_id' => $_POST['product_id'],
+                        'aantal'=> 1
                 );
 
                 $_SESSION['cart'][$count]= $item_array;
@@ -62,7 +65,8 @@ include "php/functions.php";
         }
         else {
             $item_array = array(
-                'product_id' => $_POST['product_id']
+                'product_id' => $_POST['product_id'],
+                'aantal' => 1
             );
 
             $_SESSION['cart'][0] = $item_array;
