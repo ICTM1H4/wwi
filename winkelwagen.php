@@ -76,6 +76,7 @@
 
     if(isset($_POST['deleteall'])){
         session_destroy();
+        //test
     }
     ?>
 
