@@ -343,11 +343,11 @@ h2{
 
 /* h2{
     display: inline-block;
-}
-
-td{
-    padding: 10px;
 } */
+
+.tableColumn{
+    padding: 10px;
+}
 
 /*---------------------------Bestelprocedure-----------------------------*/
 .overzicht{
