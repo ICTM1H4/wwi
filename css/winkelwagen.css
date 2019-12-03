@@ -74,3 +74,21 @@ hr {
 .aantal2 {
     margin-left: 130px;
 }
+
+#decrease {
+    height: 20px;
+    width: 20px;
+    margin-left: 100px;
+}
+
+#increase {
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+}
+
+#delete {
+    height: 20px;
+    width: 70px;
+    margin-left: 10px;
+}

@@ -24,6 +24,7 @@
     $totaal = 0;
     $totaalprijs = 0;
     foreach ($_SESSION['cart'] as $result) {
+        echo "<br>";
         $queryscproducts = mysqli_query($conn, "SELECT StockItemName FROM stockitems WHERE StockItemID = ".$result["product_id"]."");
         $title = $queryscproducts->fetch_assoc();
         echo  $title["StockItemName"];
@@ -33,6 +34,15 @@
         echo "€" . $price["RecommendedRetailPrice"];
 
         $totaal++;
+        echo "<br>";
+        ?>
+
+        <button type="submit" name="decrease" value="+" id="decrease"> - </button>
+        <button type="submit" name="increase" value="+" id="increase"> + </button>
+        <button type="submit" name="delete" value="x" id="delete"> Verwijderen </button>
+
+
+        <?php
 
         $totaalprijs = $price['RecommendedRetailPrice'] += $price['RecommendedRetailPrice'] ;
         echo "<br><hr>";
