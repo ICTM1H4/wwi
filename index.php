@@ -51,6 +51,21 @@ include "php/functions.php";
     }
 
     if(isset($_POST["add"])){
+        foreach($_SESSION['cart'] as $value) {
+            if($value['product_id'] == $_POST['product_id']) {
+                //print_r($value);
+                //print_r("test8");
+                $value['aantal'] += 1;
+            }
+            else {
+                //print_r($value);
+                //print_r("test");
+                $item_array = array(
+                    'product_id' => $_POST['product_id'],
+                    'aantal'=> 1
+                );
+            }
+        }
         //session_destroy();
         //print_r($_POST['product_id']);
         if(isset($_SESSION['cart'])){
@@ -68,10 +83,7 @@ include "php/functions.php";
                }
             else{
                 $count = count($_SESSION['cart']);
-                $item_array = array(
-                        'product_id' => $_POST['product_id'],
-                        'aantal'=> 1
-                );
+
 
                 $_SESSION['cart'][$count]= $item_array;
                 //print_r($_SESSION['cart']);
