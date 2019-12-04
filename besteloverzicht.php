@@ -96,15 +96,18 @@ $huidigePagina = "overzichtPhp"
                         <?php
                         $totaalprijs = $_SESSION['completeprijs'];
                         $prijs = $_SESSION['prijsproduct'];
+                        $btw = $_SESSION['btw'];
+                        print_r($_SESSION['Leveringsprijs']);
                             echo "<div class='overzicht-product'>";
                             echo "<div class = 'overzicht-productnaam'><h3>Product</h3><div>";
                             echo "<img class = 'overzicht-foto' src='Geen_foto_helaas_beschikbaar.png'>";
                             echo "<div class = 'overzichtAantal'></div>";
-                            echo "<div class = 'overzicht-prijs''><h4>$prijs</h4></div>";
+                            echo "<div class = 'overzicht-prijs'><h4>Subtotaal Producten:€ $prijs (exl btw)</h4></div>";
+                            echo "<div class = 'btwprijs'> <h4>BTW: € $btw </h4></div>";
                             echo "</div>";
 
                         echo "<hr>";
-                        echo "<div class = 'overzicht-totaalprijs' ><h3>$totaalprijs</h3></div>";
+                        echo "<div class = 'overzicht-totaalprijs' ><h3>Totaal:€ $totaalprijs (inc btw)</h3></div>";
                         ?>
                     </div>
                 <div>

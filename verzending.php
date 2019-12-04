@@ -5,6 +5,7 @@ $normLever = 0.00;
 $ophalen = 0.00;
 $eenDagLever = 10.00;
 
+
 $totaal = $_SESSION['completeprijs'];
 
 if ($totaal < 50.00){

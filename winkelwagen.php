@@ -102,18 +102,19 @@
 
     ?>
     <?php
-
+    $btw = round($totaalprijs * 0.21 , 2);
     $_SESSION['completeprijs'] = $totaalartikelen;
     $_SESSION['prijsproduct'] = $totaalprijs;
+    $_SESSION['btw'] = $btw;
     ?>
 
 
 <div class="totaal">
 
-    <form method="get">
+    <form method="post">
         <h3>Aantal artikelen: <?php echo $totaal ?> </h3><br>
         <h3>Totaalprijs: <?php echo "€" . $totaalprijs ?> (excl. btw) </h3><br>
-        <h3>BTW: <?php echo "€" . round($totaalprijs * 0.21 , 2) ?> </h3>
+        <h3>BTW: <?php echo "€" . $btw ?> </h3>
         <h3>Verzendkosten: <?php echo "€" . $verzendkosten ?>  </h3><hr><br>
         <h3>Totaal: <?php echo "€" . $totaalartikelen ?> (incl. btw)</h3><br><br>
 
