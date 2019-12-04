@@ -10,7 +10,7 @@ $totaal = /*normaal is het $_SESSION['$totaalbedrag']*/ 30.00;
 if ($totaal < 50.00){
     $normLever += 6.50;
 }
-
+stront();
 $huidigePagina = "verzendingPhp";
 
 //elseif (isset($_SESSION["ophalen"])){
@@ -55,7 +55,7 @@ $huidigePagina = "verzendingPhp";
     </div>
     <h2 class="uwGegev">Uw gegevens</h2>
     <h2 class="verzendPrijs">Verzendprijzen</h2>
-    <form class="factuurData" action="besteloverzicht.php" method="post">
+    <form class="factuurData" method="post">
         <table class="factuurText">
             <div class="klantNaam">
                 <tr>
@@ -89,8 +89,8 @@ $huidigePagina = "verzendingPhp";
             <p> <input type="radio" value="<?php echo $ophalen?>" name="maarEenKnop"> Ophalen €<?php echo number_format((float)$ophalen, 2, '.', '') ?> </p>
             <p> <input type="radio" value="<?php echo $eenDagLever?>" name="maarEenKnop"> Express levering €<?php echo number_format((float)$eenDagLever, 2, '.', '')?></p><br>
             <p> Totaalprijs: €<?php echo number_format((float)$totaal, 2, '.', '')?></p>
+            <input type="submit" name="sendPost" class="button-afrekenen" value="Doorgaan">
         </div>
-        <input type="submit" class="submitGegev">
     </form>
 </div>
 </body>

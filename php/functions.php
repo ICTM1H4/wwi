@@ -142,3 +142,23 @@ function progresBar($huidigePagina){
             </style>';
     }
 }
+
+//
+function stront(){
+    if(isset($_POST['sendPost'])) {
+        $_SESSION['klantgegevens'] = true;
+        $klantgegevens = array
+        (   'voornaam' => $_POST['voornaam'],
+            'tussenvoegsel' => $_POST['tussenvoegsel'],
+            'achternaam' => $_POST['achternaam'],
+            'adres' => $_POST['adres'],
+            'postcode' => $_POST['postcode'],
+            'plaatsnaam' => $_POST['plaatsnaam'],
+            'verzendType' => $_POST['maarEenKnop'],
+            'email' => $_POST['email'],
+            'telefoonnummer' => "+316" . $_POST['telefoonnummer']
+        );
+        $_SESSION['klantgegevens'] = $klantgegevens;
+        return header("Location: ?besteloverzicht");
+    }
+}

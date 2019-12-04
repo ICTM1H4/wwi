@@ -1,9 +1,4 @@
 <?php
-include "php/functions.php";
-include "php/connectDB.php";
-include "altnav.php";
-session_start();
-
 $huidigePagina = "overzichtPhp"
 ?>
 
@@ -34,77 +29,7 @@ $huidigePagina = "overzichtPhp"
                         <div class="overzichtKlantNaam">
 <!--                            Voornaam tussenvoegsel en achternaam-->
                             <?php
-                            $_SESSION['klantgegevens'] = true;
-
-                            if($_POST['tussenvoegsel'])
-                            {
-                                $klantVoornaam = $_POST['voornaam'];
-                                $klantTussenvoegsel = $_POST['tussenvoegsel'];
-                                $klantAchternaam = $_POST['achternaam'];
-                                $klantAdres = $_POST['adres'];
-                                $klantPostcode = $_POST['postcode'];
-                                $klantPlaatsnaam = $_POST['plaatsnaam'];
-                                $verzendType = $_POST['maarEenKnop'];
-                                $klantMail = $_POST['email'];
-                                $klantTelefoonnummer = "+316" . $_POST['telefoonnummer'];
-                                $klantgegevens = array
-                                (   'voornaam' => $klantVoornaam,
-                                    'tussenvoegsel' => $klantTussenvoegsel,
-                                    'achternaam' => $klantAchternaam,
-                                    'adres' => $klantAdres,
-                                    'postcode' => $klantPostcode,
-                                    'plaatsnaam' => $klantPlaatsnaam,
-                                    'verzendType' => $verzendType,
-                                    'email' => $klantMail,
-                                    'telefoonnummer' => $klantTelefoonnummer
-                                );
-
-                                echo "<div>";
-                                echo $klantgegevens['voornaam'] ." ".  $klantgegevens['tussenvoegsel'] . " " . $klantgegevens['achternaam'];
-                                echo "</div>";
-                                echo "<div>";
-                                echo $klantgegevens['adres'];
-                                echo "</div>";
-                                echo "<div>";
-                                echo $klantgegevens['postcode'] . " " . $klantgegevens['plaatsnaam'];
-                                echo "</div>";
-
-
-                            }
-                            else
-                                {
-                                    $klantVoornaam = $_POST['voornaam'];
-                                    $klantAchternaam = $_POST['achternaam'];
-                                    $klantAdres = $_POST['adres'];
-                                    $klantPostcode = $_POST['postcode'];
-                                    $klantPlaatsnaam = $_POST['plaatsnaam'];
-                                    $verzendType = $_POST['maarEenKnop'];
-                                    $klantMail = $_POST['email'];
-                                    $klantTelefoonnummer = "+316" . $_POST['telef'];
-                                    $klantgegevens = array
-                                    (   'voornaam' => $klantVoornaam,
-                                        'achternaam' => $klantAchternaam,
-                                        'adres' => $klantAdres,
-                                        'postcode' => $klantPostcode,
-                                        'plaatsnaam' => $klantPlaatsnaam,
-                                        'verzendType' => $verzendType,
-                                        'email' => $klantMail,
-                                        'telefoonnummer' => $klantTelefoonnummer
-
-                                    );
-
-                                    echo "<div>";
-                                    echo $klantgegevens['voornaam'] ." " . $klantgegevens['achternaam'];
-                                    echo "</div>";
-                                    echo "<div>";
-                                    echo $klantgegevens['adres'];
-                                    echo "</div>";
-                                    echo "<div>";
-                                    echo $klantgegevens['postcode'] . " " . $klantgegevens['plaatsnaam'];
-                                    echo "</div>";
-                            }
-
-                            $_SESSION['klantgegevens'] = $klantgegevens;
+                            print_r($_SESSION);
                             ?>
                         </div>
                     <div class = "overzichtKlantAdres">
@@ -130,9 +55,7 @@ $huidigePagina = "overzichtPhp"
                 </div>
             </div>
             <div class = "vorigestap">
-                <form action="verzending.php">
-                    <input class = "button-afrekenen" type="submit" value="Vorige stap">
-                </form>
+                <a href="?verzending"><input class = "button-afrekenen" type="submit" value="Vorige stap"></a>
             </div>
         </div>
         <div class = "overzichtBestelling">

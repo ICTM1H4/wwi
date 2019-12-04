@@ -14,7 +14,15 @@ include "php/functions.php";
 </head>
 <body>
 <div class="nav">
-    <?php include "nav.php" ?>
+    <?php
+    if(isset($_GET['verzending']) or isset($_GET['besteloverzicht'])){
+        include "altnav.php";
+    }
+    else
+        {
+            include "nav.php";
+    }
+    ?>
 </div>
 <div class="content">
 <?php
@@ -34,6 +42,9 @@ include "php/functions.php";
     }
     elseif(isset($_GET['verzending'])){
         include "verzending.php";
+    }
+    elseif(isset($_GET['besteloverzicht'])){
+        include "besteloverzicht.php";
     }
     else {
         include "structure/home.php";

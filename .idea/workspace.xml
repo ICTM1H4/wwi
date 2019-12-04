@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/besteloverzicht.php" beforeDir="false" afterPath="$PROJECT_DIR$/besteloverzicht.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/functions.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/verzending.php" beforeDir="false" afterPath="$PROJECT_DIR$/verzending.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/winkelwagen.php" beforeDir="false" afterPath="$PROJECT_DIR$/winkelwagen.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -395,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575465801173</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="verzending in index gezet">
+      <created>1575467589042</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1575467589042</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +422,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="aanpassingen index van ben" />
     <MESSAGE value="Nav style css aangepast" />
     <MESSAGE value="index geupdate" />
     <MESSAGE value="css nav balk witte letter&#10;nieuwe winkelwagen en account foto" />
@@ -440,6 +446,7 @@
     <MESSAGE value="Aantal per product toegevoegd (nog niet werkend)" />
     <MESSAGE value="Verwijderen producten mogelijk en style aangepast" />
     <MESSAGE value="kleine aanpassingen in betaling" />
-    <option name="LAST_COMMIT_MESSAGE" value="kleine aanpassingen in betaling" />
+    <MESSAGE value="verzending in index gezet" />
+    <option name="LAST_COMMIT_MESSAGE" value="verzending in index gezet" />
   </component>
 </project>
