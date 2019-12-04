@@ -3,6 +3,8 @@ include "php/functions.php";
 include "php/connectDB.php";
 include "altnav.php";
 session_start();
+
+$huidigePagina = "overzichtPhp"
 ?>
 
 <html>
@@ -13,6 +15,15 @@ session_start();
 
 <body>
 <div class="algMargin">
+    <div class="progressBar"><?php progresBar($huidigePagina)?>
+        <div class="verzendingPhp">Verzending</div>
+        <hr class="streepjesBar">
+        <div class="overzichtPhp">Overzicht</div>
+        <hr class="streepjesBar">
+        <div class="betalingPhp">Betaling</div>
+        <hr class="streepjesBar">
+        <div class="bevestigingPhp">Bevestiging</div>
+    </div>
     <div class="overzicht">
         <div class = "overzichtKlantgegevens">
             <div class = "overzichtAdres">
