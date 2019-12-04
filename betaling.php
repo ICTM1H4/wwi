@@ -32,7 +32,7 @@ $order = $mollie->orders->create([
         "givenName" => $klantgegevens['voornaam'],
         "familyName" => $klantgegevens['achternaam'],
         "email" => $klantgegevens['email'],
-        "phone" => $klantgegevens['telefoonnummer'],
+//        "phone" => $klantgegevens['telefoonnummer'],
     ],
     "shippingAddress" => [
         "streetAndNumber" => $klantgegevens['adres'],
@@ -42,14 +42,14 @@ $order = $mollie->orders->create([
         "givenName" => $klantgegevens['voornaam'],
         "familyName" => $klantgegevens['achternaam'],
         "email" => $klantgegevens['email'],
-        "phone" => $klantgegevens['telefoonnummer'],
+//        "phone" => $klantgegevens['telefoonnummer'],
     ],
     "metadata" => [
-        "order_id" => "$conn->query()",
-        "description" => "Lego cars"
+        "order_id" => "1",
+        "description" => "Test"
     ],
     "locale" => "nl_NL",
-    "orderNumber" => "1337",
+    "orderNumber" => "1",
     "redirectUrl" => "http://localhost/wwi/bevestiging.php",
     "webhookUrl" => "https://example.org/webhook",
     "method" => "creditcard",
