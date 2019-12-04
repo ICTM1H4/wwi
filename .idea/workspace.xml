@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/besteloverzicht.php" beforeDir="false" afterPath="$PROJECT_DIR$/besteloverzicht.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/betaling.php" beforeDir="false" afterPath="$PROJECT_DIR$/betaling.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/verzending.php" beforeDir="false" afterPath="$PROJECT_DIR$/verzending.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -379,7 +382,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575455440736</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="mollie werkend">
+      <created>1575458102589</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1575458102589</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -399,7 +409,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="account =&gt; inlogscherm werkt, css aangevuld over index pagina" />
     <MESSAGE value="aanpassingen index van ben" />
     <MESSAGE value="Nav style css aangepast" />
     <MESSAGE value="index geupdate" />
@@ -424,6 +433,7 @@
     <MESSAGE value="Verwijder alles button toegevoegd --&gt; sessie afbreken" />
     <MESSAGE value="Aantal per product toegevoegd (nog niet werkend)" />
     <MESSAGE value="Mollie toegevoegd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mollie toegevoegd" />
+    <MESSAGE value="mollie werkend" />
+    <option name="LAST_COMMIT_MESSAGE" value="mollie werkend" />
   </component>
 </project>

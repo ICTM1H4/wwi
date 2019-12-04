@@ -2,7 +2,7 @@
 include "php/functions.php";
 include "php/connectDB.php";
 include "altnav.php";
-
+session_start();
 ?>
 
 <html>
@@ -34,6 +34,8 @@ include "altnav.php";
                                 $klantPostcode = $_POST['postcode'];
                                 $klantPlaatsnaam = $_POST['plaatsnaam'];
                                 $verzendType = $_POST['maarEenKnop'];
+                                $klantMail = $_POST['email'];
+                                $klantTelefoonnummer = "+316" . $_POST['telefoonnummer'];
                                 $klantgegevens = array
                                 (   'voornaam' => $klantVoornaam,
                                     'tussenvoegsel' => $klantTussenvoegsel,
@@ -41,7 +43,9 @@ include "altnav.php";
                                     'adres' => $klantAdres,
                                     'postcode' => $klantPostcode,
                                     'plaatsnaam' => $klantPlaatsnaam,
-                                    'verzendType' => $verzendType
+                                    'verzendType' => $verzendType,
+                                    'email' => $klantMail,
+                                    'telefoonnummer' => $klantTelefoonnummer
                                 );
 
                                 echo "<div>";
@@ -64,13 +68,17 @@ include "altnav.php";
                                     $klantPostcode = $_POST['postcode'];
                                     $klantPlaatsnaam = $_POST['plaatsnaam'];
                                     $verzendType = $_POST['maarEenKnop'];
+                                    $klantMail = $_POST['email'];
+                                    $klantTelefoonnummer = "+316" . $_POST['telef'];
                                     $klantgegevens = array
                                     (   'voornaam' => $klantVoornaam,
                                         'achternaam' => $klantAchternaam,
                                         'adres' => $klantAdres,
                                         'postcode' => $klantPostcode,
                                         'plaatsnaam' => $klantPlaatsnaam,
-                                        'verzendType' => $verzendType
+                                        'verzendType' => $verzendType,
+                                        'email' => $klantMail,
+                                        'telefoonnummer' => $klantTelefoonnummer
 
                                     );
 

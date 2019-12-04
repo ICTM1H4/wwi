@@ -73,7 +73,7 @@ if ($totaal < 50.00){
                 <td class="tableColumn">E-mail</td> <td class="tableColumn"><input type="text" name="email" placeholder="E-mailadres" required></td>
             </tr>
             <tr>
-                <td class="tableColumn">Telefoonnummer</td> <td class="tableColumn"><input type="text" name="telef" placeholder="Telefoonnummer"></td>
+                <td class="tableColumn">Telefoonnummer <p class = "verzending-316">+316</p> </td> <td class="tableColumn"><input type="text" name="telef" placeholder="Telefoonnummer"></td>
             </tr>
         </table>
         <div class="verzendType">

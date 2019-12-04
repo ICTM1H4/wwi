@@ -1,4 +1,7 @@
 <?php
+session_start();
+$klantgegevens = $_SESSION['klantgegevens'];
+print_r($klantgegevens);
 /*
  * Make sure to disable the display of errors in production code!
  */
@@ -22,36 +25,29 @@ $order = $mollie->orders->create([
         "currency" => "EUR"
     ],
     "billingAddress" => [
-        "organizationName" => "Mollie B.V.",
-        "streetAndNumber" => "Keizersgracht 313",
-        "city" => "Amsterdam",
-        "region" => "Noord-Holland",
-        "postalCode" => "1234AB",
+        "streetAndNumber" => $klantgegevens['adres'],
+        "city" => $klantgegevens['plaatsnaam'],
+        "postalCode" => $klantgegevens['postcode'],
         "country" => "NL",
-        "title" => "Dhr.",
-        "givenName" => "Piet",
-        "familyName" => "Mondriaan",
-        "email" => "piet@mondriaan.com",
-        "phone" => "+31309202070",
+        "givenName" => $klantgegevens['voornaam'],
+        "familyName" => $klantgegevens['achternaam'],
+        "email" => $klantgegevens['email'],
+        "phone" => $klantgegevens['telefoonnummer'],
     ],
     "shippingAddress" => [
-        "organizationName" => "Mollie B.V.",
-        "streetAndNumber" => "Keizersgracht 313",
-        "streetAdditional" => "4th floor",
-        "city" => "Haarlem",
-        "region" => "Noord-Holland",
-        "postalCode" => "5678AB",
+        "streetAndNumber" => $klantgegevens['adres'],
+        "city" => $klantgegevens['plaatsnaam'],
+        "postalCode" => $klantgegevens['postcode'],
         "country" => "NL",
-        "title" => "Mr.",
-        "givenName" => "Chuck",
-        "familyName" => "Norris",
-        "email" => "norris@chucknorrisfacts.net",
+        "givenName" => $klantgegevens['voornaam'],
+        "familyName" => $klantgegevens['achternaam'],
+        "email" => $klantgegevens['email'],
+        "phone" => $klantgegevens['telefoonnummer'],
     ],
     "metadata" => [
-        "order_id" => "1337",
+        "order_id" => "$conn->query()",
         "description" => "Lego cars"
     ],
-    "consumerDateOfBirth" => "1958-01-31",
     "locale" => "nl_NL",
     "orderNumber" => "1337",
     "redirectUrl" => "http://localhost/wwi/bevestiging.php",
@@ -69,7 +65,7 @@ $order = $mollie->orders->create([
                 "description" => "Bugatti Chiron"
             ],
             "quantity" => 1,
-            "vatRate" => "0",
+            "vatRate" => "0.01",
             "unitPrice" => [
                 "currency" => "EUR",
                 "value" => "0.01"
@@ -77,6 +73,10 @@ $order = $mollie->orders->create([
             "totalAmount" => [
                 "currency" => "EUR",
                 "value" => "0.01"
+            ],
+            "discountAmount" => [
+                "currency" => "EUR",
+                "value" => "0.00"
             ],
             "vatAmount" => [
                 "currency" => "EUR",
