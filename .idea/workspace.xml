@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="" />
+    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/winkelwagen.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/winkelwagen.css" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +44,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\wwi" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\wwi\structure" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\wwi" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -369,7 +372,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575403821243</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Aantal per product toegevoegd (nog niet werkend)">
+      <created>1575464018416</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1575464018416</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Verwijderen producten mogelijk en style aangepast">
+      <created>1575464840995</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1575464840995</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +406,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="index toevoeging: logo, categorieën, zoekbalk, winkelwagen, begin account" />
     <MESSAGE value="account =&gt; inlogscherm werkt, css aangevuld over index pagina" />
     <MESSAGE value="aanpassingen index van ben" />
     <MESSAGE value="Nav style css aangepast" />
@@ -414,6 +430,7 @@
     <MESSAGE value="buttons winkelwagentje toegevoegd (+, -, delete)" />
     <MESSAGE value="Verwijder alles button toegevoegd --&gt; sessie afbreken" />
     <MESSAGE value="Aantal per product toegevoegd (nog niet werkend)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aantal per product toegevoegd (nog niet werkend)" />
+    <MESSAGE value="Verwijderen producten mogelijk en style aangepast" />
+    <option name="LAST_COMMIT_MESSAGE" value="Verwijderen producten mogelijk en style aangepast" />
   </component>
 </project>

@@ -36,11 +36,14 @@ function Aantalproducten() {
 }
 
 function getItem($conn, $id) {
-    $query = "SELECT (SELECT LastStockTakeQuantity FROM stockitemholdings WHERE StockItemID = ".$id.") AS voorraad, StockItemID, StockItemName, 
+    $query = "SELECT (SELECT LastStockTakeQuantity FROM stockitemholdings WHERE StockItemID = ".$id.") AS voorraad, IsChillerStock, StockItemID, StockItemName, 
                 SearchDetails, Photo, RecommendedRetailPrice FROM stockitems WHERE StockItemID = ".$id."";
     $result = $conn->query($query);
+    $query2 = "SELECT AVG(temperature) temp FROM coldroomtemperatures";
+    $result2 = $conn->query($query2);
     if ($result){
-        return $result->fetch_assoc();
+        $data = ["product"=>$result->fetch_assoc(), "temp"=>$result2->fetch_assoc()];
+        return $data;
     } else {
         return "Er is geen resultaat";
     }
