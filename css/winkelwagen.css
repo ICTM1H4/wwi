@@ -1,3 +1,11 @@
+#quantity {
+    width: 20px;
+    height: 20px;
+
+}
+
+
+
 .plaatje{
     /*Margin van de zijkanten van de pagina*/
     margin: auto;
@@ -91,7 +99,7 @@ hr {
 #delete {
     height: 20px;
     width: 90px;
-    margin-left: 10px;
+
     border: none;
     text-align: center;
 }

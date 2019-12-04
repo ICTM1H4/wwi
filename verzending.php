@@ -5,13 +5,13 @@ $normLever = 0.00;
 $ophalen = 0.00;
 $eenDagLever = 10.00;
 
-$totaal = /*normaal is het $_SESSION['$totaalbedrag']*/ 30.00;
+$totaal = $_SESSION['completeprijs'];
 
 if ($totaal < 50.00){
     $normLever += 6.50;
 }
-stront();
-$huidigePagina = "verzendingPhp";
+// stront();
+// $huidigePagina = "verzendingPhp";
 
 //elseif (isset($_SESSION["ophalen"])){
 //    $keuze = $ophalen;
