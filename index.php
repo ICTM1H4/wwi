@@ -60,6 +60,7 @@ include "php/functions.php";
             else {
                 //print_r($value);
                 //print_r("test");
+                //p
                 $item_array = array(
                     'product_id' => $_POST['product_id'],
                     'aantal'=> 1
