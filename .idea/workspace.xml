@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/winkelwagen.php" beforeDir="false" afterPath="$PROJECT_DIR$/winkelwagen.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/betaling.php" beforeDir="false" afterPath="$PROJECT_DIR$/betaling.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,11 +44,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\wwi\structure" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\wwi" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\wwi\structure" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -372,7 +372,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575403821243</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="Mollie toegevoegd">
+      <created>1575455440736</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1575455440736</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,7 +399,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="index toevoeging: logo, categorieën, zoekbalk, winkelwagen, begin account" />
     <MESSAGE value="account =&gt; inlogscherm werkt, css aangevuld over index pagina" />
     <MESSAGE value="aanpassingen index van ben" />
     <MESSAGE value="Nav style css aangepast" />
@@ -417,6 +423,7 @@
     <MESSAGE value="buttons winkelwagentje toegevoegd (+, -, delete)" />
     <MESSAGE value="Verwijder alles button toegevoegd --&gt; sessie afbreken" />
     <MESSAGE value="Aantal per product toegevoegd (nog niet werkend)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Aantal per product toegevoegd (nog niet werkend)" />
+    <MESSAGE value="Mollie toegevoegd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mollie toegevoegd" />
   </component>
 </project>
