@@ -13,6 +13,10 @@
     margin-top: 50px;
 }
 
+.pricei{
+    color: #777777;
+}
+
 .afmetingCard{
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
@@ -41,7 +45,7 @@
 }
 
 .price {
-    color: grey;
+    color: black;
     font-size: 22px;
 }
 

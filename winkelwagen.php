@@ -28,7 +28,11 @@
 
    if(isset($_SESSION['cart'])) {
 
-       foreach ($_SESSION['cart'] as $result) {
+       foreach ($_SESSION['cart'] as $index => $result) {
+           if(isset($_POST[$result['product_id']])) {
+               unset($_SESSION['cart'][$index]);
+           }
+
            //print_r($result);
            $totaal++;
            echo "<br>";
@@ -39,7 +43,11 @@
            $queryscproducts = mysqli_query($conn, "SELECT RecommendedRetailPrice FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
            $price = $queryscproducts->fetch_assoc();
            echo "€" . $price["RecommendedRetailPrice"];
+           $queryscproducts = mysqli_query($conn, "SELECT Photo FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
+           $image = $queryscproducts->fetch_assoc();
+           echo base64_encode($image["Photo"]);
 
+           //echo $result['product_id'];
 
            echo "<br>";
 
@@ -50,11 +58,14 @@
            <button type="submit" name="decrease" value="-" id="decrease"> -</button>
            <input type="text" id="aantal" value="<?php echo $aantalp; ?>"</input>
            <button type="submit" name="increase" value="+" id="increase"> +</button>
-           <button type="submit" name="delete" value="x" id="delete"> Verwijderen</button>
+           <button type="submit" name="<?php echo $result['product_id']?>" value="x" id="delete"> Verwijderen</button>
            <hr>
            </form>
 
            <?php
+
+
+
 
            if(isset($_POST['increase'])){
                $aantalp = $aantalp++;
@@ -74,12 +85,9 @@
         }
     }
 
-
-
    else{
        echo "Winkelwagentje is leeg";
    }
-
 
 
     ?>
@@ -94,6 +102,7 @@
     }
 
 
+
     ?>
 
 </div>
@@ -102,9 +111,10 @@
 
     <form action="verzending.php">
     <h3>Aantal artikelen: <?php echo $totaal ?> </h3><br>
-        <h3>Totaalprijs: <?php echo "€" . $totaalprijs ?> (excl. btw) </h3>
-        <h3>Verzendkosten: <?php echo "€" . $verzendkosten ?>  </h3><hr>
-        <h3>Totaal: <?php echo "€" . $totaalartikelen ?> (incl. btw)</h3>
+        <h3>Totaalprijs: <?php echo "€" . $totaalprijs ?> (excl. btw) </h3><br>
+        <h3>BTW: <?php echo "€" . round($totaalprijs * 0.21 , 2) ?> </h3>
+        <h3>Verzendkosten: <?php echo "€" . $verzendkosten ?>  </h3><hr><br>
+        <h3>Totaal: <?php echo "€" . $totaalartikelen ?> (incl. btw)</h3><br><br>
 
         <input type="submit" value="Verder naar bestellen" id="verder">
     </form>
