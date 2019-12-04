@@ -3,14 +3,14 @@
 include "nav.php";
 include "php/functions.php";
 
-$normLever = 0;
-$ophalen = 0;
-$eenDagLever = 10;
+$normLever = 0.00;
+$ophalen = 0.00;
+$eenDagLever = 10.00;
 
-$totaal = /*normaal is het $_SESSION['$totaalbedrag']*/ 30;
+$totaal = /*normaal is het $_SESSION['$totaalbedrag']*/ 30.00;
 
-if ($totaal < 50){
-    $normLever += 6.5;
+if ($totaal < 50.00){
+    $normLever += 6.50;
 }
 
 //elseif (isset($_SESSION["ophalen"])){
@@ -45,10 +45,11 @@ if ($totaal < 50){
 <body>
 <div class="algMargin">
     <div class = 'progressBar'><?php echo "<h1>" . progressBar() . "</h1>"?></div>
-    <h2>Uw gegevens</h2>
+    <h2 class="uwGegev">Uw gegevens</h2>
+    <h2 class="verzendPrijs">Verzendprijzen</h2>
     <form class="factuurData" action="besteloverzicht.php" method="post">
         <table class="factuurText">
-            <div class="klantInfo">
+            <div class="klantNaam">
                 <tr>
                     <td class="tableColumn">Naam</td>
                     <td class="tableColumn"><input type="text" name="voornaam" placeholder="Voornaam" required></td>
@@ -74,17 +75,14 @@ if ($totaal < 50){
             <tr>
                 <td class="tableColumn">Telefoonnummer</td> <td class="tableColumn"><input type="text" name="telef" placeholder="Telefoonnummer"></td>
             </tr>
-            <tr>
-                <td class="tableColumn"><input type="submit" class="rechtsSubmit"></td>
-            </tr>
         </table>
-    <div class="verzendType">
-        <h1>Verzendprijzen</h1>
-        <p> <input type="radio" value="<?php echo $normLever?>" name="maarEenKnop"> Normale levering €<?php echo $normLever ?></p>
-        <p> <input type="radio" value="<?php echo $ophalen?>" name="maarEenKnop"> Ophalen €<?php echo $ophalen ?> </p>
-        <p> <input type="radio" value="<?php echo $eenDagLever?>" name="maarEenKnop"> Express levering €<?php echo $eenDagLever ?></p><br>
-        <p> Totaalprijs: €<?php echo $totaal?></p>
-    </div>
+        <div class="verzendType">
+            <p> <input type="radio" value="<?php echo $normLever?>" name="maarEenKnop"> Normale levering €<?php echo number_format((float)$normLever, 2, '.', '') ?></p>
+            <p> <input type="radio" value="<?php echo $ophalen?>" name="maarEenKnop"> Ophalen €<?php echo number_format((float)$ophalen, 2, '.', '') ?> </p>
+            <p> <input type="radio" value="<?php echo $eenDagLever?>" name="maarEenKnop"> Express levering €<?php echo number_format((float)$eenDagLever, 2, '.', '')?></p><br>
+            <p> Totaalprijs: €<?php echo number_format((float)$totaal, 2, '.', '')?></p>
+        </div>
+        <input type="submit" class="submitGegev">
     </form>
 </div>
 </body>

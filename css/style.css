@@ -332,18 +332,25 @@ h2{
 }
 
 .factuurData{
-    float: left;
-    width: 60%;
+    font-size: 20px;
     display: table;
+    width: 100%;
 }
 
 .factuurText{
     font-size: 20px;
+    float: left;
+    margin-right: 10%;
 }
 
-/* h2{
+.uwGegev{
     display: inline-block;
-} */
+}
+
+.verzendPrijs{
+    display: inline-block;
+    margin-left: 55%;
+}
 
 .tableColumn{
     padding: 10px;
@@ -354,9 +361,18 @@ h2{
     padding-bottom: 5%;
 }
 
-.rechtsSubmit{
-    position: absolute;
-    right: 38%;
+.submitGegev{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #6a8be1;
+    text-align: center;
+    cursor: pointer;
+    width: 135px;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 
 .overzichtAdres{
@@ -366,8 +382,6 @@ h2{
 }
 
 .verzendType{
-    margin-top: -50px;
-    float: left;
 }
 
 .overzicht h2{
