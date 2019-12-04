@@ -92,6 +92,8 @@ $huidigePagina = "verzendingPhp";
             <input type="submit" name="sendPost" class="button-afrekenen" value="Doorgaan">
         </div>
     </form>
+    <?php
+    ?>
 </div>
 </body>
 </html>

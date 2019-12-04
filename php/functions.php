@@ -156,7 +156,7 @@ function stront(){
             'plaatsnaam' => $_POST['plaatsnaam'],
             'verzendType' => $_POST['maarEenKnop'],
             'email' => $_POST['email'],
-            'telefoonnummer' => "+316" . $_POST['telefoonnummer']
+            'telefoonnummer' => "+316" . $_POST['telef']
         );
         $_SESSION['klantgegevens'] = $klantgegevens;
         return header("Location: ?besteloverzicht");

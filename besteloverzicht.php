@@ -29,7 +29,38 @@ $huidigePagina = "overzichtPhp"
                         <div class="overzichtKlantNaam">
 <!--                            Voornaam tussenvoegsel en achternaam-->
                             <?php
-                            print_r($_SESSION);
+                            if ($_SESSION['klantgegevens']['tussenvoegsel'] === ""){
+                                echo "<div>";
+                                echo trim($_SESSION['klantgegevens']['voornaam']). " ";
+                                echo trim($_SESSION['klantgegevens']['tussenvoegsel']) . " ";
+                                echo trim($_SESSION['klantgegevens']['achternaam']);
+                                echo "</div>";
+                            }
+                            else{
+                                echo "<div>";
+                                echo trim($_SESSION['klantgegevens']['voornaam']). " ";
+                                echo trim($_SESSION['klantgegevens']['tussenvoegsel']) . " ";
+                                echo trim($_SESSION['klantgegevens']['achternaam']);
+                                echo "</div>";
+
+                            }
+                            echo "<div>";
+                            echo trim($_SESSION['klantgegevens']['adres']);
+                            echo "</div>";
+
+                            echo "<div>";
+                            echo trim($_SESSION['klantgegevens']['postcode']);
+                            echo " ";
+                            echo trim($_SESSION['klantgegevens']['plaatsnaam']);
+                            echo "</div>";
+
+                            echo "<div>";
+                            echo trim($_SESSION['klantgegevens']['email']);
+                            echo "</div>";
+
+                            echo "<div>";
+                            echo trim($_SESSION['klantgegevens']['telefoonnummer']);
+                            echo "</div>";
                             ?>
                         </div>
                     <div class = "overzichtKlantAdres">
