@@ -94,20 +94,22 @@ $huidigePagina = "overzichtPhp"
                 <div><h2>Bestelling</h2></div>
                     <div>
                         <?php
-                        $prijs = 1;
-                        $totaalprijs = 0;
-                        for($i = 1; $i <= 1; $i++){
-                            $totaalprijs += $prijs;
-                            $prijs ++;
+                        $completetotaal = $_SESSION['completetotaal'];
+                        $prijs = $_SESSION['prijsproduct'];
+                        $btw = $_SESSION['btw'];
+                        $verzendkosten = $_SESSION['verzendkosten'];
+
+
                             echo "<div class='overzicht-product'>";
-                            echo "<div class = 'overzicht-productnaam'><h3>Product</h3><div>";
+                            echo "<div class = 'overzicht-productnaam'><h4>Product</h4><div>";
                             echo "<img class = 'overzicht-foto' src='Geen_foto_helaas_beschikbaar.png'>";
-                            echo "<div class = 'overzichtAantal'></div>";
-                            echo "<div class = 'overzicht-prijs''><h4>$prijs</h4></div>";
+                            echo "<div class = 'overzichtprijs'> <h4>Subtotaal Producten:€ $prijs (exl. btw)</h4></div>";
+                            echo "<div class = 'btwprijs'> <h4>BTW: € $btw </h4></div>";
+                            echo "<div class = 'btwprijs'> <h4>Verzendkosten: € $verzendkosten </h4></div>";
                             echo "</div>";
-                        }
+
                         echo "<hr>";
-                        echo "<div class = 'overzicht-totaalprijs' ><h3>$totaalprijs</h3></div>";
+                        echo "<div class = 'overzicht-totaalprijs' ><h4>Totaal: € $completetotaal (inc. btw)</h4></div>";
                         ?>
                     </div>
                 <div>

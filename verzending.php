@@ -5,10 +5,12 @@ $normLever = 0.00;
 $ophalen = 0.00;
 $eenDagLever = 10.00;
 
-$totaal = /*normaal is het $_SESSION['$totaalbedrag']*/ 30.00;
 
+$totaal = $_SESSION['completeprijs'];
+$completeTotaal = $totaal + $_SESSION['verzendkosten'];
+$_SESSION['completetotaal'] = $completeTotaal;
 if ($totaal < 50.00){
-    $normLever += 6.50;
+    $normLever += 6.95;
 }
 stront();
 $huidigePagina = "verzendingPhp";
@@ -88,7 +90,7 @@ $huidigePagina = "verzendingPhp";
             <p> <input type="radio" value="<?php echo $normLever?>" name="maarEenKnop" checked> Normale levering €<?php echo number_format((float)$normLever, 2, '.', '') ?></p>
             <p> <input type="radio" value="<?php echo $ophalen?>" name="maarEenKnop"> Ophalen €<?php echo number_format((float)$ophalen, 2, '.', '') ?> </p>
             <p> <input type="radio" value="<?php echo $eenDagLever?>" name="maarEenKnop"> Express levering €<?php echo number_format((float)$eenDagLever, 2, '.', '')?></p><br>
-            <p> Totaalprijs: €<?php echo number_format((float)$totaal, 2, '.', '')?></p>
+            <p> Totaalprijs: €<?php echo number_format((float)$completeTotaal, 2, '.', '')?></p>
             <input type="submit" name="sendPost" class="button-afrekenen" value="Doorgaan">
         </div>
     </form>

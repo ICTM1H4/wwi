@@ -24,7 +24,7 @@
                $_POST[$result['aantal']] = $result['aantal'];
            }
 
-           if(isset($_POST['delete'.$result['product_id']])) {
+           if(isset($_POST['delete'.$result['product_id']]) or $result['aantal'] == 0) {
                unset($_SESSION['cart'][$index]);
                echo "<script>alert('Het product is verwijderd uit uw winkelwagentje')</script>";
                echo "<script>window.location = '?winkelwagen</script>";
@@ -43,7 +43,7 @@
            $price = $queryscproducts->fetch_assoc();
            echo "€" . $price["RecommendedRetailPrice"];
 
-           echo '<input type="text" name="'.$result['product_id'].'" value="'.$result['aantal'].'">';
+           echo '<br> Aantal: <input type="text" id="quantity" name="'.$result['product_id'].'"value="'.$result['aantal'].'">';
            echo "<br>";
 
            $totaal += $result['aantal'];
@@ -101,17 +101,23 @@
 
 
     ?>
-
+    <?php
+    $btw = round($totaalprijs * 0.21 , 2);
+    $_SESSION['completeprijs'] = $totaalartikelen;
+    $_SESSION['prijsproduct'] = $totaalprijs;
+    $_SESSION['btw'] = $btw;
+    $_SESSION['verzendkosten'] = $verzendkosten;
+    ?>
 
 
 <div class="totaal">
 
-    <form method="get">
+    <form method="post">
         <h3>Aantal artikelen: <?php echo $totaal ?> </h3><br>
         <h3>Totaalprijs: <?php echo "€" . $totaalprijs ?> (excl. btw) </h3><br>
-        <h3>BTW: <?php echo "€" . round($totaalprijs * 0.21 , 2) ?> </h3>
-        <h3>Verzendkosten: <?php echo "€" . $verzendkosten ?>  </h3><hr><br>
-        <h3>Totaal: <?php echo "€" . $totaalartikelen ?> (incl. btw)</h3><br><br>
+        <h3>BTW: <?php echo "€" . $btw ?> </h3>
+        <hr><br>
+        <h3>Totaal: <?php echo "€" . round($totaalartikelen , 2) ?> (incl. btw)</h3><br><br>
 
 
         <a href="?verzending"><input type="button" class = "button-afrekenen" value="Doorgaan"></a>

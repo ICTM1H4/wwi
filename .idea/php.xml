@@ -4,10 +4,10 @@
     <include_path>
       <path value="$PROJECT_DIR$/mollie/vendor/composer" />
       <path value="$PROJECT_DIR$/mollie/vendor/guzzlehttp/guzzle" />
-      <path value="$PROJECT_DIR$/mollie/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/mollie/vendor/guzzlehttp/psr7" />
-      <path value="$PROJECT_DIR$/mollie/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/mollie/vendor/guzzlehttp/promises" />
       <path value="$PROJECT_DIR$/mollie/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/mollie/vendor/ralouphie/getallheaders" />
     </include_path>
   </component>
   <component name="PhpUnit">
