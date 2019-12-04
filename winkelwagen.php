@@ -24,7 +24,7 @@
                $_POST[$result['aantal']] = $result['aantal'];
            }
 
-           if(isset($_POST['delete'.$result['product_id']])) {
+           if(isset($_POST['delete'.$result['product_id']]) or $result['aantal'] == 0) {
                unset($_SESSION['cart'][$index]);
                echo "<script>alert('Het product is verwijderd uit uw winkelwagentje')</script>";
                echo "<script>window.location = '?winkelwagen</script>";
