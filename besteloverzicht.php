@@ -101,16 +101,15 @@ $huidigePagina = "overzichtPhp"
 
 
                             echo "<div class='overzicht-product'>";
-                            echo "<div class = 'overzicht-productnaam'><h3>Product</h3><div>";
+                            echo "<div class = 'overzicht-productnaam'><h4>Product</h4><div>";
                             echo "<img class = 'overzicht-foto' src='Geen_foto_helaas_beschikbaar.png'>";
-                            echo "<div class = 'overzichtAantal'></div>";
-                            echo "<div class = 'overzicht-prijs'><h4>Subtotaal Producten:€ $prijs (exl btw)</h4></div>";
+                            echo "<div class = 'overzichtprijs'> <h4>Subtotaal Producten:€ $prijs (exl. btw)</h4></div>";
                             echo "<div class = 'btwprijs'> <h4>BTW: € $btw </h4></div>";
-                        echo "<div class = 'btwprijs'> <h4>Verzendkosten: € $verzendkosten </h4></div>";
+                            echo "<div class = 'btwprijs'> <h4>Verzendkosten: € $verzendkosten </h4></div>";
                             echo "</div>";
 
                         echo "<hr>";
-                        echo "<div class = 'overzicht-totaalprijs' ><h3>Totaal:€ $completetotaal (inc btw)</h3></div>";
+                        echo "<div class = 'overzicht-totaalprijs' ><h4>Totaal: € $completetotaal (inc. btw)</h4></div>";
                         ?>
                     </div>
                 <div>
