@@ -32,7 +32,6 @@
             <img src="account.png" class="menubalk-foto" onclick="document.getElementById('accountclick').style.display='block'">
             <a href="?winkelwagen">
                 <img src="winkelwagen.png" class = "menubalk-foto">
-                <p>11</p>
             </a>
         </div>
     </div>
