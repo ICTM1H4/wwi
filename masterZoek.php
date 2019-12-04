@@ -40,7 +40,7 @@ else {
         elseif($num_rows < 2 AND $num_rows != 0){
             echo " resultaat voor: ";
         }
-
+//alsje joey
         if(isset($q)){
             echo ($q);
         }
