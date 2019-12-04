@@ -1,7 +1,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <?php
-include "nav.php";
-include "php/functions.php";
 
 $normLever = 0.00;
 $ophalen = 0.00;

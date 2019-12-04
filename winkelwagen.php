@@ -109,14 +109,14 @@
 
 <div class="totaal">
 
-    <form action="verzending.php">
+    <form>
     <h3>Aantal artikelen: <?php echo $totaal ?> </h3><br>
         <h3>Totaalprijs: <?php echo "€" . $totaalprijs ?> (excl. btw) </h3><br>
         <h3>BTW: <?php echo "€" . round($totaalprijs * 0.21 , 2) ?> </h3>
         <h3>Verzendkosten: <?php echo "€" . $verzendkosten ?>  </h3><hr><br>
         <h3>Totaal: <?php echo "€" . $totaalartikelen ?> (incl. btw)</h3><br><br>
 
-        <input type="submit" value="Verder naar bestellen" id="verder">
+        <a href="?verzending"><input type="button" class = "button-afrekenen" value="Doorgaan"></a>
     </form>
 </div>
 
