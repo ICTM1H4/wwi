@@ -104,6 +104,7 @@
     <?php
 
     $_SESSION['completeprijs'] = $totaalartikelen;
+    $_SESSION['prijsproduct'] = $totaalprijs;
     ?>
 
 

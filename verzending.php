@@ -8,10 +8,10 @@ $eenDagLever = 10.00;
 $totaal = $_SESSION['completeprijs'];
 
 if ($totaal < 50.00){
-    $normLever += 6.50;
+    $normLever += 6.95;
 }
-// stront();
-// $huidigePagina = "verzendingPhp";
+stront();
+$huidigePagina = "verzendingPhp";
 
 //elseif (isset($_SESSION["ophalen"])){
 //    $keuze = $ophalen;
