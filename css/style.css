@@ -13,6 +13,11 @@
     margin-top: 50px;
 }
 
+.pricei{
+    color: #777777;
+}
+
+
 .afmetingCard{
     position: relative;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
@@ -41,7 +46,7 @@
 }
 
 .price {
-    color: grey;
+    color: black;
     font-size: 22px;
 }
 
@@ -332,36 +337,61 @@ h2{
 }
 
 .factuurData{
-    float: left;
-    width: 60%;
+    font-size: 20px;
     display: table;
+    width: 100%;
 }
 
 .factuurText{
     font-size: 20px;
+    float: left;
+    margin-right: 10%;
 }
 
-/* h2{
+.uwGegev{
     display: inline-block;
-} */
+}
+
+.verzendPrijs{
+    display: inline-block;
+    margin-left: 55%;
+}
 
 .tableColumn{
     padding: 10px;
 }
 
 /*---------------------------Bestelprocedure-----------------------------*/
+.verzending-316{
+    float: left;
+    font-size: 16px;
+}
+
 .overzicht{
     padding-bottom: 5%;
 }
 
-.rechtsVerzend{
-    position: absolute;
-    right: 38%;
+.submitGegev{
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #6a8be1;
+    text-align: center;
+    cursor: pointer;
+    width: 135px;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 8px;
 }
+
 .overzichtAdres{
     border-radius: 5px;
     border-color: black;
     border-width: medium;
+}
+
+.verzendType{
 }
 
 .overzicht h2{

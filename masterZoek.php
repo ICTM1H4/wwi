@@ -70,6 +70,7 @@ else {
                             <h5> <?php echo $title?></h5><br>
                             <div class="onder">
                                 <p class="price"><?php echo "€ ". $price ?></p><br>
+                                <p class="pricei"><?php echo "€ ". round($price * 1.21, 2) . " Incl. btw" ?></p><br>
                                 <button type="submit" name="add"> Toevoegen aan winkelwagentje</button>
                                 <input type="hidden" name="product_id" value='<?php echo $row['StockItemID']?>'>
                                 <input type="hidden" name="price" value='<?php echo $row['RecommendedRetailPrice']?>'>

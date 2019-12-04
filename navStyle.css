@@ -151,9 +151,8 @@ a{
 }
 
 
-
-/*Kleurencodes:
-#00bdf3
-#354954
-#99aebb*/
-
+h6 {
+    color: #00bdf3;
+    color: #354954;
+    color: #99aebb
+}

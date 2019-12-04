@@ -2,6 +2,7 @@
 include "php/functions.php";
 include "php/connectDB.php";
 include "altnav.php";
+session_start();
 ?>
 
 <html>
@@ -24,31 +25,81 @@ include "altnav.php";
                             <?php
                             $_SESSION['klantgegevens'] = true;
 
-                            if(isset($_POST['voornaam']) and isset($_POST['tussenvoegsel']) and isset($_POST['achternaam']))
+                            if($_POST['tussenvoegsel'])
                             {
                                 $klantVoornaam = $_POST['voornaam'];
                                 $klantTussenvoegsel = $_POST['tussenvoegsel'];
                                 $klantAchternaam = $_POST['achternaam'];
-                                $klantgegevens = array($klantVoornaam, $klantTussenvoegsel, $klantAchternaam);
+                                $klantAdres = $_POST['adres'];
+                                $klantPostcode = $_POST['postcode'];
+                                $klantPlaatsnaam = $_POST['plaatsnaam'];
+                                $verzendType = $_POST['maarEenKnop'];
+                                $klantMail = $_POST['email'];
+                                $klantTelefoonnummer = "+316" . $_POST['telefoonnummer'];
+                                $klantgegevens = array
+                                (   'voornaam' => $klantVoornaam,
+                                    'tussenvoegsel' => $klantTussenvoegsel,
+                                    'achternaam' => $klantAchternaam,
+                                    'adres' => $klantAdres,
+                                    'postcode' => $klantPostcode,
+                                    'plaatsnaam' => $klantPlaatsnaam,
+                                    'verzendType' => $verzendType,
+                                    'email' => $klantMail,
+                                    'telefoonnummer' => $klantTelefoonnummer
+                                );
+
+                                echo "<div>";
+                                echo $klantgegevens['voornaam'] ." ".  $klantgegevens['tussenvoegsel'] . " " . $klantgegevens['achternaam'];
+                                echo "</div>";
+                                echo "<div>";
+                                echo $klantgegevens['adres'];
+                                echo "</div>";
+                                echo "<div>";
+                                echo $klantgegevens['postcode'] . " " . $klantgegevens['plaatsnaam'];
+                                echo "</div>";
+
 
                             }
                             else
                                 {
                                     $klantVoornaam = $_POST['voornaam'];
                                     $klantAchternaam = $_POST['achternaam'];
-                                    $klantgegevens = array($klantVoornaam, $klantAchternaam);
+                                    $klantAdres = $_POST['adres'];
+                                    $klantPostcode = $_POST['postcode'];
+                                    $klantPlaatsnaam = $_POST['plaatsnaam'];
+                                    $verzendType = $_POST['maarEenKnop'];
+                                    $klantMail = $_POST['email'];
+                                    $klantTelefoonnummer = "+316" . $_POST['telef'];
+                                    $klantgegevens = array
+                                    (   'voornaam' => $klantVoornaam,
+                                        'achternaam' => $klantAchternaam,
+                                        'adres' => $klantAdres,
+                                        'postcode' => $klantPostcode,
+                                        'plaatsnaam' => $klantPlaatsnaam,
+                                        'verzendType' => $verzendType,
+                                        'email' => $klantMail,
+                                        'telefoonnummer' => $klantTelefoonnummer
+
+                                    );
+
+                                    echo "<div>";
+                                    echo $klantgegevens['voornaam'] ." " . $klantgegevens['achternaam'];
+                                    echo "</div>";
+                                    echo "<div>";
+                                    echo $klantgegevens['adres'];
+                                    echo "</div>";
+                                    echo "<div>";
+                                    echo $klantgegevens['postcode'] . " " . $klantgegevens['plaatsnaam'];
+                                    echo "</div>";
                             }
 
                             $_SESSION['klantgegevens'] = $klantgegevens;
-
-                            foreach($klantgegevens as $klantgegeven){
-                                echo $klantgegeven;
-                                echo " ";
-                            }
                             ?>
                         </div>
                     <div class = "overzichtKlantAdres">
+                        <?php
 
+                        ?>
                     </div>
                 </div>
             </div>
@@ -57,7 +108,7 @@ include "altnav.php";
 
                     <div><h2>Bezorging</h2></div>
                     <div>Bezorgingswijze<br><br></div>
-                    <div>... euro</div>
+                    <div><?php echo $_SESSION['klantgegevens']['verzendType']?> euro</div>
                 </div>
             </div>
             <div class = "betalingswijze">
