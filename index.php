@@ -44,7 +44,7 @@ include "php/functions.php";
 
             //var_dump($item_array_id );
 
-
+            //test
             //print_r($_SESSION['cart']);
 
             if(in_array($_POST['product_id'], $item_array_id)){
