@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
+    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="HELE GROTE BLIJ2.0">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/besteloverzicht.php" beforeDir="false" afterPath="$PROJECT_DIR$/besteloverzicht.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/verzending.php" beforeDir="false" afterPath="$PROJECT_DIR$/verzending.php" afterDir="false" />
@@ -13,7 +13,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/mollie/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -96,7 +96,8 @@
       <workItem from="1575012618811" duration="347000" />
       <workItem from="1575019788696" duration="3665000" />
       <workItem from="1575284023170" duration="3613000" />
-      <workItem from="1575485560315" duration="6287000" />
+      <workItem from="1575485560315" duration="7684000" />
+      <workItem from="1575495550529" duration="844000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -420,7 +421,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575491359212</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="HELE GROTE BLIJ">
+      <created>1575492827213</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1575492827213</updated>
+    </task>
+    <task id="LOCAL-00048" summary="HELE GROTE BLIJ2.0">
+      <created>1575493657171</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1575493657171</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -450,8 +465,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="index geupdate" />
-    <MESSAGE value="css nav balk witte letter&#10;nieuwe winkelwagen en account foto" />
     <MESSAGE value="nav toegoevoegd aan zoek pagina&#10;for loop met a en breaks weggehaald" />
     <MESSAGE value="witte account png" />
     <MESSAGE value="opmaak nav en zoekbar verbeterd" />
@@ -475,6 +488,8 @@
     <MESSAGE value="updaten en verwijderen samengevoegd." />
     <MESSAGE value="Prijs wordt doorgegeven" />
     <MESSAGE value="Ben wou dat ik dit pushte, blame him" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ben wou dat ik dit pushte, blame him" />
+    <MESSAGE value="HELE GROTE BLIJ" />
+    <MESSAGE value="HELE GROTE BLIJ2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="HELE GROTE BLIJ2.0" />
   </component>
 </project>

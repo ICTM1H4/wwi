@@ -106,6 +106,7 @@
     $_SESSION['completeprijs'] = $totaalartikelen;
     $_SESSION['prijsproduct'] = $totaalprijs;
     $_SESSION['btw'] = $btw;
+    $_SESSION['verzendkosten'] = $verzendkosten;
     ?>
 
 
@@ -115,8 +116,8 @@
         <h3>Aantal artikelen: <?php echo $totaal ?> </h3><br>
         <h3>Totaalprijs: <?php echo "€" . $totaalprijs ?> (excl. btw) </h3><br>
         <h3>BTW: <?php echo "€" . $btw ?> </h3>
-        <h3>Verzendkosten: <?php echo "€" . $verzendkosten ?>  </h3><hr><br>
-        <h3>Totaal: <?php echo "€" . $totaalartikelen ?> (incl. btw)</h3><br><br>
+        <hr><br>
+        <h3>Totaal: <?php echo "€" . round($totaalartikelen , 2) ?> (incl. btw)</h3><br><br>
 
 
         <a href="?verzending"><input type="button" class = "button-afrekenen" value="Doorgaan"></a>
