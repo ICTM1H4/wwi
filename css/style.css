@@ -367,6 +367,29 @@ h2{
     font-size: 16px;
 }
 
+.verzendingPhp{
+    float: left;
+}
+
+.overzichtPhp{
+    float: left;
+}
+
+.betalingPhp{
+    float: left;
+}
+
+.bevestigingPhp{
+    float: left;
+}
+
+.streepjesBar{
+    float: left;
+    border-top: 1px dashed;
+    width: 25.3%;
+    margin-top: 9px;
+}
+
 .overzicht{
     padding-bottom: 5%;
 }

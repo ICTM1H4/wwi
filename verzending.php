@@ -13,6 +13,8 @@ if ($totaal < 50.00){
     $normLever += 6.50;
 }
 
+$huidigePagina = "verzendingPhp";
+
 //elseif (isset($_SESSION["ophalen"])){
 //    $keuze = $ophalen;
 //}
@@ -44,7 +46,15 @@ if ($totaal < 50.00){
 </head>
 <body>
 <div class="algMargin">
-    <div class = 'progressBar'><?php echo "<h1>" . progressBar() . "</h1>"?></div>
+    <div class="progressBar"><?php progresBar($huidigePagina)?>
+        <div class="verzendingPhp">Verzending</div>
+        <hr class="streepjesBar">
+        <div class="overzichtPhp">Overzicht</div>
+        <hr class="streepjesBar">
+        <div class="betalingPhp">Betaling</div>
+        <hr class="streepjesBar">
+        <div class="bevestigingPhp">Bevestiging</div>
+    </div>
     <h2 class="uwGegev">Uw gegevens</h2>
     <h2 class="verzendPrijs">Verzendprijzen</h2>
     <form class="factuurData" action="besteloverzicht.php" method="post">
@@ -77,7 +87,7 @@ if ($totaal < 50.00){
             </tr>
         </table>
         <div class="verzendType">
-            <p> <input type="radio" value="<?php echo $normLever?>" name="maarEenKnop"> Normale levering €<?php echo number_format((float)$normLever, 2, '.', '') ?></p>
+            <p> <input type="radio" value="<?php echo $normLever?>" name="maarEenKnop" checked> Normale levering €<?php echo number_format((float)$normLever, 2, '.', '') ?></p>
             <p> <input type="radio" value="<?php echo $ophalen?>" name="maarEenKnop"> Ophalen €<?php echo number_format((float)$ophalen, 2, '.', '') ?> </p>
             <p> <input type="radio" value="<?php echo $eenDagLever?>" name="maarEenKnop"> Express levering €<?php echo number_format((float)$eenDagLever, 2, '.', '')?></p><br>
             <p> Totaalprijs: €<?php echo number_format((float)$totaal, 2, '.', '')?></p>

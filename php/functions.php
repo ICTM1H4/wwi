@@ -68,7 +68,7 @@ function printRandomItem($conn){
         echo '<div class="afmetingCardBeter">';
             echo '<div class="card">';
                 echo '<a style="color: black" href="?productID='.$row['StockItemID'].'">
-                        <img style="width: 100%; height: 250px" src="data:image/jpeg;base64,'.base64_encode($row['Photo']).'"><br>';
+                <img style="width: 100%; height: 250px" src="data:image/jpeg;base64,'.base64_encode($row['Photo']).'"><br>';
                 echo '<h5>'.$row['StockItemName'].'</h5></a>';
                 echo '<div class="onder">';
                 echo '<p class="price">&euro; '.$row['RecommendedRetailPrice'].'</p><br>';
@@ -97,28 +97,48 @@ function getCategorie($conn) {
 }
 //Functie van de progressiebar tijdens de bestelprocedure
 
-function progressBar(){
-    $status = "Besteloverzicht";
-    if (isset($_GET['betaaloverzicht']))
-    {
-        $status = "Besteloverzicht";
-    }
-    elseif (isset($_GET['verzending']))
-    {
-        $status = "Verzending";
-    }
-    elseif (isset($_GET['betaling']))
-    {
-        $status = "Betaling";
-    }
-    elseif (isset($_GET['bevestiging']))
-    {
-        $status = "Bevestiging";
-    }
-    return $status;
-}
-
 
 function klanggev($a){
     $_POST['$a'];
+}
+
+/* start functie over progressbar*/
+
+function progresBar($huidigePagina){
+    if ($huidigePagina == "verzendingPhp"){
+        echo '<style type="text/css">
+            .verzendingPhp{
+                font-weight: bold;
+            }
+            .overzichtPhp{
+                font-weight: normal;
+            }
+            .bevestigingPhp{
+                font-weight: normal;
+            }
+            </style>';
+    }
+    elseif ($huidigePagina == "overzichtPhp") {
+        echo '<style type="text/css">
+            .overzichtPhp{
+                font-weight: bold;
+            }
+            .bevestigingPhp{
+                font-weight: normal;
+            }
+            </style>';
+    }
+    elseif ($huidigePagina == "bevestigingPhp"){
+        echo '<style type="text/css">
+            .verzendingPhp{
+                font-weight: normal;
+            }
+            .overzichtPhp{
+                font-weight: normal;
+            }
+            .bevestigingPhp{
+                font-weight: bold;
+            }
+            </style>';
+    }
 }
