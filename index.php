@@ -51,42 +51,37 @@ include "php/functions.php";
     }
 
     if(isset($_POST["add"])){
-        foreach($_SESSION['cart'] as $value) {
-            if($value['product_id'] == $_POST['product_id']) {
-                //print_r($value);
-                //print_r("test8");
-                $value['aantal'] += 1;
-            }
-            else {
-                //print_r($value);
-                //print_r("test");
-                //p
-                $item_array = array(
-                    'product_id' => $_POST['product_id'],
-                    'aantal'=> 1
-                );
-            }
-        }
         //session_destroy();
         //print_r($_POST['product_id']);
         if(isset($_SESSION['cart'])){
             $item_array_id = array_column($_SESSION['cart'], "product_id");
-
-            //var_dump($item_array_id );
-
-            //test
-            //print_r($_SESSION['cart']);
+            // print_r($_SESSION['cart']);
+            foreach($_SESSION['cart'] as $key => $value) {
+                if($value['product_id'] == $_POST['product_id']) {
+                    $_SESSION['cart'][$key]['aantal'] = $value['aantal']+1;
+                }
+                else {
+                    $item_array = array(
+                        'product_id' => $_POST['product_id'],
+                        'aantal'=> 1
+                    );
+                }
+            }
 
             if(in_array($_POST['product_id'], $item_array_id)){
-                echo "<script>alert('Dit product is al toegevoegd aan uw winkelwagentje...!')</script>";
+                echo "<script>alert('Uw product is toegevoed aan winkelwagen')</script>";
                 echo "<script>window.location = 'index.php</script>";
 
                }
             else{
                 $count = count($_SESSION['cart']);
 
-
-                $_SESSION['cart'][$count]= $item_array;
+                // $_SESSION['cart'][$count]= $item_array;
+                 $item_array = array(
+                'product_id' => $_POST['product_id'],
+                'aantal' => 1
+            );
+            $_SESSION['cart'][$count] = $item_array;
                 //print_r($_SESSION['cart']);
             }
         }

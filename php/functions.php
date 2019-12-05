@@ -47,7 +47,23 @@ function getItem($conn, $id) {
     } else {
         return "Er is geen resultaat";
     }
+
 }
+
+function koudeCel ($conn){
+    $query = "SELECT AVG(temperature) FROM coldroomtemperatures";
+    $result = $conn->query($query);
+}
+
+//function gekoeldProduct($conn){
+//    $query = "SELECT * FROM stockitems WHERE IsChillerStock >= 1";
+//    $result = $conn->query($query);
+//    if ($result){
+//        return $result->fetch_assoc();
+//    } else {
+//        return "";
+//    }
+//}
 
 function printPlaatjes() {
     $getName = glob("*.{gif,jfif,png,jpeg,jpg}",  GLOB_BRACE);
@@ -73,7 +89,7 @@ function printRandomItem($conn){
                 echo '<div class="onder">';
                 echo '<p class="price">&euro; '.$row['RecommendedRetailPrice'].'</p><br>';
                 echo '<form method="POST" >';
-                echo '<input type="submit" name="add" value="Toevoegen aan winkelwagentje">';
+                echo '<input type="submit" class="button-afrekenen" name="add" value="Toevoegen aan winkelwagentje">';
                 echo '<input type="hidden" name="product_id" value="'. $row["StockItemID"] .'">';
                 echo '<input type="hidden" name="price" value="'. $row["RecommendedRetailPrice"].'">';
                 echo '</form>';

@@ -20,11 +20,16 @@
        foreach ($_SESSION['cart'] as $index => $result) {
 
            if(isset($_POST['plus'])) {
-               $result['aantal'] = $_POST[$result["product_id"]];
-               $_POST[$result['aantal']] = $result['aantal'];
+            //    print_r($_POST[$result["product_id"]]);
+            //    $result['aantal'] = $_POST[$result["product_id"]];
+            //    print_r($_SESSION['cart'][$index]['aantal']);
+            //    die(0);
+               $_SESSION['cart'][$index]['aantal'] = $_POST[$result["product_id"]];
+                header('Location: ?winkelwagen');
+
            }
 
-           if(isset($_POST['delete'.$result['product_id']]) or $result['aantal'] == 0) {
+           if(isset($_POST['delete'.$result['product_id']]) or $result['aantal'] <= 0) {
                unset($_SESSION['cart'][$index]);
                echo "<script>alert('Het product is verwijderd uit uw winkelwagentje')</script>";
                echo "<script>window.location = '?winkelwagen</script>";
@@ -32,7 +37,8 @@
            }
 
 
-           //print_r($result);
+        //    print_r($result);
+        //    die(0);
 
            echo "<br>";
            $queryscproducts = mysqli_query($conn, "SELECT StockItemName FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
@@ -45,29 +51,19 @@
 
            echo '<br> Aantal: <input type="text" id="quantity" name="'.$result['product_id'].'"value="'.$result['aantal'].'">';
            echo "<br>";
-
            $totaal += $result['aantal'];
            //echo $result['product_id'];
-
            echo "<br>";
-
            ?>
-
 <!--           <form method="post" >-->
            <input type="submit" name="delete<?php echo $result['product_id']?>" value="Verwijderen" id="delete">
            <hr>
 <!--           </form>-->
-
            <?php
-
             $totaalprijs = $totaalprijs + $price["RecommendedRetailPrice"] * $result['aantal'];
             $totaalartikelen = round( $totaalprijs * 1.21 + $verzendkosten, 2);
-
        }
-
-
     }
-
    else{
        echo "Winkelwagentje is leeg";
    }
