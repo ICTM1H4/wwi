@@ -76,8 +76,12 @@ include "php/functions.php";
             else{
                 $count = count($_SESSION['cart']);
 
-
-                $_SESSION['cart'][$count]= $item_array;
+                // $_SESSION['cart'][$count]= $item_array;
+                 $item_array = array(
+                'product_id' => $_POST['product_id'],
+                'aantal' => 1
+            );
+            $_SESSION['cart'][0] = $item_array;
                 //print_r($_SESSION['cart']);
             }
         }

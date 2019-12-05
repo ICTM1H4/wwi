@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="HELE GROTE BLIJ2.0">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/besteloverzicht.php" beforeDir="false" afterPath="$PROJECT_DIR$/besteloverzicht.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/verzending.php" beforeDir="false" afterPath="$PROJECT_DIR$/verzending.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkelwagen.php" beforeDir="false" afterPath="$PROJECT_DIR$/winkelwagen.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,7 +13,8 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/mollie/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
@@ -34,7 +38,16 @@
     <option name="RESET_MODE" value="HARD" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/mollie/vendor/composer" />
+      <path value="$PROJECT_DIR$/mollie/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/mollie/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/mollie/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/mollie/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/mollie/vendor/ralouphie/getallheaders" />
+    </include_path>
+  </component>
   <component name="ProjectId" id="1TVsoaq0mUYBokzWuvogApB1HTN" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -43,11 +56,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\wwi\structure" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\wwi" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\wwi\structure" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -83,6 +96,8 @@
       <workItem from="1575012618811" duration="347000" />
       <workItem from="1575019788696" duration="3665000" />
       <workItem from="1575284023170" duration="3613000" />
+      <workItem from="1575485560315" duration="7684000" />
+      <workItem from="1575495550529" duration="844000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -392,11 +407,49 @@
       <option name="project" value="LOCAL" />
       <updated>1575482276826</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Prijs wordt doorgegeven">
+      <created>1575489517125</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1575489517126</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Ben wou dat ik dit pushte, blame him">
+      <created>1575491359212</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1575491359212</updated>
+    </task>
+    <task id="LOCAL-00047" summary="HELE GROTE BLIJ">
+      <created>1575492827213</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1575492827213</updated>
+    </task>
+    <task id="LOCAL-00048" summary="HELE GROTE BLIJ2.0">
+      <created>1575493657171</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1575493657171</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -412,10 +465,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="aanpassingen index van ben" />
-    <MESSAGE value="Nav style css aangepast" />
-    <MESSAGE value="index geupdate" />
-    <MESSAGE value="css nav balk witte letter&#10;nieuwe winkelwagen en account foto" />
     <MESSAGE value="nav toegoevoegd aan zoek pagina&#10;for loop met a en breaks weggehaald" />
     <MESSAGE value="witte account png" />
     <MESSAGE value="opmaak nav en zoekbar verbeterd" />
@@ -437,6 +486,10 @@
     <MESSAGE value="Aantal per product toegevoegd (nog niet werkend)" />
     <MESSAGE value="Verwijderen producten mogelijk en style aangepast" />
     <MESSAGE value="updaten en verwijderen samengevoegd." />
-    <option name="LAST_COMMIT_MESSAGE" value="updaten en verwijderen samengevoegd." />
+    <MESSAGE value="Prijs wordt doorgegeven" />
+    <MESSAGE value="Ben wou dat ik dit pushte, blame him" />
+    <MESSAGE value="HELE GROTE BLIJ" />
+    <MESSAGE value="HELE GROTE BLIJ2.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="HELE GROTE BLIJ2.0" />
   </component>
 </project>

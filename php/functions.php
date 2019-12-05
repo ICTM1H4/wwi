@@ -47,7 +47,23 @@ function getItem($conn, $id) {
     } else {
         return "Er is geen resultaat";
     }
+
 }
+
+function koudeCel ($conn){
+    $query = "SELECT AVG(temperature) FROM coldroomtemperatures";
+    $result = $conn->query($query);
+}
+
+//function gekoeldProduct($conn){
+//    $query = "SELECT * FROM stockitems WHERE IsChillerStock >= 1";
+//    $result = $conn->query($query);
+//    if ($result){
+//        return $result->fetch_assoc();
+//    } else {
+//        return "";
+//    }
+//}
 
 function printPlaatjes() {
     $getName = glob("*.{gif,jfif,png,jpeg,jpg}",  GLOB_BRACE);
