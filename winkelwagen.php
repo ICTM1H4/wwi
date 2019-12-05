@@ -49,7 +49,7 @@
            $price = $queryscproducts->fetch_assoc();
            echo "€" . $price["RecommendedRetailPrice"];
 
-           echo '<br> Aantal: <input type="text" id="quantity" name="'.$result['product_id'].'"value="'.$result['aantal'].'">';
+           echo '<br> Aantal: <input type="number" min="1" max="10" id="quantity" name="'.$result['product_id'].'"value="'.$result['aantal'].'">';
            echo "<br>";
            $totaal += $result['aantal'];
            //echo $result['product_id'];
