@@ -35,7 +35,7 @@ $data = getItem($conn, $id);
         <div class="prijs md5"><?php echo "&euro;". $data["product"]["RecommendedRetailPrice"]?></div>
         <?php 
             if($data["product"]["IsChillerStock"] == 1) {
-                echo '<div class="prijs md5">Deze product wordt gekoeld: '. round($data["temp"]["temp"], 0).'&deg; </div>';
+                echo '<div class="prijs md5">Dit product wordt gekoeld: '. round($data["temp"]["temp"], 0).'&deg;C </div>';
             }
         ?>
         <div class="voorraad md5">Voorraad: <?php echo $data["product"]["voorraad"] ?></div>
