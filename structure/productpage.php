@@ -42,11 +42,11 @@ $data = getItem($conn, $id);
         ?>
         <div class="voorraad md5"><?php
             if($data["product"]["voorraad"] > 50){
-            print ("Is op voorraad");
+            print ('<div style="color: darkgreen">product is op voorraad</div>');
             } elseif ($data["product"]["voorraad"] < 50 and ($data["product"]["voorraad"] > 0)){
-            print ("De voorraad is bijna op");
+            print ('<div style="color: orange">product is bijna uitverkocht!</div>');
             } elseif ($data["product"]["voorraad"] <= 0) {
-            print ("Product is uitverkocht");
+            print ('<div style="color:red">product is uitverkocht</div>');
             } ?>
         </div>
         <form method="POST">
