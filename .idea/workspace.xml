@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/structure/productpage.php" beforeDir="false" afterPath="$PROJECT_DIR$/structure/productpage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/structure/klantenservice.php" beforeDir="false" afterPath="$PROJECT_DIR$/structure/klantenservice.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,13 +96,6 @@
       <workItem from="1575284023170" duration="3613000" />
       <workItem from="1575485560315" duration="7684000" />
       <workItem from="1575495550529" duration="844000" />
-    </task>
-    <task id="LOCAL-00001" summary="logo erbij">
-      <created>1573557548334</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1573557548335</updated>
     </task>
     <task id="LOCAL-00002" summary="winkelwagen erbij">
       <created>1573557997196</created>
@@ -441,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575557791237</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="-">
+      <created>1575560619824</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1575560619825</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,7 +470,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="nav toegoevoegd aan zoek pagina&#10;for loop met a en breaks weggehaald" />
     <MESSAGE value="witte account png" />
     <MESSAGE value="opmaak nav en zoekbar verbeterd" />
     <MESSAGE value="categorieen werkend gemaakt" />
@@ -496,6 +494,7 @@
     <MESSAGE value="Ben wou dat ik dit pushte, blame him" />
     <MESSAGE value="HELE GROTE BLIJ" />
     <MESSAGE value="HELE GROTE BLIJ2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="HELE GROTE BLIJ2.0" />
+    <MESSAGE value="-" />
+    <option name="LAST_COMMIT_MESSAGE" value="-" />
   </component>
 </project>
