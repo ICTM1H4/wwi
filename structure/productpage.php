@@ -40,7 +40,7 @@ $data = getItem($conn, $id);
         ?>
         <div class="voorraad md5">Voorraad: <?php echo $data["product"]["voorraad"] ?></div>
         <form method="POST">
-              <button type="submit" name="add">Toevoegen aan winkelwagentje</button>
+              <button type="submit" class="naarWinkelmandje" style="width:300px" name="add">Toevoegen aan winkelwagentje</button>
               <input type="hidden" name="product_id" value='<?php echo $data['product']['StockItemID']?>'>
               <input type="hidden" name="price" value='<?php echo $data['product']['RecommendedRetailPrice']?>'>
           </form>
