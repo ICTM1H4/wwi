@@ -1,6 +1,8 @@
 <?php
 $id = $_GET['productID'];
 $data = getItem($conn, $id);
+
+
 ?>
 
 <div class="content-product">
@@ -38,7 +40,15 @@ $data = getItem($conn, $id);
                 echo '<div class="prijs md5">Dit product wordt gekoeld: '. round($data["temp"]["temp"], 0).'&deg;C </div>';
             }
         ?>
-        <div class="voorraad md5">Voorraad: <?php echo $data["product"]["voorraad"] ?></div>
+        <div class="voorraad md5"><?php
+            if($data["product"]["voorraad"] > 50){
+            print ("Is op voorraad");
+            } elseif ($data["product"]["voorraad"] < 50 and ($data["product"]["voorraad"] > 0)){
+            print ("De voorraad is bijna op");
+            } elseif ($data["product"]["voorraad"] <= 0) {
+            print ("Product is uitverkocht");
+            } ?>
+        </div>
         <form method="POST">
               <button type="submit" class="naarWinkelmandje" style="width:300px" name="add">Toevoegen aan winkelwagentje</button>
               <input type="hidden" name="product_id" value='<?php echo $data['product']['StockItemID']?>'>
