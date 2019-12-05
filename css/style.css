@@ -452,15 +452,14 @@ h4 {
 .button-afrekenen{
     border: none;
     outline: 0;
-    padding: 12px;
+    padding: 20px;
     color: white;
     background-color: #6a8be1;
     text-align: center;
     cursor: pointer;
-    width: 135px;
-    font-size: 18px;
+    width: 230px;
     margin-top: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
 .overzicht-foto{
@@ -511,7 +510,7 @@ h4 {
     background-color: #6a8be1;
     text-align: center;
     cursor: pointer;
-    width: 50%;
+    width: 40%;
     font-size: 18px;
     margin-bottom: 20px;
     border-radius: 8px
