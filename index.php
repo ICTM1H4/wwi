@@ -81,7 +81,7 @@ include "php/functions.php";
                 'product_id' => $_POST['product_id'],
                 'aantal' => 1
             );
-            $_SESSION['cart'][0] = $item_array;
+            $_SESSION['cart'][$count] = $item_array;
                 //print_r($_SESSION['cart']);
             }
         }
