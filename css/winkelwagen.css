@@ -15,12 +15,20 @@
 
 .totaal {
     margin-top: 10px;
-    margin-left: 900px;;
     margin-bottom: 30px;
-    border-style: groove;
+    background-color: #d9f2f4;
 
 }
 
+.totaltext{
+    margin-left: 900px;
+    margin-top: 10px;
+}
+
+.button-afrekenen{
+    margin-left: 900px;
+    margin-bottom: 30px;
+}
 
 h1 {
     background-color:  #354954;
@@ -111,7 +119,7 @@ hr {
     margin-bottom: 10px;
     margin-top: 30px;
     border: none;
-    margin-left: 850px;
+    margin-left: 1100px;
 }
 
 #update{

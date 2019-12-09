@@ -131,12 +131,13 @@
 <div class="totaal">
 
     <form method="post">
+        <div class="totaltext" >
         <h3>Aantal artikelen: <?php echo $totaal ?> </h3><br>
         <h3>Totaalprijs: <?php echo "€" . $totaalprijs ?> (excl. btw) </h3><br>
         <h3>BTW: <?php echo "€" . $btw ?> </h3>
         <hr><br>
         <h3>Totaal: <?php echo "€" . round($totaalartikelen , 2) ?> (incl. btw)</h3><br><br>
-
+        </div>
 
         <a href="<?php echo $hrefverandering ?>"><input type="button" class = "button-afrekenen" value="<?php echo $valueverandering ?>"></a>
     </form>
