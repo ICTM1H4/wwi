@@ -517,3 +517,6 @@ h4 {
     border-radius: 8px
 }
 
+.klantenserviceInput input {
+    border: 1px solid #ccc;
+}

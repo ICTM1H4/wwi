@@ -11,7 +11,7 @@
     <h3>Direct een vraag stellen?<br></h3>
 <!--<form action="" method="post">-->
 
-    <table>
+    <table class="klantenserviceInput">
         <tr>
             <td>Naam:</td>
             <td><input type="text" class="name" name="Naam:"></td>
