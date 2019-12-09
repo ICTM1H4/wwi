@@ -14,8 +14,8 @@
     $verzendkosten = 0;
     $totaalartikelen = $totaalprijs*1.21+$verzendkosten;
     $totaalprijs=0;
-    $knop = "Doorgaan";
-    $knop2 = "?verzending";
+    $valueverandering = "Doorgaan";
+    $hrefverandering = "?verzending";
 
 
 
@@ -74,7 +74,7 @@
     }
    else{
        echo "Winkelwagentje is leeg";
-       $valueveranderin = "Verder winkelen";
+       $valueverandering = "Verder winkelen";
        $hrefverandering = "?index";
 
 
@@ -128,7 +128,7 @@
         <h3>Totaal: <?php echo "€" . round($totaalartikelen , 2) ?> (incl. btw)</h3><br><br>
 
 
-        <a href="<?php echo $knop2 ?> " ><input type="button" class = "button-afrekenen" value="<?php echo $knop ?>"></a>
+        <a href="<?php echo $hrefverandering ?> " ><input type="button" class = "button-afrekenen" value="<?php echo $valueverandering ?>"></a>
     </form>
 </div>
 </div>
