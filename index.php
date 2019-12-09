@@ -69,8 +69,8 @@ include "php/functions.php";
             }
 
             if(in_array($_POST['product_id'], $item_array_id)){
-                echo "<script>alert('Uw product is toegevoed aan winkelwagen')</script>";
-                echo "<script>window.location = 'index.php</script>";
+              //  echo "<script>alert('Uw product is toegevoed aan winkelwagen')</script>";
+              //  echo "<script>window.location = 'index.php</script>";
 
                }
             else{

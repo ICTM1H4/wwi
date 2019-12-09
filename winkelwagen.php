@@ -14,6 +14,8 @@
     $verzendkosten = 0;
     $totaalartikelen = $totaalprijs*1.21+$verzendkosten;
     $totaalprijs=0;
+    $valueverandering = "Doorgaan";
+    $hrefverandering = "?verzending";
 
    if(isset($_SESSION['cart'])) {
        echo '<form method="post">';
@@ -28,6 +30,7 @@
                 header('Location: ?winkelwagen');
 
            }
+
 
            if(isset($_POST['delete'.$result['product_id']]) or $result['aantal'] <= 0) {
                unset($_SESSION['cart'][$index]);
@@ -45,11 +48,12 @@
            $title = $queryscproducts->fetch_assoc();
            echo $title["StockItemName"];
            echo "<br>";
+
            $queryscproducts = mysqli_query($conn, "SELECT RecommendedRetailPrice FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
            $price = $queryscproducts->fetch_assoc();
            echo "€" . $price["RecommendedRetailPrice"];
 
-           echo '<br> Aantal: <input type="text" id="quantity" name="'.$result['product_id'].'"value="'.$result['aantal'].'">';
+           echo '<br> Aantal: <input type="number" min="1"  id="quantity" name="'.$result['product_id'].'"value="'.$result['aantal'].'">';
            echo "<br>";
            $totaal += $result['aantal'];
            //echo $result['product_id'];
@@ -63,17 +67,34 @@
             $totaalprijs = $totaalprijs + $price["RecommendedRetailPrice"] * $result['aantal'];
             $totaalartikelen = round( $totaalprijs * 1.21 + $verzendkosten, 2);
        }
+       if (empty($_SESSION['cart'])){
+           echo "Winkelwagentje is leeg";
+           $valueverandering = "Verder winkelen";
+           $hrefverandering = "?index";
+       }
     }
-   else{
+
+   else {
+
        echo "Winkelwagentje is leeg";
+       $valueverandering = "Verder winkelen";
+       $hrefverandering = "?index";
    }
+
+
+
+
+
+
+
 
 
     ?>
 
-    <input type="submit" name="plus" value="Update winkelwagentje" id="update" />
+    <input type="submit" name="plus" value="Update winkelwagentje" id="update"/>
+
     <form method="post">
-        <button type="submit" name="deleteall" value="+" id="deleteall"> Verwijder alles</button>
+        <button type="submit" name="deleteall" value="+" id="deleteall">Verwijder alles</button>
     </form>
 
     <hr>
@@ -84,6 +105,7 @@
 
     if(isset($_POST['deleteall'])){
         session_destroy();
+        header('location: ?winkelwagen');
         //test
     }
 
@@ -116,7 +138,7 @@
         <h3>Totaal: <?php echo "€" . round($totaalartikelen , 2) ?> (incl. btw)</h3><br><br>
 
 
-        <a href="?verzending"><input type="button" class = "button-afrekenen" value="Doorgaan"></a>
+        <a href="<?php echo $hrefverandering ?>"><input type="button" class = "button-afrekenen" value="<?php echo $valueverandering ?>"></a>
     </form>
 </div>
 </div>
