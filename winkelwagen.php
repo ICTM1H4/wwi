@@ -9,6 +9,7 @@
 
 <div class="plaatje">
     <?php
+
     $totaal = 0;
     $totaalprijs = 0;
     $verzendkosten = 0;
