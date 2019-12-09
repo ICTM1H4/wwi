@@ -1,5 +1,6 @@
 <?php
-$huidigePagina = "overzichtPhp"
+$huidigePagina = "overzichtPhp";
+$verzendkosten = $_SESSION['verzendkosten'];
 ?>
 
 <html>
@@ -75,7 +76,7 @@ $huidigePagina = "overzichtPhp"
 
                     <div><h2>Bezorging</h2></div>
                     <div>Bezorgingswijze<br><br></div>
-                    <div><?php echo $_SESSION['klantgegevens']['verzendType']?> euro</div>
+                    <div><?php echo $_SESSION['klantgegevens']['verzendType'] . $verzendkosten ?> euro</div>
                 </div>
             </div>
             <div class = "betalingswijze">

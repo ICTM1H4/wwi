@@ -8,7 +8,8 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/mollie/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
@@ -50,11 +51,11 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\wwi\structure" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\wwi" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\wwi\structure" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -90,21 +91,8 @@
       <workItem from="1575012618811" duration="347000" />
       <workItem from="1575019788696" duration="3665000" />
       <workItem from="1575284023170" duration="3613000" />
-      <workItem from="1575498765578" duration="4986000" />
-    </task>
-    <task id="LOCAL-00001" summary="logo erbij">
-      <created>1573557548334</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1573557548335</updated>
-    </task>
-    <task id="LOCAL-00002" summary="winkelwagen erbij">
-      <created>1573557997196</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1573557997196</updated>
+      <workItem from="1575485560315" duration="7684000" />
+      <workItem from="1575495550529" duration="844000" />
     </task>
     <task id="LOCAL-00003" summary="account logo erbij">
       <created>1573558514874</created>
@@ -338,24 +326,132 @@
       <updated>1575287804882</updated>
     </task>
     <task id="LOCAL-00036" summary="Mogelijkheid om producten toe te voegen aan winkelwagentje">
-      <created>1575541494064</created>
+      <created>1575363092820</created>
       <option name="number" value="00036" />
       <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
-      <updated>1575541494064</updated>
+      <updated>1575363092820</updated>
     </task>
-    <task id="LOCAL-00037" summary="Mogelijkheid om producten toe te voegen aan winkelwagentje">
-      <created>1575542605128</created>
+    <task id="LOCAL-00037" summary="buttons winkelwagentje toegevoegd (+, -, delete)">
+      <created>1575370280094</created>
       <option name="number" value="00037" />
       <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
-      <updated>1575542605128</updated>
+      <updated>1575370280094</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Verwijder alles button toegevoegd --&gt; sessie afbreken">
+      <created>1575374172637</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1575374172637</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Aantal per product toegevoegd (nog niet werkend)">
+      <created>1575403643403</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1575403643403</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Aantal per product toegevoegd (nog niet werkend)">
+      <created>1575403690738</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1575403690738</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Aantal per product toegevoegd (nog niet werkend)">
+      <created>1575403821243</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1575403821243</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Aantal per product toegevoegd (nog niet werkend)">
+      <created>1575464018416</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1575464018416</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Verwijderen producten mogelijk en style aangepast">
+      <created>1575464840995</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1575464840995</updated>
+    </task>
+    <task id="LOCAL-00044" summary="updaten en verwijderen samengevoegd.">
+      <created>1575482276826</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1575482276826</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Prijs wordt doorgegeven">
+      <created>1575489517125</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1575489517126</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Ben wou dat ik dit pushte, blame him">
+      <created>1575491359212</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1575491359212</updated>
+    </task>
+    <task id="LOCAL-00047" summary="HELE GROTE BLIJ">
+      <created>1575492827213</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1575492827213</updated>
+    </task>
+    <task id="LOCAL-00048" summary="HELE GROTE BLIJ2.0">
+      <created>1575493657171</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1575493657171</updated>
+    </task>
+    <task id="LOCAL-00049" summary="HELE GROTE BLIJ2.0">
+      <created>1575557791237</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1575557791237</updated>
+    </task>
+    <task id="LOCAL-00050" summary="-">
+      <created>1575560619824</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1575560619825</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Checkout knop in winkelwagen geneukt">
+      <created>1575890903438</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1575890903438</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -371,17 +467,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="logo erbij" />
-    <MESSAGE value="winkelwagen erbij" />
-    <MESSAGE value="account logo erbij" />
-    <MESSAGE value="index toevoeging: logo, categorieën, zoekbalk, winkelwagen, begin account" />
-    <MESSAGE value="account =&gt; inlogscherm werkt, css aangevuld over index pagina" />
-    <MESSAGE value="aanpassingen index van ben" />
-    <MESSAGE value="Nav style css aangepast" />
-    <MESSAGE value="index geupdate" />
-    <MESSAGE value="css nav balk witte letter&#10;nieuwe winkelwagen en account foto" />
-    <MESSAGE value="nav toegoevoegd aan zoek pagina&#10;for loop met a en breaks weggehaald" />
-    <MESSAGE value="witte account png" />
     <MESSAGE value="opmaak nav en zoekbar verbeterd" />
     <MESSAGE value="categorieen werkend gemaakt" />
     <MESSAGE value="wwi logo interactief gemaakt" />
@@ -396,6 +481,17 @@
     <MESSAGE value="besteloverzicht toegevoegd" />
     <MESSAGE value="begin aan besteloverzicht en aanpassingen met de style daarvan" />
     <MESSAGE value="Mogelijkheid om producten toe te voegen aan winkelwagentje" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mogelijkheid om producten toe te voegen aan winkelwagentje" />
+    <MESSAGE value="buttons winkelwagentje toegevoegd (+, -, delete)" />
+    <MESSAGE value="Verwijder alles button toegevoegd --&gt; sessie afbreken" />
+    <MESSAGE value="Aantal per product toegevoegd (nog niet werkend)" />
+    <MESSAGE value="Verwijderen producten mogelijk en style aangepast" />
+    <MESSAGE value="updaten en verwijderen samengevoegd." />
+    <MESSAGE value="Prijs wordt doorgegeven" />
+    <MESSAGE value="Ben wou dat ik dit pushte, blame him" />
+    <MESSAGE value="HELE GROTE BLIJ" />
+    <MESSAGE value="HELE GROTE BLIJ2.0" />
+    <MESSAGE value="-" />
+    <MESSAGE value="Checkout knop in winkelwagen geneukt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checkout knop in winkelwagen geneukt" />
   </component>
 </project>
