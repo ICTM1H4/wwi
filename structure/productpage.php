@@ -47,4 +47,3 @@ $data = getItem($conn, $id);
         <div class="omschrijving md5"> <h4>Productomschrijving<br></h4> <?php echo $data["product"]["SearchDetails"] ?></div>
     </div>
 </div>
-<script src="js/javascript.js"></script>

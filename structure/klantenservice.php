@@ -18,7 +18,7 @@
         </tr>
         <tr>
             <td>Email:</td>
-            <td><input type="text" class="email" name="Naam:"></td>
+            <td><input type="text" onchange="check()" class="email" name="Naam:"></td>
         </tr>
         <tr>
             <td>Ordernummer:</td>
@@ -34,6 +34,9 @@
     </table>
     <textarea class="uwVraag"></textarea>
     <br><button type="submit" class="knopVerzenden" onclick="validate()">Verzenden</button>
-    <script src="js/javascript.js"></script>
+    <!-- <script>
+    if (!isValidEmailAddress($('.email').val())) {
+        alert();
+    }
+    </script> -->
 </div>
-

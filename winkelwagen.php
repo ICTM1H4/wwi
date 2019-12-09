@@ -24,7 +24,7 @@
             //    $result['aantal'] = $_POST[$result["product_id"]];
             //    print_r($_SESSION['cart'][$index]['aantal']);
             //    die(0);
-               $_SESSION['cart'][$index]['aantal'] = $_POST[$result["product_id"]];
+               $_SESSION['cart'][$index]['aantal'] = mysqli_real_escape_string($conn, $_POST[$result["product_id"]]);
                 header('Location: ?winkelwagen');
 
            }

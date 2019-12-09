@@ -53,4 +53,18 @@ function validate() {
     }
 }
 
+function isValidEmailAddress(emailAddress) {
+    var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+    return pattern.test(emailAddress);
+}
 
+function check() {
+    if (!isValidEmailAddress($('.email').val())) {
+        $('.email').css("background-color", "#fc0356");
+        $('.knopVerzenden').prop('disabled', true)
+    }
+    else {
+        $('.email').css("background-color", "#FFF");
+        $('.knopVerzenden').prop('disabled', false)
+    }
+}
