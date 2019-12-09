@@ -64,6 +64,7 @@
            echo "<br>";
            ?>
 <!--           <form method="post" >-->
+           <input type="submit" name="plus" value="Update winkelwagentje" id="update" />
            <input type="submit" name="delete<?php echo $result['product_id']?>" value="Verwijderen" id="delete">
            <hr>
 <!--           </form>-->
@@ -83,7 +84,6 @@
 
     ?>
 
-    <input type="submit" name="plus" value="Update winkelwagentje" id="update" />
     <form method="post">
         <button type="submit" name="deleteall" value="+" id="deleteall"> Verwijder alles</button>
     </form>
