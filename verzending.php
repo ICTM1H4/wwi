@@ -4,6 +4,7 @@
 $normLever = 0.00;
 $ophalen = 0.00;
 $eenDagLever = 10.00;
+$verzendkosten = $_SESSION['verzendkosten'];
 
 
 $totaal = $_SESSION['completeprijs'];
@@ -87,9 +88,7 @@ $huidigePagina = "verzendingPhp";
             </tr>
         </table>
         <div class="verzendType">
-            <p> <input type="radio" value="<?php echo $normLever?>" name="maarEenKnop" checked> Normale levering €<?php echo number_format((float)$normLever, 2, '.', '') ?></p>
-            <p> <input type="radio" value="<?php echo $ophalen?>" name="maarEenKnop"> Ophalen €<?php echo number_format((float)$ophalen, 2, '.', '') ?> </p>
-            <p> <input type="radio" value="<?php echo $eenDagLever?>" name="maarEenKnop"> Express levering €<?php echo number_format((float)$eenDagLever, 2, '.', '')?></p><br>
+            <p> Verzendkosten: € <?php echo round($verzendkosten, 2 ) ?></p>
             <p> Totaalprijs: €<?php echo number_format((float)$completeTotaal, 2, '.', '')?></p>
             <input type="submit" name="sendPost" class="button-afrekenen" value="Doorgaan">
         </div>
