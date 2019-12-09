@@ -60,14 +60,20 @@ function isValidEmailAddress(emailAddress) {
 
 function check() {
     if (!isValidEmailAddress($('.email').val())) {
-        $('.email').css("background-color", "#fc0356");
+        $('.email').css("border-color", "#fc0356");
+        $('.email').css("color", "#721c24");
+        $('.email').css("background-color", "#f8d7da");
         $('.knopVerzenden').prop('disabled', true)
         if ($('.email').val() == "") {
+            $('.email').css("border-color", "#CCC");
+            $('.email').css("color", "black");
             $('.email').css("background-color", "#FFF");
             $('.knopVerzenden').prop('disabled', false);
         }
     }
     else {
+        $('.email').css("border-color", "#CCC");
+        $('.email').css("color", "black");
         $('.email').css("background-color", "#FFF");
         $('.knopVerzenden').prop('disabled', false);
     }
