@@ -339,9 +339,25 @@ h4 {
 
 /*---------------------------Bestelprocedure-----------------------------*/
 
+.grijsPB{
+    background-color: #354954;
+    height: 35px;
+    width: 100%;
+}
+
 .progressBar{
     margin-bottom: 20px;
     margin-top: 20px;
+    color: white;
+    font-size: 24px;
+    padding-top: 4px;
+}
+
+.streepjesBar{
+    float: left;
+    border-top: 1px dashed;
+    width: 21%;
+    margin-top: 12px;
 }
 
 .factuurData{
@@ -389,13 +405,6 @@ h4 {
 
 .bevestigingPhp{
     float: left;
-}
-
-.streepjesBar{
-    float: left;
-    border-top: 1px dashed;
-    width: 25%;
-    margin-top: 9px;
 }
 
 .overzicht{

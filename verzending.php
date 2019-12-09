@@ -46,16 +46,21 @@ $huidigePagina = "verzendingPhp";
     <title>Wide World Importers</title>
 </head>
 <body>
-<div class="algMargin">
-    <div class="progressBar"><?php progresBar($huidigePagina)?>
-        <div class="verzendingPhp">Verzending</div>
-        <hr class="streepjesBar">
-        <div class="overzichtPhp">Overzicht</div>
-        <hr class="streepjesBar">
-        <div class="betalingPhp">Betaling</div>
-        <hr class="streepjesBar">
-        <div class="bevestigingPhp">Bevestiging</div>
+
+<div class="grijsPB">
+    <div class="algMargin">
+        <div class="progressBar"><?php progresBar($huidigePagina)?>
+            <div class="verzendingPhp">Verzending</div>
+            <hr class="streepjesBar">
+            <div class="overzichtPhp">Overzicht</div>
+            <hr class="streepjesBar">
+            <div class="betalingPhp">Betaling</div>
+            <hr class="streepjesBar">
+            <div class="bevestigingPhp">Bevestiging</div>
+        </div>
     </div>
+</div>
+<div class="algMargin">
     <h2 class="uwGegev">Uw gegevens</h2>
     <h2 class="verzendPrijs">Verzendprijzen</h2>
     <form class="factuurData" method="post">
