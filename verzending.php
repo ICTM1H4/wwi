@@ -89,13 +89,13 @@ $huidigePagina = "verzendingPhp";
                 <td class="tableColumn">E-mail</td> <td class="tableColumn"><input type="text" name="email" placeholder="E-mailadres" required></td>
             </tr>
             <tr>
-                <td class="tableColumn">Telefoonnummer <p class = "verzending-316">+316</p> </td> <td class="tableColumn"><input type="text" name="telef" placeholder="Telefoonnummer"></td>
+                <td class="tableColumn"><p class="telefnr">Telefoonnummer  +316</p> </td> <td class="tableColumn"><input type="text" name="telef" placeholder="Telefoonnummer"></td>
             </tr>
         </table>
         <div class="verzendType">
-            <p> Verzendkosten: € <?php echo round($verzendkosten, 2 ) ?></p>
-            <p> Totaalprijs: €<?php echo number_format((float)$completeTotaal, 2, '.', '')?></p>
-            <input type="submit" name="sendPost" class="button-afrekene buttonPro" value="Doorgaan">
+            <p class="verzendContent"> Verzendkosten: € <?php echo round($verzendkosten, 2 ) ?></p><br>
+            <p class="verzendTotprijs"> Totaalprijs: €<?php echo number_format((float)$completeTotaal, 2, '.', '')?></p>
+            <input type="submit" name="sendPost" class="buttonPro" value="Doorgaan">
         </div>
     </form>
     <?php

@@ -367,18 +367,34 @@ h4 {
 }
 
 .factuurText{
+    border-color: #99aebb;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 10px;
+    box-shadow: 0 10px 6px -9px #777;
     font-size: 20px;
     float: left;
-    margin-right: 10%;
+}
+
+.verzendContent{
+    margin-top: 1%;
+    margin-bottom: 25%;
+}
+
+.verzendTotprijs{
+    margin-bottom: 26%;
 }
 
 .uwGegev{
     display: inline-block;
+    margin-top: 50px;
 }
 
 .verzendPrijs{
     display: inline-block;
     margin-left: 55%;
+    margin-top: 50px;
 }
 
 .tableColumn{
@@ -386,10 +402,6 @@ h4 {
 }
 
 /*---------------------------Bestelprocedure-----------------------------*/
-.verzending-316{
-    float: left;
-    font-size: 16px;
-}
 
 .verzendingPhp{
     float: left;
@@ -432,6 +444,15 @@ h4 {
 }
 
 .verzendType{
+    margin-left: 837px;
+    border-color: #99aebb;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 10px;
+    box-shadow: 0 10px 6px -9px #777;
+    width: 22%;
+    text-align: center;
 }
 
 .overzicht h2{
@@ -499,7 +520,7 @@ h4 {
     height: 50%;
 }
 
-.form-afrekenen{
+.formafrekenen{
     margin-left: 56%;
 }
 
