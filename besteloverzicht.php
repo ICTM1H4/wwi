@@ -92,7 +92,7 @@ $verzendkosten = $_SESSION['verzendkosten'];
                 </div>
             </div>
             <div class = "vorigestap">
-                <a href="?verzending"><input class = "button-afrekenen" type="submit" value="Vorige stap"></a>
+                <a href="?verzending"><input class = "buttonPro" type="submit" value="Vorige stap"></a>
             </div>
         </div>
         <div class = "overzichtBestelling">
@@ -120,7 +120,7 @@ $verzendkosten = $_SESSION['verzendkosten'];
                     </div>
                 <div>
                     <form class = "form-afrekenen" action="betaling.php">
-                        <input class = "button-afrekenen" type="submit" value="Naar betalen">
+                        <input class = "buttonPro" type="submit" value="Naar betalen">
                     </form>
                 </div>
             </div>

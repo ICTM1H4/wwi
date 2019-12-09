@@ -95,7 +95,7 @@ $huidigePagina = "verzendingPhp";
         <div class="verzendType">
             <p> Verzendkosten: € <?php echo round($verzendkosten, 2 ) ?></p>
             <p> Totaalprijs: €<?php echo number_format((float)$completeTotaal, 2, '.', '')?></p>
-            <input type="submit" name="sendPost" class="button-afrekenen" value="Doorgaan">
+            <input type="submit" name="sendPost" class="button-afrekene buttonPro" value="Doorgaan">
         </div>
     </form>
     <?php
