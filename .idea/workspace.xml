@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/structure/klantenservice.php" beforeDir="false" afterPath="$PROJECT_DIR$/structure/klantenservice.php" afterDir="false" />
-    </list>
+    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,13 +93,6 @@
       <workItem from="1575284023170" duration="3613000" />
       <workItem from="1575485560315" duration="7684000" />
       <workItem from="1575495550529" duration="844000" />
-    </task>
-    <task id="LOCAL-00002" summary="winkelwagen erbij">
-      <created>1573557997196</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1573557997196</updated>
     </task>
     <task id="LOCAL-00003" summary="account logo erbij">
       <created>1573558514874</created>
@@ -440,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575560619825</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Checkout knop in winkelwagen geneukt">
+      <created>1575890903438</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1575890903438</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -470,7 +467,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="witte account png" />
     <MESSAGE value="opmaak nav en zoekbar verbeterd" />
     <MESSAGE value="categorieen werkend gemaakt" />
     <MESSAGE value="wwi logo interactief gemaakt" />
@@ -495,6 +491,7 @@
     <MESSAGE value="HELE GROTE BLIJ" />
     <MESSAGE value="HELE GROTE BLIJ2.0" />
     <MESSAGE value="-" />
-    <option name="LAST_COMMIT_MESSAGE" value="-" />
+    <MESSAGE value="Checkout knop in winkelwagen geneukt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Checkout knop in winkelwagen geneukt" />
   </component>
 </project>
