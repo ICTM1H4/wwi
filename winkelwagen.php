@@ -139,7 +139,7 @@
         <h3>Totaal: <?php echo "€" . round($totaalartikelen , 2) ?> (incl. btw)</h3><br><br>
         </div>
 
-        <a href="<?php echo $hrefverandering ?>"><input type="button" class = "button-afrekenen" value="<?php echo $valueverandering ?>"></a>
+        <a href="<?php echo $hrefverandering ?>"><input type="button" class = "button-afrekenen buttonPro" value="<?php echo $valueverandering ?>"></a>
     </form>
 </div>
 </div>
