@@ -14,6 +14,10 @@
     $verzendkosten = 0;
     $totaalartikelen = $totaalprijs*1.21+$verzendkosten;
     $totaalprijs=0;
+    $knop = "Doorgaan";
+    $knop2 = "?verzending";
+
+
 
    if(isset($_SESSION['cart'])) {
        echo '<form method="post">';
@@ -47,10 +51,14 @@
            echo "<br>";
            $queryscproducts = mysqli_query($conn, "SELECT RecommendedRetailPrice FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
            $price = $queryscproducts->fetch_assoc();
+
            echo "€" . $price["RecommendedRetailPrice"];
 
-           echo '<br> Aantal: <input type="number" min="1" max="10" id="quantity" name="'.$result['product_id'].'"value="'.$result['aantal'].'">';
+
+            echo '<br> Aantal: <input type="number" min="1"  id="quantity" name="' . $result['product_id'].'"value="'.$result['aantal'].'">';
            echo "<br>";
+
+
            $totaal += $result['aantal'];
            //echo $result['product_id'];
            echo "<br>";
@@ -66,6 +74,10 @@
     }
    else{
        echo "Winkelwagentje is leeg";
+       $valueveranderin = "Verder winkelen";
+       $hrefverandering = "?index";
+
+
    }
 
 
@@ -116,7 +128,7 @@
         <h3>Totaal: <?php echo "€" . round($totaalartikelen , 2) ?> (incl. btw)</h3><br><br>
 
 
-        <a href="?verzending"><input type="button" class = "button-afrekenen" value="Doorgaan"></a>
+        <a href="<?php echo $knop2 ?> " ><input type="button" class = "button-afrekenen" value="<?php echo $knop ?>"></a>
     </form>
 </div>
 </div>
