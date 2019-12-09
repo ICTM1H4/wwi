@@ -62,9 +62,13 @@ function check() {
     if (!isValidEmailAddress($('.email').val())) {
         $('.email').css("background-color", "#fc0356");
         $('.knopVerzenden').prop('disabled', true)
+        if ($('.email').val() == "") {
+            $('.email').css("background-color", "#FFF");
+            $('.knopVerzenden').prop('disabled', false);
+        }
     }
     else {
         $('.email').css("background-color", "#FFF");
-        $('.knopVerzenden').prop('disabled', false)
+        $('.knopVerzenden').prop('disabled', false);
     }
 }
