@@ -1,5 +1,6 @@
 <?php
-$huidigePagina = "overzichtPhp"
+$huidigePagina = "overzichtPhp";
+$verzendkosten = $_SESSION['verzendkosten'];
 ?>
 
 <html>
@@ -9,16 +10,21 @@ $huidigePagina = "overzichtPhp"
 </head>
 
 <body>
-<div class="algMargin">
-    <div class="progressBar"><?php progresBar($huidigePagina)?>
-        <div class="verzendingPhp">Verzending</div>
-        <hr class="streepjesBar">
-        <div class="overzichtPhp">Overzicht</div>
-        <hr class="streepjesBar">
-        <div class="betalingPhp">Betaling</div>
-        <hr class="streepjesBar">
-        <div class="bevestigingPhp">Bevestiging</div>
+
+<div class="grijsPB">
+    <div class="algMargin">
+        <div class="progressBar"><?php progresBar($huidigePagina)?>
+            <div class="verzendingPhp">Verzending</div>
+            <hr class="streepjesBar">
+            <div class="overzichtPhp">Overzicht</div>
+            <hr class="streepjesBar">
+            <div class="betalingPhp">Betaling</div>
+            <hr class="streepjesBar">
+            <div class="bevestigingPhp">Bevestiging</div>
+        </div>
     </div>
+</div>
+<div class="algMargin">
     <div class="overzicht">
         <div class = "overzichtKlantgegevens">
             <div class = "overzichtAdres">
@@ -75,7 +81,7 @@ $huidigePagina = "overzichtPhp"
 
                     <div><h2>Bezorging</h2></div>
                     <div>Bezorgingswijze<br><br></div>
-                    <div><?php echo $_SESSION['klantgegevens']['verzendType']?> euro</div>
+                    <div><?php echo $_SESSION['klantgegevens']['verzendType'] . $verzendkosten ?> euro</div>
                 </div>
             </div>
             <div class = "betalingswijze">
@@ -86,7 +92,7 @@ $huidigePagina = "overzichtPhp"
                 </div>
             </div>
             <div class = "vorigestap">
-                <a href="?verzending"><input class = "button-afrekenen" type="submit" value="Vorige stap"></a>
+                <a href="?verzending"><input class = "buttonPro" type="submit" value="Vorige stap"></a>
             </div>
         </div>
         <div class = "overzichtBestelling">
@@ -114,7 +120,7 @@ $huidigePagina = "overzichtPhp"
                     </div>
                 <div>
                     <form class = "form-afrekenen" action="betaling.php">
-                        <input class = "button-afrekenen" type="submit" value="Naar betalen">
+                        <input class = "buttonPro" type="submit" value="Naar betalen">
                     </form>
                 </div>
             </div>

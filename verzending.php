@@ -4,6 +4,7 @@
 $normLever = 0.00;
 $ophalen = 0.00;
 $eenDagLever = 10.00;
+$verzendkosten = $_SESSION['verzendkosten'];
 
 
 $totaal = $_SESSION['completeprijs'];
@@ -45,16 +46,21 @@ $huidigePagina = "verzendingPhp";
     <title>Wide World Importers</title>
 </head>
 <body>
-<div class="algMargin">
-    <div class="progressBar"><?php progresBar($huidigePagina)?>
-        <div class="verzendingPhp">Verzending</div>
-        <hr class="streepjesBar">
-        <div class="overzichtPhp">Overzicht</div>
-        <hr class="streepjesBar">
-        <div class="betalingPhp">Betaling</div>
-        <hr class="streepjesBar">
-        <div class="bevestigingPhp">Bevestiging</div>
+
+<div class="grijsPB">
+    <div class="algMargin">
+        <div class="progressBar"><?php progresBar($huidigePagina)?>
+            <div class="verzendingPhp">Verzending</div>
+            <hr class="streepjesBar">
+            <div class="overzichtPhp">Overzicht</div>
+            <hr class="streepjesBar">
+            <div class="betalingPhp">Betaling</div>
+            <hr class="streepjesBar">
+            <div class="bevestigingPhp">Bevestiging</div>
+        </div>
     </div>
+</div>
+<div class="algMargin">
     <h2 class="uwGegev">Uw gegevens</h2>
     <h2 class="verzendPrijs">Verzendprijzen</h2>
     <form class="factuurData" method="post">
@@ -83,15 +89,13 @@ $huidigePagina = "verzendingPhp";
                 <td class="tableColumn">E-mail</td> <td class="tableColumn"><input type="text" name="email" placeholder="E-mailadres" required></td>
             </tr>
             <tr>
-                <td class="tableColumn">Telefoonnummer <p class = "verzending-316">+316</p> </td> <td class="tableColumn"><input type="text" name="telef" placeholder="Telefoonnummer"></td>
+                <td class="tableColumn"><p class="telefnr">Telefoonnummer  +316</p> </td> <td class="tableColumn"><input type="text" name="telef" placeholder="Telefoonnummer"></td>
             </tr>
         </table>
         <div class="verzendType">
-            <p> <input type="radio" value="<?php echo $normLever?>" name="maarEenKnop" checked> Normale levering €<?php echo number_format((float)$normLever, 2, '.', '') ?></p>
-            <p> <input type="radio" value="<?php echo $ophalen?>" name="maarEenKnop"> Ophalen €<?php echo number_format((float)$ophalen, 2, '.', '') ?> </p>
-            <p> <input type="radio" value="<?php echo $eenDagLever?>" name="maarEenKnop"> Express levering €<?php echo number_format((float)$eenDagLever, 2, '.', '')?></p><br>
-            <p> Totaalprijs: €<?php echo number_format((float)$completeTotaal, 2, '.', '')?></p>
-            <input type="submit" name="sendPost" class="button-afrekenen" value="Doorgaan">
+            <p class="verzendContent"> Verzendkosten: € <?php echo round($verzendkosten, 2 ) ?></p><br>
+            <p class="verzendTotprijs"> Totaalprijs: €<?php echo number_format((float)$completeTotaal, 2, '.', '')?></p>
+            <input type="submit" name="sendPost" class="buttonPro" value="Doorgaan">
         </div>
     </form>
     <?php

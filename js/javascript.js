@@ -53,4 +53,28 @@ function validate() {
     }
 }
 
+function isValidEmailAddress(emailAddress) {
+    var pattern = new RegExp(/^[+a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i);
+    return pattern.test(emailAddress);
+}
 
+function check() {
+    if (!isValidEmailAddress($('.email').val())) {
+        $('.email').css("border-color", "#fc0356");
+        $('.email').css("color", "#721c24");
+        $('.email').css("background-color", "#f8d7da");
+        $('.knopVerzenden').prop('disabled', true)
+        if ($('.email').val() == "") {
+            $('.email').css("border-color", "#CCC");
+            $('.email').css("color", "black");
+            $('.email').css("background-color", "#FFF");
+            $('.knopVerzenden').prop('disabled', false);
+        }
+    }
+    else {
+        $('.email').css("border-color", "#CCC");
+        $('.email').css("color", "black");
+        $('.email').css("background-color", "#FFF");
+        $('.knopVerzenden').prop('disabled', false);
+    }
+}
