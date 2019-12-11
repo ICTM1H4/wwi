@@ -2,7 +2,6 @@
 $id = $_GET['productID'];
 $data = getItem($conn, $id);
 
-
 ?>
 
 <div class="content-product">
@@ -15,12 +14,12 @@ $data = getItem($conn, $id);
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">2 / 3</div>
-                <img src="Geen_foto_helaas_beschikbaar.png">
+                <img src="data:image/jpeg;base64,<?php echo base64_encode($data["product"]['Photo'])?>" alt="werkt niet">
                 <!-- <div class="text">Caption Two</div> -->
             </div>
             <div class="mySlides fade">
                 <div class="numbertext">3 / 3</div>
-                <img src="Geen_foto_helaas_beschikbaar.png">
+                <img src="data:image/jpeg;base64,<?php echo base64_encode($data["product"]['Photo'])?>" alt="werkt niet">
                 <!-- <div class="text">Caption Three</div> -->
             </div>
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
