@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 .zoekMargin{
     width: 80%;
     margin: auto;
@@ -479,6 +480,8 @@ h4 {
     width: 360px;
 }
 
+
+
 .buttonPro{
     border: none;
     outline: 0;
@@ -504,9 +507,6 @@ h4 {
     margin-right: 8%;
 }
 
-.overzicht-product{
-
-}
 
 .overzicht-totaalprijs{
     text-align: right;
@@ -520,13 +520,8 @@ h4 {
     height: 50%;
 }
 
-.formafrekenen{
-    margin-left: 56%;
-}
 
-.vorigestap{
 
-}
 
 
 
