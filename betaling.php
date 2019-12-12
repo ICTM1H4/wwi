@@ -52,7 +52,7 @@ $order = $mollie->orders->create([
     "orderNumber" => "1",
     "redirectUrl" => "http://localhost/wwi/bevestiging.php",
     "webhookUrl" => "https://example.org/webhook",
-    "method" => "creditcard",
+    "method" => "ideal",
     "lines" => [
         [
             "type" => "physical",
