@@ -46,6 +46,9 @@ include "php/functions.php";
     elseif(isset($_GET['besteloverzicht'])){
         include "besteloverzicht.php";
     }
+    elseif(isset($_GET['bevestiging'])){
+        include "bevestiging.php";
+    }
     else {
         include "structure/home.php";
     }

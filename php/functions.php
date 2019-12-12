@@ -179,8 +179,17 @@ function stront(){
     }
 }
 
-function molliePrintLines($cart){
-    $orderID = "5";
+function molliePrintLines($cart, $conn){
+    $orderID = "test";
+
+    foreach ($_SESSION['cart'] as $product){
+        echo $product;
+    }
+//    $query = "SELECT * FROM stockgroups ORDER BY StockGroupName";
+//    $result = $conn->query($query);
+//    while($row = mysqli_fetch_array($result)) {
+//
+//    }
     echo
     [
         "type" => "physical",
