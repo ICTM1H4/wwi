@@ -59,7 +59,6 @@ $order = $mollie->orders->create([
             "sku" => "5702016116977",
             "name" => "LEGO 42083 Bugatti Chiron",
             "productUrl" => "https://shop.lego.com/nl-NL/Bugatti-Chiron-42083",
-            "imageUrl" => 'https://sh-s7-live-s.legocdn.com/is/image//LEGO/42083_alt1?$main$',
             "metadata" => [
                 "order_id" => "1337",
                 "description" => "Bugatti Chiron"

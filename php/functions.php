@@ -179,4 +179,36 @@ function stront(){
     }
 }
 
-
+function molliePrintLines($cart){
+    $orderID = "5";
+    echo
+    [
+        "type" => "physical",
+        "sku" => "5702016116977",
+        "name" => "LEGO 42083 Bugatti Chiron",
+        "productUrl" => "http://localhost/wwi/index.php?productID=218" . $cart['productID'][''],
+        "metadata" => [
+            "order_id" => $orderID,
+            "description" => $cart['productID']['productomschrijving']
+        ],
+        "quantity" => 1,
+        "vatRate" => "0.01",
+        "unitPrice" => [
+            "currency" => "EUR",
+            "value" => "0.01"
+        ],
+        "totalAmount" => [
+            "currency" => "EUR",
+            "value" => "0.01"
+        ],
+        "discountAmount" => [
+            "currency" => "EUR",
+            "value" => "0.00"
+        ],
+        "vatAmount" => [
+            "currency" => "EUR",
+            "value" => "0.00"
+        ]
+    ]
+    ;
+}
