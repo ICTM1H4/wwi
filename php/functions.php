@@ -164,15 +164,17 @@ function stront(){
     if(isset($_POST['sendPost'])) {
         $_SESSION['klantgegevens'] = true;
         $klantgegevens = array
-        (   'voornaam' => $_POST['voornaam'],
+        (   'Voornaam' => $_POST['Voornaam'],
             'tussenvoegsel' => $_POST['tussenvoegsel'],
-            'achternaam' => $_POST['achternaam'],
-            'adres' => $_POST['adres'],
-            'postcode' => $_POST['postcode'],
-            'plaatsnaam' => $_POST['plaatsnaam'],
-            'verzendType' => $_POST['maarEenKnop'],
-            'email' => $_POST['email'],
-            'telefoonnummer' => "+316" . $_POST['telef']
+            'Achternaam' => $_POST['Achternaam'],
+            'Straat' => $_POST['Straat'],
+            'Huisnr.' => $_POST['Huisnr.'],
+            'Evt. toev.' => $_POST['Evt. toev.'],
+            '1234 AB' => $_POST['1234 AB'],
+            'Woonplaats' => $_POST['Woonplaats'],
+            'E-mailadres' => $_POST['E-mailadres'],
+            '0612345678' => "+316" . $_POST['0612345678'],
+            'verzendType' => $_POST['maarEenKnop']
         );
         $_SESSION['klantgegevens'] = $klantgegevens;
         return header("Location: ?besteloverzicht");

@@ -16,6 +16,14 @@ if ($totaal < 50.00){
 stront();
 $huidigePagina = "verzendingPhp";
 
+function sessieEcho($a){
+    if ($_SESSION['klantgegevens'] === TRUE){
+        echo $_SESSION['klantgegevens'][$a];
+    }
+    else{
+        echo $a;
+    }
+}
 //elseif (isset($_SESSION["ophalen"])){
 //    $keuze = $ophalen;
 //}
@@ -68,28 +76,34 @@ $huidigePagina = "verzendingPhp";
             <div class="klantNaam">
                 <tr>
                     <td class="tableColumn">Naam</td>
-                    <td class="tableColumn"><input type="text" name="voornaam" placeholder="Voornaam" required></td>
-                    <td class="tableColumn"><input type="text" name="tussenvoegsel" placeholder="tussenvoegsel"></td>
-                    <td class="tableColumn"><input type="text" name="achternaam" placeholder="Achternaam" required></td>
+                    <td class="tableColumn"><input type="text" name="Voornaam" placeholder="<?php sessieEcho('Voornaam');?>" required></td>
+                    <td class="tableColumn"><input type="text" name="tussenvoegsel" placeholder="<?php sessieEcho('tussenvoegsel');?>"></td>
+                    <td class="tableColumn"><input type="text" name="Achternaam" placeholder="<?php sessieEcho('Achternaam');?>" required></td>
                 </tr>
             </div>
             <div class="adres">
                 <tr>
-                    <td class = "tableColumn">Adres</td> <td class = "tableColumn"><input type="text" name="adres" placeholder="Straat + straatnummer" required></td>
-                    <td class = "tableColumn"><input type="text" name="toev" placeholder="Evt. toev."></td>
+                    <td class = "tableColumn">Adres</td>
+                    <td class = "tableColumn"><input type="text" name="Straat" placeholder="<?php sessieEcho('Straat');?>" required></td>
+                    <td class = "tableColumn"><input type="text" name="Huisnr." size="4" placeholder="<?php sessieEcho('Huisnr.');?>"></td>
+                    <td class = "tableColumn"><input type="text" name="Evt. toev." size="4" placeholder="<?php sessieEcho('Evt. toev.');?>"></td>
                 </tr>
                 <tr>
-                    <td class = "tableColumn">Postcode</td> <td class = "tableColumn"><input type="text" name="postcode" placeholder="1234 AB" required><br></td>
+                    <td class = "tableColumn">Postcode</td>
+                    <td class = "tableColumn"><input type="text" name="1234 AB" placeholder="<?php sessieEcho('1234 AB');?>" required><br></td>
                 </tr>
                 <tr>
-                    <td class = "tableColumn">Plaatsnaam</td> <td class = "tableColumn"><input type="text" name="plaatsnaam" placeholder="Zwolle" required><br></td>
+                    <td class = "tableColumn">Plaatsnaam</td>
+                    <td class = "tableColumn"><input type="text" name="Woonplaats" placeholder="<?php sessieEcho('Woonplaats');?>" required><br></td>
                 </tr>
             </div>
             <tr>
-                <td class="tableColumn">E-mail</td> <td class="tableColumn"><input type="text" name="email" placeholder="E-mailadres" required></td>
+                <td class="tableColumn">E-mail</td>
+                <td class="tableColumn"><input type="text" name="E-mailadres" placeholder="<?php sessieEcho('E-mailadres');?>" required></td>
             </tr>
             <tr>
-                <td class="tableColumn"><p class="telefnr">Telefoonnummer  +316</p> </td> <td class="tableColumn"><input type="text" name="telef" placeholder="Telefoonnummer"></td>
+                <td class="tableColumn"><p class="telefnr">Telefoonnummer</p>
+                </td> <td class="tableColumn"><input type="text" name="0612345678" placeholder="<?php sessieEcho('0612345678');?>"></td>
             </tr>
         </table>
         <div class="verzendType">
