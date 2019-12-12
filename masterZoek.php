@@ -8,6 +8,17 @@ function categ($conn){
 
 ?>
 
+
+
+
+
+
+
+<!----<div class="filterhoeveelheid">
+    <input type="submit" name="25" value="25">
+<input type="submit" name="50" value="50">
+<input type="submit" name="100" value="100">
+</div> --->
 <?php
 include_once "php\connectDB.php";
 
@@ -24,19 +35,33 @@ else{
 
 if (categ($conn)=== TRUE){
     $groupID = $_GET['id'];
-    $query = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID'");
-    $num_rows = mysqli_num_rows($query);
+    $query = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID' LIMIT 25");
+    $query3 = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID'");
+    $num_rows = mysqli_num_rows($query3);
+    if (isset($_POST['meer'])){
+        $query = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID' LIMIT 227");
+    }
 }
 else {
-    $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR StockItemID LIKE '$q'");
-    $num_rows = mysqli_num_rows($query);
+
+    $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR StockItemID LIKE '$q' LIMIT 25");
+    $query4 = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR StockItemID LIKE '$q'");
+    $num_rows = mysqli_num_rows($query4);
+    if (isset($_POST['meer'])){
+        $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR StockItemID LIKE '$q' LIMIT 227");
+    }
 }
+
+
+
+
 ?>
 
 <div id="resultaten" ><p> <strong> <?php if($num_rows > 0) {echo $num_rows;} else{echo "Er zijn geen resultaten voor: ";}; ?> </strong> <?php
 
         if($num_rows > 1) {
             echo" resultaten voor: ";
+
         }
         elseif($num_rows < 2 AND $num_rows != 0){
             echo " resultaat voor: ";
@@ -81,12 +106,15 @@ else {
                 </div>
             </div>
         </form>
-        
+
+
 <?php
 
 }
 ?>
-
+<div class="meerladen"> <form method="post">
+    <input type="submit" value="Meer laden" name="meer">
+</form>
 
 
 

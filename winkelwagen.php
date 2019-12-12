@@ -91,10 +91,10 @@
 
     ?>
 
-    <input type="submit" name="plus" value="Update winkelwagentje" id="update"/>
+    <input type="submit" class="updatebutton buttonPro" name="plus" value="Update winkelwagentje" id="update"/>
 
     <form method="post">
-        <button type="submit" name="deleteall" value="+" id="deleteall">Verwijder alles</button>
+        <button class="button-alles buttonPro"  type="submit" name="deleteall" value="+" id="deleteall">Verwijder alles</button>
     </form>
 
     <hr>
