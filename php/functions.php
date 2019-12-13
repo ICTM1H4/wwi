@@ -162,22 +162,25 @@ function progresBar($huidigePagina){
 //
 function klantgegevens(){
     if(isset($_POST['sendPost'])) {
-        $_SESSION['klantgegevens'] = true;
-        $klantgegevens = array
-        (   'Voornaam' => $_POST['Voornaam'],
-            'tussenvoegsel' => $_POST['tussenvoegsel'],
-            'Achternaam' => $_POST['Achternaam'],
-            'Straat' => $_POST['Straat'],
-            'huisnr' => $_POST['huisnr'],
-            'toev' => $_POST['toev'],
-            'postcode' => $_POST['postcode'],
-            'Woonplaats' => $_POST['Woonplaats'],
-            'E-mailadres' => $_POST['E-mailadres'],
-            'telefoon' => "+31" . $_POST['telefoon'],
+        if(empty($_POST['Voornaam'] && $_POST['Achternaam'] && $_POST['Straat'] && $_POST['huisnr'] && $_POST['postcode'] && $_POST['Woonplaats'] && $_POST['E-mailadres'])) {
+            print_r('Vul alle verplichte velden in!');
+        } else{
+            $klantgegevens = array
+            (   'Voornaam' => $_POST['Voornaam'],
+                'tussenvoegsel' => $_POST['tussenvoegsel'],
+                'Achternaam' => $_POST['Achternaam'],
+                'Straat' => $_POST['Straat'],
+                'huisnr' => $_POST['huisnr'],
+                'toev' => $_POST['toev'],
+                'postcode' => $_POST['postcode'],
+                'Woonplaats' => $_POST['Woonplaats'],
+                'E-mailadres' => $_POST['E-mailadres'],
+                'telefoon' => $_POST['telefoon'],
             'verzendType' => $_POST['maarEenKnop']
-        );
-        $_SESSION['klantgegevens'] = $klantgegevens;
+            );
+            $_SESSION['klantgegevens'] = $klantgegevens;
         return header("Location: ?besteloverzicht");
+        }
     }
 }
 
