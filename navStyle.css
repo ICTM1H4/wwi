@@ -17,6 +17,12 @@ a{
     position: static;
 }
 
+#accountnotav{
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
 #menuBalk{
     /*Opmaak van de menubalk*/
     position: sticky;
@@ -105,11 +111,11 @@ a{
 }
 
 .modal{
-    background-color: red;
+    background-color: #0018ff;
     position: absolute;
-    height: 300px;
-    width: 60%;
-    left: 20%;
+    height: 200px;
+    width: 40%;
+    left: 30%;
 }
 
 #inlog{

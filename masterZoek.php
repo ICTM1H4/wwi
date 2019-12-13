@@ -66,6 +66,8 @@ else {
         elseif($num_rows < 2 AND $num_rows != 0){
             echo " resultaat voor: ";
         }
+        //-------------------------------------------------------------------------------------------------------------------------------------
+
 //alsje joey
         if(isset($q)){
             echo ($q);
@@ -77,7 +79,7 @@ else {
         }
         ?></p> </div>
     <?php
-
+    $i = 1;
     while ($row = mysqli_fetch_array($query)) {
         // print_r($row);
         $title = $row['StockItemName'];
@@ -85,9 +87,10 @@ else {
         $tags = $row['Tags'];
         $image = $row['Photo'];
         $price = $row['RecommendedRetailPrice'];
+        $i++;
 
     ?>
-        <form method="post"  >
+        <form method="post" >
             <div class="zoekMargin">
                 <div class="alleProducten">
                     <div class="afmetingCard">
@@ -105,16 +108,18 @@ else {
                     </div>
                 </div>
             </div>
-        </form>
-
-
-<?php
-
-}
-?>
-<div class="meerladen"> <form method="post">
-    <input type="submit" value="Meer laden" name="meer">
 </form>
+<?php
+    }
+?>
+
+<div class="meerladen"> <form method="post">
+        <input type="submit" value="Meer laden" name="meer">
+    </form>
+</div>
+
+
+
 
 
 

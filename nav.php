@@ -41,9 +41,10 @@
     <div class="modal">
         <form id="inlog" method="post">
             <span onclick="document.getElementById('accountclick').style.display='none'" class="close">X</span>
-            <input type="text" placeholder="Username" id="username" required><br>
+            <!--<input type="text" placeholder="Username" id="username" required><br>
             <input type="password" placeholder="Password" id="userpw" required><br>
-            <input type="submit" placeholder="Verstuur" id="send"><br>
+            <input type="submit" placeholder="Verstuur" id="send"><br> -->
+            <p id="accountnotav">Het is op dit moment nog niet mogelijk om een account aan te maken!</p>
         </form>
     </div>
 </div>
