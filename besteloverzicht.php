@@ -107,6 +107,7 @@ $verzendkosten = $_SESSION['verzendkosten'];
 
                         echo "<hr>";
                         echo "<div class = 'overzicht-totaalprijs' ><h4>Totaal: € $completetotaal (inc. btw)</h4></div>";
+
                         ?>
                     </div>
                 <div>

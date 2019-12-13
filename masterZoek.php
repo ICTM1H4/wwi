@@ -33,15 +33,27 @@ else{
     }
 }
 
-if (categ($conn)=== TRUE){
+if (categ($conn)=== TRUE) {
     $groupID = $_GET['id'];
     $query = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID' LIMIT 25");
     $query3 = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID'");
     $num_rows = mysqli_num_rows($query3);
-    if (isset($_POST['meer'])){
+    if (isset($_POST['meer'])) {
         $query = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID' LIMIT 227");
     }
+    if (isset($_POST['submit'])) {
+        $selected_filter = $_POST['filters'];
+        echo $selected_filter;
+    }
+//    if ($selected_filter == "hooglaag") {
+//        $query = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID' LIMIT 25 ORDER BY RecommendedRetailPrice DESC");
+//
+//    }
 }
+
+
+
+
 else {
 
     $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR StockItemID LIKE '$q' LIMIT 25");
@@ -115,6 +127,25 @@ else {
 
 <div class="meerladen"> <form method="post">
         <input type="submit" value="Meer laden" name="meer">
+    </form>
+</div>
+<div class="filteren">
+    <form method="post">
+        <select name="filters">
+            <option value="Kies een filter">Kies een filter</option>
+            <option value="hooglaag">Prijs hoog - laag </option>
+            <option value="laaghoog">Prijs laag -hoog </option>
+            <option value="Naam">Naam</option>
+        </select>
+        <input type="submit" name="submit" value="Filters toepassen">
+    </form>
+</div>
+
+
+
+<div class="naarboven">
+    <form action="#" method="post">
+        <input type="submit" value="Terug naar boven" name="naarboven">
     </form>
 </div>
 
