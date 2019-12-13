@@ -162,8 +162,8 @@ function progresBar($huidigePagina){
 //
 function klantgegevens(){
     if(isset($_POST['sendPost'])) {
-        if(empty($_POST['Voornaam'] && $_POST['Achternaam'] && $_POST['Straat'] && $_POST['huisnr'] && $_POST['postcode'] && $_POST['Woonplaats'] && $_POST['E-mailadres'])) {
-            print_r('Vul alle verplichte velden in!');
+        if(empty($_POST['Voornaam'] && $_POST['Achternaam'] && $_POST['Straat'] && $_POST['huisnr'] && $_POST['postcode'] && $_POST['Woonplaats']&& $_POST['E-mailadres'])) {
+            print('<span class="danger"> Vul alle verplichte velden in!</span>');
         } else{
             $klantgegevens = array
             (   'Voornaam' => $_POST['Voornaam'],

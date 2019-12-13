@@ -13,7 +13,7 @@ $_SESSION['completetotaal'] = $completeTotaal;
 if ($totaal < 50.00){
     $normLever += 6.95;
 }
-klantgegevens();
+//klantgegevens();
 $huidigePagina = "verzendingPhp";
 
 function sessieEcho($a){
@@ -83,11 +83,12 @@ function sessieEcho($a){
     <h2 class="uwGegev">Uw gegevens</h2>
     <h2 class="verzendPrijs">Verzendprijzen</h2>
     <form class="factuurData" method="post" action="">
+        <?php klantgegevens() ?>
         <table class="factuurText">
         <?php if(isset($_SESSION['klantgegevens'])) { $klant =$_SESSION['klantgegevens']; ?>
             <div class="klantNaam">
                 <tr>
-                    <td class="tableColumn">Naam</td>
+                    <td class="tableColumn">Naam<b>&#42;</b></td>
                     <td class="tableColumn"><input type="text" name="Voornaam" placeholder="Voer uw voornaam in" value="<?php echo $klant['Voornaam'] ?>"></td>
                     <td class="tableColumn"><input type="text" name="tussenvoegsel" placeholder="Voer us tussenvoegsel in" value="<?php echo $klant['tussenvoegsel'] ?>"></td>
                     <td class="tableColumn"><input type="text" name="Achternaam" placeholder="Voer uw achternaam in" value="<?php echo $klant['Achternaam'] ?>"></td>
@@ -95,27 +96,30 @@ function sessieEcho($a){
             </div>
             <div class="adres">
                 <tr>
-                    <td class = "tableColumn">Adres</td>
+                    <td class = "tableColumn">Adres<b>&#42;</b></td>
                     <td class = "tableColumn"><input type="text" name="Straat" placeholder="Voer uw straat in" value="<?php echo $klant['Straat'] ?>"></td>
                     <td class = "tableColumn"><input type="text" name="huisnr" size="4" placeholder="Voer uw huisnummer in" value="<?php echo $klant['huisnr'] ?>"></td>
                     <td class = "tableColumn"><input type="text" name="toev" size="4" placeholder="Voer uw toevoeging in" value="<?php echo $klant['toev'] ?>"></td>
                 </tr>
                 <tr>
-                    <td class = "tableColumn">Postcode</td>
+                    <td class = "tableColumn">Postcode<b>&#42;</b></td>
                     <td class = "tableColumn"><input type="text" name="postcode" placeholder="Voer uw postcode in" value="<?php echo $klant['postcode']?>"><br></td>
                 </tr>
                 <tr>
-                    <td class = "tableColumn">Plaatsnaam</td>
+                    <td class = "tableColumn">Plaatsnaam<b>&#42;</b></td>
                     <td class = "tableColumn"><input type="text" name="Woonplaats" placeholder="Voer uw woonplaats in" value="<?php echo $klant['Woonplaats']?>""><br></td>
                 </tr>
             </div>
             <tr>
-                <td class="tableColumn">E-mail</td>
+                <td class="tableColumn">E-mail<b>&#42;</b></td>
                 <td class="tableColumn"><input type="text" name="E-mailadres" placeholder="Voer uw e-mail adres in" value="<?php echo $klant['E-mailadres']?>""></td>
             </tr>
             <tr>
                 <td class="tableColumn"><p class="telefnr">Telefoonnummer</p>
                 </td> <td class="tableColumn"><input type="text" name="telefoon" placeholder="Voer uw telefoon nummer in" value="<?php echo $klant['telefoon']?>"></td>
+            </tr>
+            <tr>
+                <td class="tableColumn"><p class="verplichtveld">* verplicht veld</p></td>
             </tr>
         <?php } else { ?>
             <div class="klantNaam">
@@ -158,6 +162,7 @@ function sessieEcho($a){
             <input type="submit" name="sendPost" class="buttonPro" value="Doorgaan">
         </div>
     </form>
+
 </div>
 </body>
 </html>

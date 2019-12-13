@@ -78,3 +78,24 @@ function check() {
         $('.knopVerzenden').prop('disabled', false);
     }
 }
+
+function check2() {
+    if (!isValidEmailAddress($('.email').val())) {
+        $('.email').css;
+        $('.email').css;
+        $('.email').css("background-color", "#f8d7da");
+        $('.buttonPro').prop('disabled', true)
+        if ($('.email').val() == "") {
+            $('.email').css("border-color", "#CCC");
+            $('.email').css("color", "black");
+            $('.email').css("background-color", "#FFF");
+            $('.buttonPro').prop('disabled', false);
+        }
+    }
+    else {
+        $('.email').css("border-color", "#CCC");
+        $('.email').css("color", "black");
+        $('.email').css("background-color", "#FFF");
+        $('.buttonPro').prop('disabled', false);
+    }
+}

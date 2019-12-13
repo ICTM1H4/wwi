@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="" />
+    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/javascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/javascript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/verzending.php" beforeDir="false" afterPath="$PROJECT_DIR$/verzending.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -337,21 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575287804882</updated>
     </task>
-    <task id="LOCAL-00036" summary="button Masterzoek (categorieën en zoeklijst) in het midden gezet.">
-      <created>1576227103330</created>
+    <task id="LOCAL-00036" summary="Mogelijkheid om producten toe te voegen aan winkelwagentje">
+      <created>1576233506843</created>
       <option name="number" value="00036" />
       <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
-      <updated>1576227103330</updated>
+      <updated>1576233506843</updated>
     </task>
-    <task id="LOCAL-00037" summary="funtie stront veranderd">
-      <created>1576231785221</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1576231785221</updated>
-    </task>
-    <option name="localTasksCounter" value="38" />
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,6 +370,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="logo erbij" />
+    <MESSAGE value="winkelwagen erbij" />
     <MESSAGE value="account logo erbij" />
     <MESSAGE value="index toevoeging: logo, categorieën, zoekbalk, winkelwagen, begin account" />
     <MESSAGE value="account =&gt; inlogscherm werkt, css aangevuld over index pagina" />
@@ -394,8 +395,6 @@
     <MESSAGE value="besteloverzicht toegevoegd" />
     <MESSAGE value="begin aan besteloverzicht en aanpassingen met de style daarvan" />
     <MESSAGE value="Mogelijkheid om producten toe te voegen aan winkelwagentje" />
-    <MESSAGE value="button Masterzoek (categorieën en zoeklijst) in het midden gezet." />
-    <MESSAGE value="funtie stront veranderd" />
-    <option name="LAST_COMMIT_MESSAGE" value="funtie stront veranderd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mogelijkheid om producten toe te voegen aan winkelwagentje" />
   </component>
 </project>

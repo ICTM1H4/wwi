@@ -577,3 +577,17 @@ h4 {
 .klantenserviceInput input {
     border: 1px solid #ccc;
 }
+
+b {
+    font-size: 20px;
+    color: red;
+}
+
+.danger {
+    color: red;
+}
+
+.verplichtveld{
+    color: red;
+    font-size: 12px;
+}
