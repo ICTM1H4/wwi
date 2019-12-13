@@ -168,12 +168,12 @@ function stront(){
             'tussenvoegsel' => $_POST['tussenvoegsel'],
             'Achternaam' => $_POST['Achternaam'],
             'Straat' => $_POST['Straat'],
-            'Huisnr.' => $_POST['Huisnr.'],
-            'Evt. toev.' => $_POST['Evt. toev.'],
-            '1234 AB' => $_POST['1234 AB'],
+            'huisnr' => $_POST['huisnr'],
+            'toev' => $_POST['toev'],
+            'postcode' => $_POST['postcode'],
             'Woonplaats' => $_POST['Woonplaats'],
             'E-mailadres' => $_POST['E-mailadres'],
-            '0612345678' => "+316" . $_POST['0612345678'],
+            'telefoon' => "+31" . $_POST['telefoon'],
             'verzendType' => $_POST['maarEenKnop']
         );
         $_SESSION['klantgegevens'] = $klantgegevens;
@@ -223,3 +223,12 @@ function molliePrintLines($cart, $conn){
     ]
     ;
 }
+
+// function printFormVerzending($klant) {
+//     foreach($klant as $key=>$value) {
+//         echo '<tr>';
+//         echo '<td></td>';
+//         echo '<td class="tableColumn"><input type="text" name="'.$key.'" placeholder="Voer uw '.$key.' in" value="'.$value.'" required></td>';
+//         echo '</tr>';
+//     }
+// }

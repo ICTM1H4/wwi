@@ -35,7 +35,6 @@ $verzendkosten = $_SESSION['verzendkosten'];
                         <div class="overzichtKlantNaam">
 <!--                            Voornaam tussenvoegsel en achternaam-->
                             <?php
-                            print_r($_SESSION['klantgegevens']);
                             if ($_SESSION['klantgegevens']['tussenvoegsel'] === ""){
                                 echo "<div>";
                                 echo trim($_SESSION['klantgegevens']['Voornaam']). " ";
@@ -52,12 +51,12 @@ $verzendkosten = $_SESSION['verzendkosten'];
 
                             }
                             echo trim($_SESSION['klantgegevens']['Straat']). " ";
-                            echo trim($_SESSION['klantgegevens']['Huisnr.']). " ";
-                            echo trim($_SESSION['klantgegevens']['Evt. toev.']). '<br>';
-                            echo trim($_SESSION['klantgegevens']['1234 AB']). '<br>';
+                            echo trim($_SESSION['klantgegevens']['huisnr']). " ";
+                            echo trim($_SESSION['klantgegevens']['toev']). '<br>';
+                            echo trim($_SESSION['klantgegevens']['postcode']). '<br>';
                             echo trim($_SESSION['klantgegevens']['Woonplaats']). '<br>';
                             echo trim($_SESSION['klantgegevens']['E-mailadres']). '<br>';
-                            echo trim($_SESSION['klantgegevens']['0612345678']). '<br>';
+                            echo trim($_SESSION['klantgegevens']['telefoon']). '<br>';
                             ?>
                         </div>
                     <div class = "overzichtKlantAdres">
