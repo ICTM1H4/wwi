@@ -160,7 +160,7 @@ function progresBar($huidigePagina){
 }
 
 //
-function stront(){
+function klantgegevens(){
     if(isset($_POST['sendPost'])) {
         $_SESSION['klantgegevens'] = true;
         $klantgegevens = array

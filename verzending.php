@@ -13,7 +13,7 @@ $_SESSION['completetotaal'] = $completeTotaal;
 if ($totaal < 50.00){
     $normLever += 6.95;
 }
-stront();
+klantgegevens();
 $huidigePagina = "verzendingPhp";
 
 function sessieEcho($a){
