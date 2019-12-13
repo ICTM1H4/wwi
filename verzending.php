@@ -82,8 +82,7 @@ function sessieEcho($a){
 <div class="algMargin">
     <h2 class="uwGegev">Uw gegevens</h2>
     <h2 class="verzendPrijs">Verzendprijzen</h2>
-    <form class="factuurData" method="post" action="">
-        <?php klantgegevens() ?>
+    <form class="factuurData" method="post">
         <table class="factuurText">
         <?php if(isset($_SESSION['klantgegevens'])) { $klant =$_SESSION['klantgegevens']; ?>
             <div class="klantNaam">

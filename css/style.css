@@ -37,19 +37,22 @@
     text-align: center;
     padding: 0 10px;
     margin-top: 40px;
+    height: 500px;
+}
+
+.groteHR{
+    height: 20px;
+    visibility: hidden;
 }
 
 .onder{
-    position: absolute;
     bottom: 20px;
-
 }
 
 .price {
     color: black;
     font-size: 22px;
 }
-
 
 .card button {
     border: none;
@@ -505,6 +508,16 @@ h4 {
 .overzichtKlantgegevens{
     float: left;
     width: 240px;
+}
+
+.overzichtProducten{
+    position: absolute;
+    margin-left: 21%;
+    width: 30%;
+}
+
+.overzichtAantal{
+    float: left;
 }
 
 .overzichtBestelling{

@@ -86,9 +86,10 @@ function printRandomItem($conn){
                 echo '<a style="color: black" href="?productID='.$row['StockItemID'].'">
                 <img style="width: 100%; height: 250px" src="data:image/jpeg;base64,'.base64_encode($row['Photo']).'"><br>';
                 echo '<h5>'.$row['StockItemName'].'</h5></a>';
+                echo '<br><br><hr class="groteHR">';
                 echo '<div class="onder">';
                 echo '<p class="price">&euro; '.$row['RecommendedRetailPrice'].'</p><br>';
-                echo '<form method="POST" >';
+                echo '<form method="POST">';
                 echo '<input type="submit" class="buttonPro" name="add" value="Toevoegen aan winkelwagentje">';
                 echo '<input type="hidden" name="product_id" value="'. $row["StockItemID"] .'">';
                 echo '<input type="hidden" name="price" value="'. $row["RecommendedRetailPrice"].'">';

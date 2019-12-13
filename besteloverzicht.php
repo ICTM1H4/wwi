@@ -66,14 +66,6 @@ $verzendkosten = $_SESSION['verzendkosten'];
                     </div>
                 </div>
             </div>
-            <div class="overzichtBezorging">
-                <div class = "overzicht-border">
-
-                    <div><h2>Bezorging</h2></div>
-                    <div>Bezorgingswijze<br><br></div>
-                    <div><?php echo $_SESSION['klantgegevens']['verzendType'] . $verzendkosten ?> euro</div>
-                </div>
-            </div>
             <div class = "betalingswijze">
                 <div class = "overzicht-border">
 
@@ -85,30 +77,46 @@ $verzendkosten = $_SESSION['verzendkosten'];
                 <a href="?verzending"><input class = "buttonPro" type="submit" value="Vorige stap"></a>
             </div>
         </div>
+        <div class="overzichtProducten">
+            <div class="overzicht-border">
+                <h2>Producten</h2>
+                <?php
+                foreach ($_SESSION['cart'] as $index => $result) {
+                    $queryscproducts = mysqli_query($conn, "SELECT StockItemName FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
+                    $title = $queryscproducts->fetch_assoc();
+                    echo $title["StockItemName"];
+                    echo '<br>';
+                    $queryscproducts = mysqli_query($conn, "SELECT RecommendedRetailPrice FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
+                    $price = $queryscproducts->fetch_assoc();
+                    echo "€" . $price["RecommendedRetailPrice"];
+                    echo '<br>';
+                    $resAantal = $result['aantal'];
+                    echo "<div class = 'ProductAantal'>Aantal: $resAantal</div>";
+                    echo '<hr>';
+                    echo '<br><br>';
+                }
+                ?>
+            </div>
+        </div>
         <div class = "overzichtBestelling">
             <div class = "overzicht-border">
-                <div><h2>Bestelling</h2></div>
-                    <div>
-                        <?php
-                        $completetotaal = $_SESSION['completetotaal'];
-                        $prijs = $_SESSION['prijsproduct'];
-                        $btw = $_SESSION['btw'];
-                        $verzendkosten = $_SESSION['verzendkosten'];
+                <h2>Bestelling</h2>
+                <div>
+                    <?php
+                    $completetotaal = $_SESSION['completetotaal'];
+                    $prijs = $_SESSION['prijsproduct'];
+                    $btw = $_SESSION['btw'];
+                    $verzendkosten = $_SESSION['verzendkosten'];
 
+                    echo "<div class = 'overzichtprijs'> <h4>Subtotaal Producten:€ $prijs (exl. btw)</h4>";
+                    echo "<div class = 'btwprijs'> <h4>BTW: € $btw </h4></div>";
+                    echo "<div class = 'btwprijs'> <h4>Verzendkosten: € $verzendkosten </h4></div>";
+                    echo "</div>";
+                    echo "<hr>";
+                    echo "<div class = 'overzicht-totaalprijs' ><h4>Totaal: € $completetotaal (inc. btw)</h4></div>";
 
-                            echo "<div class='overzicht-product'>";
-                            echo "<div class = 'overzicht-productnaam'><h4>Product</h4><div>";
-                            echo "<img class = 'overzicht-foto' src='Geen_foto_helaas_beschikbaar.png'>";
-                            echo "<div class = 'overzichtprijs'> <h4>Subtotaal Producten:€ $prijs (exl. btw)</h4></div>";
-                            echo "<div class = 'btwprijs'> <h4>BTW: € $btw </h4></div>";
-                            echo "<div class = 'btwprijs'> <h4>Verzendkosten: € $verzendkosten </h4></div>";
-                            echo "</div>";
-
-                        echo "<hr>";
-                        echo "<div class = 'overzicht-totaalprijs' ><h4>Totaal: € $completetotaal (inc. btw)</h4></div>";
-
-                        ?>
-                    </div>
+                    ?>
+                </div>
                 <div>
                     <form action="betaling.php">
                         <input class = "buttonPro" type="submit" value="Naar betalen">
