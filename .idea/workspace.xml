@@ -3,10 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bevestiging.php" beforeDir="false" afterPath="$PROJECT_DIR$/bevestiging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/winkelwagen.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/winkelwagen.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/masterZoek.php" beforeDir="false" afterPath="$PROJECT_DIR$/masterZoek.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nav.php" beforeDir="false" afterPath="$PROJECT_DIR$/nav.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/navStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tentamenBen/opgave01.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tentamenBen/opgave02.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tentamenBen/opgave03.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tentamenBen/opgave04.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tentamenBen/opgave05.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tentamenBen/opgave06.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tentamenBen/opgave07a+b.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tentamenBen/opgave08a+b.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tentamenBen/opgave09.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tentamenBen/opgave10.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tentamenBen/opgave11.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tentamenBen/opgave12.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkelwagen.php" beforeDir="false" afterPath="$PROJECT_DIR$/winkelwagen.php" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,9 +63,6 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1TVsoaq0mUYBokzWuvogApB1HTN" />
-  <component name="ProjectLevelVcsManager">
-    <OptionsSetting value="false" id="Update" />
-  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -64,15 +77,15 @@
       <recent name="C:\xampp\htdocs\wwi" />
     </key>
   </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
+  <component name="RunDashboard">
+    <option name="ruleStates">
       <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
       </list>
     </option>
   </component>
@@ -344,21 +357,7 @@
       <option name="project" value="LOCAL" />
       <updated>1575287804882</updated>
     </task>
-    <task id="LOCAL-00036" summary="ideal mogelijk gemaakt">
-      <created>1576154992505</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1576154992505</updated>
-    </task>
-    <task id="LOCAL-00037" summary="begin aan functie voor order aangemaakt">
-      <created>1576159007862</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1576159007862</updated>
-    </task>
-    <option name="localTasksCounter" value="38" />
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,6 +377,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="logo erbij" />
+    <MESSAGE value="winkelwagen erbij" />
     <MESSAGE value="account logo erbij" />
     <MESSAGE value="index toevoeging: logo, categorieën, zoekbalk, winkelwagen, begin account" />
     <MESSAGE value="account =&gt; inlogscherm werkt, css aangevuld over index pagina" />
@@ -401,26 +402,6 @@
     <MESSAGE value="besteloverzicht toegevoegd" />
     <MESSAGE value="begin aan besteloverzicht en aanpassingen met de style daarvan" />
     <MESSAGE value="Mogelijkheid om producten toe te voegen aan winkelwagentje" />
-    <MESSAGE value="ideal mogelijk gemaakt" />
-    <MESSAGE value="begin aan functie voor order aangemaakt" />
-    <option name="LAST_COMMIT_MESSAGE" value="begin aan functie voor order aangemaakt" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="375" y="10" key="CommitChangelistDialog2" timestamp="1576159006861">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="375" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1576159006861" />
-    <state x="633" y="126" key="RollbackChangesDialog" timestamp="1576163305237">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="633" y="126" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1576163305237" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1576159013220">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1576159013220" />
-    <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576154117259">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="580" y="331" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1576154117259" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mogelijkheid om producten toe te voegen aan winkelwagentje" />
   </component>
 </project>

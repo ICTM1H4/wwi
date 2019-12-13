@@ -33,15 +33,28 @@ else{
     }
 }
 
-if (categ($conn)=== TRUE){
+if (categ($conn)=== TRUE) {
     $groupID = $_GET['id'];
     $query = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID' LIMIT 25");
     $query3 = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID'");
     $num_rows = mysqli_num_rows($query3);
-    if (isset($_POST['meer'])){
+    if (isset($_POST['meer'])) {
         $query = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID' LIMIT 227");
     }
+//    if (isset($_POST['submit'])) {
+//        $selected_filter = $_POST['filters'];
+//        echo $selected_filter;
+//        if ($selected_filter == "hooglaag") {
+//            $query = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID' LIMIT 25 ORDER BY RecommendedRetailPrice DESC");
+//
+//        }
+//    }
 }
+
+
+
+
+
 else {
 
     $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR StockItemID LIKE '$q' LIMIT 25");
@@ -66,6 +79,8 @@ else {
         elseif($num_rows < 2 AND $num_rows != 0){
             echo " resultaat voor: ";
         }
+        //-------------------------------------------------------------------------------------------------------------------------------------
+
 //alsje joey
         if(isset($q)){
             echo ($q);
@@ -77,44 +92,72 @@ else {
         }
         ?></p> </div>
     <?php
+//    if(!isset($_POST['submit'])) {
 
-    while ($row = mysqli_fetch_array($query)) {
-        // print_r($row);
-        $title = $row['StockItemName'];
-        $details = $row['SearchDetails'];
-        $tags = $row['Tags'];
-        $image = $row['Photo'];
-        $price = $row['RecommendedRetailPrice'];
 
-    ?>
-        <form method="post"  >
-            <div class="zoekMargin">
-                <div class="alleProducten">
-                    <div class="afmetingCard">
-                        <div class="card">
-                             <a href="?productID=<?php echo $row['StockItemID']?>"><img src="data:image/jpeg;base64,<?php echo base64_encode($row['Photo']) ?>" alt="Denim Jeans" style="width:100%"></a>
-                            <h5> <?php echo $title?></h5><br>
-                            <div class="onder">
-                                <p class="price"><?php echo "€ ". $price ?></p><br>
-                                <p class="pricei"><?php echo "€ ". round($price * 1.21, 2) . " Incl. btw" ?></p><br>
-                                <button type="submit" name="add"> Toevoegen aan winkelwagentje</button>
-                                <input type="hidden" name="product_id" value='<?php echo $row['StockItemID']?>'>
-                                <input type="hidden" name="price" value='<?php echo $row['RecommendedRetailPrice']?>'>
+        $i = 1;
+
+        while ($row = mysqli_fetch_array($query)) {
+            // print_r($row);
+            $title = $row['StockItemName'];
+            $details = $row['SearchDetails'];
+            $tags = $row['Tags'];
+            $image = $row['Photo'];
+            $price = $row['RecommendedRetailPrice'];
+            $i++;
+
+            ?>
+            <form method="post">
+                <div class="zoekMargin">
+                    <div class="alleProducten">
+                        <div class="afmetingCard">
+                            <div class="card">
+                                <a href="?productID=<?php echo $row['StockItemID'] ?>"><img
+                                            src="data:image/jpeg;base64,<?php echo base64_encode($row['Photo']) ?>"
+                                            alt="Denim Jeans" style="width:100%"></a>
+                                <h5> <?php echo $title ?></h5><br>
+                                <div class="onder">
+                                    <p class="price"><?php echo "€ " . $price ?></p><br>
+                                    <p class="pricei"><?php echo "€ " . round($price * 1.21, 2) . " Incl. btw" ?></p>
+                                    <br>
+                                    <button type="submit" name="add"> Toevoegen aan winkelwagentje</button>
+                                    <input type="hidden" name="product_id" value='<?php echo $row['StockItemID'] ?>'>
+                                    <input type="hidden" name="price"
+                                           value='<?php echo $row['RecommendedRetailPrice'] ?>'>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </form>
-
-
-<?php
-
-}
+            </form>
+            <?php
+        }
+//    }
 ?>
-<div class="meerladen"> <form method="post">
+
+
+
+<div class="filteren">
+    <form method="post">
+        <select name="filters">
+            <option value="Kies een filter">Kies een filter</option>
+            <option value="hooglaag">Prijs hoog - laag </option>
+            <option value="laaghoog">Prijs laag -hoog </option>
+            <option value="Naam">Naam</option>
+        </select>
+        <input type="submit" name="submit" value="Filters toepassen">
+    </form>
+</div>
+<div class="laden"><form method="post">
     <input type="submit" value="Meer laden" name="meer">
 </form>
+    <form action="#" method="post">
+        <input type="submit" value="Terug naar boven" name="naarboven">
+    </form></div>
+
+
+
+
 
 
 

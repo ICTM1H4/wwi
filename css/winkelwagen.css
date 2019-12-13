@@ -4,11 +4,13 @@
 
 }
 
-
+.wiwaform {
+    margin-top: 40px;
+}
 
 .plaatje{
     /*Margin van de zijkanten van de pagina*/
-    margin: auto;
+    margin:auto;
     width: 80%;
     position: static;
 }
@@ -16,17 +18,20 @@
 .totaal {
     margin-top: 10px;
     margin-bottom: 30px;
-    background-color: #d9f2f4;
+    background-color: rgba(25, 115, 255, 0.11);
 
 }
 
 .totaltext{
-    margin-left: 900px;
-    margin-top: 10px;
+    margin-left: 800px;
+    margin-top: 30px;
 }
 
+#aantalart{
+    margin-top: 30px;
+}
 .button-afrekenen{
-    margin-left: 900px;
+    margin-left: 800px;
     margin-bottom: 30px;
 }
 
@@ -72,6 +77,7 @@ h3 {
     background-color: #00bdf3;
     border: none;
     margin-bottom: 20px;
+    margin-left: 200px;
 }
 
 hr {
@@ -82,28 +88,6 @@ hr {
 }
 
 
-#plaatje {
-    height: 100px;
-    width: 100px;
-    margin-top: 5px;
-
-
-}
-
-#decrease {
-    height: 20px;
-    width: 20px;
-    margin-left: 800px;
-    background-color: #00bdf3;
-    border: none;
-}
-
-#increase {
-    height: 20px;
-    width: 20px;
-    background-color: #00bdf3;
-    border: none;
-}
 
 #delete {
     height: 20px;
@@ -115,18 +99,20 @@ hr {
 
 #deleteall{
     height: 50px;
-    width: 100px;
-    background-color: #00bdf3;
+    width: 150px;
+    background-color: #6a8be1;
     margin-bottom: 10px;
     margin-top: 30px;
     border: none;
-    margin-left: 1100px;
+    float: right;
+    /*margin-right: 600px;*/
 }
+
 
 #update{
     height: 50px;
     width: 200px;
-    background-color: #00bdf3;
+    background-color: #6a8be1;
     margin-right: 30px;
     margin-bottom: 10px;
     margin-top: 30px;

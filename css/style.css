@@ -41,7 +41,6 @@
 
 .onder{
     position: absolute;
-    padding: 0 10px;
     bottom: 20px;
 
 }
@@ -64,6 +63,7 @@
     font-size: 18px;
     margin-bottom: 20px;
     border-radius: 8px;
+    position: center;
 
 }
 
@@ -338,6 +338,8 @@ h4 {
   color: black;
 }
 
+
+
 /*---------------------------Bestelprocedure-----------------------------*/
 
 .grijsPB{
@@ -401,6 +403,14 @@ h4 {
 .tableColumn{
     padding: 10px;
 }
+
+.laden {
+    float: right;
+    margin-right: 400px;
+    width: 400px;
+}
+
+
 
 /*---------------------------Bestelprocedure-----------------------------*/
 
@@ -490,7 +500,7 @@ h4 {
     background-color: #6a8be1;
     text-align: center;
     cursor: pointer;
-    width: 230px;
+    width: 220px;
     margin-top: 20px;
     border-radius: 10px;
 }

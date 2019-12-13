@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin-right: 8px;
     padding: 0;
     font-family: Arial, serif;
 }
@@ -15,6 +15,12 @@ a{
     margin: auto;
     width: 80%;
     position: static;
+}
+
+#accountnotav{
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
 }
 
 #menuBalk{
@@ -105,11 +111,11 @@ a{
 }
 
 .modal{
-    background-color: red;
+    background-color: #0018ff;
     position: absolute;
-    height: 300px;
-    width: 60%;
-    left: 20%;
+    height: 200px;
+    width: 40%;
+    left: 30%;
 }
 
 #inlog{

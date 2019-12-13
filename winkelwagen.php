@@ -7,6 +7,7 @@
 <body>
 <h1>Winkelwagen</h1>
 
+<div class="wiwaform" >
 <div class="plaatje">
     <?php
     $totaal = 0;
@@ -19,7 +20,10 @@
 
    if(isset($_SESSION['cart'])) {
        echo '<form method="post">';
-       foreach ($_SESSION['cart'] as $index => $result) {
+       ?>
+       <input type="submit" class="updatebutton buttonPro" name="plus" value="Update winkelwagentje" id="update" hidden/>
+       <?php
+       foreach ($_SESSION['cart'] as $index => $result) {   // For each item in this array / for each item that have been added to array/cart
 
            if(isset($_POST['plus'])) {
             //    print_r($_POST[$result["product_id"]]);
@@ -44,11 +48,13 @@
         //    die(0);
 
            echo "<br>";
+           // Use this query to print all descriptions of products that have been added to the shopping cart
            $queryscproducts = mysqli_query($conn, "SELECT StockItemName FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
            $title = $queryscproducts->fetch_assoc();
            echo $title["StockItemName"];
            echo "<br>";
 
+           // Use this query to print all prices of products that have been added to the shopping cart
            $queryscproducts = mysqli_query($conn, "SELECT RecommendedRetailPrice FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
            $price = $queryscproducts->fetch_assoc();
            echo "€" . $price["RecommendedRetailPrice"];
@@ -59,16 +65,16 @@
            //echo $result['product_id'];
            echo "<br>";
            ?>
-<!--           <form method="post" >-->
+
            <input type="submit" name="delete<?php echo $result['product_id']?>" value="Verwijderen" id="delete">
            <hr>
-<!--           </form>-->
+
            <?php
             $totaalprijs = $totaalprijs + $price["RecommendedRetailPrice"] * $result['aantal'];
             $totaalartikelen = round( $totaalprijs * 1.21 + $verzendkosten, 2);
        }
        if (empty($_SESSION['cart'])){
-           echo "Winkelwagentje is leeg";
+           echo "U heeft geen producten in uw winkelwagentje";
            $valueverandering = "Verder winkelen";
            $hrefverandering = "?index";
        }
@@ -76,24 +82,17 @@
 
    else {
 
-       echo "Winkelwagentje is leeg";
+       echo "U heeft geen producten in uw winkelwagentje";
        $valueverandering = "Verder winkelen";
        $hrefverandering = "?index";
    }
 
 
 
-
-
-
-
-
-
     ?>
 
-    <input type="submit" class="updatebutton buttonPro" name="plus" value="Update winkelwagentje" id="update"/>
-
     <form method="post">
+        <input type="submit" class="updatebutton buttonPro" name="plus" value="Update winkelwagentje" id="update" />
         <button class="button-alles buttonPro"  type="submit" name="deleteall" value="+" id="deleteall">Verwijder alles</button>
     </form>
 
@@ -104,9 +103,15 @@
     <?php
 
     if(isset($_POST['deleteall'])){
-        session_destroy();
-        header('location: ?winkelwagen');
-        //test
+        if(empty($_SESSION['cart'])){
+            echo "<script>alert('U kunt geen producten verwijderen als er geen producten in het winkelwagentje staan')</script>";
+            echo "<script>window.location = '?winkelwagen</script>";
+            echo "<meta http-equiv='refresh' content='0'>";
+        }
+        else {
+            session_destroy();                                                     // destroy session when delete button is set
+            echo "<meta http-equiv='refresh' content='0'>";                        // refresh page after destroy
+        }
     }
 
     if ($totaalprijs >= 50){
@@ -130,19 +135,20 @@
 
 <div class="totaal">
 
-    <form method="post">
+    <div method="post">
         <div class="totaltext" >
-        <h3>Aantal artikelen: <?php echo $totaal ?> </h3><br>
+        <h3 id="aantalart">Subtototaal: <?php echo $totaal ?> </h3><br>
         <h3>Totaalprijs: <?php echo "€" . $totaalprijs ?> (excl. btw) </h3><br>
         <h3>BTW: <?php echo "€" . $btw ?> </h3>
         <hr><br>
         <h3>Totaal: <?php echo "€" . round($totaalartikelen , 2) ?> (incl. btw)</h3><br><br>
-        </div>
+
+    </div>
 
         <a href="<?php echo $hrefverandering ?>"><input type="button" class = "button-afrekenen buttonPro" value="<?php echo $valueverandering ?>"></a>
     </form>
 </div>
 </div>
-</form>
+</div>
 </body>
 </html>
