@@ -119,6 +119,7 @@ h4 {
 .product-omschrijving {
     float: left;
     margin-left: 5%;
+    max-width: 600px;
 }
 
 .md5 {
