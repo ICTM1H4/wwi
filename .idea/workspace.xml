@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/besteloverzicht.php" beforeDir="false" afterPath="$PROJECT_DIR$/besteloverzicht.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/masterZoek.php" beforeDir="false" afterPath="$PROJECT_DIR$/masterZoek.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -344,7 +344,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575287804882</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Poging tot filters">
+      <created>1576224180693</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1576224180693</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,7 +371,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="logo erbij" />
     <MESSAGE value="winkelwagen erbij" />
     <MESSAGE value="account logo erbij" />
     <MESSAGE value="index toevoeging: logo, categorieën, zoekbalk, winkelwagen, begin account" />
@@ -389,6 +395,7 @@
     <MESSAGE value="besteloverzicht toegevoegd" />
     <MESSAGE value="begin aan besteloverzicht en aanpassingen met de style daarvan" />
     <MESSAGE value="Mogelijkheid om producten toe te voegen aan winkelwagentje" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mogelijkheid om producten toe te voegen aan winkelwagentje" />
+    <MESSAGE value="Poging tot filters" />
+    <option name="LAST_COMMIT_MESSAGE" value="Poging tot filters" />
   </component>
 </project>
