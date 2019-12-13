@@ -1,5 +1,6 @@
 <?php
 
+
 function categ($conn){
     if (isset($_GET['id'])){
         return TRUE;
@@ -7,12 +8,6 @@ function categ($conn){
 }
 
 ?>
-
-
-
-
-
-
 
 <!----<div class="filterhoeveelheid">
     <input type="submit" name="25" value="25">
@@ -149,14 +144,11 @@ else {
     </form>
 </div>
 <div class="laden"><form method="post">
-    <input type="submit" value="Meer laden" name="meer">
-</form>
-    <form action="#" method="post">
-        <input type="submit" value="Terug naar boven" name="naarboven">
+    <input type="submit" value="Toon meer producten" name="meer" id="loadmore">
+
+    <!--<form action="#" method="post"> -->
+        <input type="submit" value="Terug naar boven" name="naarboven" id="pagup">
     </form></div>
-
-
-
 
 
 

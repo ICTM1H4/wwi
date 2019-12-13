@@ -406,10 +406,31 @@ h4 {
 
 .laden {
     float: right;
-    margin-right: 400px;
+    margin-right: 530px;
     width: 400px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+
 }
 
+#pagup{
+    margin-left: 50px;
+    width: 150px;
+    height: 30px;
+    background-color: #6A8BE1;
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
+
+#loadmore{
+    width: 150px;
+    height: 30px;
+    background-color: #6A8BE1;
+    border: none;
+    border-radius: 8px;
+    color: white;
+}
 
 
 /*---------------------------Bestelprocedure-----------------------------*/

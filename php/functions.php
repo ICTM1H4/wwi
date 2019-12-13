@@ -224,6 +224,9 @@ function molliePrintLines($cart, $conn){
     ;
 }
 
+
+
+
 // function printFormVerzending($klant) {
 //     foreach($klant as $key=>$value) {
 //         echo '<tr>';
