@@ -41,7 +41,6 @@
 
 .onder{
     position: absolute;
-    padding: 0 10px;
     bottom: 20px;
 
 }
@@ -501,7 +500,7 @@ h4 {
     background-color: #6a8be1;
     text-align: center;
     cursor: pointer;
-    width: 230px;
+    width: 220px;
     margin-top: 20px;
     border-radius: 10px;
 }
