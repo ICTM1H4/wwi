@@ -13,11 +13,11 @@
 
     <table class="klantenserviceInput">
         <tr>
-            <td>Naam:</td>
+            <td>Naam:<b>&#42;</b></td>
             <td><input type="text" class="name" name="Naam:"></td>
         </tr>
         <tr>
-            <td>Email:</td>
+            <td>Email:<b>&#42;</b></td>
             <td><input type="text" onchange="check()" class="email" name="Naam:"></td>
         </tr>
         <tr>
@@ -25,11 +25,11 @@
             <td><input type="text" class="od" name="Ordernummer:"><br></td>
         </tr>
         <tr>
-            <td>Onderwerp:</td>
+            <td>Onderwerp:<b>&#42;</b></td>
             <td><input type="text" class="onw" name="Onderwerp:"><br></td>
         </tr>
         <tr>
-            <td><h4><br>Uw vraag:</h4></td>
+            <td><h4><br>Uw vraag:<b>&#42;</b></h4></td>
         </tr>
     </table>
     <textarea class="uwVraag"></textarea>

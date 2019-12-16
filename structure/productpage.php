@@ -5,6 +5,7 @@ $data = getItem($conn, $id);
 ?>
 
 <div class="content-product">
+    <div class="naam"><?php echo "<h2>". $data["product"]["StockItemName"]."</h2>"?><br></div>
     <div class="div-image">
         <div class="slideshow-container">
             <div class="mySlides fade">
@@ -32,7 +33,6 @@ $data = getItem($conn, $id);
         </div>
     </div>
     <div class="product-omschrijving">
-        <div class="naam"><?php echo "<h2>". $data["product"]["StockItemName"]."</h2>"?><br></div>
         <div class="prijs md5"><?php echo "&euro;". $data["product"]["RecommendedRetailPrice"]?></div>
         <?php 
             if($data["product"]["IsChillerStock"] == 1) {
