@@ -22,7 +22,7 @@ $mollie->setApiKey("test_RBf2gpgfc9xfRvfMmTVFEjyN9wHbk7");
 
 $order = $mollie->orders->create([
     "amount" => [
-        "value" => "44.85",
+        "value" => $_SESSION['completeprijs'],
         "currency" => "EUR"
     ],
     "billingAddress" => [
@@ -54,7 +54,7 @@ $order = $mollie->orders->create([
     "redirectUrl" => "http://localhost/wwi/bevestiging.php",
     "webhookUrl" => "https://example.org/webhook",
     "method" => "ideal",
-    "lines" => molliePrintLines($_SESSION['cart'], $conn)
+    "lines" => [molliePrintLines($_SESSION['cart'], $conn),]
 ]);
 // print_r($mollie);
 header("Location: " . $order->getCheckoutUrl(), true, 303);

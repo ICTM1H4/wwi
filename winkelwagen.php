@@ -17,6 +17,7 @@
     $totaalprijs=0;
     $valueverandering = "Doorgaan";
     $hrefverandering = "?verzending";
+    $prijsPerProduct = [];
 
    if(isset($_SESSION['cart'])) {
        echo '<form method="post">';
@@ -70,8 +71,9 @@
            <hr>
 
            <?php
-            $totaalprijs = $totaalprijs + $price["RecommendedRetailPrice"] * $result['aantal'];
-            $totaalartikelen =  number_format($totaalprijs * 1.21 + $verzendkosten, '2', '.', '');
+            $prijsPerProduct[] = $price["RecommendedRetailPrice"] * $result['aantal'];
+            // print_r($prijsPerProduct);
+            // $totaalartikelen =  number_format($totaalprijs * 1.21 + $verzendkosten, '2', '.', '');
        }
        if (empty($_SESSION['cart'])){
            echo "U heeft geen producten in uw winkelwagentje";
@@ -87,6 +89,22 @@
        $hrefverandering = "?index";
    }
 
+   foreach($prijsPerProduct as  $key => $kont) {
+            $max += $kont;
+            //hier verder werken
+            print_r($max.'<br>');
+        }
+   
+   foreach($_SESSION['cart'] as $id){
+        // print_r($id);
+        $getTax = mysqli_query($conn, 'SELECT TaxRate from stockitems where stockitemid = '.$id['product_id'].'');
+        $tax = $getTax->fetch_assoc()['TaxRate'];
+        // print_r($tax);
+        // print_r($prijsPerProduct);
+        // print_r($i++.'<br>');
+        
+        $btw = number_format($totaalprijs * ($tax / 100) , 2, '.', '');
+    }
 
 
     ?>
@@ -125,7 +143,8 @@
 
     ?>
     <?php
-    $btw = number_format($totaalprijs * 0.21 , 2, '.', '');
+    // print_r($_SESSION['cart']);
+    
     $_SESSION['completeprijs'] = $totaalartikelen;
     $_SESSION['prijsproduct'] = $totaalprijs;
     $_SESSION['btw'] = $btw;

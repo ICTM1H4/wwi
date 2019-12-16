@@ -1,6 +1,6 @@
 <?php
 $huidigePagina = "overzichtPhp";
-print_r($_SESSION);
+// print_r($_SESSION);
 $verzendkosten = $_SESSION['verzendkosten'];
 ?>
 
@@ -113,6 +113,7 @@ $verzendkosten = $_SESSION['verzendkosten'];
                     <div>
                         <?php
 //                        print_r($_SESSION);
+                        
                         $completetotaal = $_SESSION['completeprijs'];
                         $prijs = $_SESSION['prijsproduct'];
                         $btw = $_SESSION['btw'];

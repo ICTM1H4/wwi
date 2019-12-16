@@ -188,14 +188,15 @@ function molliePrintLines($cart, $conn){
     $i = 0;
     foreach($cart as $key => $value) {
         $query = mysqli_query($conn, 'SELECT stockitemid, stockitemname, taxrate, unitprice, recommendedretailprice, searchdetails FROM stockitems WHERE stockitemid = '.$value['product_id'].'');
-        $data = [$i++ => [$query->fetch_assoc()]];
-        
+        $data = [$i => [$query->fetch_assoc(), "aantal" => $cart[$i++]["aantal"]]];
+        // print_r($i);
         foreach ($data as $product){  
             // print("<pre>");
             // print_r($product);
             // print("</pre>"); 
             $info = $product[0];
-        $lines = [
+            // print_r($product['aantal']);
+        $lines = 
                     [
                         "type" => "physical",
                         "sku" => $info['stockitemid'],
@@ -205,15 +206,15 @@ function molliePrintLines($cart, $conn){
                             "order_id" => time(),
                             "description" => $info['searchdetails']
                         ],
-                        "quantity" => 1,
-                        "vatRate" => $info["taxrate"],
+                        "quantity" => $product['aantal'],
+                        "vatRate" => $info['taxrate'],
                         "unitPrice" => [
                             "currency" => "EUR",
-                            "value" => $info['recommendedretailprice']
+                            "value" => number_format($info['recommendedretailprice']* (1 + $info['taxrate'] / 100), 2, ".","")
                         ],
                         "totalAmount" => [
                             "currency" => "EUR",
-                            "value" => $info['recommendedretailprice']
+                            "value" => strval(number_format(($info['recommendedretailprice']*(1 + $info['taxrate'] / 100))*$product['aantal'], 2, ".",""))
                         ],
                         "discountAmount" => [
                             "currency" => "EUR",
@@ -221,11 +222,14 @@ function molliePrintLines($cart, $conn){
                         ],
                         "vatAmount" => [
                             "currency" => "EUR",
-                            "value" => strval(number_format($info['recommendedretailprice'] * ($info['taxrate'] / ($info['taxrate'] + 100)), '2', '.',''))
+                            "value" => strval(number_format($_SESSION['completeprijs'] * ($info['taxrate'] / (100 + $info['taxrate'])), '2', '.',''))
                         ]
-                    ],
-                ];
-                // print_r($lines);
+                        ];
+                
+                // print_r(number_format($info['recommendedretailprice']*1.21, 2, ".","")*$product['aantal']);
+                print_r(100 + $info['taxrate']);
+                print_r($info['taxrate']);
+                print_r($_SESSION['completeprijs']);
             return $lines;
             
         }
