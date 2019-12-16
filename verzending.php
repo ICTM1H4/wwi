@@ -156,8 +156,7 @@ function sessieEcho($a){
         <?php } ?>
         </table>
         <div class="verzendType">
-            <p class="verzendContent"> Verzendkosten: € <?php echo round($verzendkosten, 2 ) ?></p><br>
-            <p class="verzendTotprijs"> Totaalprijs: €<?php echo number_format((float)$completeTotaal, 2, '.', '')?></p>
+            <p class="verzendContent"> Verzendkosten: € <?php echo round($verzendkosten, 2 ) ?></p>
             <input type="submit" name="sendPost" class="buttonPro" value="Doorgaan">
         </div>
     </form>
