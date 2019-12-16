@@ -137,8 +137,8 @@
 
     <div method="post">
         <div class="totaltext" >
-        <h3 id="aantalart">Subtototaal: <?php echo $totaal ?> </h3><br>
-        <h3>Totaalprijs: <?php echo "€" . $totaalprijs ?> (excl. btw) </h3><br>
+        <h3 id="aantalart">Aantal producten: <?php echo $totaal ?> </h3><br>
+        <h3>Subtotaal: <?php echo "€" . $totaalprijs ?> (excl. btw) </h3><br>
         <h3>BTW: <?php echo "€" . $btw ?> </h3>
         <hr><br>
         <h3>Totaal: <?php echo "€" . round($totaalartikelen , 2) ?> (incl. btw)</h3><br><br>
