@@ -384,13 +384,9 @@ h4 {
     float: left;
 }
 
-.verzendContent{
+.verzendkosten{
     margin-top: 1%;
     margin-bottom: 25%;
-}
-
-.verzendTotprijs{
-    margin-bottom: 26%;
 }
 
 .uwGegev{
@@ -400,7 +396,7 @@ h4 {
 
 .verzendPrijs{
     display: inline-block;
-    margin-left: 55%;
+    margin-left: 58.5%;
     margin-top: 50px;
 }
 
@@ -481,6 +477,8 @@ h4 {
 }
 
 .verzendType{
+    width: 20%;
+    height: 140px;
     margin-left: 837px;
     border-color: #99aebb;
     border-style: solid;
@@ -488,8 +486,13 @@ h4 {
     border-width: 1px;
     padding: 10px;
     box-shadow: 0 10px 6px -9px #777;
-    width: 22%;
     text-align: center;
+    position: relative;
+}
+
+.verzendOnder{
+    position: absolute;
+    bottom: 10px;
 }
 
 .overzicht h2{
@@ -529,6 +532,8 @@ h4 {
 
 
 .buttonPro{
+    font-size: 15px;
+    display: inline-block;
     border: none;
     outline: 0;
     padding: 20px;

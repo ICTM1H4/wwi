@@ -1,5 +1,6 @@
 <?php
 $huidigePagina = "overzichtPhp";
+print_r($_SESSION);
 $verzendkosten = $_SESSION['verzendkosten'];
 ?>
 
@@ -66,6 +67,14 @@ $verzendkosten = $_SESSION['verzendkosten'];
                     </div>
                 </div>
             </div>
+            <div class="overzichtBezorging">
+                <div class = "overzicht-border">
+
+                    <div><h2>Bezorging</h2></div>
+                    <div>Bezorgingswijze<br><br></div>
+                    <div><?php echo $_SESSION['klantgegevens']['verzendType'] . $verzendkosten ?> euro</div>
+                </div>
+            </div>
             <div class = "betalingswijze">
                 <div class = "overzicht-border">
 
@@ -100,13 +109,14 @@ $verzendkosten = $_SESSION['verzendkosten'];
         </div>
         <div class = "overzichtBestelling">
             <div class = "overzicht-border">
-                <h2>Bestelling</h2>
-                <div>
-                    <?php
-                    $completetotaal = $_SESSION['completetotaal'];
-                    $prijs = $_SESSION['prijsproduct'];
-                    $btw = $_SESSION['btw'];
-                    $verzendkosten = $_SESSION['verzendkosten'];
+                <div><h2>Bestelling</h2></div>
+                    <div>
+                        <?php
+//                        print_r($_SESSION);
+                        $completetotaal = $_SESSION['completeprijs'];
+                        $prijs = $_SESSION['prijsproduct'];
+                        $btw = $_SESSION['btw'];
+                        $verzendkosten = $_SESSION['verzendkosten'];
 
                     echo "<div class = 'overzichtprijs'> <h4>Subtotaal Producten:€ $prijs (exl. btw)</h4>";
                     echo "<div class = 'btwprijs'> <h4>BTW: € $btw </h4></div>";

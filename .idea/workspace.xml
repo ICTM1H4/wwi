@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/php/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/functions.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkelwagen.php" beforeDir="false" afterPath="$PROJECT_DIR$/winkelwagen.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ComposerSettings">
+    <pharConfigPath>$PROJECT_DIR$/mollie/composer.json</pharConfigPath>
     <execution>
       <executable />
     </execution>
@@ -43,6 +46,14 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1TVsoaq0mUYBokzWuvogApB1HTN" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -57,15 +68,15 @@
       <recent name="C:\xampp\htdocs\wwi" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -351,7 +362,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576244748556</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="bevestiging gebruikt om te testen">
+      <created>1576495212627</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1576495212627</updated>
+    </task>
+    <task id="LOCAL-00039" summary="besteloverzicht geupdate om kloppend te maken voor mollie">
+      <created>1576495357901</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1576495357901</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,8 +396,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="logo erbij" />
-    <MESSAGE value="winkelwagen erbij" />
     <MESSAGE value="account logo erbij" />
     <MESSAGE value="index toevoeging: logo, categorieën, zoekbalk, winkelwagen, begin account" />
     <MESSAGE value="account =&gt; inlogscherm werkt, css aangevuld over index pagina" />
@@ -396,6 +419,22 @@
     <MESSAGE value="besteloverzicht toegevoegd" />
     <MESSAGE value="begin aan besteloverzicht en aanpassingen met de style daarvan" />
     <MESSAGE value="Mogelijkheid om producten toe te voegen aan winkelwagentje" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mogelijkheid om producten toe te voegen aan winkelwagentje" />
+    <MESSAGE value="bevestiging gebruikt om te testen" />
+    <MESSAGE value="besteloverzicht geupdate om kloppend te maken voor mollie" />
+    <option name="LAST_COMMIT_MESSAGE" value="besteloverzicht geupdate om kloppend te maken voor mollie" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="375" y="10" key="CommitChangelistDialog2" timestamp="1576495461793">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="375" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1576495461793" />
+    <state x="633" y="126" key="RollbackChangesDialog" timestamp="1576495135270">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="633" y="126" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1576495135270" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1576495290865">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1576495290865" />
   </component>
 </project>

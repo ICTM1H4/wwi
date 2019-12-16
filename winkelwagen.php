@@ -71,7 +71,7 @@
 
            <?php
             $totaalprijs = $totaalprijs + $price["RecommendedRetailPrice"] * $result['aantal'];
-            $totaalartikelen = round( $totaalprijs * 1.21 + $verzendkosten, 2);
+            $totaalartikelen =  number_format($totaalprijs * 1.21 + $verzendkosten, '2', '.', '');
        }
        if (empty($_SESSION['cart'])){
            echo "U heeft geen producten in uw winkelwagentje";
@@ -125,7 +125,7 @@
 
     ?>
     <?php
-    $btw = round($totaalprijs * 0.21 , 2);
+    $btw = number_format($totaalprijs * 0.21 , 2, '.', '');
     $_SESSION['completeprijs'] = $totaalartikelen;
     $_SESSION['prijsproduct'] = $totaalprijs;
     $_SESSION['btw'] = $btw;
@@ -137,17 +137,15 @@
 
     <div method="post">
         <div class="totaltext" >
-        <h3 id="aantalart">Subtototaal: <?php echo $totaal ?> </h3><br>
-        <h3>Totaalprijs: <?php echo "€" . $totaalprijs ?> (excl. btw) </h3><br>
+        <h3 id="aantalart">Aantal producten: <?php echo $totaal ?> </h3><br>
+        <h3>Subtotaal: <?php echo "€" . $totaalprijs ?> (excl. btw) </h3><br>
         <h3>BTW: <?php echo "€" . $btw ?> </h3>
         <hr><br>
-        <h3>Totaal: <?php echo "€" . round($totaalartikelen , 2) ?> (incl. btw)</h3><br><br>
-
-    </div>
-
+        <h3>Totaal: <?php echo "€" . number_format($totaalartikelen , 2, '.', '') ?> (incl. btw)</h3><br><br>
+        </div>
         <a href="<?php echo $hrefverandering ?>"><input type="button" class = "button-afrekenen buttonPro" value="<?php echo $valueverandering ?>"></a>
     </form>
-</div>
+    </div>
 </div>
 </div>
 </body>

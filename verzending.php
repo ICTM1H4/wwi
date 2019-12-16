@@ -13,17 +13,17 @@ $_SESSION['completetotaal'] = $completeTotaal;
 if ($totaal < 50.00){
     $normLever += 6.95;
 }
-//klantgegevens();
+klantgegevens();
 $huidigePagina = "verzendingPhp";
 
-function sessieEcho($a){
-    if ($_SESSION['klantgegevens'] === TRUE){
-        echo $_SESSION['klantgegevens'][$a];
-    }
-    else{
-        echo $a;
-    }
-}
+// function sessieEcho($a){
+//     if ($_SESSION['klantgegevens'] === TRUE){
+//         echo $_SESSION['klantgegevens'][$a];
+//     }
+//     else{
+//         echo $a;
+//     }
+// }
 // $_SESSION['klantgegevens'] = 0;
 
 // printForm($klant);
@@ -88,7 +88,7 @@ function sessieEcho($a){
             <div class="klantNaam">
                 <tr>
                     <td class="tableColumn">Naam<b>&#42;</b></td>
-                    <td class="tableColumn"><input type="text" name="Voornaam" placeholder="Voer uw voornaam in" value="<?php echo $klant['Voornaam'] ?>"></td>
+                    <td class="tableColumn"><input type="text" name="Voornaam" placeholder="Voornaam" value="<?php echo $klant['Voornaam'] ?>"></td>
                     <td class="tableColumn"><input type="text" name="tussenvoegsel" placeholder="Voer us tussenvoegsel in" value="<?php echo $klant['tussenvoegsel'] ?>"></td>
                     <td class="tableColumn"><input type="text" name="Achternaam" placeholder="Voer uw achternaam in" value="<?php echo $klant['Achternaam'] ?>"></td>
                 </tr>
@@ -124,41 +124,42 @@ function sessieEcho($a){
             <div class="klantNaam">
                 <tr>
                     <td class="tableColumn">Naam</td>
-                    <td class="tableColumn"><input type="text" name="Voornaam" placeholder="Voer uw voornaam in"></td>
-                    <td class="tableColumn"><input type="text" name="tussenvoegsel" placeholder="Voer us tussenvoegsel in"></td>
-                    <td class="tableColumn"><input type="text" name="Achternaam" placeholder="Voer uw achternaam in"></td>
+                    <td class="tableColumn"><input type="text" name="Voornaam" placeholder="Voornaam"></td>
+                    <td class="tableColumn"><input type="text" name="tussenvoegsel" placeholder="Tussenv."></td>
+                    <td class="tableColumn"><input type="text" name="Achternaam" placeholder="Achternaam"></td>
                 </tr>
             </div>
             <div class="adres">
                 <tr>
                     <td class = "tableColumn">Adres</td>
-                    <td class = "tableColumn"><input type="text" name="Straat" placeholder="Voer uw straat in"></td>
-                    <td class = "tableColumn"><input type="text" name="huisnr" size="4" placeholder="Voer uw huisnummer in"></td>
-                    <td class = "tableColumn"><input type="text" name="toev" size="4" placeholder="Voer uw toevoeging in"></td>
+                    <td class = "tableColumn"><input type="text" name="Straat" placeholder="Straatnaam"></td>
+                    <td class = "tableColumn"><input type="text" name="huisnr" size="4" placeholder="Nr."></td>
+                    <td class = "tableColumn"><input type="text" name="toev" size="4" placeholder="Toev."></td>
                 </tr>
                 <tr>
                     <td class = "tableColumn">Postcode</td>
-                    <td class = "tableColumn"><input type="text" name="postcode" placeholder="Voer uw postcode in"><br></td>
+                    <td class = "tableColumn"><input type="text" name="postcode" placeholder="1111AA" ><br></td>
                 </tr>
                 <tr>
                     <td class = "tableColumn">Plaatsnaam</td>
-                    <td class = "tableColumn"><input type="text" name="Woonplaats" placeholder="Voer uw woonplaats in"><br></td>
+                    <td class = "tableColumn"><input type="text" name="Woonplaats" placeholder="Plaatsnaam"><br></td>
                 </tr>
             </div>
             <tr>
                 <td class="tableColumn">E-mail</td>
-                <td class="tableColumn"><input type="text" name="E-mailadres" placeholder="Voer uw e-mail adres in"></td>
+                <td class="tableColumn"><input type="text" name="E-mailadres" placeholder="email@adres.com"></td>
             </tr>
             <tr>
                 <td class="tableColumn"><p class="telefnr">Telefoonnummer</p>
-                </td> <td class="tableColumn"><input type="text" name="telefoon" placeholder="Voer uw telefoon nummer in"></td>
+                </td> <td class="tableColumn"><input type="text" name="telefoon" placeholder="TelefoonNr."></td>
             </tr>
         <?php } ?>
         </table>
         <div class="verzendType">
-            <p class="verzendContent"> Verzendkosten: € <?php echo round($verzendkosten, 2 ) ?></p><br>
-            <p class="verzendTotprijs"> Totaalprijs: €<?php echo number_format((float)$completeTotaal, 2, '.', '')?></p>
-            <input type="submit" name="sendPost" class="buttonPro" value="Doorgaan">
+            <p class="verzendkosten"> Verzendkosten: € <?php echo round($verzendkosten, 2 ) ?></p>
+            <div class="verzendOnder">
+                <input type="submit" name="sendPost" class="buttonPro" value="Doorgaan">
+            </div>
         </div>
     </form>
 
