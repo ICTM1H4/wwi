@@ -56,7 +56,20 @@ else {
     $query4 = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR StockItemID LIKE '$q'");
     $num_rows = mysqli_num_rows($query4);
     if (isset($_POST['meer'])){
-        $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR StockItemID LIKE '$q' LIMIT 227");
+        ?>
+        <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var scrollpos = localStorage.getItem('scrollpos');
+            if (scrollpos) window.scrollTo(0, scrollpos);
+        });
+
+        window.onbeforeunload = function(e) {
+            localStorage.setItem('scrollpos', window.scrollY);
+        };
+        </script>
+        <?php
+        $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR StockItemID LIKE '$q' LIMIT 1000 ");
+
     }
 }
 
@@ -127,6 +140,7 @@ else {
             </form>
             <?php
         }
+
 //    }
 ?>
 
@@ -143,7 +157,11 @@ else {
         <input type="submit" name="submit" value="Filters toepassen">
     </form>
 </div>
-<div class="laden"><form method="post">
+
+<div class="laden">
+
+    <form method="post">
+
     <input type="submit" value="Toon meer producten" name="meer" id="loadmore">
 
     <!--<form action="#" method="post"> -->

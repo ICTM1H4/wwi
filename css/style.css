@@ -433,7 +433,9 @@ h4 {
 }
 
 
-
+iframe{
+    display: none;
+}
 /*---------------------------Bestelprocedure-----------------------------*/
 
 .verzendingPhp{
