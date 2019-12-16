@@ -89,33 +89,33 @@ $huidigePagina = "verzendingPhp";
                 <tr>
                     <td class="tableColumn">Naam<b>&#42;</b></td>
                     <td class="tableColumn"><input type="text" name="Voornaam" placeholder="Voornaam" value="<?php echo $klant['Voornaam'] ?>"></td>
-                    <td class="tableColumn"><input type="text" name="tussenvoegsel" placeholder="Voer us tussenvoegsel in" value="<?php echo $klant['tussenvoegsel'] ?>"></td>
-                    <td class="tableColumn"><input type="text" name="Achternaam" placeholder="Voer uw achternaam in" value="<?php echo $klant['Achternaam'] ?>"></td>
+                    <td class="tableColumn"><input type="text" name="tussenvoegsel" placeholder="Tussenv." value="<?php echo $klant['tussenvoegsel'] ?>"></td>
+                    <td class="tableColumn"><input type="text" name="Achternaam" placeholder="Achternaam" value="<?php echo $klant['Achternaam'] ?>"></td>
                 </tr>
             </div>
             <div class="adres">
                 <tr>
                     <td class = "tableColumn">Adres<b>&#42;</b></td>
-                    <td class = "tableColumn"><input type="text" name="Straat" placeholder="Voer uw straat in" value="<?php echo $klant['Straat'] ?>"></td>
-                    <td class = "tableColumn"><input type="text" name="huisnr" size="4" placeholder="Voer uw huisnummer in" value="<?php echo $klant['huisnr'] ?>"></td>
-                    <td class = "tableColumn"><input type="text" name="toev" size="4" placeholder="Voer uw toevoeging in" value="<?php echo $klant['toev'] ?>"></td>
+                    <td class = "tableColumn"><input type="text" name="Straat" placeholder="Straatnaam" value="<?php echo $klant['Straat'] ?>"></td>
+                    <td class = "tableColumn"><input type="text" name="huisnr" size="4" placeholder="Huisnr." value="<?php echo $klant['huisnr'] ?>"></td>
+                    <td class = "tableColumn"><input type="text" name="toev" size="4" placeholder="Toev." value="<?php echo $klant['toev'] ?>"></td>
                 </tr>
                 <tr>
                     <td class = "tableColumn">Postcode<b>&#42;</b></td>
-                    <td class = "tableColumn"><input type="text" name="postcode" placeholder="Voer uw postcode in" value="<?php echo $klant['postcode']?>"><br></td>
+                    <td class = "tableColumn"><input type="text" name="postcode" placeholder="1234 AB" value="<?php echo $klant['postcode']?>"><br></td>
                 </tr>
                 <tr>
                     <td class = "tableColumn">Plaatsnaam<b>&#42;</b></td>
-                    <td class = "tableColumn"><input type="text" name="Woonplaats" placeholder="Voer uw woonplaats in" value="<?php echo $klant['Woonplaats']?>""><br></td>
+                    <td class = "tableColumn"><input type="text" name="Woonplaats" placeholder="Plaatsnaam" value="<?php echo $klant['Woonplaats']?>""><br></td>
                 </tr>
             </div>
             <tr>
                 <td class="tableColumn">E-mail<b>&#42;</b></td>
-                <td class="tableColumn"><input type="text" name="E-mailadres" placeholder="Voer uw e-mail adres in" value="<?php echo $klant['E-mailadres']?>""></td>
+                <td class="tableColumn"><input type="text" name="E-mailadres" placeholder="email@adres.com" value="<?php echo $klant['E-mailadres']?>""></td>
             </tr>
             <tr>
                 <td class="tableColumn"><p class="telefnr">Telefoonnummer</p>
-                </td> <td class="tableColumn"><input type="text" name="telefoon" placeholder="Voer uw telefoon nummer in" value="<?php echo $klant['telefoon']?>"></td>
+                </td> <td class="tableColumn"><input type="text" name="telefoon" placeholder="0612345678" value="<?php echo $klant['telefoon']?>"></td>
             </tr>
             <tr>
                 <td class="tableColumn"><p class="verplichtveld">* verplicht veld</p></td>
@@ -133,12 +133,12 @@ $huidigePagina = "verzendingPhp";
                 <tr>
                     <td class = "tableColumn">Adres</td>
                     <td class = "tableColumn"><input type="text" name="Straat" placeholder="Straatnaam"></td>
-                    <td class = "tableColumn"><input type="text" name="huisnr" size="4" placeholder="Nr."></td>
+                    <td class = "tableColumn"><input type="text" name="huisnr" size="4" placeholder="Huisnr."></td>
                     <td class = "tableColumn"><input type="text" name="toev" size="4" placeholder="Toev."></td>
                 </tr>
                 <tr>
                     <td class = "tableColumn">Postcode</td>
-                    <td class = "tableColumn"><input type="text" name="postcode" placeholder="1111AA" ><br></td>
+                    <td class = "tableColumn"><input type="text" name="postcode" placeholder="1234 AB"><br></td>
                 </tr>
                 <tr>
                     <td class = "tableColumn">Plaatsnaam</td>
@@ -151,7 +151,7 @@ $huidigePagina = "verzendingPhp";
             </tr>
             <tr>
                 <td class="tableColumn"><p class="telefnr">Telefoonnummer</p>
-                </td> <td class="tableColumn"><input type="text" name="telefoon" placeholder="TelefoonNr."></td>
+                </td> <td class="tableColumn"><input type="text" name="telefoon" placeholder="0612345678"></td>
             </tr>
         <?php } ?>
         </table>
