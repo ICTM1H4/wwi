@@ -168,8 +168,6 @@ function klantgegevens(){
     }
 
     if(isset($_POST['sendPost'])) {
-        $spatieWeg = str_replace(" ","", $_POST['postcode']);
-        $nieuwPostcode = strtoupper($spatieWeg);
         if(empty($_POST['Voornaam'] && $_POST['Achternaam'] && $_POST['Straat'] && $_POST['huisnr'] && $_POST['postcode'] && $_POST['Woonplaats']&& $_POST['E-mailadres'])) {
             echo '<span class="danger"> Vul alle verplichte velden in!</span>';
         }   elseif (preg_match('/[^A-Za-z]/', $_POST['Voornaam'])) {
@@ -190,7 +188,7 @@ function klantgegevens(){
             echo '<span class="danger"> Het woonplaats veld is verkeerd ingevoerd!</span>';
         } elseif (!preg_match("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^", $_POST['E-mailadres'])) {
             echo '<span class="danger"> Het email veld is verkeerd ingevoerd!</span>';
-        } elseif (preg_match('/[^0-9]/', $_POST['telefoon'])){
+        } elseif (!preg_match('^[0-9]{10}$^', $_POST['telefoon'])){
             echo '<span class="danger"> Het telefoonnummer veld is verkeerd ingevoerd!</span>';
         } else{
             $klantgegevens = array
