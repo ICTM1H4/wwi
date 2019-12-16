@@ -186,46 +186,49 @@ function klantgegevens(){
 }
 
 function molliePrintLines($cart, $conn){
-    $orderID = "test";
-
-    foreach ($_SESSION['cart'] as $product){
-        echo $product;
+    $i = 0;
+    foreach($cart as $key => $value) {
+        $query = mysqli_query($conn, 'SELECT stockitemid, stockitemname, taxrate, unitprice, recommendedretailprice, searchdetails FROM stockitems WHERE stockitemid = '.$value['product_id'].'');
+        $data = [$i++ => [$query->fetch_assoc()]];
+        
+        foreach ($data as $product){  
+            print("<pre>");
+            print_r($product);
+            print("</pre>"); 
+            $info = $product[0];
+        $lines = [
+                    [
+                        "type" => "physical",
+                        "sku" => $info['stockitemid'],
+                        "name" => $info['stockitemname'],
+                        "productUrl" => "http://localhost/wwi/index.php?productID=" . $info["stockitemid"],
+                        "metadata" => [
+                            "order_id" => time(),
+                            "description" => $info['searchdetails']
+                        ],
+                        "quantity" => 1,
+                        "vatRate" => $info["taxrate"],
+                        "unitPrice" => [
+                            "currency" => "EUR",
+                            "value" => $info['unitprice']
+                        ],
+                        "totalAmount" => [
+                            "currency" => "EUR",
+                            "value" => $info['recommendedretailprice']
+                        ],
+                        "discountAmount" => [
+                            "currency" => "EUR",
+                            "value" => "0.00"
+                        ],
+                        "vatAmount" => [
+                            "currency" => "EUR",
+                            "value" => "0.00"
+                        ]
+                    ],
+                ];
+            print_r($lines);
+        }
     }
-//    $query = "SELECT * FROM stockgroups ORDER BY StockGroupName";
-//    $result = $conn->query($query);
-//    while($row = mysqli_fetch_array($result)) {
-//
-//    }
-    echo
-    [
-        "type" => "physical",
-        "sku" => "5702016116977",
-        "name" => "LEGO 42083 Bugatti Chiron",
-        "productUrl" => "http://localhost/wwi/index.php?productID=218" . $cart['productID'][''],
-        "metadata" => [
-            "order_id" => $orderID,
-            "description" => $cart['productID']['productomschrijving']
-        ],
-        "quantity" => 1,
-        "vatRate" => "0.01",
-        "unitPrice" => [
-            "currency" => "EUR",
-            "value" => "0.01"
-        ],
-        "totalAmount" => [
-            "currency" => "EUR",
-            "value" => "0.01"
-        ],
-        "discountAmount" => [
-            "currency" => "EUR",
-            "value" => "0.00"
-        ],
-        "vatAmount" => [
-            "currency" => "EUR",
-            "value" => "0.00"
-        ]
-    ]
-    ;
 }
 
 

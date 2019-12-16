@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 $klantgegevens = $_SESSION['klantgegevens'];
 print_r($klantgegevens);
 /*
@@ -84,7 +84,7 @@ $order = $mollie->orders->create([
         ],
     ]
 ]);
-
+print_r($mollie);
 header("Location: " . $order->getCheckoutUrl(), true, 303);
 
 
