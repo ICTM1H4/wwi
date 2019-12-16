@@ -34,6 +34,7 @@
 }
 
 .card {
+    position: relative;
     text-align: center;
     padding: 0 10px;
     margin-top: 40px;
@@ -46,6 +47,7 @@
 }
 
 .onder{
+    position: absolute;
     bottom: 20px;
 }
 
@@ -123,6 +125,14 @@ h4 {
     float: left;
     margin-left: 5%;
     max-width: 600px;
+    border-color: #99aebb;
+    border-style: solid;
+    width: 800px;
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 10px;
+    box-shadow: 0 10px 6px -9px #777;
+    font-size: 20px
 }
 
 .md5 {
@@ -304,7 +314,6 @@ h4 {
     background-color: rgba(253, 246, 255, 0);
     float: left;
     width: 20%;
-    height: 500px;
     margin-top: 10px;
     margin-right: 2.5%;
     margin-left: 2.5%;
@@ -535,7 +544,6 @@ iframe{
 
 .buttonPro{
     font-size: 15px;
-    display: inline-block;
     border: none;
     outline: 0;
     padding: 20px;
@@ -548,6 +556,9 @@ iframe{
     border-radius: 10px;
 }
 
+input.buttonPro{
+    white-space: normal;
+}
 .overzicht-foto{
     margin-top: -15px;
     margin-left: 70%;
@@ -591,7 +602,8 @@ iframe{
     cursor: pointer;
     width: 40%;
     font-size: 18px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
     border-radius: 8px
 }
 

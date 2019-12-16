@@ -34,11 +34,11 @@ function showSlides(n) {
 
 function validate() {
     var Name = $(".name").val();
-    var Ordernummer = $(".od").val();
     var Onderwerp = $(".onw").val();
     var Vraag = $('.uwVraag').val();
+    var Ordernummer = $('.Odernummer').val();
     var email = $('.email').val();
-    if (Name == "" || Ordernummer == "" || Onderwerp == "" || email == "" || Vraag == "") //wanted to check for alphabets only.
+    if (Name == "" || Onderwerp == "" || email == "" || Vraag == "") //wanted to check for alphabets only.
         alert("Vul alle velden in");
     else {
         $.post("php/ajaxSendMail.php", {
