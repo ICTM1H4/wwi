@@ -192,9 +192,9 @@ function molliePrintLines($cart, $conn){
         $data = [$i++ => [$query->fetch_assoc()]];
         
         foreach ($data as $product){  
-            print("<pre>");
-            print_r($product);
-            print("</pre>"); 
+            // print("<pre>");
+            // print_r($product);
+            // print("</pre>"); 
             $info = $product[0];
         $lines = [
                     [
@@ -210,7 +210,7 @@ function molliePrintLines($cart, $conn){
                         "vatRate" => $info["taxrate"],
                         "unitPrice" => [
                             "currency" => "EUR",
-                            "value" => $info['unitprice']
+                            "value" => $info['recommendedretailprice']
                         ],
                         "totalAmount" => [
                             "currency" => "EUR",
@@ -222,11 +222,13 @@ function molliePrintLines($cart, $conn){
                         ],
                         "vatAmount" => [
                             "currency" => "EUR",
-                            "value" => "0.00"
+                            "value" => strval(number_format($info['recommendedretailprice'] * ($info['taxrate'] / ($info['taxrate'] + 100)), '2', '.',''))
                         ]
                     ],
                 ];
-            print_r($lines);
+                // print_r($lines);
+            return $lines;
+            
         }
     }
 }

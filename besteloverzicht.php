@@ -128,9 +128,7 @@ $verzendkosten = $_SESSION['verzendkosten'];
                     ?>
                 </div>
                 <div>
-                    <form action="betaling.php">
-                        <input class = "buttonPro" type="submit" value="Naar betalen">
-                    </form>
+                        <a href="?betaling" class="buttonPro" >Naar betalen</a>
                 </div>
             </div>
         </div>
