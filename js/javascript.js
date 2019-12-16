@@ -36,6 +36,7 @@ function validate() {
     var Name = $(".name").val();
     var Onderwerp = $(".onw").val();
     var Vraag = $('.uwVraag').val();
+    var Ordernummer = $('.Odernummer').val();
     var email = $('.email').val();
     if (Name == "" || Onderwerp == "" || email == "" || Vraag == "") //wanted to check for alphabets only.
         alert("Vul alle velden in");
