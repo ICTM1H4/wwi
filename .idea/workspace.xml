@@ -413,13 +413,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="Mogelijkheid om producten toe te voegen aan winkelwagentje" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="375" y="10" key="CommitChangelistDialog2" timestamp="1576495210301">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="375" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1576495210301" />
     <state x="633" y="126" key="RollbackChangesDialog" timestamp="1576495135270">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="633" y="126" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1576495135270" />
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1576494523645">
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1576495290865">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1576494523645" />
+    <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1576495290865" />
   </component>
 </project>
