@@ -13,7 +13,6 @@ $_SESSION['completetotaal'] = $completeTotaal;
 if ($totaal < 50.00){
     $normLever += 6.95;
 }
-klantgegevens();
 $huidigePagina = "verzendingPhp";
 
 // function sessieEcho($a){
@@ -83,6 +82,7 @@ $huidigePagina = "verzendingPhp";
     <h2 class="uwGegev">Uw gegevens</h2>
     <h2 class="verzendPrijs">Verzendprijzen</h2>
     <form class="factuurData" method="post">
+        <?php klantgegevens(); ?>
         <table class="factuurText">
         <?php if(isset($_SESSION['klantgegevens'])) { $klant =$_SESSION['klantgegevens']; ?>
             <div class="klantNaam">
