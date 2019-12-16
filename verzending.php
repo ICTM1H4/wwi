@@ -147,7 +147,7 @@ $huidigePagina = "verzendingPhp";
             </div>
             <tr>
                 <td class="tableColumn">E-mail</td>
-                <td class="tableColumn"><input type="text" class="email" name="E-mailadres" onchange="check2()" placeholder="email@adres.com"></td>
+                <td class="tableColumn"><input type="text" name="E-mailadres" placeholder="email@adres.com"></td>
             </tr>
             <tr>
                 <td class="tableColumn"><p class="telefnr">Telefoonnummer</p>
