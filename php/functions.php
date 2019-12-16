@@ -159,12 +159,37 @@ function progresBar($huidigePagina){
     }
 }
 
-//
+
 function klantgegevens(){
     if(isset($_POST['sendPost'])) {
+        $spatieWeg = str_replace(" ","", $_POST['postcode']);
+        $nieuwPostcode = strtoupper($spatieWeg);
         if(empty($_POST['Voornaam'] && $_POST['Achternaam'] && $_POST['Straat'] && $_POST['huisnr'] && $_POST['postcode'] && $_POST['Woonplaats']&& $_POST['E-mailadres'])) {
-            print('<span class="danger"> Vul alle verplichte velden in!</span>');
-        } else{
+            echo '<span class="danger"> Vul alle verplichte velden in!</span>';
+        }   elseif (preg_match('/[^A-Za-z]/', $_POST['Voornaam'])) {
+            echo '<span class="danger"> Het voornaam veld is verkeerd ingevoerd!</span>';
+        }   elseif (preg_match('/[^A-Za-z]/', $_POST['tussenvoegsel'])){
+            echo '<span class="danger"> Het tussenvoegsel veld is verkeerd ingevoerd!</span>';
+        }   elseif (preg_match('/[^A-Za-z]/', $_POST['Achternaam'])){
+            echo '<span class="danger"> Het achternaam veld is verkeerd ingevoerd!</span>';
+        }   elseif (preg_match('/[^A-Za-z]/', $_POST['Straat'])){
+            echo '<span class="danger"> Het straatnaam veld is verkeerd ingevoerd!</span>';
+        }   elseif (preg_match('/[^0-9]/', $_POST['huisnr'])){
+            echo '<span class="danger"> Het huisnummer veld is verkeerd ingevoerd!</span>';
+        }   elseif (preg_match('/[^A-Za-z0-9]/', $_POST['toev'])){
+            echo '<span class="danger"> Het toevoegings veld is verkeerd ingevoerd!</span>';
+        }
+//        elseif (preg_match('/^[1-9][0-9]{3} ?[a-zA-Z]{2}$/' , $nieuwPostcode)){
+//            echo '<span class="danger"> Het postcode veld is verkeerd ingevoerd!</span>';
+//        }
+        elseif (preg_match('/[^A-Za-z]/', $_POST['Woonplaats'])){
+            echo '<span class="danger"> Het woonplaats veld is verkeerd ingevoerd!</span>';
+        }
+//        Email wordt in verzending.php gecontorlleerd
+        elseif (preg_match('/[^0-9]/', $_POST['telefoon'])){
+            echo '<span class="danger"> Het telefoonnummer veld is verkeerd ingevoerd!</span>';
+        }
+        else{
             $klantgegevens = array
             (   'Voornaam' => $_POST['Voornaam'],
                 'tussenvoegsel' => $_POST['tussenvoegsel'],
