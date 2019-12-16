@@ -162,7 +162,7 @@ $huidigePagina = "verzendingPhp";
             </div>
         </div>
     </form>
-
+<!--nice-->
 </div>
 </body>
 </html>
