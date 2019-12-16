@@ -114,7 +114,7 @@ $huidigePagina = "verzendingPhp";
                 <td class="tableColumn"><input type="text" name="E-mailadres" placeholder="email@adres.com" value="<?php echo $klant['E-mailadres']?>""></td>
             </tr>
             <tr>
-                <td class="tableColumn"><p class="telefnr">Telefoonnummer</p>
+                <td class="tableColumn"><p class="telefnr">Telefoonnummer<b>&#42;</b></p>
                 </td> <td class="tableColumn"><input type="text" name="telefoon" placeholder="0612345678" value="<?php echo $klant['telefoon']?>"></td>
             </tr>
             <tr>
@@ -150,7 +150,7 @@ $huidigePagina = "verzendingPhp";
                 <td class="tableColumn"><input type="text" name="E-mailadres" placeholder="email@adres.com"></td>
             </tr>
             <tr>
-                <td class="tableColumn"><p class="telefnr">Telefoonnummer</p>
+                <td class="tableColumn"><p class="telefnr">Telefoonnummer<b>&#42;</b></p>
                 </td> <td class="tableColumn"><input type="text" name="telefoon" placeholder="0612345678"></td>
             </tr>
         <?php } ?>
