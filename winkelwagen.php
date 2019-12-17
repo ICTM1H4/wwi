@@ -104,7 +104,7 @@
     $totaalPlusBtw = 0;
     $totaalBtw = 0;
     $subTotaal = 0;
-    
+
     $p = 0;
     foreach($prijsPerProduct as $product) {
     $btwNieuw[] = $taxArray[$p]*($prijsPerProduct[$p]/100);

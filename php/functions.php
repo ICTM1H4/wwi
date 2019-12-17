@@ -214,72 +214,86 @@ function klantgegevens(){
 
 function molliePrintLines($cart, $conn){
     $i = 0;
-    // $countItems = count()
     foreach($cart as $key => $value) {
         $query = mysqli_query($conn, 'SELECT stockitemid, stockitemname, taxrate, unitprice, recommendedretailprice, searchdetails FROM stockitems WHERE stockitemid = '.$value['product_id'].'');
         $data = [$i => [$query->fetch_assoc(), "aantal" => $cart[$i++]["aantal"]]];
-        // print_r($i);
+
         foreach ($data as $product){  
-            // print("<pre>");
-            // print_r($product);
-            // print("</pre>"); 
+
             $info = $product[0];
-            
-            // print_r($product['aantal']);
+
             $lines =    
-                            // for($i = 0; $i < $)
-                            [
-                                "type" => "physical",
-                                "sku" => $info['stockitemid'],
-                                "name" => $info['stockitemname'],
-                                "productUrl" => "http://localhost/wwi/index.php?productID=" . $info["stockitemid"],
-                                "metadata" => [
-                                    "order_id" => time(),
-                                    "description" => $info['searchdetails']
-                                ],
-                                "quantity" => $product['aantal'],
-                                "vatRate" => $info['taxrate'],
-                                "unitPrice" => [
-                                    "currency" => "EUR",
-                                    "value" => number_format($info['recommendedretailprice']* (1 + $info['taxrate'] / 100), 2, ".","")
-                                ],
-                                "totalAmount" => [
-                                    "currency" => "EUR",
-                                    "value" => strval(number_format(($info['recommendedretailprice']*(1 + $info['taxrate'] / 100))*$product['aantal'], 2, ".",""))
-                                ],
-                                "discountAmount" => [
-                                    "currency" => "EUR",
-                                    "value" => "0.00"
-                                ],
-                                "vatAmount" => [
-                                    "currency" => "EUR",
-                                    "value" => strval(number_format($_SESSION['Nieuw']['totaalPlusBtw'] * ($info['taxrate'] / (100 + $info['taxrate'])), '2', '.',''))
-                                ]
-                                ];
-                        
-                
-                // print_r(number_format($info['recommendedretailprice']*1.21, 2, ".","")*$product['aantal']);
-                // print_r(100 + $info['taxrate']);
-                // print_r($product['aantal']);
-                
-                // print_r($_SESSION['completeprijs']);
-                // print_r($_SESSION['Nieuw']);
-            // print("<pre>");
-            // print_r( $lines);
-            // print("</pre>");
-            return $lines;
+                    [
+                        "type" => "physical",
+                        "sku" => $info['stockitemid'],
+                        "name" => $info['stockitemname'],
+                        "productUrl" => "http://localhost/wwi/index.php?productID=" . $info["stockitemid"],
+                        "metadata" => [
+                            "order_id" => time(),
+                            "description" => $info['searchdetails']
+                        ],
+                        "quantity" => $product['aantal'],
+                        "vatRate" => $info['taxrate'],
+                        "unitPrice" => [
+                            "currency" => "EUR",
+                            "value" => number_format($info['recommendedretailprice']* (1 + $info['taxrate'] / 100), 2, ".","")
+                        ],
+                        "totalAmount" => [
+                            "currency" => "EUR",
+                            "value" => strval(number_format(($info['recommendedretailprice']*(1 + $info['taxrate'] / 100))*$product['aantal'], 2, ".",""))
+                        ],
+                        "discountAmount" => [
+                            "currency" => "EUR",
+                            "value" => "0.00"
+                        ],
+                        "vatAmount" => [
+                            "currency" => "EUR",
+                            "value" => strval(number_format($_SESSION['Nieuw']['totaalPlusBtw'] * ($info['taxrate'] / (100 + $info['taxrate'])), '2', '.',''))
+                        ]
+                    ];
         }
     }
 }
 
+function bevestigingOrder($conn) {
+    if(isset($_GET['bevestiging']) && isset($_GET['orderID'])) {
+        $subject = "U heeft besteling aangemaakt bij WWI met volgende ordernummer: ".$_SESSION['api']['id'];
+        foreach($_SESSION['cart'] as $product) {
+            $query = mysqli_query($conn, "SELECT StockItemID,SearchDetails, RecommendedRetailPrice, StockItemName FROM stockitems where StockItemID = ".$product['product_id']."");
+            $getProducten[] = $query->fetch_assoc()['StockItemName']." ".$product['aantal']."x";
+        }
+        $to = $_SESSION['klantgegevens']['E-mailadres'];
+        $from = "klantenservicewwi@gmail.com";
+        $message = "<html>
+                    <head>
+                        <title>Uw bestalling is gemaakt</title>
+                    </head>
+                    <body>
+                        <h2>Uw bestelling is aangemaakt</h2>
+                        <b>U heeft volgende producten besteld:</b> <br>"
+                        .implode("<br>", $getProducten)."<br>
+                        <b>U heeft in totaal betaald:</b> &euro;".$_SESSION['Nieuw']['totaalPlusBtw']
+                        ."
+                    </body>
+                    </html>";
 
-
-
-// function printFormVerzending($klant) {
-//     foreach($klant as $key=>$value) {
-//         echo '<tr>';
-//         echo '<td></td>';
-//         echo '<td class="tableColumn"><input type="text" name="'.$key.'" placeholder="Voer uw '.$key.' in" value="'.$value.'" required></td>';
-//         echo '</tr>';
-//     }
-// }
+        $subjectK = "Klant heeft een besteling aangemaakt met ordernummer: ".$_SESSION['api']['id'];
+        $messageK = "<html>
+        <head>
+            <title>Er is een nieuwe besteling aangemaakt</title>
+        </head>
+        <body>
+            <h2>Er is een nieuwe order aangemaakt</h2>
+            <b>Klant heeft volgende producten besteld:</b> <br>"
+            .implode("<br>", $getProducten)."<br>
+            <b>En heeft betaald:</b> &euro;".$_SESSION['Nieuw']['totaalPlusBtw']
+            ."
+        </body>
+        </html>";
+        $headers  = "From: $from\r\n"; 
+        $headers .= "Content-type: text/html\r\n";
+        mail($to, $subject,$message, $headers);
+        mail("klantenservicewwi@gmail.com", $subjectK,$messageK, $headers);
+        return header('Location: ?bevestiging');
+    }
+}

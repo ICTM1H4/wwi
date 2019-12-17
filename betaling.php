@@ -24,12 +24,13 @@ $payment = $mollie->payments->create([
         "value" => $_SESSION['Nieuw']['totaalPlusBtw'] // You must send the correct number of decimals, thus we enforce the use of strings
     ],
     "description" => "Order " . $orderid,
-    "redirectUrl" => "http://localhost/wwi/?bevestiging",
+    "redirectUrl" => "http://localhost/wwi/?bevestiging&orderID=".$orderid,
     "webhookUrl" => "https://webshop.example.org/payments/webhook/",
     "metadata" => [
         "order_id" => $orderid,
     ],
 ]);
-$_SESSION['paymentID'] = $payment->id;
+$_SESSION['api']['paymentID'] = $payment->id;
+$_SESSION['api']['id'] = $payment->metadata->order_id;
 header("Location: " . $payment->getCheckoutUrl(), \true, 303);
 ?>
