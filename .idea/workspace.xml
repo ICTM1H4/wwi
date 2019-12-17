@@ -4,7 +4,8 @@
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bevestiging.php" beforeDir="false" afterPath="$PROJECT_DIR$/bevestiging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/winkelwagen.php" beforeDir="false" afterPath="$PROJECT_DIR$/winkelwagen.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoice.php" beforeDir="false" afterPath="$PROJECT_DIR$/invoice.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -418,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576607237421</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Verwijder- en update knop zeggen doei als je winkelwaggie leeg is">
+      <created>1576612078954</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1576612078954</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,7 +446,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="aanpassingen index van ben" />
     <MESSAGE value="Nav style css aangepast" />
     <MESSAGE value="index geupdate" />
     <MESSAGE value="css nav balk witte letter&#10;nieuwe winkelwagen en account foto" />
@@ -463,7 +470,8 @@
     <MESSAGE value="gemerged met mollie en bevestiging" />
     <MESSAGE value="Fixed max aantal" />
     <MESSAGE value="Session destroy na bevesteging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Session destroy na bevesteging" />
+    <MESSAGE value="Verwijder- en update knop zeggen doei als je winkelwaggie leeg is" />
+    <option name="LAST_COMMIT_MESSAGE" value="Verwijder- en update knop zeggen doei als je winkelwaggie leeg is" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576587931904">
