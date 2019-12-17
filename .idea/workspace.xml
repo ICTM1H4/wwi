@@ -3,15 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bevestiging.php" beforeDir="false" afterPath="$PROJECT_DIR$/bevestiging.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/winkelwagen.php" beforeDir="false" afterPath="$PROJECT_DIR$/winkelwagen.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" doNotAsk="true">
+  <component name="ComposerSettings">
     <pharConfigPath>$PROJECT_DIR$/mollie/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -48,13 +48,7 @@
   </component>
   <component name="ProjectId" id="1TVsoaq0mUYBokzWuvogApB1HTN" />
   <component name="ProjectLevelVcsManager">
-    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
-    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -82,16 +76,6 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="winkelwagen.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/winkelwagen.php">
-      <method v="2" />
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="PHP Script.winkelwagen.php" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -115,7 +99,6 @@
       <workItem from="1575284023170" duration="3613000" />
       <workItem from="1575498765578" duration="3892000" />
       <workItem from="1576494991814" duration="5266000" />
-      <workItem from="1576580432471" duration="11231000" />
     </task>
     <task id="LOCAL-00001" summary="logo erbij">
       <created>1573557548334</created>
@@ -390,35 +373,7 @@
       <option name="project" value="LOCAL" />
       <updated>1576498959560</updated>
     </task>
-    <task id="LOCAL-00040" summary="mollie werkt als betaling">
-      <created>1576589872123</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1576589872123</updated>
-    </task>
-    <task id="LOCAL-00041" summary="mollie payment id kan in bevestiging.php worden opgehaald">
-      <created>1576595809175</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1576595809175</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Fixed max aantal">
-      <created>1576605597167</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1576605597167</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Session destroy na bevesteging">
-      <created>1576607237421</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1576607237421</updated>
-    </task>
-    <option name="localTasksCounter" value="44" />
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -438,6 +393,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="logo erbij" />
+    <MESSAGE value="winkelwagen erbij" />
+    <MESSAGE value="account logo erbij" />
+    <MESSAGE value="index toevoeging: logo, categorieën, zoekbalk, winkelwagen, begin account" />
+    <MESSAGE value="account =&gt; inlogscherm werkt, css aangevuld over index pagina" />
     <MESSAGE value="aanpassingen index van ben" />
     <MESSAGE value="Nav style css aangepast" />
     <MESSAGE value="index geupdate" />
@@ -458,53 +418,6 @@
     <MESSAGE value="besteloverzicht toegevoegd" />
     <MESSAGE value="begin aan besteloverzicht en aanpassingen met de style daarvan" />
     <MESSAGE value="Mogelijkheid om producten toe te voegen aan winkelwagentje" />
-    <MESSAGE value="mollie werkt als betaling" />
-    <MESSAGE value="mollie payment id kan in bevestiging.php worden opgehaald" />
-    <MESSAGE value="gemerged met mollie en bevestiging" />
-    <MESSAGE value="Fixed max aantal" />
-    <MESSAGE value="Session destroy na bevesteging" />
-    <option name="LAST_COMMIT_MESSAGE" value="Session destroy na bevesteging" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576587931904">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1576587931904" />
-    <state x="503" y="127" key="#winkelwagen.php" timestamp="1576587588106">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="503" y="127" key="#winkelwagen.php/0.0.1536.824@0.0.1536.824" timestamp="1576587588106" />
-    <state x="378" y="10" key="CommitChangelistDialog2" timestamp="1576598679681">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="378" y="10" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1576598679681" />
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1576598873070">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1576598873070" />
-    <state x="481" y="129" key="MultipleFileMergeDialog" timestamp="1576580468615">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="481" y="129" key="MultipleFileMergeDialog/0.0.1536.824@0.0.1536.824" timestamp="1576580468615" />
-    <state x="620" y="126" key="RollbackChangesDialog" timestamp="1576588217781">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="620" y="126" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1576588217781" />
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2" timestamp="1576598874501">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="148" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1576598874501" />
-    <state x="514" y="215" key="git4idea.merge.GitPullDialog" timestamp="1576596080774">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="514" y="215" key="git4idea.merge.GitPullDialog/0.0.1536.824@0.0.1536.824" timestamp="1576596080774" />
-    <state x="587" y="318" key="git4idea.ui.GitResetDialog" timestamp="1576589959860">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="587" y="318" key="git4idea.ui.GitResetDialog/0.0.1536.824@0.0.1536.824" timestamp="1576589959860" />
-    <state x="430" y="232" key="git4idea.ui.GitUnstashDialog" timestamp="1576598638801">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="430" y="232" key="git4idea.ui.GitUnstashDialog/0.0.1536.824@0.0.1536.824" timestamp="1576598638801" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mogelijkheid om producten toe te voegen aan winkelwagentje" />
   </component>
 </project>
