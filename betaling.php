@@ -30,6 +30,6 @@ $payment = $mollie->payments->create([
         "order_id" => $orderid,
     ],
 ]);
-
+$_SESSION['paymentID'] = $payment->id;
 header("Location: " . $payment->getCheckoutUrl(), \true, 303);
 ?>
