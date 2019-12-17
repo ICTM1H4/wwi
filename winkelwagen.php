@@ -66,13 +66,15 @@
            $queryscproducts = mysqli_query($conn, "SELECT RecommendedRetailPrice FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
            $price = $queryscproducts->fetch_assoc();
            echo "€" . $price["RecommendedRetailPrice"];
+
+           echo '<br> Aantal: <input type="number" min="1"  id="quantity" name="'.$result['product_id'].'"value="'.$result['aantal'].'"><br><br>';
            $querymaximaal = mysqli_query($conn, "SELECT QuantityOnHand FROM stockitemholdings WHERE StockItemID = ".$result['product_id']. "");
            $maximaal = $querymaximaal->fetch_assoc(); $maximaal['QuantityOnHand'];
-           $maximum = 0.80*$maximaal['QuantityOnHand'];
+           $maximum = ceil(0.80*$maximaal['QuantityOnHand']);
            if ($result['aantal'] > $maximum){
                $result['aantal'] = $maximum;
+               echo "Je mag maximaal $maximum stuks van dit product bestellen!";
            }
-           echo '<br> Aantal: <input type="number" min="1"  id="quantity" name="'.$result['product_id'].'"value="'.$result['aantal'].'">';
            echo "<br>";
            $totaal += $result['aantal'];
            //echo $result['product_id'];
