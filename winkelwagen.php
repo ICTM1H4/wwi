@@ -101,20 +101,12 @@
         $tax = $getTax->fetch_assoc()['TaxRate'];
         $taxArray[] = $tax;
     }
-   foreach($prijsPerProduct as $key => $value) {
-            $arrayPrijsProduct[] = $value;
-            if(++$i === $last){
-                foreach($arrayPrijsProduct as $product) {
-                    $producten[] = $product;
-                }
-            }
-    }
     $totaalPlusBtw = 0;
     $totaalBtw = 0;
     $subTotaal = 0;
-    $countProducten = count($producten);
+    
     $p = 0;
-    foreach($producten as $product) {
+    foreach($prijsPerProduct as $product) {
     $btwNieuw[] = $taxArray[$p]*($prijsPerProduct[$p]/100);
         $totaalPlusBtw += $prijsPerProduct[$p] + $btwNieuw[$p];
         $totaalBtw += $btwNieuw[$p];

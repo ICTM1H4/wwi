@@ -48,7 +48,8 @@
 
 .onder{
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
+    width: 95%;
 }
 
 .price {
