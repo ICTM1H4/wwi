@@ -37,7 +37,7 @@ bevestigingOrder($conn);
     </h2>
 
     <div class="pdfding">
-        <h2><a href="invoice.php <?php  ?>" style="color: blue">Klik hier</a> om uw orderbevestiging nu in te zien </h2>
+        <h2><a href="invoice.php " style="color: blue">Klik hier</a> om uw orderbevestiging nu in te zien </h2>
     </div>
     <div class="home">
         <h2><a href="index.php" style="color: blue">Klik hier</a> om terug te gaan naar de hoofdpagina </h2>
