@@ -1,38 +1,64 @@
 <?php
-molliePrintLines($_SESSION['cart'], $conn);
+/*
+ * How to verify Mollie API Payments in a webhook.
+ *
+ * See: https://docs.mollie.com/guides/webhooks
+ */
+try {
+    /*
+     * Initialize the Mollie API library with your API key.
+     *
+     * See: https://www.mollie.com/dashboard/developers/api-keys
+     */
+    require "../mollie/examples/initialize.php";
+    /*
+     * Retrieve the payment's current state.
+     */
+    $payment = $mollie->payments->get($_POST["id"]);
+    $orderId = $payment->metadata->order_id;
+    /*
+     * Update the order in the database.
+     */
 
-//molliePrintLines($_SESSION['cart']);
-// $data = getProduct($conn);
-
-// print_r($data);
-//ini_set('display_errors', 1);
-//ini_set('display_startup_errors', 1);
-//error_reporting(E_ALL);
-//require_once __DIR__ . "/mollie/vendor/autoload.php";
-//require_once __DIR__ . "/mollie/vendor/guzzlehttp/guzzle/src/functions.php";
-//
-//
-//$mollie = new \Mollie\Api\MollieApiClient();
-//$mollie->setApiKey("test_RBf2gpgfc9xfRvfMmTVFEjyN9wHbk7");
-//
-//$order_id = time();
-//
-//
-//$totaalprijs = number_format($_SESSION['completeprijs'], 2, '.', '');
-//
-//print_r($totaalprijs);
-//
-//$payment = $mollie->payments->create([
-//    "amount" => [
-//        "currency" => "EUR",
-//        "value" => $totaalprijs // You must send the correct number of decimals, thus we enforce the use of strings
-//    ],
-//    "description" => "Order " . $order_id,
-//    "redirectUrl" => "https://webshop.example.org/order/12345/",
-//    "webhookUrl" => "https://webshop.example.org/payments/webhook/",
-//    "metadata" => [
-//        "order_id" => $order_id,
-//    ],
-//]);
-//
-//header("Location: " . $payment->getCheckoutUrl(), \true, 303);
+    print_r($payment);
+    print_r($orderId);
+    database_write($orderId, $payment->status);
+    if ($payment->isPaid() && !$payment->hasRefunds() && !$payment->hasChargebacks()) {
+        /*
+         * The payment is paid and isn't refunded or charged back.
+         * At this point you'd probably want to start the process of delivering the product to the customer.
+         */
+    } elseif ($payment->isOpen()) {
+        /*
+         * The payment is open.
+         */
+    } elseif ($payment->isPending()) {
+        /*
+         * The payment is pending.
+         */
+    } elseif ($payment->isFailed()) {
+        /*
+         * The payment has failed.
+         */
+    } elseif ($payment->isExpired()) {
+        /*
+         * The payment is expired.
+         */
+    } elseif ($payment->isCanceled()) {
+        /*
+         * The payment has been canceled.
+         */
+    } elseif ($payment->hasRefunds()) {
+        /*
+         * The payment has been (partially) refunded.
+         * The status of the payment is still "paid"
+         */
+    } elseif ($payment->hasChargebacks()) {
+        /*
+         * The payment has been (partially) charged back.
+         * The status of the payment is still "paid"
+         */
+    }
+} catch (\Mollie\Api\Exceptions\ApiException $e) {
+    echo "API call failed: " . htmlspecialchars($e->getMessage());
+}

@@ -1,7 +1,4 @@
 <?php
-// session_start();
-$klantgegevens = $_SESSION['klantgegevens'];
-// print_r($$_SESSION['Nieuw']['totaalPlusBtw']);
 /*
  * Make sure to disable the display of errors in production code!
  */
@@ -18,46 +15,21 @@ require_once __DIR__ . "/mollie/vendor/guzzlehttp/guzzle/src/functions.php";
 $mollie = new \Mollie\Api\MollieApiClient();
 $mollie->setApiKey("test_RBf2gpgfc9xfRvfMmTVFEjyN9wHbk7");
 
-// print_r($_SESSION['completetotaal'])
+//-------------------------------------Payment code-------------------------------------------------
+$orderid = time();
 
-$order = $mollie->orders->create([
+$payment = $mollie->payments->create([
     "amount" => [
-        "value" => $_SESSION['Nieuw']['totaalPlusBtw'],
-        "currency" => "EUR"
+        "currency" => "EUR",
+        "value" => $_SESSION['Nieuw']['totaalPlusBtw'] // You must send the correct number of decimals, thus we enforce the use of strings
     ],
-    "billingAddress" => [
-        "streetAndNumber" => $klantgegevens['Straat'],
-        "city" => $klantgegevens['Woonplaats'],
-        "postalCode" => $klantgegevens['postcode'],
-        "country" => "NL",
-        "givenName" => $klantgegevens['Voornaam'],
-        "familyName" => $klantgegevens['Achternaam'],
-        "email" => $klantgegevens['E-mailadres'],
-       "phone" => "+31".$klantgegevens['telefoon'],
-    ],
-    "shippingAddress" => [
-        "streetAndNumber" => $klantgegevens['Straat'],
-        "city" => $klantgegevens['Woonplaats'],
-        "postalCode" => $klantgegevens['postcode'],
-        "country" => "NL",
-        "givenName" => $klantgegevens['Voornaam'],
-        "familyName" => $klantgegevens['Achternaam'],
-        "email" => $klantgegevens['E-mailadres'],
-       "phone" => "+31".$klantgegevens['telefoon'],
-    ],
+    "description" => "Order " . $orderid,
+    "redirectUrl" => "http://localhost/wwi/?bevestiging",
+    "webhookUrl" => "https://webshop.example.org/payments/webhook/",
     "metadata" => [
-        "order_id" => "1",
-        "description" => "Test"
+        "order_id" => $orderid,
     ],
-    "locale" => "nl_NL",
-    "orderNumber" => "1",
-    "redirectUrl" => "http://localhost/wwi/bevestiging.php",
-    "webhookUrl" => "https://example.org/webhook",
-    "method" => "ideal",
-    "lines" => [molliePrintLines($_SESSION['cart'], $conn),]
 ]);
-// print_r($mollie);
-header("Location: " . $order->getCheckoutUrl(), true, 303);
 
-
+header("Location: " . $payment->getCheckoutUrl(), \true, 303);
 ?>
