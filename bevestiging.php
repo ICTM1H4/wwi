@@ -14,15 +14,21 @@ try {
     /*
      * Retrieve the payment's current state.
      */
-    $payment = $mollie->payments->get($_POST["id"]);
+    print("<pre>");
+    print_r($_SESSION['paymentID']);
+    print("</pre>");
+    $mollie->setApiKey("test_RBf2gpgfc9xfRvfMmTVFEjyN9wHbk7");
+    $payment = $mollie->payments->get($_SESSION['paymentID']);
     $orderId = $payment->metadata->order_id;
+
+
     /*
      * Update the order in the database.
      */
 
-    print_r($payment);
+//    print_r($payment);
     print_r($orderId);
-    database_write($orderId, $payment->status);
+//    database_write($orderId, $payment->status);
     if ($payment->isPaid() && !$payment->hasRefunds() && !$payment->hasChargebacks()) {
         /*
          * The payment is paid and isn't refunded or charged back.
