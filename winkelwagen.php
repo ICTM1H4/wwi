@@ -73,7 +73,10 @@
                $result['aantal'] = $maximum;
            }
            echo '<br> Aantal: <input type="number" min="1"  id="quantity" name="'.$result['product_id'].'"value="'.$result['aantal'].'"><br><br>';
+            if ($result['aantal'] == $maximum){
+                echo "<h3> <div class='boe' style='color: red'>Je mag maximaal $maximum stuks van dit product bestellen!</div> </h3>";
 
+            }
 
            echo "<br>";
            $totaal += $result['aantal'];
