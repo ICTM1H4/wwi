@@ -80,22 +80,23 @@ function check() {
 }
 
 function check2() {
-    if (!isValidEmailAddress($('.email').val())) {
-        $('.email').css;
-        $('.email').css;
-        $('.email').css("background-color", "#f8d7da");
+    if (!isValidEmailAddress($('.emailcheck').val())) {
+        $('.emailcheck').css("border-color", "#fc0356");
+        $('.emailcheck').css("color", "#721c24");
+        $('.emailcheck').css("background-color", "#f8d7da");
         $('.buttonPro').prop('disabled', true)
-        if ($('.email').val() == "") {
-            $('.email').css("border-color", "#CCC");
-            $('.email').css("color", "black");
-            $('.email').css("background-color", "#FFF");
+        if ($('.emailcheck').val() == "") {
+            $('.emailcheck').css("border-color", "#CCC");
+            $('.emailcheck').css("color", "black");
+            $('.emailcheck').css("background-color", "#FFF");
             $('.buttonPro').prop('disabled', false);
         }
     }
     else {
-        $('.email').css("border-color", "#CCC");
-        $('.email').css("color", "black");
-        $('.email').css("background-color", "#FFF");
+        $('.emailcheck').css("border-color", "#CCC");
+        $('.emailcheck').css("color", "black");
+        $('.emailcheck').css("background-color", "#FFF");
         $('.buttonPro').prop('disabled', false);
     }
 }
+

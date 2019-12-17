@@ -54,7 +54,7 @@ $order = $mollie->orders->create([
     "redirectUrl" => "http://localhost/wwi/bevestiging.php",
     "webhookUrl" => "https://example.org/webhook",
     "method" => "ideal",
-    "lines" => molliePrintLines($_SESSION['cart'], $conn)
+    "lines" => [molliePrintLines($_SESSION['cart'], $conn),]
 ]);
 // print_r($mollie);
 header("Location: " . $order->getCheckoutUrl(), true, 303);

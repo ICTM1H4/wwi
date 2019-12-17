@@ -161,9 +161,13 @@ function progresBar($huidigePagina){
 
 
 function klantgegevens(){
+
+    // function IsPostcode($value)
+    // {
+    //     return preg_match('/^[1-9][0-9]{3} ?[a-zA-Z]{2}$/', $value);
+    // }
+
     if(isset($_POST['sendPost'])) {
-        $spatieWeg = str_replace(" ","", $_POST['postcode']);
-        $nieuwPostcode = strtoupper($spatieWeg);
         if(empty($_POST['Voornaam'] && $_POST['Achternaam'] && $_POST['Straat'] && $_POST['huisnr'] && $_POST['postcode'] && $_POST['Woonplaats']&& $_POST['E-mailadres'])) {
             echo '<span class="danger"> Vul alle verplichte velden in!</span>';
         }   elseif (preg_match('/[^A-Za-z]/', $_POST['Voornaam'])) {
@@ -178,18 +182,17 @@ function klantgegevens(){
             echo '<span class="danger"> Het huisnummer veld is verkeerd ingevoerd!</span>';
         }   elseif (preg_match('/[^A-Za-z0-9]/', $_POST['toev'])){
             echo '<span class="danger"> Het toevoegings veld is verkeerd ingevoerd!</span>';
-        }
-//        elseif (preg_match('/^[1-9][0-9]{3} ?[a-zA-Z]{2}$/' , $nieuwPostcode)){
-//            echo '<span class="danger"> Het postcode veld is verkeerd ingevoerd!</span>';
-//        }
+        } 
+        // elseif (!IsPostcode($_POST['postcode'])){
+        //     echo '<span class="danger"> Het postcode veld is verkeerd ingevoerd!</span>';
+        // } 
         elseif (preg_match('/[^A-Za-z]/', $_POST['Woonplaats'])){
             echo '<span class="danger"> Het woonplaats veld is verkeerd ingevoerd!</span>';
-        }
-//        Email wordt in verzending.php gecontorlleerd
-        elseif (preg_match('/[^0-9]/', $_POST['telefoon'])){
+        } elseif (!preg_match("^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$^", $_POST['E-mailadres'])) {
+            echo '<span class="danger"> Het email veld is verkeerd ingevoerd!</span>';
+        } elseif (!preg_match('^[0-9]{10}$^', $_POST['telefoon'])){
             echo '<span class="danger"> Het telefoonnummer veld is verkeerd ingevoerd!</span>';
-        }
-        else{
+        } else{
             $klantgegevens = array
             (   'Voornaam' => $_POST['Voornaam'],
                 'tussenvoegsel' => $_POST['tussenvoegsel'],
@@ -223,7 +226,7 @@ function molliePrintLines($cart, $conn){
             $info = $product[0];
             
             // print_r($product['aantal']);
-            $lines =    [
+            $lines =    
                             // for($i = 0; $i < $)
                             [
                                 "type" => "physical",
@@ -252,8 +255,8 @@ function molliePrintLines($cart, $conn){
                                     "currency" => "EUR",
                                     "value" => strval(number_format($_SESSION['Nieuw']['totaalPlusBtw'] * ($info['taxrate'] / (100 + $info['taxrate'])), '2', '.',''))
                                 ]
-                            ],
-                        ];
+                                ];
+                        
                 
                 // print_r(number_format($info['recommendedretailprice']*1.21, 2, ".","")*$product['aantal']);
                 // print_r(100 + $info['taxrate']);
@@ -264,6 +267,7 @@ function molliePrintLines($cart, $conn){
             // print("<pre>");
             // print_r( $lines);
             // print("</pre>");
+            return $lines;
         }
     }
 }

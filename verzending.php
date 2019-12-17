@@ -80,6 +80,7 @@ $huidigePagina = "verzendingPhp";
     <h2 class="uwGegev">Uw gegevens</h2>
     <!-- <h2 class="verzendPrijs">Verzendprijzen</h2> -->
     <form class="factuurData" method="post">
+        <?php klantgegevens(); ?>
         <table class="factuurText">
         <?php if(isset($_SESSION['klantgegevens'])) { $klant =$_SESSION['klantgegevens']; ?>
             <div class="klantNaam">
@@ -111,7 +112,7 @@ $huidigePagina = "verzendingPhp";
                 <td class="tableColumn"><input type="text" name="E-mailadres" placeholder="email@adres.com" value="<?php echo $klant['E-mailadres']?>""></td>
             </tr>
             <tr>
-                <td class="tableColumn"><p class="telefnr">Telefoonnummer</p>
+                <td class="tableColumn"><p class="telefnr">Telefoonnummer<b>&#42;</b></p>
                 </td> <td class="tableColumn"><input type="text" name="telefoon" placeholder="0612345678" value="<?php echo $klant['telefoon']?>"></td>
             </tr>
             <tr>
@@ -147,10 +148,10 @@ $huidigePagina = "verzendingPhp";
             </div>
             <tr>
                 <td class="tableColumn">E-mail</td>
-                <td class="tableColumn"><input type="text" class="email" name="E-mailadres" onchange="check2()" placeholder="email@adres.com"></td>
+                <td class="tableColumn"><input type="text" name="E-mailadres" placeholder="email@adres.com"></td>
             </tr>
             <tr>
-                <td class="tableColumn"><p class="telefnr">Telefoonnummer</p>
+                <td class="tableColumn"><p class="telefnr">Telefoonnummer<b>&#42;</b></p>
                 </td> <td class="tableColumn"><input type="text" name="telefoon" placeholder="0612345678"></td>
             </tr>
             <tr>

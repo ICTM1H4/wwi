@@ -30,11 +30,11 @@ else{
 
 if (categ($conn)=== TRUE) {
     $groupID = $_GET['id'];
-    $query = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID' LIMIT 25");
-    $query3 = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID'");
+    $query = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SSG ON S.StockItemID = SSG.StockItemID WHERE SSG.StockGroupID = '$groupID' LIMIT 25");
+    $query3 = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SSG ON S.StockItemID = SSG.StockItemID WHERE SSG.StockGroupID = '$groupID'");
     $num_rows = mysqli_num_rows($query3);
     if (isset($_POST['meer'])) {
-        $query = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SG ON SG.StockItemID = S.StockItemID WHERE SG.StockGroupID = '$groupID' LIMIT 227");
+        $query = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SSG ON S.StockItemID = SSG.StockItemID WHERE SSG.StockGroupID = '$groupID' LIMIT 227");
     }
 //    if (isset($_POST['submit'])) {
 //        $selected_filter = $_POST['filters'];
@@ -52,8 +52,8 @@ if (categ($conn)=== TRUE) {
 
 else {
 
-    $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR StockItemID LIKE '$q' LIMIT 25");
-    $query4 = mysqli_query($conn, "SELECT * FROM stockitems WHERE StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR StockItemID LIKE '$q'");
+    $query = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SSG ON S.StockItemID = SSG.StockItemID JOIN stockgroups SG ON SG.StockGroupID = SSG.StockGroupID WHERE StockGroupName LIKE '%$q%' OR StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR S.StockItemID LIKE '$q' LIMIT 25");
+    $query4 = mysqli_query($conn, "SELECT * FROM stockitems S JOIN stockitemstockgroups SSG ON S.StockItemID = SSG.StockItemID JOIN stockgroups SG ON SG.StockGroupID = SSG.StockGroupID WHERE StockGroupName LIKE '%$q%' OR StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR S.StockItemID LIKE '$q'");
     $num_rows = mysqli_num_rows($query4);
     if (isset($_POST['meer'])){
         ?>

@@ -58,6 +58,18 @@ include "php/functions.php";
     if(isset($_POST["add"])){
         //session_destroy();
         //print_r($_POST['product_id']);
+        ?>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var scrollpos = localStorage.getItem('scrollpos');
+            if (scrollpos) window.scrollTo(0, scrollpos);
+        });
+
+        window.onbeforeunload = function(e) {
+            localStorage.setItem('scrollpos', window.scrollY);
+        };
+    </script>
+    <?php
         if(isset($_SESSION['cart'])){
             $item_array_id = array_column($_SESSION['cart'], "product_id");
             // print_r($_SESSION['cart']);
