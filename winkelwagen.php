@@ -102,20 +102,23 @@
     $totaalPlusBtw = 0;
     $totaalBtw = 0;
     $subTotaal = 0;
-    for($i = 0; $i < $producten[$i]; $i++ ){
-        $btwNieuw[] = $taxArray[$i]*($prijsPerProduct[$i]/100);
-        $totaalPlusBtw += $prijsPerProduct[$i] + $btwNieuw[$i];
-        $totaalBtw += $btwNieuw[$i];
-        $subTotaal += $prijsPerProduct[$i];
+    $countProducten = count($producten);
+    $p = 0;
+    foreach($producten as $product) {
+    $btwNieuw[] = $taxArray[$p]*($prijsPerProduct[$p]/100);
+        $totaalPlusBtw += $prijsPerProduct[$p] + $btwNieuw[$p];
+        $totaalBtw += $btwNieuw[$p];
+        $subTotaal += $prijsPerProduct[$p];
        
         $_SESSION['Nieuw']['totaalBTW'] = number_format($totaalBtw, 2, ".", "");
         $_SESSION['Nieuw']['totaalPlusBtw'] = number_format($totaalPlusBtw, 2, ".", "");
         $_SESSION['Nieuw']['subTotaal'] = number_format($subTotaal, 2, ".", "");
         $_SESSION["Nieuw"]["prijs"] = $prijsPerProduct;
         $_SESSION["Nieuw"]['btw'] = $btwNieuw;
+        $p++;
     }
-    print_r($_SESSION["Nieuw"]);
 
+    
        if (empty($_SESSION['cart'])){
            echo "U heeft geen producten in uw winkelwagentje";
            $valueverandering = "Verder winkelen";

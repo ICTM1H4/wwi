@@ -10,7 +10,6 @@ $eenDagLever = 10.00;
 $completeTotaal = $_SESSION['Nieuw']['totaalBTW'];
 $_SESSION['completetotaal'] = $completeTotaal;
 
-klantgegevens();
 $huidigePagina = "verzendingPhp";
 
 // function sessieEcho($a){
