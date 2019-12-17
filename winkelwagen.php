@@ -19,6 +19,12 @@
     $hrefverandering = "?verzending";
     $prijsPerProduct = [];
 
+    $_SESSION['Nieuw']['totaalBTW'] = 0;
+    $_SESSION['Nieuw']['totaalPlusBtw'] = 0;
+    $_SESSION['Nieuw']['subTotaal'] = 0;
+    $_SESSION["Nieuw"]["prijs"] = 0;
+    $_SESSION["Nieuw"]['btw'] = 0;
+
    if(isset($_SESSION['cart'])) {
        echo '<form method="post">';
        ?>
@@ -43,6 +49,7 @@
                echo "<script>window.location = '?winkelwagen</script>";
                header('Location: ?winkelwagen');
            }
+
 
 
         //    print_r($result);
@@ -75,6 +82,40 @@
             // print_r($prijsPerProduct);
             // $totaalartikelen =  number_format($totaalprijs * 1.21 + $verzendkosten, '2', '.', '');
        }
+
+        $max = 0;
+   $i = 0;
+   $last = count($prijsPerProduct);
+   foreach($_SESSION['cart'] as $key2 => $id){
+        $getTax = mysqli_query($conn, 'SELECT TaxRate from stockitems where stockitemid = '.$id['product_id'].'');
+        $tax = $getTax->fetch_assoc()['TaxRate'];
+        $taxArray[] = $tax;
+    }
+   foreach($prijsPerProduct as $key => $value) {
+            $arrayPrijsProduct[] = $value;
+            if(++$i === $last){
+                foreach($arrayPrijsProduct as $product) {
+                    $producten[] = $product;
+                }
+            }
+    }
+    $totaalPlusBtw = 0;
+    $totaalBtw = 0;
+    $subTotaal = 0;
+    for($i = 0; $i < $producten[$i]; $i++ ){
+        $btwNieuw[] = $taxArray[$i]*($prijsPerProduct[$i]/100);
+        $totaalPlusBtw += $prijsPerProduct[$i] + $btwNieuw[$i];
+        $totaalBtw += $btwNieuw[$i];
+        $subTotaal += $prijsPerProduct[$i];
+       
+        $_SESSION['Nieuw']['totaalBTW'] = number_format($totaalBtw, 2, ".", "");
+        $_SESSION['Nieuw']['totaalPlusBtw'] = number_format($totaalPlusBtw, 2, ".", "");
+        $_SESSION['Nieuw']['subTotaal'] = number_format($subTotaal, 2, ".", "");
+        $_SESSION["Nieuw"]["prijs"] = $prijsPerProduct;
+        $_SESSION["Nieuw"]['btw'] = $btwNieuw;
+    }
+    print_r($_SESSION["Nieuw"]);
+
        if (empty($_SESSION['cart'])){
            echo "U heeft geen producten in uw winkelwagentje";
            $valueverandering = "Verder winkelen";
@@ -89,24 +130,10 @@
        $hrefverandering = "?index";
    }
 
-   foreach($prijsPerProduct as  $key => $kont) {
-            $max += $kont;
-            //hier verder werken
-            print_r($max.'<br>');
-        }
+//    $arr = [];
    
-   foreach($_SESSION['cart'] as $id){
-        // print_r($id);
-        $getTax = mysqli_query($conn, 'SELECT TaxRate from stockitems where stockitemid = '.$id['product_id'].'');
-        $tax = $getTax->fetch_assoc()['TaxRate'];
-        // print_r($tax);
-        // print_r($prijsPerProduct);
-        // print_r($i++.'<br>');
-        
-        $btw = number_format($totaalprijs * ($tax / 100) , 2, '.', '');
-    }
-
-
+    // print_r($tax);
+  
     ?>
 
     <form method="post">
@@ -143,12 +170,15 @@
 
     ?>
     <?php
+
+    
+
     // print_r($_SESSION['cart']);
     
-    $_SESSION['completeprijs'] = $totaalartikelen;
-    $_SESSION['prijsproduct'] = $totaalprijs;
-    $_SESSION['btw'] = $btw;
-    $_SESSION['verzendkosten'] = $verzendkosten;
+    // $_SESSION['completeprijs'] = $totaalartikelen;
+    // $_SESSION['prijsproduct'] = $totaalprijs;
+    // $_SESSION['btw'] = $btw;
+    // $_SESSION['verzendkosten'] = $verzendkosten;
     ?>
 
 
@@ -157,10 +187,10 @@
     <div method="post">
         <div class="totaltext" >
         <h3 id="aantalart">Aantal producten: <?php echo $totaal ?> </h3><br>
-        <h3>Subtotaal: <?php echo "€" . $totaalprijs ?> (excl. btw) </h3><br>
-        <h3>BTW: <?php echo "€" . $btw ?> </h3>
+        <h3>Subtotaal: <?php echo "€" . $_SESSION['Nieuw']['subTotaal'] ?> (excl. btw) </h3><br>
+        <h3>BTW: <?php echo "€" . $_SESSION['Nieuw']['totaalBTW'] ?> </h3>
         <hr><br>
-        <h3>Totaal: <?php echo "€" . number_format($totaalartikelen , 2, '.', '') ?> (incl. btw)</h3><br><br>
+        <h3>Totaal: <?php echo "€" . $_SESSION['Nieuw']['totaalPlusBtw'] ?> (incl. btw)</h3><br><br>
         </div>
         <a href="<?php echo $hrefverandering ?>"><input type="button" class = "button-afrekenen buttonPro" value="<?php echo $valueverandering ?>"></a>
     </form>

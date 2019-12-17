@@ -1,7 +1,7 @@
 <?php
 $huidigePagina = "overzichtPhp";
 // print_r($_SESSION);
-$verzendkosten = $_SESSION['verzendkosten'];
+// $verzendkosten = $_SESSION['verzendkosten'];
 ?>
 
 <html>
@@ -72,7 +72,7 @@ $verzendkosten = $_SESSION['verzendkosten'];
 
                     <div><h2>Bezorging</h2></div>
                     <div>Bezorgingswijze<br><br></div>
-                    <div><?php echo $_SESSION['klantgegevens']['verzendType'] . $verzendkosten ?> euro</div>
+                    <div>PostNL</div>
                 </div>
             </div>
             <div class = "betalingswijze">
@@ -110,14 +110,14 @@ $verzendkosten = $_SESSION['verzendkosten'];
         <div class = "overzichtBestelling">
             <div class = "overzicht-border">
                 <div><h2>Bestelling</h2></div>
-                    <div>
+                    <div class="bigAssDiv">
                         <?php
 //                        print_r($_SESSION);
                         
-                        $completetotaal = $_SESSION['completeprijs'];
-                        $prijs = $_SESSION['prijsproduct'];
-                        $btw = $_SESSION['btw'];
-                        $verzendkosten = $_SESSION['verzendkosten'];
+                        $completetotaal = $_SESSION['Nieuw']['totaalPlusBtw'];
+                        $prijs = $_SESSION['Nieuw']['subTotaal'];
+                        $btw = $_SESSION['Nieuw']['totaalBTW'];
+                        $verzendkosten = "0.00";
 
                     echo "<div class = 'overzichtprijs'> <h4>Subtotaal Producten:€ $prijs (exl. btw)</h4>";
                     echo "<div class = 'btwprijs'> <h4>BTW: € $btw </h4></div>";
@@ -129,7 +129,7 @@ $verzendkosten = $_SESSION['verzendkosten'];
                     ?>
                 </div>
                 <div>
-                        <a href="?betaling" class="buttonPro" >Naar betalen</a>
+                        <a href="?betaling" class="buttonPro mb5" >Naar betalen</a>
                 </div>
             </div>
         </div>

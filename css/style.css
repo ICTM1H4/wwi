@@ -624,3 +624,12 @@ b {
     color: red;
     font-size: 12px;
 }
+
+.bigAssDiv {
+    height: 125px;
+    /* width: 100%; */
+}
+
+ .mb5 {
+     margin-bottom: 5px;
+ }

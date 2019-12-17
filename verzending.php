@@ -4,15 +4,12 @@
 $normLever = 0.00;
 $ophalen = 0.00;
 $eenDagLever = 10.00;
-$verzendkosten = $_SESSION['verzendkosten'];
 
 
-$totaal = $_SESSION['completeprijs'];
-$completeTotaal = $totaal + $_SESSION['verzendkosten'];
+// $totaal = $_SESSION['Nieuw']['totaalBTW'];
+$completeTotaal = $_SESSION['Nieuw']['totaalBTW'];
 $_SESSION['completetotaal'] = $completeTotaal;
-if ($totaal < 50.00){
-    $normLever += 6.95;
-}
+
 klantgegevens();
 $huidigePagina = "verzendingPhp";
 
@@ -81,7 +78,7 @@ $huidigePagina = "verzendingPhp";
 </div>
 <div class="algMargin">
     <h2 class="uwGegev">Uw gegevens</h2>
-    <h2 class="verzendPrijs">Verzendprijzen</h2>
+    <!-- <h2 class="verzendPrijs">Verzendprijzen</h2> -->
     <form class="factuurData" method="post">
         <table class="factuurText">
         <?php if(isset($_SESSION['klantgegevens'])) { $klant =$_SESSION['klantgegevens']; ?>
@@ -120,6 +117,9 @@ $huidigePagina = "verzendingPhp";
             <tr>
                 <td class="tableColumn"><p class="verplichtveld">* verplicht veld</p></td>
             </tr>
+            <tr>
+                <td><input type="submit" name="sendPost" class="buttonPro" value="Doorgaan"></td>
+            </tr>
         <?php } else { ?>
             <div class="klantNaam">
                 <tr>
@@ -153,14 +153,17 @@ $huidigePagina = "verzendingPhp";
                 <td class="tableColumn"><p class="telefnr">Telefoonnummer</p>
                 </td> <td class="tableColumn"><input type="text" name="telefoon" placeholder="0612345678"></td>
             </tr>
+            <tr>
+                <td><input type="submit" name="sendPost" class="buttonPro" value="Doorgaan"></td>
+            </tr>
         <?php } ?>
         </table>
-        <div class="verzendType">
+        <!-- <div class="verzendType">
             <p class="verzendkosten"> Verzendkosten: € <?php echo round($verzendkosten, 2 ) ?></p>
             <div class="verzendOnder">
                 <input type="submit" name="sendPost" class="buttonPro" value="Doorgaan">
             </div>
-        </div>
+        </div> -->
     </form>
 <!--nice-->
 </div>
