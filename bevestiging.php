@@ -1,7 +1,6 @@
 <?php
 $email = "E-mail";
 $order = "x";
-$totaalprijs = $_SESSION['Nieuw']['totaalPlusBtw'];
 $huidigePagina = "verzendingPhp";
 bevestigingOrder($conn);
 ?>

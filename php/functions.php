@@ -36,7 +36,7 @@ function Aantalproducten() {
 }
 
 function getItem($conn, $id) {
-    $query = "SELECT (SELECT LastStockTakeQuantity FROM stockitemholdings WHERE StockItemID = ".$id.") AS voorraad, IsChillerStock, StockItemID, StockItemName, 
+    $query = "SELECT (SELECT QuantityOnHand FROM stockitemholdings WHERE StockItemID = ".$id.") AS voorraad, IsChillerStock, StockItemID, StockItemName, 
                 SearchDetails, Photo, RecommendedRetailPrice FROM stockitems WHERE StockItemID = ".$id."";
     $result = $conn->query($query);
     $query2 = "SELECT AVG(temperature) temp FROM coldroomtemperatures";
@@ -54,16 +54,6 @@ function koudeCel ($conn){
     $query = "SELECT AVG(temperature) FROM coldroomtemperatures";
     $result = $conn->query($query);
 }
-
-//function gekoeldProduct($conn){
-//    $query = "SELECT * FROM stockitems WHERE IsChillerStock >= 1";
-//    $result = $conn->query($query);
-//    if ($result){
-//        return $result->fetch_assoc();
-//    } else {
-//        return "";
-//    }
-//}
 
 function printPlaatjes() {
     $getName = glob("*.{gif,jfif,png,jpeg,jpg}",  GLOB_BRACE);
@@ -261,6 +251,7 @@ function bevestigingOrder($conn) {
         foreach($_SESSION['cart'] as $product) {
             $query = mysqli_query($conn, "SELECT StockItemID,SearchDetails, RecommendedRetailPrice, StockItemName FROM stockitems where StockItemID = ".$product['product_id']."");
             $getProducten[] = $query->fetch_assoc()['StockItemName']." ".$product['aantal']."x";
+            mysqli_query($conn, 'UPDATE stockitemholdings SET QuantityOnHand = QuantityOnHand-'.$product['aantal'].' WHERE StockItemID = '.$product["product_id"].'');
         }
         $to = $_SESSION['klantgegevens']['E-mailadres'];
         $from = "klantenservicewwi@gmail.com";
@@ -294,6 +285,7 @@ function bevestigingOrder($conn) {
         $headers .= "Content-type: text/html\r\n";
         mail($to, $subject,$message, $headers);
         mail("klantenservicewwi@gmail.com", $subjectK,$messageK, $headers);
+        session_destroy();
         return header('Location: ?bevestiging');
     }
 }
