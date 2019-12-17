@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bevestiging.php" beforeDir="false" afterPath="$PROJECT_DIR$/bevestiging.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/winkelwagen.php" beforeDir="false" afterPath="$PROJECT_DIR$/winkelwagen.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,13 +69,20 @@
       <recent name="C:\xampp\htdocs\wwi" />
     </key>
   </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
   <component name="RunManager">
     <configuration name="winkelwagen.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/winkelwagen.php">
-      <CommandLine>
-        <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP from XAMPP" />
-        </PhpTestInterpreterSettings>
-      </CommandLine>
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -83,18 +90,6 @@
         <item itemvalue="PHP Script.winkelwagen.php" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="ServiceViewManager">
-    <option name="viewStates">
-      <list>
-        <serviceView>
-          <treeState>
-            <expand />
-            <select />
-          </treeState>
-        </serviceView>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
