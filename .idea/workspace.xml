@@ -72,11 +72,6 @@
   </component>
   <component name="RunManager">
     <configuration name="winkelwagen.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/winkelwagen.php">
-      <CommandLine>
-        <PhpTestInterpreterSettings>
-          <option name="interpreterName" value="PHP from XAMPP" />
-        </PhpTestInterpreterSettings>
-      </CommandLine>
       <method v="2" />
     </configuration>
     <recent_temporary>

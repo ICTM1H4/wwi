@@ -102,7 +102,7 @@ $huidigePagina = "overzichtPhp";
                     $resAantal = $result['aantal'];
                     echo "<div class = 'ProductAantal'>Aantal: $resAantal</div>";
                     echo '<hr>';
-                    echo '<br><br>';
+                    echo '<br><br>';    
                 }
                 ?>
             </div>
