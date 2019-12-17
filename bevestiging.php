@@ -71,118 +71,76 @@ $huidigePagina = "verzendingPhp";
  *
  * See: https://docs.mollie.com/guides/webhooks
  */
-//try {
+try {
     /*
      * Initialize the Mollie API library with your API key.
      *
      * See: https://www.mollie.com/dashboard/developers/api-keys
      */
-//    require "../mollie/examples/initialize.php";
+    require "../mollie/examples/initialize.php";
     /*
      * Retrieve the payment's current state.
      */
+    print("<pre>");
+    print_r($_SESSION['paymentID']);
+    print("</pre>");
+    $mollie->setApiKey("test_RBf2gpgfc9xfRvfMmTVFEjyN9wHbk7");
+    $payment = $mollie->payments->get($_SESSION['paymentID']);
+    $orderId = $payment->metadata->order_id;
 
-//    $payment = $mollie->payments->get($_POST["id"]);
-//    $orderId = $payment->metadata->order_id;
-//    /*
-//     * Update the order in the database.
-//     */
-//
+    echo "<pre>";
 //    print_r($payment);
-//    print_r($orderId);
-//    database_write($orderId, $payment->status);
-//    if ($payment->isPaid() && !$payment->hasRefunds() && !$payment->hasChargebacks()) {
-//        /*
-//         * The payment is paid and isn't refunded or charged back.
-//         * At this point you'd probably want to start the process of delivering the product to the customer.
-//         */
-//    } elseif ($payment->isOpen()) {
-//        /*
-//         * The payment is open.
-//         */
-//    } elseif ($payment->isPending()) {
-//        /*
-//         * The payment is pending.
-//         */
-//    } elseif ($payment->isFailed()) {
-//        /*
-//         * The payment has failed.
-//         */
-//    } elseif ($payment->isExpired()) {
-//        /*
-//         * The payment is expired.
-//         */
-//    } elseif ($payment->isCanceled()) {
-//        /*
-//         * The payment has been canceled.
-//         */
-//    } elseif ($payment->hasRefunds()) {
-//        /*
-//         * The payment has been (partially) refunded.
-//         * The status of the payment is still "paid"
-//         */
-//    } elseif ($payment->hasChargebacks()) {
-//        /*
-//         * The payment has been (partially) charged back.
-//         * The status of the payment is still "paid"
-//         */
-//    }
-//} catch (\Mollie\Api\Exceptions\ApiException $e) {
-//    echo "API call failed: " . htmlspecialchars($e->getMessage());
-//}
+    echo "</pre>";
 
-//    print("<pre>");
-//    print_r($_SESSION['paymentID']);
-//    print("</pre>");
-//    $mollie->setApiKey("test_RBf2gpgfc9xfRvfMmTVFEjyN9wHbk7");
-//    $payment = $mollie->payments->get($_SESSION['paymentID']);
-//    $orderId = $payment->metadata->order_id;
-//
-//
-//    /*
-//     * Update the order in the database.
-//     */
-//
-//    print_r($payment);
-//    print_r($orderId);
+    /*
+     * Update the order in the database.
+     */
+
+    print_r($orderId);
 //    database_write($orderId, $payment->status);
-//    if ($payment->isPaid() && !$payment->hasRefunds() && !$payment->hasChargebacks()) {
-//        /*
-//         * The payment is paid and isn't refunded or charged back.
-//         * At this point you'd probably want to start the process of delivering the product to the customer.
-//         */
-//    } elseif ($payment->isOpen()) {
-//        /*
-//         * The payment is open.
-//         */
-//    } elseif ($payment->isPending()) {
-//        /*
-//         * The payment is pending.
-//         */
-//    } elseif ($payment->isFailed()) {
-//        /*
-//         * The payment has failed.
-//         */
-//    } elseif ($payment->isExpired()) {
-//        /*
-//         * The payment is expired.
-//         */
-//    } elseif ($payment->isCanceled()) {
-//        /*
-//         * The payment has been canceled.
-//         */
-//    } elseif ($payment->hasRefunds()) {
-//        /*
-//         * The payment has been (partially) refunded.
-//         * The status of the payment is still "paid"
-//         */
-//    } elseif ($payment->hasChargebacks()) {
-//        /*
-//         * The payment has been (partially) charged back.
-//         * The status of the payment is still "paid"
-//         */
-//    }
-//} catch (\Mollie\Api\Exceptions\ApiException $e) {
-//    echo "API call failed: " . htmlspecialchars($e->getMessage());
-//}
-//>>>>>>> origin/master
+    if ($payment->isPaid() && !$payment->hasRefunds() && !$payment->hasChargebacks()) {
+        echo "<h2>Uw bestelling is betaald</h2>";
+        /*
+         * The payment is paid and isn't refunded or charged back.
+         * At this point you'd probably want to start the process of delivering the product to the customer.
+         */
+    } elseif ($payment->isOpen()) {
+        echo "<h2>Uw bestelling staat open</h2>";
+        /*
+         * The payment is open.
+         */
+    } elseif ($payment->isPending()) {
+        echo "<h2>Uw bestelling wordt verwerkt</h2>";
+        /*
+         * The payment is pending.
+         */
+    } elseif ($payment->isFailed()) {
+        echo "<h2>Uw betaling is gefaald</h2>";
+        /*
+         * The payment has failed.
+         */
+    } elseif ($payment->isExpired()) {
+        echo "<h2>Uw betalingsessie is verlopen</h2>";
+        /*
+         * The payment is expired.
+         */
+    } elseif ($payment->isCanceled()) {
+        echo "<h2>Uw betaling is geannuleerd</h2>";
+        /*
+         * The payment has been canceled.
+         */
+    } elseif ($payment->hasRefunds()) {
+        echo "<h2>Uw betaling is geretourneerd</h2>";
+        /*
+         * The payment has been (partially) refunded.
+         * The status of the payment is still "paid"
+         */
+    } elseif ($payment->hasChargebacks()) {
+        /*
+         * The payment has been (partially) charged back.
+         * The status of the payment is still "paid"
+         */
+    }
+} catch (\Mollie\Api\Exceptions\ApiException $e) {
+    echo "API call failed: " . htmlspecialchars($e->getMessage());
+}
