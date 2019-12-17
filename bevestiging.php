@@ -17,6 +17,7 @@ $huidigePagina = "verzendingPhp";
         <title>Document</title>
     </head>
     <body>
+
     <div class="grijsPB">
     <div class="algMargin">
         <div class="progressBar"><?php progresBar($huidigePagina)?>
