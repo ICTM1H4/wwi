@@ -140,12 +140,14 @@
     // print_r($tax);
   
     ?>
+<?php if(!empty($_SESSION['cart'])){
+    echo
 
-    <form method="post">
+    '<form method="post">
         <input type="submit" class="updatebutton buttonPro" name="plus" value="Update winkelwagentje" id="update" />
         <button class="button-alles buttonPro"  type="submit" name="deleteall" value="+" id="deleteall">Verwijder alles</button>
-    </form>
-
+    </form>'; }
+?>
     <hr>
 
 

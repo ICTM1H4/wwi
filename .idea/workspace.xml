@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="Session destroy na best">
+    <list default="true" id="b442c5b5-6888-4e28-9277-f4edaa813c2d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bevestiging.php" beforeDir="false" afterPath="$PROJECT_DIR$/bevestiging.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/winkelwagen.php" beforeDir="false" afterPath="$PROJECT_DIR$/winkelwagen.php" afterDir="false" />
@@ -411,7 +411,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576605597167</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Session destroy na bevesteging">
+      <created>1576607237421</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1576607237421</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,7 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="account =&gt; inlogscherm werkt, css aangevuld over index pagina" />
     <MESSAGE value="aanpassingen index van ben" />
     <MESSAGE value="Nav style css aangepast" />
     <MESSAGE value="index geupdate" />
@@ -456,7 +462,8 @@
     <MESSAGE value="mollie payment id kan in bevestiging.php worden opgehaald" />
     <MESSAGE value="gemerged met mollie en bevestiging" />
     <MESSAGE value="Fixed max aantal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed max aantal" />
+    <MESSAGE value="Session destroy na bevesteging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Session destroy na bevesteging" />
   </component>
   <component name="WindowStateProjectService">
     <state x="223" y="70" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576587931904">
