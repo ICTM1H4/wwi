@@ -52,8 +52,8 @@ if (categ($conn)=== TRUE) {
 
 else {
 
-    $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE stockitemname LIKE '%$q%' OR StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR StockItemID LIKE '$q' LIMIT 25");
-    $query4 = mysqli_query($conn, "SELECT * FROM stockitems WHERE stockitemname LIKE '%$q%' OR StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' OR StockItemID LIKE '$q'");
+    $query = mysqli_query($conn, "SELECT * FROM stockitems WHERE stockitemname LIKE '%$q%' OR StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%'  LIMIT 25");
+    $query4 = mysqli_query($conn, "SELECT * FROM stockitems WHERE stockitemname LIKE '%$q%' OR StockItemName LIKE '%$q%' OR SearchDetails LIKE '%$q%' OR Tags LIKE '%$q%' ");
     $num_rows = mysqli_num_rows($query4);
     if (isset($_POST['meer'])){
         ?>

@@ -1,7 +1,7 @@
 <?php
 $email = "E-mail";
 $order = "x";
-$huidigePagina = "verzendingPhp";
+$huidigePagina = "bevestigingPhp";
 bevestigingOrder($conn);
 ?>
 <!doctype html>
