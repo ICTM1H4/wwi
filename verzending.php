@@ -123,7 +123,7 @@ $huidigePagina = "verzendingPhp";
         <?php } else { ?>
             <div class="klantNaam">
                 <tr>
-                    <td class="tableColumn">Naam</td>
+                    <td class="tableColumn">Naam<b>&#42;</b></td>
                     <td class="tableColumn"><input type="text" name="Voornaam" placeholder="Voornaam"></td>
                     <td class="tableColumn"><input type="text" name="tussenvoegsel" placeholder="Tussenv."></td>
                     <td class="tableColumn"><input type="text" name="Achternaam" placeholder="Achternaam"></td>
@@ -131,27 +131,30 @@ $huidigePagina = "verzendingPhp";
             </div>
             <div class="adres">
                 <tr>
-                    <td class = "tableColumn">Adres</td>
+                    <td class = "tableColumn">Adres<b>&#42;</b></td>
                     <td class = "tableColumn"><input type="text" name="Straat" placeholder="Straatnaam"></td>
                     <td class = "tableColumn"><input type="text" name="huisnr" size="4" placeholder="Huisnr."></td>
                     <td class = "tableColumn"><input type="text" name="toev" size="4" placeholder="Toev."></td>
                 </tr>
                 <tr>
-                    <td class = "tableColumn">Postcode</td>
+                    <td class = "tableColumn">Postcode<b>&#42;</b></td>
                     <td class = "tableColumn"><input type="text" name="postcode" placeholder="1234 AB"><br></td>
                 </tr>
                 <tr>
-                    <td class = "tableColumn">Plaatsnaam</td>
+                    <td class = "tableColumn">Plaatsnaam<b>&#42;</b></td>
                     <td class = "tableColumn"><input type="text" name="Woonplaats" placeholder="Plaatsnaam"><br></td>
                 </tr>
             </div>
             <tr>
-                <td class="tableColumn">E-mail</td>
+                <td class="tableColumn">E-mail<b>&#42;</b></td>
                 <td class="tableColumn"><input type="text" name="E-mailadres" placeholder="email@adres.com"></td>
             </tr>
             <tr>
                 <td class="tableColumn"><p class="telefnr">Telefoonnummer<b>&#42;</b></p>
                 </td> <td class="tableColumn"><input type="text" name="telefoon" placeholder="0612345678"></td>
+            </tr>
+            <tr>
+                <td class="tableColumn"><p class="verplichtveld">* verplicht veld</p></td>
             </tr>
             <tr>
                 <td><input type="submit" name="sendPost" class="buttonPro" value="Doorgaan"></td>
