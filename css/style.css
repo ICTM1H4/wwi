@@ -49,7 +49,7 @@
 .onder{
     position: absolute;
     bottom: 30px;
-    width: 95%;
+    width: 94%;
 }
 
 .price {
@@ -594,6 +594,10 @@ input.buttonPro{
     margin-top: 330px;
 }
 
+.home {
+    margin-top: 330px;
+}
+
 
 
 
@@ -639,6 +643,6 @@ b {
     /* width: 100%; */
 }
 
- .mb5 {
-     margin-bottom: 5px;
- }
+.divKnop {
+    height: 30px;
+}

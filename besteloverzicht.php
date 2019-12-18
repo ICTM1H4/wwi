@@ -128,7 +128,7 @@ $huidigePagina = "overzichtPhp";
 
                     ?>
                 </div>
-                <div>
+                <div class="divKnop">
                         <a href="?betaling" class="buttonPro mb5" >Naar betalen</a>
                 </div>
             </div>

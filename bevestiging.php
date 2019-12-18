@@ -1,7 +1,6 @@
 <?php
 $email = "E-mail";
 $order = "x";
-$totaalprijs = $_SESSION['Nieuw']['totaalPlusBtw'];
 $huidigePagina = "verzendingPhp";
 bevestigingOrder($conn);
 ?>
@@ -32,19 +31,36 @@ bevestigingOrder($conn);
 <br>
 
 <div class="algMargin">
-    <h2>Bedankt voor uw bestelling met ordernummer <?php echo $_SESSION['api']['id'] ?>, we doen er alles aan om
+    <h2>Bedankt voor uw bestelling, we doen er alles aan om
         het u zo spoedig mogelijk te leveren.
     </h2>
 
-    <div class="pdfding">
-        <h2><a href="invoice.php " style="color: blue">Klik hier</a> om uw orderbevestiging nu in te zien </h2>
-    </div>
+<!--    <div class="pdfding">-->
+<!--        <h2><a href="invoice.php " style="background: none!important;-->
+<!--               border: none;-->
+<!--               padding: 0!important;-->
+<!--            /*optional*/-->
+<!--            font-family: arial, sans-serif;-->
+<!--            /*input has OS specific font-family*/-->
+<!--            color: blue;-->
+<!--            text-decoration: underline;"-->
+<!--            cursor: pointer;>Klik hier</a> om uw orderbevestiging nu in te zien </h2>-->
+<!--    </div>-->
+
     <div class="home">
-        <h2><a href="index.php" style="color: blue">Klik hier</a> om terug te gaan naar de hoofdpagina </h2>
-        <div class="laatsteprijs">
-            <h2>Totaalprijs: <?php echo "€" . " " . $totaalprijs; ?></h2>
-        </div>
+        <h2><a href="index.php" style="background: none!important;
+               border: none;
+               padding: 0!important;
+            /*optional*/
+            font-family: arial, sans-serif;
+            /*input has OS specific font-family*/
+            color: blue;
+            text-decoration: underline;"
+            cursor: pointer;> Klik hier</a> om terug te gaan naar de hoofdpagina </h2>
+
     </div>
+
+
 
 </body>
 </html>
