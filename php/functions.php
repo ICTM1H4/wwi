@@ -247,12 +247,18 @@ function molliePrintLines($cart, $conn){
 
 function bevestigingOrder($conn) {
     if(isset($_GET['bevestiging']) && isset($_GET['orderID'])) {
-        $subject = "U heeft besteling aangemaakt bij WWI met volgende ordernummer: ".$_SESSION['api']['id'];
+        mysqli_query($conn,"INSERT INTO orders (OrderID, OrderDate) VALUES ('".$_SESSION['api']['id']."', GETDATE()");
+        $i = 0;
         foreach($_SESSION['cart'] as $product) {
-            $query = mysqli_query($conn, "SELECT StockItemID,SearchDetails, RecommendedRetailPrice, StockItemName FROM stockitems where StockItemID = ".$product['product_id']."");
-            $getProducten[] = $query->fetch_assoc()['StockItemName']." ".$product['aantal']."x";
+            $query = mysqli_query($conn, "SELECT StockItemID,SearchDetails, RecommendedRetailPrice, StockItemName, TaxRate, UnitPrice FROM stockitems where StockItemID = ".$product['product_id']."");
+            $fetch[] = $query->fetch_assoc();
+            $getProducten[] = $fetch[$i]['StockItemName']." ".$product['aantal']."x";
             mysqli_query($conn, 'UPDATE stockitemholdings SET QuantityOnHand = QuantityOnHand-'.$product['aantal'].' WHERE StockItemID = '.$product["product_id"].'');
+            mysqli_query($conn, "INSERT INTO orderlines (OrderLineID, OrderID, StockItemID, Description, Quantity, UnitPrice, TaxRate) 
+                        VALUES (uuid(),'".$_SESSION['api']['id']."', '".$fetch[$i]['StockItemID']."', '".$fetch[$i]['StockItemName']."', '".$product['aantal']."', '".$fetch[$i]['UnitPrice']."', '".$fetch[$i++]['TaxRate']."')");
         }
+        
+        $subject = "U heeft besteling aangemaakt bij WWI met volgende ordernummer: ".$_SESSION['api']['id'];
         $to = $_SESSION['klantgegevens']['E-mailadres'];
         $from = "klantenservicewwi@gmail.com";
         $message = "<html>
@@ -283,6 +289,10 @@ function bevestigingOrder($conn) {
         </html>";
         $headers  = "From: $from\r\n"; 
         $headers .= "Content-type: text/html\r\n";
+
+        
+
+
         mail($to, $subject,$message, $headers);
         mail("klantenservicewwi@gmail.com", $subjectK,$messageK, $headers);
         session_destroy();
