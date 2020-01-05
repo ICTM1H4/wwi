@@ -1,6 +1,6 @@
 <?php
 $huidigePagina = "overzichtPhp";
-// print_r($_SESSION);
+// print_r($_SESSION['klantgegevens']);
 // $verzendkosten = $_SESSION['verzendkosten'];
 ?>
 
