@@ -55,34 +55,43 @@
 
         //    print_r($result);
         //    die(0);
+            $querymaximaal = mysqli_query($conn, "SELECT QuantityOnHand FROM stockitemholdings WHERE StockItemID = ".$result['product_id']. "");
+            $maximaal = $querymaximaal->fetch_assoc(); $maximaal['QuantityOnHand'];
+            $maximum = ceil(0.80*$maximaal['QuantityOnHand']);
+            if ($result['aantal'] > $maximum) {
+                $result['aantal'] = $maximum;
+            }
+            echo "<br>";
+            if($result['aantal'] <= 0){
+                unset($_SESSION['cart'][$index]);
+                header('Location: ?winkelwagen');
+            }
+            else {
+                print_r($result['aantal']);
+            // Use this query to print all descriptions of products that have been added to the shopping cart
+            $queryscproducts = mysqli_query($conn, "SELECT StockItemName FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
+            $title = $queryscproducts->fetch_assoc();
+            echo $title["StockItemName"];
+            echo "<br>";
 
-           echo "<br>";
-           // Use this query to print all descriptions of products that have been added to the shopping cart
-           $queryscproducts = mysqli_query($conn, "SELECT StockItemName FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
-           $title = $queryscproducts->fetch_assoc();
-           echo $title["StockItemName"];
-           echo "<br>";
+            // Use this query to print all prices of products that have been added to the shopping cart
+            $queryscproducts = mysqli_query($conn, "SELECT RecommendedRetailPrice FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
+            $price = $queryscproducts->fetch_assoc();
+            echo "€" . $price["RecommendedRetailPrice"];
+            
 
-           // Use this query to print all prices of products that have been added to the shopping cart
-           $queryscproducts = mysqli_query($conn, "SELECT RecommendedRetailPrice FROM stockitems WHERE StockItemID = " . $result["product_id"] . "");
-           $price = $queryscproducts->fetch_assoc();
-           echo "€" . $price["RecommendedRetailPrice"];
-           $querymaximaal = mysqli_query($conn, "SELECT QuantityOnHand FROM stockitemholdings WHERE StockItemID = ".$result['product_id']. "");
-           $maximaal = $querymaximaal->fetch_assoc(); $maximaal['QuantityOnHand'];
-           $maximum = ceil(0.80*$maximaal['QuantityOnHand']);
-           if ($result['aantal'] > $maximum) {
-               $result['aantal'] = $maximum;
-           }
-           echo '<br> Aantal: <input type="number" min="1"  id="quantity" name="'.$result['product_id'].'"value="'.$result['aantal'].'"><br><br>';
+                echo '<br> Aantal: <input type="number"  id="quantity" name="'.$result['product_id'].'"value="'.$result['aantal'].'"><br><br>';
+        
+              
             if ($result['aantal'] == $maximum){
                 echo "<h3> <div class='boe' style='color: red'>Je mag maximaal $maximum stuks van dit product bestellen!</div> </h3>";
-
             }
 
            echo "<br>";
            $totaal += $result['aantal'];
            //echo $result['product_id'];
            echo "<br>";
+        }
            ?>
 
            <input type="submit" name="delete<?php echo $result['product_id']?>" value="Verwijderen" id="delete">
@@ -135,7 +144,7 @@
        $valueverandering = "Verder winkelen";
        $hrefverandering = "?index";
    }
-
+   
 //    $arr = [];
    
     // print_r($tax);
@@ -178,9 +187,6 @@
 
     ?>
     <?php
-
-    
-
     // print_r($_SESSION['cart']);
     
     // $_SESSION['completeprijs'] = $totaalartikelen;
