@@ -278,7 +278,13 @@ function bevestigingOrder($conn) {
             <b>Klant heeft volgende producten besteld:</b> <br>"
             .implode("<br>", $getProducten)."<br>
             <b>En heeft betaald:</b> &euro;".$_SESSION['Nieuw']['totaalPlusBtw']
-            ."
+            ."<br>
+            <b>Klant gegevens:</b> <br>
+            ".$_SESSION['klantgegevens']['Voornaam']." 
+            ".$_SESSION['klantgegevens']['Achternaam']." <br>
+            ".$_SESSION['klantgegevens']['Woonplaats']." <br>
+            ".$_SESSION['klantgegevens']['postcode']." <br>
+            ".$_SESSION['klantgegevens']['Huisnummer']." <br>
         </body>
         </html>";
         $headers  = "From: $from\r\n"; 
